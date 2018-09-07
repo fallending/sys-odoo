@@ -87,6 +87,7 @@ def _create_empty_database(name):
             raise DatabaseExists("database %r already exists!" % (name,))
         else:
             cr.autocommit(True)     # avoid transaction block
+            # EUC_CN unicode
             cr.execute("""CREATE DATABASE "%s" ENCODING 'unicode' TEMPLATE "%s" """ % (name, chosen_template))
 
 def exp_create_database(db_name, demo, lang, user_password='admin', login='admin', country_code=None):
@@ -103,6 +104,7 @@ def exp_duplicate_database(db_original_name, db_name):
     with closing(db.cursor()) as cr:
         cr.autocommit(True)     # avoid transaction block
         _drop_conn(cr, db_original_name)
+        # EUC_CN unicode
         cr.execute("""CREATE DATABASE "%s" ENCODING 'unicode' TEMPLATE "%s" """ % (db_name, db_original_name))
 
     registry = odoo.modules.registry.Registry.new(db_name)

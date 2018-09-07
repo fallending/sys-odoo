@@ -11,6 +11,7 @@ from weakref import WeakValueDictionary
 import logging
 import os
 import threading
+import traceback
 
 import odoo
 from .. import SUPERUSER_ID
@@ -81,7 +82,16 @@ class Registry(Mapping):
                     # This should be a method on Registry
                     try:
                         odoo.modules.load_modules(registry._db, force_demo, status, update_module)
-                    except Exception:
+                    except Exception, e:
+                        # print 'str(Exception):\t', str(Exception)
+                        # print 'str(e):\t\t', str(e)
+                        print 'repr(e):\t', repr(e)
+                        print 'e.message:\t', e.message
+                        # print 'traceback.print_exc():'
+
+                        # traceback.print_exc()
+                        # print 'traceback.format_exc():\n%s' % traceback.format_exc()
+
                         odoo.modules.reset_modules_state(db_name)
                         raise
                 except Exception:
