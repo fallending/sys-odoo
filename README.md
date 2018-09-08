@@ -25,7 +25,7 @@ A suite of web based open source business apps:
 * [Mac下快速搭建Odoo10开发环境](http://www.mamicode.com/info-detail-2178388.html), [postgresql下载](https://www.postgresql.org/download/macosx/)
 * [Odoo开发教程(一):使用pycharm搭建开发调试环境](https://blog.csdn.net/feigamesnb/article/details/50392082)
 * [mac下完全卸载postgresql的方法](https://blog.csdn.net/stk_tianwen/article/details/17757393)
-
+* [odoo配置文件详解](https://www.jianshu.com/p/abf366d7319e)
 
 *Linux*
 
@@ -114,3 +114,15 @@ locale把按照所涉及到的文化传统的各个方面分成12个大类，这
 locale 是国际化与本土化过程中的一个非常重要的概念
 ```
 
+* 如果odoo跑起来后，admin的密码忘记了
+
+```
+// python 生成密码hash
+from passlib.context import CryptContext
+print CryptContext(['pbkdf2_sha512']).encrypt('MY_PASSWORD')
+
+// 更新db
+UPDATE res_users SET password_crypt='your new password hash'WHERE id=1;
+```
+
+* [could not execute command lessc](https://blog.csdn.net/maiktom/article/details/78194318)
