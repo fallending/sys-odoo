@@ -3,18 +3,17 @@
 # * website_event_questions
 # 
 # Translators:
-# kalatchev, 2016
-# Martin Trigaux, 2016
-# Maria Boyadjieva <marabo2000@gmail.com>, 2016
-# Kaloyan Naumov <kaloyan@lumnus.net>, 2016
-# Vladimir Dachev <v.dachev@dalkomotors.com>, 2016
+# Martin Trigaux, 2017
+# aleksandar ivanov, 2018
+# Albena Mincheva <albena_vicheva@abv.bg>, 2018
+# Maria Boyadjieva <marabo2000@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: Vladimir Dachev <v.dachev@dalkomotors.com>, 2016\n"
+"POT-Creation-Date: 2017-10-02 11:26+0000\n"
+"PO-Revision-Date: 2017-10-02 11:26+0000\n"
+"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +23,7 @@ msgstr ""
 
 #. module: website_event_questions
 #: model:ir.ui.view,arch_db:website_event_questions.registration_attendee_details_questions
-msgid "<strong>Common Questions</strong>"
+msgid "<strong>Questions</strong>"
 msgstr ""
 
 #. module: website_event_questions
@@ -85,6 +84,7 @@ msgstr "Име за показване"
 
 #. module: website_event_questions
 #: model:ir.model,name:website_event_questions.model_event_event
+#: model:ir.model.fields,field_description:website_event_questions.field_event_question_event_id
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report_event_id
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_report_search
 msgid "Event"
@@ -92,18 +92,23 @@ msgstr "Събитие"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_event_answer_id
-msgid "Event answer id"
-msgstr "ИН на отговор за събитие"
+msgid "Event Answer"
+msgstr ""
 
 #. module: website_event_questions
-#: model:ir.model.fields,field_description:website_event_questions.field_event_question_event_id
-msgid "Event id"
-msgstr "ИН на събитие"
+#: model:ir.model,name:website_event_questions.model_event_type
+msgid "Event Category"
+msgstr "Категория на събитие"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_event_registration_id
-msgid "Event registration id"
-msgstr "ИН на регистрация за събитие"
+msgid "Event Registration"
+msgstr "Регистрация на събитие"
+
+#. module: website_event_questions
+#: model:ir.model.fields,field_description:website_event_questions.field_event_question_event_type_id
+msgid "Event Type"
+msgstr "Вид събитие"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_event_general_question_ids
@@ -126,7 +131,7 @@ msgstr "Групиране по"
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report_id
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_id
 msgid "ID"
-msgstr "ИН"
+msgstr "ID"
 
 #. module: website_event_questions
 #: model:ir.model.fields,help:website_event_questions.field_event_question_is_individual
@@ -181,6 +186,7 @@ msgid "Personal"
 msgstr ""
 
 #. module: website_event_questions
+#: model:ir.model.fields,field_description:website_event_questions.field_event_answer_question_id
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report_question_id
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_answer_simplified_form
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_form
@@ -189,12 +195,14 @@ msgid "Question"
 msgstr "Въпрос"
 
 #. module: website_event_questions
-#: model:ir.model.fields,field_description:website_event_questions.field_event_answer_question_id
-msgid "Question id"
-msgstr "ИН на въпрос"
+#: code:addons/website_event_questions/models/event.py:78
+#, python-format
+msgid "Question should belong to either event category or event but not both"
+msgstr ""
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_event_question_ids
+#: model:ir.model.fields,field_description:website_event_questions.field_event_type_question_ids
 #: model:ir.ui.menu,name:website_event_questions.menu_report_event_questions
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_form_inherit_question
 msgid "Questions"
@@ -206,6 +214,11 @@ msgstr "Въпроси"
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_report_pivot
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_report_search
 msgid "Questions Analysis"
+msgstr ""
+
+#. module: website_event_questions
+#: model:ir.model.fields,field_description:website_event_questions.field_event_type_use_questions
+msgid "Questions to Attendees"
 msgstr ""
 
 #. module: website_event_questions

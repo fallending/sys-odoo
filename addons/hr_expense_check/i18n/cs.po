@@ -3,14 +3,13 @@
 # * hr_expense_check
 # 
 # Translators:
-# Martin Trigaux, 2017
 # Jiří P., 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:27+0000\n"
-"PO-Revision-Date: 2017-06-23 13:27+0000\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
 "Last-Translator: Jiří P., 2018\n"
 "Language-Team: Czech (https://www.transifex.com/odoo/teams/41243/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -20,38 +19,37 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #. module: hr_expense_check
-#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_register_payment_wizard_check_amount_in_words
+#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_check_amount_in_words
 msgid "Amount in Words"
 msgstr "Částka slovy"
 
 #. module: hr_expense_check
-#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_register_payment_wizard_check_number
+#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_check_number
 msgid "Check Number"
-msgstr "Zkontrolujte číslo"
+msgstr "číslo šeku"
 
 #. module: hr_expense_check
-#: model:ir.model.fields,help:hr_expense_check.field_hr_expense_register_payment_wizard_check_manual_sequencing
+#: model:ir.model.fields,help:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_check_manual_sequencing
 msgid "Check this option if your pre-printed checks are not numbered."
-msgstr ""
-"Zaškrtněte tuto možnost, pokud předtištěné kontroly nejsou očíslovány."
+msgstr "Zaškrtněte tuto možnost, pokud předtištěné šeky nejsou očíslovány."
 
 #. module: hr_expense_check
-#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_register_payment_wizard_payment_method_code_2
+#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_payment_method_code_2
 msgid "Code"
 msgstr "Kód"
 
 #. module: hr_expense_check
-#: model:ir.model,name:hr_expense_check.model_hr_expense_register_payment_wizard
-msgid "Hr Expense Register Payment wizard"
+#: model:ir.model,name:hr_expense_check.model_hr_expense_sheet_register_payment_wizard
+msgid "Expense Report Register Payment wizard"
 msgstr ""
 
 #. module: hr_expense_check
-#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_register_payment_wizard_check_manual_sequencing
+#: model:ir.model.fields,field_description:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_check_manual_sequencing
 msgid "Manual Numbering"
 msgstr "Manuální číslování"
 
 #. module: hr_expense_check
-#: model:ir.model.fields,help:hr_expense_check.field_hr_expense_register_payment_wizard_check_number
+#: model:ir.model.fields,help:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_check_number
 msgid ""
 "Number of the check corresponding to this payment. If your pre-printed check"
 " are not already numbered, you can manage the numbering in the journal "
@@ -61,7 +59,7 @@ msgstr ""
 "očíslovaný, můžete číslování spravovat v konfigurační stránce deníku."
 
 #. module: hr_expense_check
-#: model:ir.model.fields,help:hr_expense_check.field_hr_expense_register_payment_wizard_payment_method_code_2
+#: model:ir.model.fields,help:hr_expense_check.field_hr_expense_sheet_register_payment_wizard_payment_method_code_2
 msgid ""
 "Technical field used to adapt the interface to the payment type selected."
 msgstr "Technické pole použité k přizpůsobení rozhraní vybranému typu platby."

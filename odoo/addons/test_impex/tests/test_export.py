@@ -2,8 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import itertools
+import unittest
+from cProfile import Profile
 
 from odoo.tests import common
+from odoo.tools import pycompat
 
 
 class CreatorCase(common.TransactionCase):
@@ -25,6 +28,23 @@ class CreatorCase(common.TransactionCase):
         record.invalidate_cache()
         return record._export_rows([f.split('/') for f in fields])
 
+class test_xids(CreatorCase):
+    model_name = 'export.boolean'
+
+    def test_no_module(self):
+        record = self.make(True)
+        # add existing xid without module
+        self.env['ir.model.data'].create({
+            'module': '',
+            'name': 'x',
+            'model': self.model_name,
+            'res_id': record.id,
+        })
+        record.invalidate_cache()
+        self.assertEqual(
+            record._export_rows([['id'], ['value']]),
+            [[u'x', u'True']]
+        )
 
 class test_boolean_field(CreatorCase):
     model_name = 'export.boolean'
@@ -68,8 +88,18 @@ class test_integer_field(CreatorCase):
     def test_huge(self):
         self.assertEqual(
             self.export(2**31-1),
-            [[unicode(2**31-1)]])
+            [[pycompat.text_type(2**31-1)]])
 
+    @unittest.skip("Only benches/profiles")
+    def test_xid_perfs(self):
+        for i in range(10000):
+            self.make(i)
+        self.model.invalidate_cache()
+        records = self.model.search([])
+
+        p = Profile()
+        p.runcall(records._export_rows, [['id'], ['value']])
+        p.dump_stats('xid_perfs.pstats')
 
 class test_float_field(CreatorCase):
     model_name = 'export.float'
@@ -318,17 +348,15 @@ class test_m2o(CreatorCase):
         record = self.env['export.integer'].create({'value': 42})
         self.assertEqual(
             self.export(record.id, fields=['value/.id', 'value/value']),
-            [[unicode(record.id), u'42']])
+            [[pycompat.text_type(record.id), u'42']])
 
     def test_external_id(self):
         record = self.env['export.integer'].create({'value': 42})
         # Expecting the m2o target model name in the external id,
         # not this model's name
-        external_id = u'__export__.export_integer_%d' % record.id
-        self.assertEqual(
-            self.export(record.id, fields=['value/id']),
-            [[external_id]])
-
+        self.assertRegexpMatches(
+            self.export(record.id, fields=['value/id'])[0][0],
+            u'__export__.export_integer_%d_[0-9a-f]{8}' % record.id)
 
 class test_o2m(CreatorCase):
     model_name = 'export.one2many'
@@ -502,9 +530,9 @@ class test_o2m_multiple(CreatorCase):
         """
         fields = ['const', 'child1/value', 'child2/value']
         child1 = [(0, False, {'value': v, 'str': 'record%.02d' % index})
-                  for index, v in zip(itertools.count(), [4, 42, 36, 4, 13])]
+                  for index, v in pycompat.izip(itertools.count(), [4, 42, 36, 4, 13])]
         child2 = [(0, False, {'value': v, 'str': 'record%.02d' % index})
-                  for index, v in zip(itertools.count(10), [8, 12, 8, 55, 33, 13])]
+                  for index, v in pycompat.izip(itertools.count(10), [8, 12, 8, 55, 33, 13])]
 
         self.assertEqual(
             self.export(child1=child1, child2=False, fields=fields),

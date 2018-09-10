@@ -6,7 +6,7 @@ from odoo import api, fields, models, _
 
 
 class SaleOrder(models.Model):
-    """Add several date fields to Sale Orders, computed or user-entered"""
+    """Add several date fields to Sales Orders, computed or user-entered"""
     _inherit = 'sale.order'
 
     commitment_date = fields.Datetime(compute='_compute_commitment_date', string='Commitment Date', store=True,
@@ -33,7 +33,7 @@ class SaleOrder(models.Model):
         for order in self:
             dates_list = []
             order_datetime = fields.Datetime.from_string(order.date_order)
-            for line in order.order_line.filtered(lambda x: x.state != 'cancel'):
+            for line in order.order_line.filtered(lambda x: x.state != 'cancel' and not x._is_delivery()):
                 dt = order_datetime + timedelta(days=line.customer_lead or 0.0)
                 dates_list.append(dt)
             if dates_list:
@@ -66,8 +66,8 @@ class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
 
     @api.multi
-    def _prepare_order_line_procurement(self, group_id):
-        vals = super(SaleOrderLine, self)._prepare_order_line_procurement(group_id=group_id)
+    def _prepare_procurement_values(self, group_id):
+        vals = super(SaleOrderLine, self)._prepare_procurement_values(group_id=group_id)
         for line in self.filtered("order_id.requested_date"):
             date_planned = fields.Datetime.from_string(line.order_id.requested_date) - timedelta(days=line.order_id.company_id.security_lead)
             vals.update({

@@ -3,14 +3,16 @@
 # * crm
 # 
 # Translators:
-# ສີສຸວັນ ສັງບົວບຸລົມ <sisouvan@gmail.com>, 2017
+# Martin Trigaux, 2017
+# ki dvd <soutsakhone.d@gmail.com>, 2017
+# ສີສຸວັນ ສັງບົວບຸລົມ <sisouvan@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:26+0000\n"
-"PO-Revision-Date: 2017-06-23 13:26+0000\n"
-"Last-Translator: ສີສຸວັນ ສັງບົວບຸລົມ <sisouvan@gmail.com>, 2017\n"
+"POT-Creation-Date: 2018-04-20 11:58+0000\n"
+"PO-Revision-Date: 2018-04-20 11:58+0000\n"
+"Last-Translator: ສີສຸວັນ ສັງບົວບຸລົມ <sisouvan@gmail.com>, 2018\n"
 "Language-Team: Lao (https://www.transifex.com/odoo/teams/41243/lo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,10 +106,10 @@ msgid ""
 "                                <span>We would be delighted to assist you along the way. Contact us through our\n"
 "                                <a href=\"https://www.odoo.com/help\">support form</a> if you have any question.\n"
 "                                You can also discover how to get the best out of Odoo CRM with our </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation/user/10.0/crm.html\">\n"
+"                                <a target=\"_blank\" href=\"https://www.odoo.com/documentation/user/11.0/crm.html\">\n"
 "                                <span style=\"text-decoration:underline;\">User Documentation</span></a>\n"
 "                                </span><span> or with our </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation\">\n"
+"                                <a target=\"_blank\" href=\"https://www.odoo.com/documentation\">\n"
 "                                <span style=\"text-decoration:underline;\">API Documentation</span></a>\n"
 "                            </p>\n"
 "                            <br>\n"
@@ -117,109 +119,10 @@ msgid ""
 "                </tbody>\n"
 "            </table>\n"
 "            <div dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;color:grey\">\n"
-"                <span><br/>-- <br/>The Odoo Team<br/>PS: People love Odoo, check </span><a href=\"https://twitter.com/odoo/favorites\"><span style=\"text-decoration:underline;\">what they say about it.</span></a></span>\n"
+"                <span><br/>-- <br/>The Odoo Team<br/>PS: People love Odoo, check </span><a target=\"_blank\" href=\"https://twitter.com/odoo/favorites\"><span style=\"text-decoration:underline;\">what they say about it.</span></a></span>\n"
 "            </div>\n"
 "        </div>"
 msgstr ""
-"\n"
-"\n"
-"            <div style=\"margin: 10px auto;\">\n"
-"            % set last_created_team = user.env['crm.team'].search([], order=\"create_date desc\")[0]\n"
-"            <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:100%;\">\n"
-"                <tbody>\n"
-"                    <tr>\n"
-"                        <td style=\"padding:2px;width:30%;\">\n"
-"                            <img src=\"web/static/src/img/logo.png\"/>\n"
-"                        </td>\n"
-"                        <td style=\"vertical-align: top; padding: 8px 10px;text-align: left;font-size: 14px;\">\n"
-"                            <a href=\"web/login\" style=\"float:right ;margin:15px auto;background: #875A7B;border-radius: 5px;color: #ffffff;font-size: 16px;padding: 10px 20px 10px 20px;text-decoration: none;\">ເຊື່ອມຕໍ່ເຂົ້າອັດຕະໂນມັດ</a>\n"
-"                        </td>\n"
-"                    </tr>\n"
-"                </tbody>\n"
-"            </table>\n"
-"            <table style=\"width:100%;text-align:justify;margin:0 auto;border-collapse:collapse;border-top:1px solid lightgray\"\">\n"
-"                <tbody>\n"
-"                    <tr>\n"
-"                        <td style=\"padding:15px 10px;font-size:20px\">\n"
-"                            <p style=\"color:#875A7B;margin:0\" >ໄຊໂຍ!</p><br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                <span>ແອັບ Odoo CRM ຂອງທ່ານ ຂຶ້ນມາແລ້ວແລະກຳລັງແລ່ນຢູ່.</span></p><br>\n"
-"                            <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-size:13px;font-weight:bold; \">ຕໍ່ໄປແມ່ນຫຍັງ?</span></p>\n"
-"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;font-size:13px;list-style-type:disc;\">\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>ພະຍາຍາມສ້າງໂອກາດໃນການຂາຍ ໂດຍສົ່ງ ອີເມວລ໌ ໄປຫາ </span>\n"
-"                                        <a href=\"mailto:${last_created_team.alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else user.company_id.email}\">\n"
-"                                            <span style=\"font-weight:bold; text-decoration:underline;\">${last_created_team.alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else user.company_id.email}</span>\n"
-"                                        </a>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                        <span>ຕິດຕາມໂອກາດຂອງທ່ານ ໃນຊ່ອງທາງ ການຂາຍ ຂອງ ທ່ານ ໂດຍພຽງແຕ່ ລາກ ບັດ ໄປ ແລະ ປະລົງ ລະຫວ່າງຖັນໜຶ່ງ ໄປຫາອີກຖັນໜຶ່ງ</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                            </ul> <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-weight:bold;\">ຄົ້ນພົບ </span>\n"
-"                                <span><a href=\"/web#view_type=list&model=crm.lead&action=crm.crm_lead_all_leads\">\n"
-"                                    <span style=\"font-weight:bold; text-decoration:underline;\">ໂຕວາງແຜນ CRM </span></a></span>\n"
-"                                <span> ເພື່ອເປີດໃຊ້ງານ ຄຸນສົມບັດ ຂອງມັນເພີ່ມ</span>\n"
-"                                <span style=\"color:#875A7B;margin:0;font-weight:bold\">(${user.env['web.planner'].get_planner_progress('planner_crm')}% ແລ້ວໆ)</span>\n"
-"                            </p>\n"
-"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;font-size:13px;list-style-type:disc;\">\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>ກຳນົດໂອກາດໃນການຊຸກຍູ້ການຂາຍ ໃຫ້ກັບ ພະນັກງານຂາຍຂອງທ່ານ ໂດຍອັດຕະໂນມັດ ດ້ວຍຄະແນນນໍາໜ້າ, </span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>ຕິດຕໍ່ຢ່າງໃກ້ຊິດກັບລູກຄ້າທີ່ມີສັກກະຍະພາບ ໃນ ການຊື້ ດ້ວຍການສົ່ງ ອີເມວລ໌ ປຸກລະດົມ ໄປຫາ.,</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>ໃຫ້ມີຂໍ້ມູນລວງເລິກທີ່ມີຄຸນນະພາບສູງ ຈາກ ໃບສອບຖາມ,</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>ໃຫ້ໄດ້ຮັບການລາຍງານທີ່ຍອດຍ້ຽມ ແລະ ກະດານຂ່າວຂໍ້ມູນທີ່ຖືກຕ້ອງ,</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                        <span>ແລະ ອື່ນໆອີກຢ່າງຫຼວງຫຼາຍ...</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                            </ul>\n"
-"                            <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;line-height:1.3;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-weight:bold;\">ຕ້ອງການຄວາມຊ່ວຍເຫຼືອບໍ່?</span>\n"
-"                                <span style=\"font-style:italic;\">ທ່ານບໍ່ໄດ້ຢູ່ຢ່າງໂດດດ່ຽວ</span>\n"
-"                            </p>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span>ພວກເຮົາຍິນດີທີ່ຈະຊ່ວຍທ່ານຕະຫຼອດທາງ. ກະລຸນາຕິດຕໍ່ຫາພວກເຮົາ ໂດຍຜ່ານ\n"
-"                                <a href=\"https://www.odoo.com/help\">ແບບຟອມສະໜັບສະໜູນຂອງພວກເຮົາ</a>ຖ້າຫາກ ທ່ານມີບັນຫາຂ້ອງໃຈ.\n"
-"                              ນອກຈາກນັ້ນທ່ານຍັງສາມາດຄົ້ນພົບວິທີການ ທີ່ຈະໃຫ້ໄດ້ຮັບປະໂຫຍດສູງສຸດ ຈາກ Odoo CRM ດ້ວຍ </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation/user/10.0/crm.html\">\n"
-"                                <span style=\"text-decoration:underline;\">ເອກະສານ ຜູ້ໃຊ້ງານ</span></a>\n"
-"                                </span><span> ຫຼື ດ້ວຍ </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation\">\n"
-"                                <span style=\"text-decoration:underline;\">ເອກະສານ API </span></a>\n"
-"                            </p>\n"
-"                            <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\"><span>ຂໍໃຫ້ເພີດເພີນໄປກັບ ປະສົບການໃຊ້ງານ Odoo ຂອງ ທ່ານ,</span></p>\n"
-"                        </td>\n"
-"                    </tr>\n"
-"                </tbody>\n"
-"            </table>\n"
-"            <div dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;color:grey\">\n"
-"                <span><br/>-- <br/>ຈາກທິມງານ Odoo<br/>ປລ: ຜູ້ຄົນທີ່ຮັກ Odoo, ໃຫ້ກວດສອບເບິ່ງວ່າ </span><a href=\"https://twitter.com/odoo/favorites\"><span style=\"text-decoration:underline;\">ພວກເພິ່ນໄດ້ເວົ້າຫຍັງແນ່ກ່ຽວກັບມັນ.</span></a></span>\n"
-"            </div>\n"
-"        </div>"
 
 #. module: crm
 #: model:mail.template,body_html:crm.email_template_opportunity_reminder_mail
@@ -265,11 +168,11 @@ msgstr "(ທ່ານສາມາດປ່ຽນມັນໄດ້ຢູ່ບ�
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ", if accounting or purchase is installed"
-msgstr ", ຖ້າຫາກ ການບັນຊີ ຫຼື ການສັ່ງຂື້ ໄດ້ຮັບການຕິດຕັ້ງລົງແລ້ວ"
+msgstr ", ຖ້າຫາກ ການບັນຊີ ຫຼື ການສັ່ງຊື້ໄດ້ຮັບການຕິດຕັ້ງແລ້ວ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:34
+#: code:addons/crm/static/src/js/tour.js:29
 #, python-format
 msgid ""
 "<b>Drag &amp; drop opportunities</b> between columns as you progress in your"
@@ -280,7 +183,7 @@ msgstr ""
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:75
+#: code:addons/crm/static/src/js/tour.js:74
 #, python-format
 msgid ""
 "<b>Invite coworkers</b> via email.<br/><i>Enter one email per line.</i>"
@@ -294,18 +197,13 @@ msgid "<i class=\"fa fa-envelope-o\"/> Ask Our Experts"
 msgstr "<i class=\"fa fa-envelope-o\"/> ຖາມຜູ້ຊ່ຽວຊານຂອງພວກເຮົາ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
-msgid "<i class=\"fa fa-envelope-o\"/>&amp;nbsp;"
-msgstr "<i class=\"fa fa-envelope-o\"/>&amp;nbsp;"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<i class=\"fa fa-question-circle\"> view examples</i>"
 msgstr "<i class=\"fa fa-question-circle\">ເບິ່ງຕົວຢ່າງ</i>"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:61
+#: code:addons/crm/static/src/js/tour.js:60
 #, python-format
 msgid ""
 "<p><b>Send messages</b> to your prospect and get replies automatically "
@@ -316,23 +214,6 @@ msgstr ""
 "ໄດ້ຮັບການຕອບກັບຢ່າງອັດຕະໂນມັດ ຕິດຄັດມາກັບໂອກາດນີ້ .</p><p class=\"mb0\">ພິມ "
 "<i>'@'</i> ເພື່ອສົ່ງເຖິງບຸກຄົນ - "
 "ຊຶ່ງມັນຄືກັນກັບການສົ່ງສຳເນົາໃຫ້ບຸກຄົນອື່ນອີກ ເຊັ່ນ cc ໃນ ອີເມລ໌.</p>"
-
-#. module: crm
-#: model:ir.actions.server,body_html:crm.action_email_reminder_lead
-msgid ""
-"<p>Hello ${object.user_id and object.user_id.name or ''},</p>\n"
-"<p>The opportunity <strong>${object.name}</strong> did not have any activity since at least 5 days.</p>\n"
-"%if object.description:\n"
-"<p>Here is the description about the opportunity : </p><p><i>${object.description}</i>\n"
-"%endif\n"
-"</p><p>Thank you!</p>\n"
-msgstr ""
-"<p>ສະບາຍດີ ${object.user_id and object.user_id.name or ''},</p>\n"
-"<p>ໂອກາດ <strong>${object.name}</strong> ບໍ່ໄດ້ມີກິດຈະກຳໃດໆ ນັບຕັ້ງແຕ່ 5 ມື້ມາເປັນຢ່າງໜ້ອຍ.</p>\n"
-"%if object.description:\n"
-"<p>ນີ້ແມ່ນລາຍລະອຽດກ່ຽວກັບກາລະໂອກາດ : </p><p><i>${object.description}</i>\n"
-"%endif\n"
-"</p><p>ຂອບໃຈ!</p>\n"
 
 #. module: crm
 #. openerp-web
@@ -460,17 +341,6 @@ msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
-msgid ""
-"<span class=\"oe_form_field\" attrs=\"{'invisible': ['|', "
-"('next_activity_id', '=', False), ('date_action', '=', False)]}\"> on "
-"</span>"
-msgstr ""
-"<span class=\"oe_form_field\" attrs=\"{'invisible': ['|', "
-"('next_activity_id', '=', False), ('date_action', '=', False)]}\"> ເປີດ "
-"</span>"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "<span class=\"oe_grey\"> at </span>"
 msgstr "<span class=\"oe_grey\"> ທີ່ </span>"
 
@@ -517,91 +387,61 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"\"/>\n"
 "                                        <strong>Import a file</strong><br/>\n"
 "                                        <span class=\"small\">Recommended if &gt;50 items</span>\n"
 "                                    </span>"
 msgstr ""
-"<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>ນໍາເຂົ້າຟາຍລ໌</strong><br/>\n"
-"                                        <span class=\"small\">ທີ່ແນະນຳ ຖ້າ &gt;50 ລາຍການ</span>\n"
-"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"\"/>\n"
 "                                        <strong>Import</strong><br/>\n"
 "                                        <span class=\"small\">&gt; 200 contacts</span>\n"
 "                                    </span>"
 msgstr ""
-"<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>ນໍາເຂົ້າ</strong><br/>\n"
-"                                        <span class=\"small\">&gt; 200 ທີ່ຢູ່ຕິດຕໍ່</span>\n"
-"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"\"/>\n"
 "                                        <strong>Subscriptions</strong><br/>\n"
 "                                        <span class=\"small\"/>\n"
 "                                    </span>"
 msgstr ""
-"<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>ການສະໝັກຮັບຂໍ້ມູນ</strong><br/>\n"
-"                                        <span class=\"small\"/>\n"
-"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"\"/>\n"
 "                                        <strong> Create manually</strong><br/>\n"
 "                                        <span class=\"small\">&lt; 200 contacts</span>\n"
 "                                    </span>"
 msgstr ""
-"<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
-"                                        <strong> ສ້າງດ້ວຍຕົນເອງ</strong><br/>\n"
-"                                        <span class=\"small\">&lt; 200 ທີ່ຢູ່ຕິດຕໍ່</span>\n"
-"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"\"/>\n"
 "                                        <strong> Create manually</strong><br/>\n"
 "                                        <span class=\"small\">Recommended if &lt;50 items</span>\n"
 "                                    </span>"
 msgstr ""
-"<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
-"                                        <strong> ສ້າງດ້ວຍຕົນເອງ</strong><br/>\n"
-"                                        <span class=\"small\">ຂໍອນະນຳ ຖ້າ &lt;50 ທີ່ຢູ່ຕິດຕໍ່</span>\n"
-"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"\"/>\n"
 "                                        <strong>One-time sale</strong><br/>\n"
 "                                        <span class=\"small\"/>\n"
 "                                    </span>"
 msgstr ""
-"<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
-"                                        <strong>ຂາຍພຽງຄັ້ງດຽວ</strong><br/>\n"
-"                                        <span class=\"small\"/>\n"
-"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -639,29 +479,23 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"panel-title\"><span data-icon=\"&#57366;\"/><strong> Exercise 1</strong></span>\n"
+"<span class=\"panel-title\"><span data-icon=\"\"/><strong> Exercise 1</strong></span>\n"
 "                                    <span>(Lead Manager)</span>"
 msgstr ""
-"<span class=\"panel-title\"><span data-icon=\"&#57366;\"/><strong> ແບບຝຶກຫັດ 1</strong></span>\n"
-"                                    <span>(ຫົວໜ້າຝ່າຍບໍລິຫານ)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"panel-title\"><span data-icon=\"&#57438;\"/><strong> Exercise 3</strong></span>\n"
+"<span class=\"panel-title\"><span data-icon=\"\"/><strong> Exercise 3</strong></span>\n"
 "                                    <span>(Salesperson)</span>"
 msgstr ""
-"<span class=\"panel-title\"><span data-icon=\"&#57438;\"/><strong> ແບບຝຶກຫັດ 3</strong></span>\n"
-"                                    <span>(ພະນັກງານຂາຍ)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"panel-title\"><span data-icon=\"&#57463;\"/><strong> Exercise 2</strong></span>\n"
+"<span class=\"panel-title\"><span data-icon=\"\"/><strong> Exercise 2</strong></span>\n"
 "                                    <span>(Sales Manager)</span>"
 msgstr ""
-"<span class=\"panel-title\"><span data-icon=\"&#57463;\"/><strong> ແບບຝຶກຫັດ 2</strong></span>\n"
-"                                    <span>(ຜູ້ບໍລິຫານຝ່າຍຂາຍ)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -750,18 +584,12 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Forecast future revenues</strong><br/>\n"
-"                                    You can assess the maturity of a sales team by its ability to forecasts future revenues\n"
+"                                    You can assess the maturity of a sales channel by its ability to forecasts future revenues\n"
 "                                    for the coming months or quarters. Train the team to forecast efficiently by having\n"
 "                                    an up-to-date pipeline of opportunities.\n"
 "                                    After a few month, set the real success rate according to the stages, to have\n"
 "                                    accurate expected revenues by closing date."
 msgstr ""
-"<strong>ຄາດຄະເນລາຍຮັບໃນອະນາຄົດ</strong><br/>\n"
-"                                    ທ່ານສາມາດປະເມີນການເຕີບໂຕຂອງທີມງານຂາຍ ດ້ວຍ ຄວາມສາມາດໃນການຄາດຄະເນລາຍໄດ້ໃນອະນາຄົດ\n"
-"                                    ສໍາລັບເດືອນ ຫຼື ໄຕມາດ ທີ່ຈະມາເຖິງ. ຝຶກອົບຮົມທີມງານ ໃຫ້ຄາດຄະເນປະສິດທິພາບໂດຍມີ\n"
-"                                    ການປັບປຸງ ຊ່ອງທາງ ຂອງ ໂອກາດ ໃຫ້ທັນສະພາບ.\n"
-"                                    ຫຼັງຈາກບໍ່ພໍເທົ່າໃດເດືອນ, ໃຫ້ກໍານົດອັດຕາຜົນສໍາເລັດທີ່ຖືກຕ້ອງຕາມຂັ້ນຕອນ, ທີ່ຈະມີ\n"
-"                                   ລາຍຮັບຕົວຈິງທີ່ຄາດຄະເນວ່າຈະໄດ້ຖືກຕ້ອງຕາມວັນທີປິດ."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -787,10 +615,8 @@ msgstr "<strong>ການດຳເນີນການຕໍ່ໄປ:</strong>"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Organize weekly sales meetings</strong><br/>\n"
-"                                    It's a great way to see where you can improve and keep track of the progress of your sales team. Start the pipeline review by looking at the big picture; revenues and number of opportunities by stage, by expected closing date and by salespeople."
+"                                    It's a great way to see where you can improve and keep track of the progress of your sales channel. Start the pipeline review by looking at the big picture; revenues and number of opportunities by stage, by expected closing date and by salespeople."
 msgstr ""
-"<strong>ຈັດກອງປະຊຸມການຂາຍປະຈຳອາທິດ</strong><br/>\n"
-"                                   ເປັນພະນັກງານຂາຍ ເປັນວິທີການທີ່ດີ ທີ່ຈະເຫັນຊ່ອງທາງ ທີ່ທ່ານຈະສາມາດ ປັບປຸງ ແລະ ຕິດຕາມ ຄວາມຄືບໜ້າຂອງທີມງານຂາຍຂອງທ່ານ. ເລີ່ມທົບທວນແນວທາງຄືນ ໂດຍມອງໃນພາບລວມ; ລາຍຮັບ ແລະ ຈໍານວນໂອກາດ ເປັນຂັ້ນຕອນ, ໂດຍຜົນຄາດຫວັງໃນມື້ປິດ ແລະໂດຍທີມງານຂາຍ."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -815,11 +641,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Recommended actions:</strong>"
 msgstr "<strong>ການດຳເນີນການທີ່ແນະນຳ:</strong>"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
-msgid "<strong>Recommended activities:</strong>"
-msgstr "<strong>ກິດຈະກຳທີ່ແນະນຳ:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -985,19 +806,9 @@ msgid "Accept Emails From"
 msgstr "ຍອມຮັບຈົດໝາຍ ຈາກ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_view_search
-msgid "Action Search"
-msgstr "ການດຳເນີນການຊອກ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Activate the 'Online Quotations' option in"
 msgstr "ເປີດໃຊ້ທາງເລືອກ 'ໃບສະເໜີລາຄາອອນລາຍນ໌' ໃນ"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_default
-msgid "Activated by default when subscribing."
-msgstr "ໃຫ້ເປີດໃຊ້ເປັນຄ່າເລີ່ມຕົ້ນ ເທື່ອມີການສະໝັກຈອງ."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_active
@@ -1008,15 +819,7 @@ msgid "Active"
 msgstr "ໃຊ້ຢູ່"
 
 #. module: crm
-#: model:ir.actions.act_window,name:crm.crm_activity_action
-#: model:ir.actions.act_window,name:crm.crm_activity_report_action_tree
-#: model:ir.model.fields,field_description:crm.field_res_partner_activities_count
-#: model:ir.model.fields,field_description:crm.field_res_users_activities_count
-#: model:ir.ui.menu,name:crm.crm_activity_menu
 #: model:ir.ui.menu,name:crm.crm_activity_report_menu
-#: model:ir.ui.view,arch_db:crm.crm_activity_view_form
-#: model:ir.ui.view,arch_db:crm.crm_activity_view_tree
-#: model:ir.ui.view,arch_db:crm.view_partners_form_crm1
 msgid "Activities"
 msgstr "ກິດຈຳກຳ"
 
@@ -1036,16 +839,9 @@ msgid "Activities Done Target"
 msgstr "ເປົ້າໝາຍ ກິດຈະກຳ ເຮັດແລ້ວ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_next_activity_id
-#: model:ir.model.fields,field_description:crm.field_crm_activity_report_subtype_id
-msgid "Activity"
-msgstr "ກິດຈະກຳ"
-
-#. module: crm
-#: code:addons/crm/wizard/crm_activity_log.py:80
-#, python-format
-msgid "Activity Done"
-msgstr "ກິດຈະກຳ ເຮັດແລ້ວ"
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Activities Todo"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_kanban_state
@@ -1053,9 +849,24 @@ msgid "Activity State"
 msgstr "ສະຖານະ ກິດຈະກຳ"
 
 #. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report_mail_activity_type_id
+msgid "Activity Type"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.crm_team_menu_config_activity_types
+msgid "Activity Types"
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Add Features"
 msgstr "ເພີ່ມ ຄຸນລັກສະນະ"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "Add a qualification step before creating an opportunity"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -1065,6 +876,7 @@ msgstr "ທີ່ຢູ່"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_id
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "Alias"
 msgstr "ຊື່ ຫຼື ທີ່ຢູ່ສຳຮອງ"
 
@@ -1072,11 +884,6 @@ msgstr "ຊື່ ຫຼື ທີ່ຢູ່ສຳຮອງ"
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_contact
 msgid "Alias Contact Security"
 msgstr "ຄວາມປອດໄພຂອງທີ່ຢູ່ຕິດຕໍ່ສຳຮອງ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_sale_config_settings_alias_domain
-msgid "Alias Domain"
-msgstr "ໂດເມນສຳຮອງ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_name
@@ -1105,7 +912,7 @@ msgstr ""
 "                        ການຂາຍຂອງທ່ານຢ່າງຕໍ່ເນື່ອງ."
 
 #. module: crm
-#: code:addons/crm/wizard/base_partner_merge.py:310
+#: code:addons/crm/wizard/base_partner_merge.py:273
 #, python-format
 msgid ""
 "All contacts must have the same email. Only the Administrator can merge "
@@ -1115,7 +922,7 @@ msgstr ""
 "ເອົາທີ່ຢູ່ຕິດຕໍ່ ໄປໃສ່ຫຼາຍ ອີ ເມວລ໌ ໄດ້."
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:864
+#: code:addons/crm/models/crm_lead.py:916
 #, python-format
 msgid ""
 "All email incoming to %s will automatically\n"
@@ -1125,6 +932,11 @@ msgstr ""
 "ອີເມລ໌ທັງໝົດ ທີ່ສົ່ງມາເຖິງ %s ຈະສ້າງ\n"
 "                    ໂອກາດໃໝ່ອັດຕະໂນມັດ. ປັບປຸງນາມບັດທຸລະກິດບັດຂອງທ່ານ, ປຶ້ມໂທລະສັບ, ສື່ສັງຄົມອອນລາຍ,..\n"
 "                    ສົ່ງອີເມວທັນທີແລະເບິ່ງມັນໄດ້ຢູ່ທີ່ນີ້."
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_team_opportunities_amount
+msgid "Amount of quotations to invoice"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -1224,11 +1036,6 @@ msgid "Automatic Merge Wizard"
 msgstr "ຕົວຊ່ອຍສ້າງລວມປະສານອັດຕະໂນມັດ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_sale_config_settings_generate_sales_team_alias
-msgid "Automatically generate an email alias at the sales team creation"
-msgstr "ສ້າງຊື່ແທນ ອີເມວລ໌ ໂດຍອັດຕະໂນມັດ ໃນການສ້າງທີມງານຂາຍ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_tree_view_oppor
 msgid "Avg. of Probability"
 msgstr "ຄ່າສະເລັ່ຍຂອງຄວາມໜ້າຈະເປັນໄດ້"
@@ -1259,6 +1066,12 @@ msgid "Better visibility on team activities"
 msgstr "ການແນມເຫັນທີ່ດີກວ່າໃນກິດຈະກຳຂອງທິມງານ"
 
 #. module: crm
+#: code:addons/crm/models/crm_lead.py:381
+#, python-format
+msgid "Boom! Team record for the past 30 days."
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Boost your online sales with sleek product pages."
 msgstr "ເພີ່ມຍອດຂາຍອອນໄລນ໌ຂອງທ່ານ ດ້ວຍໜ້າຜະລິດຕະພັນທີ່ເບົາບາງ."
@@ -1269,14 +1082,10 @@ msgid "Bounce"
 msgstr "ກ້າວກະໂດດ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
+#: model:ir.ui.menu,name:crm.crm_menu_root
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "CRM"
 msgstr "CRM"
-
-#. module: crm
-#: model:ir.model,name:crm.model_crm_activity
-msgid "CRM Activity"
-msgstr "ກີດຈະກຳຂອງ CRM"
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_activity_report
@@ -1289,21 +1098,8 @@ msgid "CRM Opportunity Analysis"
 msgstr "ການວິໄຈ ໂອກາດ ຂອງ CRM"
 
 #. module: crm
-#: model:crm.activity,name:crm.crm_activity_data_call
-#: model:mail.message.subtype,name:crm.crm_activity_data_call_mail_message_subtype
-msgid "Call"
-msgstr "ເອີ້ນ"
-
-#. module: crm
-#: model:crm.activity,name:crm.crm_activity_demo_call_demo
-#: model:mail.message.subtype,name:crm.crm_activity_demo_call_demo_mail_message_subtype
+#: model:mail.activity.type,name:crm.mail_activity_demo_call_demo
 msgid "Call for Demo"
-msgstr "ເອີ້ນເພື່ອສະແດງຕົວຢ່າງ"
-
-#. module: crm
-#: model:crm.activity,description:crm.crm_activity_demo_call_demo
-#: model:mail.message.subtype,description:crm.crm_activity_demo_call_demo_mail_message_subtype
-msgid "Call for a demo"
 msgstr "ເອີ້ນເພື່ອສະແດງຕົວຢ່າງ"
 
 #. module: crm
@@ -1315,18 +1111,17 @@ msgstr "ການໂຄສະນາສົ່ງເສີມ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
 #: model:ir.ui.view,arch_db:crm.crm_lead_lost_view_form
 #: model:ir.ui.view,arch_db:crm.merge_opportunity_form
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
 msgid "Cancel"
-msgstr "ຍົກເລີກ"
+msgstr "ຍົກເລີອກ"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_team_act_tree
-msgid "Cases by Sales Team"
-msgstr "ກໍລະນີຕໍ່ທິມງານຂາຍ"
+msgid "Cases by Sales Channel"
+msgstr ""
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lead_tag
@@ -1349,14 +1144,16 @@ msgid "Channel"
 msgstr "ຊ່ອງ"
 
 #. module: crm
-#: model:ir.model.fields,help:crm.field_crm_team_use_opportunities
-msgid "Check this box to manage opportunities in this sales team."
-msgstr "ໝາຍເອົາຫ້ອງນີ້ ເພື່ອບໍລິຫານໂອກາດ ໃນທິມງານຂາຍນີ້."
+#: model:ir.model.fields,help:crm.field_crm_team_use_leads
+msgid ""
+"Check this box to filter and qualify incoming requests as leads before "
+"converting them into opportunities and assigning them to a salesperson."
+msgstr ""
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
-msgid "Choose a date..."
-msgstr "ເລືອກວັນທີ..."
+#: model:ir.model.fields,help:crm.field_crm_team_use_opportunities
+msgid "Check this box to manage a presales process with opportunities."
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_city
@@ -1376,7 +1173,7 @@ msgstr "ຈັດໝວດແລະວິເຄາະປະເພດຍອດຂ
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:23
+#: code:addons/crm/static/src/js/tour.js:18
 #, python-format
 msgid ""
 "Click here to <b>create your first opportunity</b> and add it to your "
@@ -1387,21 +1184,16 @@ msgstr ""
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:54
+#: code:addons/crm/static/src/js/tour.js:53
 #, python-format
 msgid "Click on an opportunity to zoom to it."
 msgstr "ກົດໃສ່ ໂອກາດ ເພື່ອ ຂະຫຽາຍ ມັນ."
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:867
+#: code:addons/crm/models/crm_lead.py:908
 #, python-format
 msgid "Click to add a new opportunity"
 msgstr "ກົດ ເພື່ອເພີ່ມໂອກາດໃໝ່"
-
-#. module: crm
-#: model:ir.actions.act_window,help:crm.crm_activity_action
-msgid "Click to create a new activity."
-msgstr "ກົດ ເພື່ອສ້າງ ກິດຈະກຳໃໝ່."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.relate_partner_opportunities
@@ -1435,7 +1227,7 @@ msgstr "ວັນທີອັດ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:30
+#: code:addons/crm/static/src/js/web_planner_crm.js:29
 #, python-format
 msgid ""
 "Close opportunity if: \"pre-sales days * $500\" < \"expected revenue\" * "
@@ -1487,8 +1279,13 @@ msgid "Competition Matrix comparing prices"
 msgstr "ຕາ​ຕະ​ລາງການແຂ່ງຂັນປຽບທຽບລາຄາ"
 
 #. module: crm
+#: model:ir.ui.menu,name:crm.crm_menu_config
+msgid "Configuration"
+msgstr "ການກຳນົດຄ່າ"
+
+#. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:71
+#: code:addons/crm/static/src/js/tour.js:70
 #, python-format
 msgid "Configuration options are available in the Settings app."
 msgstr "ທາງເລືອກໃນການກຳນົດຄ່າມີຢູ່ໃນ ແອັບ ການຕັ້ງຄ່າ."
@@ -1519,6 +1316,11 @@ msgid "Consumers, Retailers"
 msgstr "ຜູ້ບໍລິໂພກ, ລູກຄ້າລາຍຍ່ອຍ"
 
 #. module: crm
+#: model:ir.model,name:crm.model_res_partner
+msgid "Contact"
+msgstr "ທີ່ຕິດຕໍ່່"
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "Contact Information"
 msgstr "ຂໍ້ມູນຂ່າວສານການຕິດຕໍ່ພົວພັນ"
@@ -1535,6 +1337,7 @@ msgstr "ຕິດຕໍ່ຫາພວກເຮົາ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_partner_ids
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "Contacts"
 msgstr "ຜູ້ຕິດຕໍ່"
 
@@ -1579,7 +1382,7 @@ msgid "Convert to opportunities"
 msgstr "ປ່ຽນແປງເປັນໂອກາດ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1038
+#: code:addons/crm/models/crm_lead.py:1080
 #: selection:crm.lead2opportunity.partner,name:0
 #: selection:crm.lead2opportunity.partner.mass,name:0
 #: model:ir.actions.act_window,name:crm.action_crm_lead2opportunity_partner
@@ -1610,6 +1413,11 @@ msgid "Create"
 msgstr "ສ້າງ"
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.view_create_opportunity_simplified
+msgid "Create & Edit"
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Create Customers"
 msgstr "ສ້າງລູກຄ້າ"
@@ -1631,14 +1439,14 @@ msgstr "ສ້າງຜູ້ຂາຍ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:31
+#: code:addons/crm/static/src/js/web_planner_crm.js:30
 #, python-format
 msgid "Create a Proof of Concept with consultants"
 msgstr "ສ້າງຫຼັກຖານຂອງແນວຄວາມຄິດ ກັບທີ່ປຶກສາ"
 
 #. module: crm
+#: selection:crm.lead.convert2task,action:0
 #: selection:crm.lead2opportunity.partner,action:0
-#: selection:crm.lead2projectissue.wizard,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Create a new customer"
 msgstr "ສ້າງລູກຄ້າໃໝ່"
@@ -1697,8 +1505,6 @@ msgstr "ສ້າງໂດຍ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_create_uid
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_create_uid
-#: model:ir.model.fields,field_description:crm.field_crm_activity_create_uid
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_create_uid
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_create_uid
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_create_uid
 #: model:ir.model.fields,field_description:crm.field_crm_lead_create_uid
@@ -1714,8 +1520,6 @@ msgstr "ສ້າງ ໂດຍ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_create_date
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_create_date
-#: model:ir.model.fields,field_description:crm.field_crm_activity_create_date
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_create_date
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_create_date
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_create_date
 #: model:ir.model.fields,field_description:crm.field_crm_lead_lost_create_date
@@ -1740,9 +1544,14 @@ msgid "Creation Month"
 msgstr "ເດືອນສ້າງ"
 
 #. module: crm
+#: model:ir.actions.server,name:crm.action_your_pipeline
+msgid "Crm: My Pipeline"
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_company_currency
 msgid "Currency"
-msgstr "ສະກຸນເງິນ"
+msgstr "ເງິນຕາ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
@@ -1755,10 +1564,10 @@ msgid "Current Line"
 msgstr "ລາຍການລາຍຮັບເປັນເງິນ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1069
+#: code:addons/crm/models/crm_lead.py:1135
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_partner_id
-#: model:ir.model.fields,field_description:crm.field_crm_lead2projectissue_wizard_partner_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead_convert2task_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_partner_binding_partner_id
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -1768,10 +1577,15 @@ msgstr "ລາຍການລາຍຮັບເປັນເງິນ"
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 #, python-format
 msgid "Customer"
-msgstr "ລູກຄ້າ"
+msgstr "ຄຸ່ຄ້າ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1075
+#: model:ir.model.fields,field_description:crm.field_res_config_settings_module_web_clearbit
+msgid "Customer Autocomplete"
+msgstr ""
+
+#. module: crm
+#: code:addons/crm/models/crm_lead.py:1126
 #, python-format
 msgid "Customer Email"
 msgstr "ອີເມວລ໌ລູກຄ້າ"
@@ -1782,6 +1596,7 @@ msgid "Customer Name"
 msgstr "ຊື່ລູກຄ້າ"
 
 #. module: crm
+#: model:ir.ui.menu,name:crm.res_partner_menu_crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
@@ -1792,6 +1607,14 @@ msgstr "ລູກຄ້າ"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Customizations"
 msgstr "ການດັດປັບ"
+
+#. module: crm
+#: code:addons/crm/models/crm_team.py:121
+#, python-format
+msgid ""
+"Dashboard graph content cannot be Pipeline if the sales channel doesn't use "
+"it. (Pipeline is unchecked.)"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_date
@@ -1819,12 +1642,7 @@ msgid "Deduplicate the other Contacts"
 msgstr "ສ້າງທີ່ຢູ່ຊໍ້າຊ້ອນອື່ນໆ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_default
-msgid "Default"
-msgstr "ຄ່າເລີ່ມຕົ້ນ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_sale_config_settings_alias_prefix
+#: model:ir.model.fields,field_description:crm.field_res_config_settings_crm_alias_prefix
 msgid "Default Alias Name for Leads"
 msgstr "ຊື່ສຳຮອງຂອງຍອດຂາຍ"
 
@@ -1850,7 +1668,7 @@ msgstr "ລຶບ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
 #, python-format
 msgid "Demonstration"
 msgstr "ການສາທິດ"
@@ -1859,10 +1677,8 @@ msgstr "ການສາທິດ"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Depending on how complex your business is, it may take between 6 months and 18 months for a new\n"
-"                                    sales team to efficiently forecasts future revenues."
+"                                    sales channel to efficiently forecasts future revenues."
 msgstr ""
-"ໂດຍຂຶ້ນກັບຄວາມຊັບຊ້ອນຂອງທຸລະກິດຂອງທ່ານ, ມັນອາດຈະໃຊ້ເວລາ 6 ເດືອນ ແລະ 18 ເດືອນ ສໍາລັບ\n"
-"                                    ທີມງານການຂາຍໃຫມ່ ໃນການຄາດຄະເນລາຍຮັບໃນຕໍ່ໜ້າ ຢ່າງມີປະສິດທິພາບ."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1873,20 +1689,6 @@ msgstr "ການປັບໃຊ້"
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
 msgid "Describe the lead..."
 msgstr "ອະທິບາຍຍອດຂາຍ ..."
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_description
-msgid "Description"
-msgstr "ຄຳອະທິບາຍ"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_description
-msgid ""
-"Description that will be added in the message posted for this subtype. If "
-"void, the name will be added instead."
-msgstr ""
-"ຄໍາອະທິບາຍທີ່ຈະໄດ້ຮັບການເພີ່ມໃນຂໍ້ຄວາມຈັດພີມມາສໍາລັບການປະເພດຍ່ອຍນີ້. "
-"ຖ້າເປັນໂມຄະ, ຊື່ຈະໄດ້ຮັບການເພີ່ເຂົ້າໄປມແທນ."
 
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor5
@@ -1913,8 +1715,6 @@ msgstr "ປະລະ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_display_name
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_display_name
-#: model:ir.model.fields,field_description:crm.field_crm_activity_display_name
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_display_name
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_display_name
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_display_name
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_display_name
@@ -1935,9 +1735,9 @@ msgid "Display your brochures, product sheets, showcases etc."
 msgstr "ສະແດງແຜ່ນພັບ, ໃບລາຍການຜະລິດຕະພັນ, ຜົນງານອື່ນໆ ຂອງທ່ານ."
 
 #. module: crm
+#: selection:crm.lead.convert2task,action:0
 #: selection:crm.lead2opportunity.partner,action:0
 #: selection:crm.lead2opportunity.partner.mass,action:0
-#: selection:crm.lead2projectissue.wizard,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Do not link to a customer"
 msgstr "ບໍ່ໃຫ້ເຊື່ອມໂຍງໄປຫາລູກຄ້າ"
@@ -1963,16 +1763,6 @@ msgid "Download the"
 msgstr "ດາວໂຫຼດເອົາ"
 
 #. module: crm
-#: model:ir.filters,name:crm.filter_draft_lead
-msgid "Draft Leads"
-msgstr "ຍອດຂາຍຊົ່ວຄາວ"
-
-#. module: crm
-#: selection:sale.config.settings,group_use_lead:0
-msgid "Each mail sent to the alias creates a new opportunity"
-msgstr "ແຕ່ລະ ອີເມວລ໌ ທີ່ສົ່ງໄປຍັງ ຊື່ລູກຄ້າ ໄດ້ສ້າງໂອກາດໃໝ່ຂຶ້ນມາ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Each product has only one price.\n"
@@ -1982,30 +1772,15 @@ msgstr ""
 "                                        <br/>"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
-msgid ""
-"Each sales team has an email alias that\n"
-"                                    could be setup on the sales team form. You\n"
-"                                    can setup a generic email alias to create\n"
-"                                    incoming leads."
-msgstr ""
-"ແຕ່ລະທິມງານມີຊື່ ອີເມວລ໌ ສຳຮອງ ທີ່\n"
-"                                    ສາມາດຕິດຕັ້ງໃນແບບຟອມທິມງານຂາຍ. ທ່ານ\n"
-"                                    ສາມາດຕິດຕັ້ງ ເປັນຊື່ ອີເມວລ໌ທົ່ວໄປ ເພື່ອສ້າງ ຍອດຂາຍ\n"
-"                                   ທີ່ຈະມານີ້."
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
 msgid "Edit"
 msgstr "ແກ້ໄຂ"
 
 #. module: crm
-#: model:crm.activity,name:crm.crm_activity_data_email
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_email
 #: model:ir.model.fields,field_description:crm.field_crm_lead_email_from
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
-#: model:mail.message.subtype,name:crm.crm_activity_data_email_mail_message_subtype
 msgid "Email"
 msgstr "ອີເມວລ໌"
 
@@ -2018,6 +1793,15 @@ msgstr "ຊື່ສຳຮອງແີເມວລ໌"
 #: model:ir.model.fields,help:crm.field_crm_lead_email_from
 msgid "Email address of the contact"
 msgstr "ທີ່ຢູ່ ອີເມວລ໌ ຂອງ ຜູ້ຕິດຕໍ່"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid ""
+"Emails received to that address generate new leads not assigned to any sales"
+" channel yet. This can be made when converting them into opportunities. "
+"Incoming emails can be automatically assigned to specific sales channels. To"
+" do so, set an email alias on the sales channel."
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2099,7 +1883,6 @@ msgid "Existing Tools"
 msgstr "ເຄື່ອງມີທີ່ມີຢູ່"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_date_deadline
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_deadline
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_date_deadline
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
@@ -2112,15 +1895,39 @@ msgid "Expected Closing Date"
 msgstr "ວັນທີອັດທີ່ຄາດຫວັງໄວ້"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_planned_revenue
+#: selection:crm.team,dashboard_graph_group_pipeline:0
+msgid "Expected Closing Day"
+msgstr ""
+
+#. module: crm
+#: selection:crm.team,dashboard_graph_group_pipeline:0
+msgid "Expected Closing Month"
+msgstr ""
+
+#. module: crm
+#: selection:crm.team,dashboard_graph_group_pipeline:0
+msgid "Expected Closing Week"
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_planned_revenue
 msgid "Expected Revenue"
 msgstr "ລາຍຮັບທີ່ຄາດຫວັງໄວ້"
 
 #. module: crm
+#: model:ir.filters,name:crm.filter_opportunity_expected_revenue
+msgid "Expected Revenue by Team"
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_tree_view_oppor
 msgid "Expected Revenues"
 msgstr "ລາຍຮັບທີ່ຄາດຫວັງໄວ້"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_team_dashboard_graph_period_pipeline
+msgid "Expected to Close"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
@@ -2147,24 +1954,8 @@ msgid "Extra Info"
 msgstr "ຂໍ້ມູນເພີ່ມ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_lead_fax
-msgid "Fax"
-msgstr "ໂທລະສານ"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_relation_field
-msgid ""
-"Field used to link the related model to the subtype model when using "
-"automatic subscription on a related document. The field is used to compute "
-"getattr(related_document.relation_field)."
-msgstr ""
-"ຊ່ອງຂໍ້ມູນທີ່ນໍາໃຊ້ ເຊື່ອມຕໍ່ ແບບທີ່ກ່ຽວຂ້ອງ ກັບແບບຍ່ອຍ ໃນເວລານໍາໃຊ້ "
-"ການສະໝັກ ຈອງເອກະສານທີ່ກ່ຽວຂ້ອງ ອັດຕະໂນມັດ. ຊ່ອງຂໍ້ມູນນີ້ໄດ້ຖືກນໍາໃຊ້ເພື່ອ "
-"ຄໍານວນ getattr(related_document.relation_field)."
-
-#. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:32
+#: code:addons/crm/static/src/js/web_planner_crm.js:31
 #, python-format
 msgid "Final Proposal sent"
 msgstr "ຂໍ້ສະເໜີສຸດທ້າຍໄດ້ສົ່ງໄປແລ້ວ"
@@ -2180,15 +1971,8 @@ msgid "Folded in Pipeline"
 msgstr "ໂຟນເດຣ໌ ໃນຊ່ອງທາງສົ່ງ"
 
 #. module: crm
-#: model:crm.activity,name:crm.crm_activity_demo_followup_quote
-#: model:mail.message.subtype,name:crm.crm_activity_demo_followup_quote_mail_message_subtype
+#: model:mail.activity.type,name:crm.mail_activity_demo_followup_quote
 msgid "Follow-up Quote"
-msgstr "ການຕິດຕາມສະເໜີລາຄາ"
-
-#. module: crm
-#: model:crm.activity,description:crm.crm_activity_demo_followup_quote
-#: model:mail.message.subtype,description:crm.crm_activity_demo_followup_quote_mail_message_subtype
-msgid "Follow-up quote"
 msgstr "ການຕິດຕາມສະເໜີລາຄາ"
 
 #. module: crm
@@ -2201,7 +1985,7 @@ msgstr ""
 "ບັນຫາທີ່ຕ້ອງແກ້ໄຂ, ລາຍຮັບທີ່ຄາດຫວັງໄວ້, ຂະບວນການຊື້, ຯລຯ."
 
 #. module: crm
-#: code:addons/crm/wizard/base_partner_merge.py:299
+#: code:addons/crm/wizard/base_partner_merge.py:263
 #, python-format
 msgid ""
 "For safety reasons, you cannot merge more than 3 contacts together. You can "
@@ -2225,14 +2009,34 @@ msgid "Force assignation"
 msgstr "ການບັງຄັບມອບໝາຍ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:538
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "Format phone numbers based on national conventions"
+msgstr ""
+
+#. module: crm
+#: code:addons/crm/models/crm_lead.py:588
 #, python-format
 msgid "From %s : %s"
 msgstr "ຈາກ %s : %s"
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Future Activities"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+msgid "Future Activities (7 days)"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+msgid "Future Activities (All)"
+msgstr ""
+
+#. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:31
+#: code:addons/crm/static/src/js/web_planner_crm.js:30
 #, python-format
 msgid "GAP analysis with customer"
 msgstr "ການວິເຄາະ GAP ກັບລູກຄ້າ"
@@ -2251,6 +2055,13 @@ msgid "Gamification"
 msgstr "ການເກມຫຼິ້ນ"
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid ""
+"Generate unassigned leads from incoming emails. Leads coming from\n"
+"                                    that email will be assigned manually."
+msgstr ""
+
+#. module: crm
 #: model:ir.model,name:crm.model_crm_lead_lost
 msgid "Get Lost Reason"
 msgstr "ເຫດຜົນທີ່ເຮັດໃຫ້ຫຼົງທາງ"
@@ -2261,8 +2072,14 @@ msgid "Global CC"
 msgstr "ການສົ່ງຕໍ່ໃຫ້ທັງໝົດ"
 
 #. module: crm
+#: code:addons/crm/models/crm_lead.py:379
+#, python-format
+msgid "Go, go, go! Congrats for your first deal."
+msgstr ""
+
+#. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:80
+#: code:addons/crm/static/src/js/tour.js:79
 #, python-format
 msgid ""
 "Good job! Your completed the tour of the CRM. You can continue with the "
@@ -2287,6 +2104,11 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Group By"
 msgstr "ຈັດກຸ່ມ ໂດຍ"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_team_dashboard_graph_group_pipeline
+msgid "Group by"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_number_group
@@ -2326,11 +2148,9 @@ msgstr "ຂໍໃຫ້ມີຄວາມສຸກໃນການປັບໃຊ
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"Here are a few examples of documents you should provide to your sales team "
-"based on the sales stage:"
+"Here are a few examples of documents you should provide to your sales "
+"channel based on the sales stage:"
 msgstr ""
-"ນີ້ຄືຕົວຢ່າງບາງສ່ວນຂອງເອກະສານ ທີ່ທ່ານຄວນໃຫ້ກັບທີມງານການຂາຍຂອງທ່ານ ໂດຍອີງໃສ່ "
-"ຂັ້ນຕອນ ຂອງ ການຂາຍ:"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2347,25 +2167,18 @@ msgstr ""
 "                   ຫາກຕ້ອງການກິດຈະກໍາຕໍ່ໄປ, ໃຫ້ໄປຍັງ ໂອກາດ ແລະ ເພີ່ມກິດຈະກຳ ເຂົ້າໄປ. ຫຼັງຈາກນັ້ນ ມັນຈະປາກົດຢູ່ໃນບັນຊີລາຍການນີ້."
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_hidden
-msgid "Hidden"
-msgstr "ເຊື່ອງຊ້ອນຢູ່"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_hidden
-msgid "Hide the subtype in the follower options"
-msgstr "ເຊື່ອງຊ້ອນ ປະເພດຍ່ອຍໄວ້ ໃນທາງເລືອກຜູ້ຕິດຕາມ"
-
-#. module: crm
 #: selection:crm.lead,priority:0 selection:crm.opportunity.report,priority:0
 msgid "High"
 msgstr "ສູງ"
 
 #. module: crm
+#: model:ir.model.fields,help:crm.field_crm_team_dashboard_graph_group_pipeline
+msgid "How this channel's dashboard graph will group the results."
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_id
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_id
-#: model:ir.model.fields,field_description:crm.field_crm_activity_id
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_id
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_id
@@ -2416,11 +2229,8 @@ msgstr "ຖ້າຫາກບໍ່ໝາຍກາເອົາ, ນີ້ຈະ�
 msgid ""
 "If you followed the preceding steps, you already setup\n"
 "                        the foundations to a strong process leading to\n"
-"                        continuous improvements of your sales teams."
+"                        continuous improvements of your sales channels."
 msgstr ""
-"ຖ້າຫາກທ່ານປະຕິບັດຕາມຂັ້ນຕອນກ່ອນໜ້ານັ້ນ,ກໍເປັນອັນວ່າທ່ານໄດ້ຕິດຕັ້ງ\n"
-"                       ຮາກຖານ ໃຫ້ຂະບວນການທີ່ເຂັ້ມແຂງ ທີ່ນໍາໄປສູ່\n"
-"                        ການປັບປຸງທິມງານຂາຍຂອງທ່ານຢ່າງຕໍ່ເນື່ອງ."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2482,26 +2292,16 @@ msgstr "ຂໍ້ມູນຂ່າວສານ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
 #, python-format
 msgid "Initial Contact"
 msgstr "ຜູ້ຕິດຕໍ່ທຳອິດ"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_sale_config_settings_module_crm_voip
-msgid "Integration with Asterisk"
-msgstr "ການບູລະນາການເຂົ້າກັບເຄື່ອງໝາຍດາວ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "Internal Notes"
 msgstr "ບັນທຶກພາຍໃນ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_internal
-msgid "Internal Only"
-msgstr "ສຳລັບພາຍໃນເທົ່ານັ້ນ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2536,8 +2336,6 @@ msgstr "ດຳເນີນການລ້າສຸດ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard___last_update
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line___last_update
-#: model:ir.model.fields,field_description:crm.field_crm_activity___last_update
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log___last_update
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report___last_update
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner___last_update
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass___last_update
@@ -2553,6 +2351,12 @@ msgid "Last Modified on"
 msgstr "ແກ້ໄຂລ້າສຸດ ເມື່ອ"
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+msgid "Last Month"
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_last_stage_update
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_date_last_stage_update
 msgid "Last Stage Update"
@@ -2561,8 +2365,6 @@ msgstr "ປັບປຸງຂັ້ນຕອນລ້າສຸດ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_write_uid
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_write_uid
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_write_uid
-#: model:ir.model.fields,field_description:crm.field_crm_activity_write_uid
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_write_uid
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_write_uid
 #: model:ir.model.fields,field_description:crm.field_crm_lead_lost_write_uid
@@ -2578,8 +2380,6 @@ msgstr "ປັບປຸງລ້າສຸດ ໂດຍ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_write_date
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_write_date
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_write_date
-#: model:ir.model.fields,field_description:crm.field_crm_activity_write_date
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_write_date
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_write_date
 #: model:ir.model.fields,field_description:crm.field_crm_lead_lost_write_date
@@ -2592,10 +2392,15 @@ msgid "Last Updated on"
 msgstr "ປັບປຸງລ້າສຸດ ເມື່ອ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:837
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Late Activities"
+msgstr ""
+
+#. module: crm
+#: code:addons/crm/models/crm_lead.py:882
 #: selection:crm.activity.report,lead_type:0 selection:crm.lead,type:0
 #: selection:crm.opportunity.report,type:0
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_lead_id
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_lead_id
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
 #: model:ir.ui.view,arch_db:crm.crm_case_tree_view_leads
@@ -2647,7 +2452,7 @@ msgstr "ຍອດຂາຍ/ໂອກາດຈາກການສົ່ງເມ�
 #: model:ir.actions.act_window,name:crm.crm_case_form_view_salesteams_lead
 #: model:ir.actions.act_window,name:crm.crm_lead_all_leads
 #: model:ir.model.fields,field_description:crm.field_crm_team_use_leads
-#: model:ir.model.fields,field_description:crm.field_sale_config_settings_group_use_lead
+#: model:ir.model.fields,field_description:crm.field_res_config_settings_group_use_lead
 #: model:ir.ui.menu,name:crm.crm_opportunity_report_menu_lead
 #: model:ir.ui.menu,name:crm.menu_crm_leads
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
@@ -2660,12 +2465,6 @@ msgstr "ຍອດຂາຍ"
 #. module: crm
 #: model:ir.ui.menu,name:crm.menu_crm_config_lead
 msgid "Leads & Opportunities"
-msgstr "ຍອດຂາຍ/ໂອກາດ"
-
-#. module: crm
-#: code:addons/crm/models/crm_lead.py:59
-#, python-format
-msgid "Leads / Opportunities"
 msgstr "ຍອດຂາຍ/ໂອກາດ"
 
 #. module: crm
@@ -2695,11 +2494,6 @@ msgid "Leads By Salespersons"
 msgstr "ຍອດຂາຍຕໍ່ແຕ່ລະພະນັກງານຂາຍ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
-msgid "Leads Email Alias"
-msgstr "ຍອດ ອີເມວລ໌ ນາມແຝງ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
 msgid "Leads Form"
 msgstr "ຮູບແບບຍອດເປົ້າ"
@@ -2713,11 +2507,6 @@ msgstr "ຍອດການຜະລິດ"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Leads by Source"
 msgstr "ຍອດຂາຍ ຕາມແຫຼ່ງສິນຄ້າ"
-
-#. module: crm
-#: model:ir.filters,name:crm.filter_usa_lead
-msgid "Leads from USA"
-msgstr "ຍອດຂາຍຈາກອະເມຣິກາ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
@@ -2751,13 +2540,6 @@ msgid "Leads/Opportunities"
 msgstr "ເປົ້າໝາຍຍອດຂາຍ/ໂອກາດໃນການຂາຍ"
 
 #. module: crm
-#. openerp-web
-#: code:addons/crm/static/src/js/tour.js:18
-#, python-format
-msgid "Let's have a look at your opportunities pipeline."
-msgstr "ລອງມາເບິ່ງຊ່ອງທາງໂອກາດຂອງທ່ານເບິ່ງ."
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Licences"
 msgstr "ໃບອະນຸຍາດ"
@@ -2768,8 +2550,8 @@ msgid "Lines"
 msgstr "ລາຍການ"
 
 #. module: crm
+#: selection:crm.lead.convert2task,action:0
 #: selection:crm.lead2opportunity.partner,action:0
-#: selection:crm.lead2projectissue.wizard,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Link to an existing customer"
 msgstr "ເຊື່ອມໂຍງໄປຫາລູກຄ້າທີ່ມີແລ້ວ"
@@ -2787,36 +2569,14 @@ msgid "List of possible pain points by segment/profile"
 msgstr "ບັນຊີລາຍການຈຸດຂາບທີ່ເປັນໄປໄດ້ ຕາມສ່ວນ/ລາຍລະອຽດ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
-msgid "Log & Schedule Next"
-msgstr "ບັນທຶກແລະຈັດຕາຕະລາງຕໍ່ໄປ"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
-msgid "Log Activity"
-msgstr "ບັນທຶກເອົາການເຄື່ອນໄຫວ"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
-msgid "Log Only"
-msgstr "ບັນທຶກເທົ່ານັ້ນ"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
-msgid "Log a note..."
-msgstr "ເຂົ້າສູ່ ບັນທຶກຫຍໍ້..."
-
-#. module: crm
-#: model:ir.actions.act_window,name:crm.crm_activity_log_action
-#: model:ir.model,name:crm.model_crm_activity_log
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
-msgid "Log an Activity"
-msgstr "ເຂົ້າສູ່ ການເຄື່ອນໄຫວ"
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "Look up company information (name, logo, etc.)"
+msgstr ""
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/models/crm_lead.py:1044
-#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#: code:addons/crm/models/crm_lead.py:1086
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
@@ -2847,10 +2607,29 @@ msgid "Low"
 msgstr "ຕໍ່າ"
 
 #. module: crm
-#: model:crm.activity,name:crm.crm_activity_demo_make_quote
-#: model:mail.message.subtype,name:crm.crm_activity_demo_make_quote_mail_message_subtype
+#: model:mail.activity.type,name:crm.mail_activity_demo_make_quote
 msgid "Make Quote"
 msgstr "ເຮັດໃບສະເໜີລາຄາ"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_res_config_settings_generate_lead_from_alias
+msgid "Manual Assignation of Emails"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "Manually Assignation of Incoming Emails"
+msgstr ""
+
+#. module: crm
+#: model:ir.actions.server,name:crm.action_mark_activities_done
+msgid "Mark All Activities as Done"
+msgstr ""
+
+#. module: crm
+#: model:ir.actions.server,name:crm.action_mark_late_activities_done
+msgid "Mark Late Activities as Done"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
@@ -2890,14 +2669,14 @@ msgid "Medium"
 msgstr "ປານກາງ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:883
+#: code:addons/crm/models/crm_lead.py:924
 #, python-format
 msgid "Meeting scheduled at '%s'<br> Subject: %s <br> Duration: %s hour(s)"
 msgstr "ຕາຕະລາງປະຊຸມເວລາ '%s'<br> ຫົວຂໍ້: %s <br> ກຳນົດເວລາ: %s ຊົ່ວໂມງ(ຫຼາຍ)"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:25
+#: code:addons/crm/static/src/js/web_planner_crm.js:24
 #, python-format
 msgid "Meeting with a demo. Set Fields: expected revenue, closing date"
 msgstr ""
@@ -2975,67 +2754,34 @@ msgid "Merge with existing opportunities"
 msgstr "ຮວມເຂົ້າກັບໂອກາດທີ່ມີຢູ່ແລ້ວ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:486
+#: code:addons/crm/models/crm_lead.py:528
 #, python-format
 msgid "Merged lead"
 msgstr "ເປົ້າຂາຍທີ່ຮວມກັນແລ້ວ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:520
+#: code:addons/crm/models/crm_lead.py:559
 #, python-format
 msgid "Merged leads"
 msgstr "ເປົ້າຂາຍທີ່ຮວມກັນແລ້ວ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:520
+#: code:addons/crm/models/crm_lead.py:559
 #, python-format
 msgid "Merged opportunities"
 msgstr "ໂອກາດທີ່ຮວມກັນແລ້ວ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:486
+#: code:addons/crm/models/crm_lead.py:528
 #, python-format
 msgid "Merged opportunity"
 msgstr "ໂອກາດທີ່ຮວມກັນແລ້ວ"
 
 #. module: crm
-#: code:addons/crm/wizard/base_partner_merge.py:331
+#: code:addons/crm/wizard/base_partner_merge.py:295
 #, python-format
 msgid "Merged with the following partners:"
 msgstr "ຮວມກັນກັບຄູ່ຄ້າດັ່ງຕໍ່ໄປນີ້:"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_subtype_id
-msgid "Message Subtype"
-msgstr "ປະເພດຂໍ້ຄວາມຍ່ອຍ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_name
-msgid "Message Type"
-msgstr "ປະເພດຂໍ້ຄວາມ"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_name
-msgid ""
-"Message subtype gives a more precise type on the message, especially for "
-"system notifications. For example, it can be a notification related to a new"
-" record (New), or to a stage change in a process (Stage change). Message "
-"subtypes allow to precisely tune the notifications the user want to receive "
-"on its wall."
-msgstr ""
-"ປະເພດຍ່ອຍຂອງຂໍ້ຄວາມເຮັດໃຫ້ປະເພດຂໍ້ຄວາມຊັດເຈນຍິ່ງຂຶ້ນ, ໂດຍສະເພາະສໍາລັບ ລະບົບ "
-"ການແຈ້ງເຕືອນ. ເຊັ່ນຕົວຢ່າງ, ມັນອາດເປັນການແຈ້ງເຕືອນ ກ່ຽວກັບແຖວຂໍ້ມູນໃຫມ່ "
-"(New), ຫຼື ການປ່ຽນຂັ້ນຕອນໃນຂະບວນການ (ການປ່ຽນແປງຂັ້ນຕອນ). ປະເພດ ຂໍ້ຄວາມຍ່ອຍ "
-"ອະນຸຍາດໃຫ້ ປັບແຕ່ງການແຈ້ງເຕືອນ ທີ່ຜູ້ໃຊ້ຕ້ອງການ ທີ່ຈະໄດ້ຮັບໃນໜ້າຈໍຂອງເຂົາ."
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_internal
-msgid ""
-"Messages with internal subtypes will be visible only by employees, aka "
-"members of base_user group"
-msgstr ""
-"ຂໍ້ຄວາມທີ່ມີ ຂໍ້ຄວາມຍ່ອຍຢູ່ພາຍໃນ ຈະສາມາດເບິ່ງເຫັນໄດ້ພຽງແຕ່ພະນັກງານ, aka "
-"ສະມາຊິກຂອງກຸ່ມ ພະນັກງານຕົ້ນຕໍ ເທົ່ານັ້ນ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_min_id
@@ -3053,31 +2799,20 @@ msgid "Mobile"
 msgstr "ມືຖື"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_res_model
-msgid "Model"
-msgstr "ແບບ"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_res_model
-msgid ""
-"Model the subtype applies to. If False, this subtype applies to all models."
-msgstr ""
-"ສ້າງແບບຊະນິດຍ່ອຍເພື່ອໃຊ້ໄດ້. ຖ້າຫາກຜິດ, ປະເພດຍ່ອຍນີ້ ຈະໃຊ້ໄດ້ກັບແບບທັງໝົດ."
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
 msgid "Month"
 msgstr "ເດືອນ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
-msgid "More Info"
-msgstr "ຂໍ້ມູນເພີ່ມຕື່ມ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Motivation letter from the management"
 msgstr "ຈົດໝາຍຈູງໃຈຈາກຝ່າຍບໍລິຫານ"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+msgid "My Activities"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
@@ -3086,13 +2821,11 @@ msgstr "ເປົ້າໝາຍການຂາຍ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
-#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "My Opportunities"
 msgstr "ໂອກາດການຂາຍ"
 
 #. module: crm
-#: model:ir.actions.server,name:crm.action_your_pipeline
-#: model:ir.ui.menu,name:crm.menu_crm_opportunities
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "My Pipeline"
 msgstr "ຊ່ອງທາງການຂາຍ"
 
@@ -3105,24 +2838,24 @@ msgstr "ຊື່"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
 #, python-format
 msgid "Needs assessment"
 msgstr "ຕ້ອງການການປະເມີນ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:16
-#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
 #, python-format
 msgid "Negotiation"
 msgstr "ການເຈລະຈາຕໍ່ລອງ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:23
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
-#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
 #: model:crm.stage,name:crm.stage_lead1
 #, python-format
 msgid "New"
@@ -3135,43 +2868,15 @@ msgstr "ສ້າງໂອກາດໃໝ່"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:17
+#: code:addons/crm/static/src/js/web_planner_crm.js:16
 #, python-format
 msgid "New propspect assigned to the right salesperson"
 msgstr "ຄວາມຄາດຫວັງໃໝ່ທີ່ມອບໝາຍໃຫ້ພະນັກງານຂາຍທີ່ຖືກຕ້ອງ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_lead_date_action_next
-msgid "Next Action"
-msgstr "ການດຳເນີນການຕໍ່ໄປ"
-
-#. module: crm
 #: model:ir.actions.act_window,name:crm.crm_lead_action_activities
-#: model:ir.ui.menu,name:crm.crm_lead_menu_activities
-msgid "Next Activities"
-msgstr "ກິດຈະກຳຕໍ່ໄປ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_lead_next_activity_id
 #: model:ir.ui.view,arch_db:crm.crm_lead_view_tree_activity
-msgid "Next Activity"
-msgstr "ກິດຈະກຳຕໍ່ໄປ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_date_action
-#: model:ir.model.fields,field_description:crm.field_crm_lead_date_action
-msgid "Next Activity Date"
-msgstr "ວັນທີສຳລັບກິດຈະກຳຕໍ່ໄປ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_lead_title_action
-msgid "Next Activity Summary"
-msgstr "ສັງລວມກິດຈະກຳຕໍ່ໄປ"
-
-#. module: crm
-#: code:addons/crm/wizard/crm_activity_log.py:61
-#, python-format
-msgid "Next activity"
+msgid "Next Activities"
 msgstr "ກິດຈະກຳຕໍ່ໄປ"
 
 #. module: crm
@@ -3185,15 +2890,10 @@ msgid "Next activity late"
 msgstr "ກິດຈະກຳຕໍ່ໄປທີ່ຊ້າ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1095
+#: code:addons/crm/models/crm_lead.py:1146
 #, python-format
 msgid "No Subject"
 msgstr "ບໍ່ມີຫົວຂໍ້"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
-msgid "No activity"
-msgstr "ບໍ່ມີກິດຈະກຳ"
 
 #. module: crm
 #: selection:crm.lead,kanban_state:0
@@ -3215,11 +2915,6 @@ msgstr "ທຳມະດາ"
 #: model:crm.lost.reason,name:crm.lost_reason_3
 msgid "Not enough stock"
 msgstr "ເຄື່ອງໃນສາງບໍ່ພໍ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_note
-msgid "Note"
-msgstr "ໝາຍເຫດ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3247,28 +2942,14 @@ msgid "Number of Rooms"
 msgstr "ຈຳນວນຫ້ອງ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_days
-msgid "Number of days"
-msgstr "ຈຳນວນມື້"
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_days
-msgid ""
-"Number of days before executing the action, allowing you to plan the date of"
-" the action."
+#: model:ir.model.fields,field_description:crm.field_crm_team_opportunities_count
+msgid "Number of open opportunities"
 msgstr ""
-"ຈຳນວນມື້ກ່ອນທີ່ຈະສຳເລັດການດຳເນີນການ, ອຳນວຍໃຫ້ທ່ານຂຶ້ນແຜນວັນທີດຳເນີນການໄດ້."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Odoo Default"
 msgstr "ຄ່າເລີ່ມຕົ້ນຂອງ Odoo"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_sale_config_settings_module_website_sign
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
-msgid "Odoo Sign"
-msgstr "ເຊັນ"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_case_form_view_salesteams_opportunity
@@ -3289,11 +2970,6 @@ msgid ""
 msgstr ""
 "Odoo ເປັນ ຊອຟແວຣ໌ ດຽວ ໃນໂລກ ທີ່ມີການປະສົມປະສານຢ່າງເຕັມສ່ວນ ຂອງ ຊ່ອງການຕະຫຼາດ"
 " ຂອງທ່ານ: ຂໍ້ມູນລວງເລິກທາງການຕະຫຼາດ, ຈຸດຂາຍ, ອີຄອມເມີຊ."
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_sale_config_settings_generate_sales_team_alias
-msgid "Odoo will generate an email alias based on the sales team name"
-msgstr "Odoo ຈະສ້າງ ອີເມວລ໌ ແທນຂຶ້ນ ຢູ່ກັບ ຊື່ທີມຂາຍ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3335,7 +3011,7 @@ msgid "Online users: we do it for you!"
 msgstr "ຜູ້ໃຊ້ງານອອນລາຍຕ໌: ພວກເຮົາຈະເຮັດໃຫ້ທ່ານເອງ!"
 
 #. module: crm
-#: code:addons/crm/wizard/base_partner_merge.py:323
+#: code:addons/crm/wizard/base_partner_merge.py:287
 #, python-format
 msgid ""
 "Only the destination contact may be linked to existing Journal Items. Please"
@@ -3348,12 +3024,21 @@ msgstr ""
 "ເຊື່ອມໂຍງເຂົ້າກັບລາຍການບັນທຶກປະຈຳວັນ ທີ່ມີຢູ່."
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
+msgid "Open Opportunities"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
+msgid "Open Opportunity"
+msgstr ""
+
+#. module: crm
 #: model:ir.actions.act_window,name:crm.crm_case_form_view_salesteams_opportunity
 #: model:ir.actions.act_window,name:crm.crm_lead_opportunities
 #: model:ir.actions.act_window,name:crm.relate_partner_opportunities
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_opportunity_ids
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_opportunity_ids
-#: model:ir.model.fields,field_description:crm.field_crm_team_use_opportunities
 #: model:ir.model.fields,field_description:crm.field_res_partner_opportunity_ids
 #: model:ir.model.fields,field_description:crm.field_res_users_opportunity_ids
 #: model:ir.ui.menu,name:crm.menu_crm_config_opportunity
@@ -3381,12 +3066,8 @@ msgid ""
 "with information such as the expected revenue, planned cost, missed "
 "deadlines or the number of interactions per opportunity. This report is "
 "mainly used by the sales manager in order to do the periodic review with the"
-" teams of the sales pipeline."
+" channels of the sales pipeline."
 msgstr ""
-"ການວິເຄາະໂອກາດຊ່ວຍໃຫ້ທ່ານເຂົ້າເຖິງໂອກາດຂອງທ່ານກັບຂໍ້ມູນຂ່າວສານເຊັ່ນ "
-"ລາຍຮັບທີ່ຄາດຄະເນ, ຄ່າໃຊ້ຈ່າຍທີ່ວາງແຜນໄວ້, ກໍານົດເວລາທີ່ພາດ ຫຼື "
-"ຈໍານວນປະຕິສໍາພັນຕໍ່ໂອກາດ. ລາຍງານນີ້ ແມ່ນຜູ້ຈັດການຝ່າຍຂາຍ ເປັນຜູ້ນໍາໃຊ້ຕົ້ນຕໍ"
-" ເພື່ອກວດສອບຄືນຊ່ອງທາງການຂາຍເປັນໄລຍະຮ່ວມກັບທີມງານຂາຍ."
 
 #. module: crm
 #: model:ir.filters,name:crm.filter_opportunity_opportunities_cohort
@@ -3409,7 +3090,8 @@ msgid "Opportunities that are assigned to me"
 msgstr "ໂອກາດທີ່ໄດ້ມອບໝາຍໃຫ້ຂ້ອຍ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:816
+#: code:addons/crm/models/crm_lead.py:427
+#: code:addons/crm/models/crm_lead.py:857
 #: selection:crm.activity.report,lead_type:0 selection:crm.lead,type:0
 #: selection:crm.opportunity.report,type:0
 #: model:ir.model.fields,field_description:crm.field_calendar_event_opportunity_id
@@ -3489,11 +3171,6 @@ msgstr "ອື່ນໆ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
-msgid "Overdue Activities"
-msgstr "ກິດຈະກຳກາຍກຳນົດ"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Overdue Opportunities"
 msgstr "ໂອກາດກາຍກຳນົດ"
 
@@ -3509,22 +3186,17 @@ msgstr "ເຈົ້າຂອງ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
 #, python-format
 msgid "POC Sold"
 msgstr "ການຢືນຢັນການສັ່ງຊື້ທີ່ຂາຍແລ້ວ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:32
+#: code:addons/crm/static/src/js/web_planner_crm.js:31
 #, python-format
 msgid "POC demonstration to the customer"
 msgstr "ສາທິດການຢືນຢັນການສັ່ງຊື້ໃຫ້ກັບລູກຄ້າ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_parent_id
-msgid "Parent"
-msgstr "ບໍລິສັດແມ່"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_parent_id
@@ -3553,22 +3225,10 @@ msgstr ""
 "(parent_model) ແລະ ໜ້າວຽກ (model))"
 
 #. module: crm
-#: model:ir.model.fields,help:crm.field_crm_activity_parent_id
-msgid ""
-"Parent subtype, used for automatic subscription. This field is not correctly"
-" named. For example on a project, the parent_id of project subtypes refers "
-"to task-related subtypes."
-msgstr ""
-"ປະເພດຍ່ອຍຂອງເລກກຳກັບຫຼັກ, ໄດ້ນໍາໃຊ້ສໍາລັບການສະໝັກອັດຕະໂນມັດ. "
-"ຊ່ອງຂໍ້ມູນນີ້ບໍ່ມີຊື່ທີ່ຖືກຕ້ອງ. ເຊັ່ນຕົວຢ່າງ ໃນໂຄງການ, ເລກກຳກັບຫຼັກ "
-"ຂອງປະເພດໂຄງການຍ່ອຍ ໝາຍເຖິງໜ້າວຽກທີ່ກ່ຽວຂ້ອງກັບມັນ."
-
-#. module: crm
-#: model:ir.model,name:crm.model_res_partner
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_partner_id
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 msgid "Partner"
-msgstr "ຫຸ້ນສ່ວນ"
+msgstr "ຄຸ່ຄ້າ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_partner_address_email
@@ -3596,8 +3256,13 @@ msgid "Phone"
 msgstr "ໂທລະສັຍ"
 
 #. module: crm
+#: model:ir.model.fields,field_description:crm.field_res_config_settings_module_crm_phone_validation
+msgid "Phone Formatting"
+msgstr ""
+
+#. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:24
+#: code:addons/crm/static/src/js/web_planner_crm.js:23
 #, python-format
 msgid "Phone call with following questions: ..."
 msgstr "ໂທລະສັບຫາດ້ວຍຄຳຖາມດັ່ວນີ້: ..."
@@ -3608,9 +3273,14 @@ msgid "Phone scripts"
 msgstr "ຂໍ້ຄວາມກຳກັບໂທລະສັບ"
 
 #. module: crm
+#: code:addons/crm/models/crm_team.py:165
+#: model:ir.actions.act_window,name:crm.crm_lead_opportunities_tree_view
+#: model:ir.model.fields,field_description:crm.field_crm_team_use_opportunities
+#: model:ir.ui.menu,name:crm.crm_menu_pipeline
 #: model:ir.ui.menu,name:crm.crm_opportunity_report_menu
+#: model:ir.ui.menu,name:crm.menu_crm_opportunities
 #: model:ir.ui.view,arch_db:crm.crm_planner
-#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
+#, python-format
 msgid "Pipeline"
 msgstr "ຂະບວນການຂາຍ"
 
@@ -3620,7 +3290,6 @@ msgstr "ຂະບວນການຂາຍ"
 #: model:ir.actions.act_window,name:crm.crm_opportunity_report_action_graph
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_graph
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_pivot
-#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Pipeline Analysis"
 msgstr "ການວິເຄາະຂະບວນການຂາຍ"
 
@@ -3645,12 +3314,14 @@ msgid ""
 "your opportunities with information such as the expected revenue, planned cost,\n"
 "missed deadlines or the number of interactions per opportunity. This report is\n"
 "mainly used by the sales manager in order to periodically review the pipeline\n"
-"with the the sales teams."
+"with the the sales channel."
 msgstr ""
-"ການວິເຄາະຂະບວນການຂາຍຊ່ອຍໃຫ້ທ່ານເຂົ້າເຖິງ\n"
-"ໂອກາດຂອງທ່ານທັນທີ ພ້ອມກັບຂໍ້ມູນ ເຊັ່ນ ລາຍຮັບທີ່ຄາດຫວັງ, ຄ່າໃຊ້ຈ່າຍທີ່ຂຶ້ນແຜນໄວ້, \n"
-"ກຳນົດເວລາທີ່ບໍ່ໄດ້ຮັບ ຫຼື ຈໍານວນປະຕິສໍາພັນຕໍ່ໂອກາດ. ລາຍງານນີ້ແມ່ນ ຜູ້ຈັດການຝ່າຍຂາຍ\n"
-"ເປັນຜູ້ໃຊ້ຫຼັກ ເພື່ອທົບທວນຄືນເປັນໄລຍະ ກັບທີມງານຂາຍ."
+
+#. module: crm
+#: code:addons/crm/models/crm_team.py:231
+#, python-format
+msgid "Pipeline: Expected Revenue"
+msgstr ""
 
 #. module: crm
 #: model:web.planner,tooltip_planner:crm.planner_crm
@@ -3665,7 +3336,7 @@ msgid "Planner"
 msgstr "ຜູ້​ວາງ​ແຜນ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:592
+#: code:addons/crm/models/crm_lead.py:631
 #, python-format
 msgid ""
 "Please select more than one element (lead or opportunity) from the list "
@@ -3686,21 +3357,12 @@ msgstr ""
 "- ຜູ້ຕິດຕາມ: ພຽງແຕ່ ຜູ້ຕິດຕາມຂອງເອກະສານທີ່ກ່ຽວຂ້ອງ ຫຼື ສະມາຊິກຂອງຊ່ອງຕໍ່ໄປນີ້ເທົ່ານັ້ນ\n"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_preceding_activity_ids
-msgid "Preceding Activities"
-msgstr "ກິດຈະກຳນໍາໜ້ານີ້"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_last_activity_id
-msgid "Previous Activity"
-msgstr "ກິດຈະກຳກ່ອນໜ້ານີ້"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Pricing &amp; Discounts"
 msgstr "ການວາງລາຄາ &ແຜນບໍລິຫານຊັບສິນ; ການຫຼຸດລາຄາ"
 
 #. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_lead_priority
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_priority
 msgid "Priority"
 msgstr "ບຸລິມະສິດ"
@@ -3730,11 +3392,11 @@ msgstr "ຜົນຕອບແທນທີ່ເປັນໄປໄດ້"
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor1
 msgid "Product"
-msgstr "ຜະລິດຕະພັນ"
+msgstr "ສິນຄ້າ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
 #, python-format
 msgid "Product Demonstration"
 msgstr "ການສາທິດຜະລິດຕະພັນ"
@@ -3742,13 +3404,13 @@ msgstr "ການສາທິດຜະລິດຕະພັນ"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Products"
-msgstr "ຜະລິດຕະພັນ"
+msgstr "ສິນຄ້າ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:16
-#: code:addons/crm/static/src/js/web_planner_crm.js:23
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
 #: model:ir.ui.view,arch_db:crm.crm_planner
 #, python-format
 msgid "Proposal"
@@ -3756,7 +3418,7 @@ msgstr "ຄຳສະເໜີ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
 #: model:crm.stage,name:crm.stage_lead3
 #, python-format
 msgid "Proposition"
@@ -3769,9 +3431,9 @@ msgstr "ແບບຮັບຮອງ (ທ່ານສາມາດໃຊ້ ແບ
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:15
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
-#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#: code:addons/crm/static/src/js/web_planner_crm.js:14
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
 #: model:crm.stage,name:crm.stage_lead2
 #, python-format
 msgid "Qualified"
@@ -3779,36 +3441,31 @@ msgstr "ຜ່ານຮັບຮອງ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:14
 #, python-format
 msgid "Qualified Sponsor"
 msgstr "ຜູ້ສະໜັບສະໜູນທີ່ຜ່ານການຮັບຮອງ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:26
+#: code:addons/crm/static/src/js/web_planner_crm.js:25
 #, python-format
 msgid "Quotation sent"
-msgstr "ສົ່ງສະເໜີລາຄາໄປແລ້ວ"
+msgstr "ສົ່ງແລ້ວ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:20
+#: code:addons/crm/static/src/js/web_planner_crm.js:19
 #, python-format
 msgid "Quotation sent to customer"
 msgstr "ສົ່ງສະເໜີລາຄາໃຫ້ລູກຄ້າແລ້ວ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:21
+#: code:addons/crm/static/src/js/web_planner_crm.js:20
 #, python-format
 msgid "Quotation signed by the customer"
 msgstr "ໃບສະເໜີລາຄາເຊັນໂດຍລູກຄ້າ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_lead_priority
-msgid "Rating"
-msgstr "ຈັດລຳດັບ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3820,26 +3477,14 @@ msgstr "ອ່ານເອກະສານກ່ຽວກັບການວາງ
 #: code:addons/crm/static/src/js/tour.js:13
 #, python-format
 msgid ""
-"Ready to boost you sales? Your <b>sales pipeline</b> can be found here, "
-"under this app."
+"Ready to boost your sales? Your <b>Pipeline</b> can be found here, under "
+"<b>CRM</b> app."
 msgstr ""
-"ພ້ອມທີ່ຈະເພີ່ມຍອດຂາຍໃຫ້ທ່ານຫຼືຍັງ? <b> ແຜນການຂາຍ </ b> ສາມາດພົບໄດ້ທີ່ນີ້, "
-"ພາຍໃນແອັບ ນີ້."
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lost_reason
 msgid "Reason for loosing leads"
 msgstr "ເຫດຜົນໃນການສູນເສຍຍອດຂາຍ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_recommended_activity_id
-msgid "Recommended Activities"
-msgstr "ກິດຈະກຳທີ່ແນະນຳ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_recommended_activity_ids
-msgid "Recommended Next Activities"
-msgstr "ກິດຈະກຳຕໍ່ໄປທີ່ແນະນຳ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_force_thread_id
@@ -3854,23 +3499,12 @@ msgstr "ອ້າງອີງ ໂດຍ"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_action
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_action
-#: model:ir.model.fields,field_description:crm.field_crm_lead2projectissue_wizard_action
+#: model:ir.model.fields,field_description:crm.field_crm_lead_convert2task_action
 #: model:ir.model.fields,field_description:crm.field_crm_partner_binding_action
 msgid "Related Customer"
 msgstr "ລູກຄ້າທີ່ກ່ຽວຂ້ອງ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_relation_field
-msgid "Relation field"
-msgstr "ຊ່ອງຂໍ້ມູນທີ່ກ່ຽວຂ້ອງ"
-
-#. module: crm
-#: model:ir.actions.server,name:crm.action_email_reminder_lead
-msgid "Reminder to User"
-msgstr "ແຈ້ງເຕືອນໃຫ້ຜູ້ໃຊ້"
-
-#. module: crm
-#: model:ir.actions.server,subject:crm.action_email_reminder_lead
 #: model:mail.template,subject:crm.email_template_opportunity_reminder_mail
 msgid ""
 "Reminder: Lead ${object.name} from ${object.partner_id != False and "
@@ -3880,15 +3514,21 @@ msgstr ""
 "object.partner_id.name or object.contact_name}"
 
 #. module: crm
+#: model:ir.ui.menu,name:crm.crm_menu_report
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Reporting"
-msgstr "ການລາຍງານ"
+msgstr "ບົດລາຍງານ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_requirements
 #: model:ir.ui.view,arch_db:crm.crm_stage_form
 msgid "Requirements"
 msgstr "ຄວາມຕ້ອງການ"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
+msgid "Restore"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3899,6 +3539,27 @@ msgstr "ລາຍໄດ້ຕາມພະນັກງານຂາຍ"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Sale Flow"
 msgstr "ກະແສການຂາຍ"
+
+#. module: crm
+#: model:ir.model,name:crm.model_crm_team
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report_team_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_team_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_team_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead_team_id
+#: model:ir.model.fields,field_description:crm.field_crm_merge_opportunity_team_id
+#: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_team_id
+#: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Sales Channel"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.crm_team_config
+#: model:ir.ui.menu,name:crm.sales_team_menu_report_crm
+msgid "Sales Channels"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3916,23 +3577,6 @@ msgid "Sales Settings"
 msgstr "ການຕັ້ງຄ່າການຂາຍ"
 
 #. module: crm
-#: model:ir.model,name:crm.model_crm_team
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_activity_report_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_activity_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_lead_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_merge_opportunity_team_id
-#: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_team_id
-#: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
-#: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
-#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
-msgid "Sales Team"
-msgstr "ທິມງານຂາຍ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Sales Tools"
 msgstr "ເຄື່ອງມືການຂາຍ"
@@ -3943,6 +3587,7 @@ msgid "Salesmen"
 msgstr "ພະນັກງານຂາຍ"
 
 #. module: crm
+#: selection:crm.team,dashboard_graph_group_pipeline:0
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_user_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_user_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_user_id
@@ -3963,19 +3608,11 @@ msgstr ""
 "ດ້ວຍລາຍການຄຳສັ່ງທີ່ມັກ."
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
-msgid "Schedule Activity"
-msgstr "ຕາຕະລາງເຄື່ອນໄຫວກິດຈະກຳ"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
-msgid "Schedule Next Activity"
-msgstr "ຕາຕະລາງເຄື່ອນໄຫວກິດຈະກຳຕໍ່ໄປ"
-
-#. module: crm
-#: model:ir.actions.act_window,name:crm.crm_activity_schedule_action
-msgid "Schedule an Activity"
-msgstr "ສ້າງຕາຕະລາງເຄື່ອນໄຫວກິດຈະກຳ"
+#. openerp-web
+#: code:addons/crm/static/src/js/tour.js:40
+#, python-format
+msgid "Schedule an activity by clicking here"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
@@ -4034,12 +3671,6 @@ msgid "Selection"
 msgstr "ການເລືອກເອົາ"
 
 #. module: crm
-#: model:crm.activity,description:crm.crm_activity_demo_make_quote
-#: model:mail.message.subtype,description:crm.crm_activity_demo_make_quote_mail_message_subtype
-msgid "Send a quotation"
-msgstr "ສົ່ງໃບສະເໜີລາຄາ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Send an email to all opportunities in the \"Qualified\" stage for more than "
@@ -4047,7 +3678,6 @@ msgid ""
 msgstr "ສົ່ງອີເມວໄປຍັງທຸກໂອກາດໃນໄລຍະ \"ຜ່ານການຮັບຮອງ\" ຫຼາຍກວ່າ 20 ມື້"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_sequence
 #: model:ir.model.fields,field_description:crm.field_crm_stage_sequence
 msgid "Sequence"
 msgstr "ລຳດັບ"
@@ -4059,17 +3689,12 @@ msgstr "ການບໍລິການ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:18
-#: code:addons/crm/static/src/js/web_planner_crm.js:29
+#: code:addons/crm/static/src/js/web_planner_crm.js:17
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
 #, python-format
 msgid "Set fields: Expected Revenue, Expected Closing Date, Next Action"
 msgstr ""
 "ຕັ້ງຄ່າຊ່ອງຂໍ້ມູນ: ລາຍຮັບທີ່ຄາດຫວັງ, ວັນທີປິດທີ່ຄາດຄະເນໄວ້, ກິດຈະກຳຕໍ່ໄປ"
-
-#. module: crm
-#: model:ir.actions.server,name:crm.action_set_team_sales_department
-msgid "Set team to Sales Department"
-msgstr "ຕັ້ງທີມງານໃຫ້ກັບຜະແນກຂາຍ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4097,9 +3722,10 @@ msgstr ""
 "                       ເພື່ອຫັນປ່ຽນວິທີການຂາຍຂອງພະນັກງານຂາຍຂອງທ່ານ. ນັ້ນຄືຈຸດປະສົງຂອງຄູ່ມືນີ້."
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
-msgid "Setup your domain alias"
-msgstr "ຕິດຕັ້ງ ຊື່ແທນໃຫ້ກັບໂດເມນຂອງທ່ານ"
+#: model:ir.actions.act_window,name:crm.crm_config_settings_action
+#: model:ir.ui.menu,name:crm.crm_config_settings_menu
+msgid "Settings"
+msgstr "ການກໍານົດຄ່າ"
 
 #. module: crm
 #: model:res.groups,name:crm.group_use_lead
@@ -4128,6 +3754,11 @@ msgid ""
 msgstr ""
 "ສະແດງໂອກາດທັງໝົດ ພ້ອມກັບວັນກຳນົດເສັ້ນຕາຍ ອອກມາ ສຳລັບວັນທີກ່ອນມື້ນີ້ "
 "ຂອງກິດຈະກຳຕໍ່ໄປ "
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+msgid "Show all records which has next action date is before today"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
@@ -4187,6 +3818,7 @@ msgstr ""
 "ໃຊ້ງານຂັ້ນນີ້."
 
 #. module: crm
+#: selection:crm.team,dashboard_graph_group_pipeline:0
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_stage_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead_stage_id
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_stage_id
@@ -4280,7 +3912,11 @@ msgid "Subscription Management"
 msgstr "ການຈັດການສະໝັກສະມາຊິກ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_activity_log_title_action
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report_subtype_id
+msgid "Subtype"
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_subject
 msgid "Summary"
 msgstr "ສັງລວມ"
@@ -4313,12 +3949,6 @@ msgid "Tags"
 msgstr "ເປົ້າໝາຍ"
 
 #. module: crm
-#: model:crm.activity,name:crm.crm_activity_data_meeting
-#: model:mail.message.subtype,name:crm.crm_activity_data_meeting_mail_message_subtype
-msgid "Task"
-msgstr "ໜ້າທີ່"
-
-#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_team_id
 msgid "Team"
 msgstr "ທີມງານ"
@@ -4340,14 +3970,14 @@ msgstr "ຟອມແບບຢ່າງໃບສະເໜີລາຄາ(ໃຊ�
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:14
 #, python-format
 msgid "Territory"
 msgstr "ແນວການປະຕິບັດ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:20
+#: code:addons/crm/static/src/js/web_planner_crm.js:19
 #, python-format
 msgid "The customer came back to you to discuss your quotation"
 msgstr "ລູກຄ້າກັບມາຫາທ່ານ ເພື່ອປອກສາຫາລືກ່ຽວກັບໃບສະເນີລາຄາຂອງທ່ານ"
@@ -4355,21 +3985,9 @@ msgstr "ລູກຄ້າກັບມາຫາທ່ານ ເພື່ອປ�
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_id
 msgid ""
-"The email address associated with this team. New emails received will "
-"automatically create new leads assigned to the team."
+"The email address associated with this channel. New emails received will "
+"automatically create new leads assigned to the channel."
 msgstr ""
-"ທີ່ຢູ່ອີເມວທີ່ກ່ຽວຂ້ອງກັບທີມງານນີ້. ອີເມວໃໝ່ທີ່ໄດ້ຮັບ ຈະສ້າງໂດຍອັດຕະໂນມັດ "
-"ເປົ້າໝາຍຂາຍໃໝ່ ທີ່ຈະມອບໝາຍໃຫ້ທີມງານ."
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_team_use_leads
-msgid ""
-"The first contact you get with a potential customer is a lead you qualify "
-"before converting it into a real business opportunity. Check this box to "
-"manage leads in this sales team."
-msgstr ""
-"ການຕິດຕໍ່ຄັ້ງທໍາອິດທີ່ທ່ານໄດ້ຮັບກັບລູກຄ້າທີ່ມີທ່າແຮງຄືເປົ້າໝາຍທີ່ທ່ານຮັບຮອງກ່ອນທີ່ຈະປ່ຽນມັນເປັນໂອກາດທາງທຸລະກິດທີ່ແທ້ຈິງ."
-" ໝາຍເອົາຊ່ອງນີ້ເພື່ອຈັດການເປົ້າໝາຍໃນທີມຂາຍນີ້."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4439,6 +4057,11 @@ msgstr ""
 "                        <strong>ເຄື່ອງມືການຂາຍທີ່ດີ</strong>."
 
 #. module: crm
+#: model:ir.model.fields,help:crm.field_crm_team_dashboard_graph_period_pipeline
+msgid "The time period this channel's dashboard graph will consider."
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "The whole process may take a few hours. But it's worth doing\n"
@@ -4452,23 +4075,14 @@ msgstr ""
 msgid ""
 "There are several ways for your company to generate leads with Odoo CRM.\n"
 "                        One of them is using your company's generic email address as a trigger\n"
-"                        to create a new lead in the system. In Odoo, each one of your sales teams\n"
+"                        to create a new lead in the system. In Odoo, each one of your sales channels\n"
 "                        is linked to its own email address from which prospects can reach them.\n"
 "                        For example, if the personal email address of your Direct team is\n"
 "                        direct@mycompany.example.com, every email sent when a new prospect\n"
-"                        contacts you will automatically create a new opportunity into the sales team.\n"
+"                        contacts you will automatically create a new opportunity into the sales channel.\n"
 "\n"
 "                        That's the easiest way to integrate Odoo with third party apps."
 msgstr ""
-"ມີຫຼາຍວິທີສໍາລັບບໍລິສັດຂອງທ່ານທີ່ຈະສ້າງເປົ້າການຂາຍໄດ້ດ້ວຍ Odoo CRM.\n"
-"                        ໜຶ່ງໃນນັ້ນແມ່ນການນໍາໃຊ້ທີ່ຢູ່ອີເມວທົ່ວໄປຂອງບໍລິສັດຂອງທ່ານເປັນຕົວກະຕຸ້ນ\n"
-"                       ເພື່ອສ້າງເປົ້າຂາຍໃຫມ່ໃນລະບົບ. ໃນ Odoo, ແຕ່ລະທີມງານຂາຍຂອງທ່ານ\n"
-"                        ເຊື່ອມໂຍງກັບທີ່ຢູ່ອີເມວຂອງຕົນເອງ ຊຶ່ງລູກຄ້າສາມາດເຂົ້າເຖິງໄດ້.\n"
-"                        ອີເມວສ່ວນຕົວຂອງທີມຂາຍຕົງ ຂອງ ທ່ານແມ່ນ \n"
-"                        direct@mycompany.example.com,ທຸກໆອີເມວທີ່ສົ່ງ ເມື່ອມີທີ່ຢູ່ລູກຄ້າໃໝ່\n"
-"                        ທ່ານຈະສ້າງໂອກາດຂາຍໃໝ່ ໃຫ້ແກ່ທີມຂາຍໄດ້ໂດຍອັດຕະໂນມັດ.\n"
-"\n"
-"                        ນັ້ນແມ່ນວິທີທີ່ງ່າຍທີ່ສຸດທີ່ຈະປະສົມປະສານກັບ Odoo ກັບແອັບພລິເຄຊັນທີສາມ."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
@@ -4487,9 +4101,10 @@ msgstr ""
 "ດ້ວຍໝາຍຈຸດ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
-msgid "This Week Activities"
-msgstr "ກິດຈະກຳສຳລັບອາທິດນີ້"
+#: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+msgid "This Month"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4507,13 +4122,11 @@ msgstr "ນີ້ເປັນການກຳນົດຄ່າເລີ່ມຕ
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:40
+#: code:addons/crm/static/src/js/tour.js:35
 #, python-format
 msgid ""
-"This opportunity has <b>no next activity scheduled</b>. <i>Click to set "
-"one.</i>"
+"This opportunity has <b>no activity planned</b>. <i>Click to check them.</i>"
 msgstr ""
-"ໂອກາດການຂາຍນີ້ <b>ບໍ່ມີກິດຈະກຳຕໍ່ໄປທີ່ກຳນົດໄວ້</b>. <i>ກົດເພື່ອຕັ້ງຂຶ້ນ.</i>"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_probability
@@ -4539,7 +4152,7 @@ msgstr ""
 "ທີ່ຈະສະແດງ ໃນຂັ້ນຕອນນັ້ນ."
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1010
+#: code:addons/crm/models/crm_lead.py:1052
 #, python-format
 msgid "This target does not exist."
 msgstr "ເປົ້າໝາຍນີ້ຍັງບໍ່ທັນມີ"
@@ -4572,6 +4185,7 @@ msgstr ""
 "ນີ້ແມ່ນສາມາດຕັ້ງຄ່າໄວ້ໃນການກໍານົດລາຍການລາຄາ ຖ້າວ່າທ່ານອະນຸຍາດໃຫ້ມີສ່ວນຫຼຸດ."
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Today Activities"
 msgstr "ກິດຈະກຳມື້ນີ້"
@@ -4616,15 +4230,27 @@ msgid "USD, EUR, GBP"
 msgstr "ໂດລາ, ຢູໂຣ, ປອນ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
-msgid "Unarchive"
-msgstr "ບໍ່ໄດ້ສຳເນົາໄວ້"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Unassigned"
 msgstr "ບໍ່ໄດ້ມອບໝາຍໃຫ້"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
+msgid "Unassigned Lead"
+msgstr ""
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_team_unassigned_leads_count
+#: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
+msgid "Unassigned Leads"
+msgstr ""
+
+#. module: crm
+#: code:addons/crm/models/crm_team.py:211
+#, python-format
+msgid "Undefined"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4639,8 +4265,9 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+#: model:ir.ui.view,arch_db:crm.view_crm_lead_kanban
 msgid "Unread Messages"
-msgstr "ຂໍ້ຄວາມບໍ່ທັນໄດ້ອ່ານ"
+msgstr "ຂໍ້ຄວາມບໍ່ໄດ້ອ່ານ"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_write_date
@@ -4656,6 +4283,11 @@ msgstr "ເພີ່ມຍອດຂາຍໃຫ້ລູກຄ້າເດີມ
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Use"
 msgstr "ໃຊ້ງານ"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid "Use an External Email Server"
+msgstr ""
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner.mass,action:0
@@ -4675,15 +4307,6 @@ msgstr ""
 "                    ໂອກາດການຂາຍ ຫຼື ລູກຄ້າ. ອາດເປັນນາມບັດທີ່ທ່ານໄດ້ຮັບ,\n"
 "                    ຟອມທີ່ຢູ່ຕິດຕໍ່ທີ່ປ້ອນໄວ້ໃນເວັບໄຊຕ໌, ຫຼື ຟາຍລ໌ \n"
 "                    ລູກຄ້າທີ່ຍັງບໍ່ໄດ້ຮັບຮອງ ທີ່ທ່ານ, ແລະອື່ນໆ."
-
-#. module: crm
-#: selection:sale.config.settings,group_use_lead:0
-msgid ""
-"Use leads if you need a qualification step before creating an opportunity or"
-" a customer"
-msgstr ""
-"ໃຫ້ໃຊ້ເປົ້າກາຂາຍ ຖ້າທ່ານຕ້ອງການຂັ້ນຕອນການຮັບຮອງກ່ອນສ້າງໂອກາດການຂາຍ ຫຼື "
-"ລູກຄ້າ"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lost_reason_action
@@ -4721,7 +4344,7 @@ msgstr ""
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:84
+#: code:addons/crm/static/src/js/tour.js:83
 #, python-format
 msgid "Use the <b>implementation guide</b> to setup the CRM in your company."
 msgstr ""
@@ -4729,15 +4352,10 @@ msgstr ""
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/tour.js:66
+#: code:addons/crm/static/src/js/tour.js:65
 #, python-format
 msgid "Use the breadcrumbs to <b>go back to your sales pipeline</b>."
 msgstr "ໃຊ້ຂໍ້ມູນປະຕິດປະຕໍ່ <b>ເພື່ອກັບຄືນໄປຫາ ຊ່ອງທາງການຂາຍຂອງທ່ານ</b>."
-
-#. module: crm
-#: model:ir.model.fields,help:crm.field_crm_team_resource_calendar_id
-msgid "Used to compute open days"
-msgstr "ໃຊ້ສຳລັບຄິດໄລ່ວັນທີໄຂ"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_user_login
@@ -4783,16 +4401,6 @@ msgstr "ຈົດໝາຍ VIP ສົ່ງຫາ ຜູ້ສະໜັບສະ
 #: selection:crm.lead,priority:0 selection:crm.opportunity.report,priority:0
 msgid "Very High"
 msgstr "ສູງຫຼາຍ"
-
-#. module: crm
-#: model:ir.model.fields,field_description:crm.field_sale_config_settings_module_crm_voip
-msgid "VoIP integration"
-msgstr "ບູລະນາການ VoiP"
-
-#. module: crm
-#: model:ir.ui.view,arch_db:crm.view_sale_config_settings
-msgid "Voip integration"
-msgstr "ບູລະນາການ VoiP"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4862,6 +4470,16 @@ msgstr ""
 "ຈະຊ່ອຍໃຫ້ທ່ານສາມາດນໍາວິໄສທັດການຂາຍຂອງທ່ານໄປສູ່ຄວາມມີຊີວິດຊີວາ."
 
 #. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_lead_website
+msgid "Website"
+msgstr ""
+
+#. module: crm
+#: model:ir.model.fields,help:crm.field_crm_lead_website
+msgid "Website of the contact"
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Weekly Meetings"
 msgstr "ປະຊຸມປະຈຳອາທິດ"
@@ -4897,15 +4515,39 @@ msgstr ""
 "                        ຂອງການນໍາໃຊ້ທີ່ສຳເລັດຜົນ."
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
+msgid ""
+"When populating your address book, Odoo relies on Clearbit’s API to provide "
+"you with a list of matching contacts or companies.When selecting one item, "
+"the partner name, logo and website get automatically set."
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_team_id
 msgid ""
-"When sending mails, the default email address is taken from the sales team."
-msgstr "ໃນເວລາສົ່ງ ອີເມວລ໌, ທີ່ຢູ່ ອີເມວລ໌ ຫຼັກ ຈະເອົາມາຈາກ ທີມງານຂາຍ."
+"When sending mails, the default email address is taken from the sales "
+"channel."
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Win / Loss Ratio"
 msgstr "ອັດຕາຜົນກຳໄລ/ຫຼຸບ"
+
+#. module: crm
+#: selection:crm.team,dashboard_graph_period_pipeline:0
+msgid "Within a Month"
+msgstr ""
+
+#. module: crm
+#: selection:crm.team,dashboard_graph_period_pipeline:0
+msgid "Within a Week"
+msgstr ""
+
+#. module: crm
+#: selection:crm.team,dashboard_graph_period_pipeline:0
+msgid "Within a Year"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_wizard_id
@@ -4914,11 +4556,11 @@ msgstr "ໂຕພາສ້າງ"
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/models/crm_lead.py:1043
-#: code:addons/crm/static/src/js/web_planner_crm.js:16
-#: code:addons/crm/static/src/js/web_planner_crm.js:23
-#: code:addons/crm/static/src/js/web_planner_crm.js:28
-#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#: code:addons/crm/models/crm_lead.py:1085
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:22
+#: code:addons/crm/static/src/js/web_planner_crm.js:27
+#: code:addons/crm/static/src/js/web_planner_crm.js:33
 #: model:crm.stage,name:crm.stage_lead4
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -4940,13 +4582,14 @@ msgid "Won in Opportunities Target"
 msgstr "ຜົນກຳໄລໃນເປົ້າໝາຍໂອກາດ"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_crm_team_resource_calendar_id
-msgid "Working Time"
-msgstr "ເວລາເຮັດວຽກ"
+#: code:addons/crm/models/crm_lead.py:383
+#, python-format
+msgid "Yeah! Deal of the last 7 days for the team."
+msgstr ""
 
 #. module: crm
 #. openerp-web
-#: code:addons/crm/static/src/js/web_planner_crm.js:19
+#: code:addons/crm/static/src/js/web_planner_crm.js:18
 #, python-format
 msgid ""
 "You are in discussion with the decision maker and HE agreed on his pain "
@@ -4956,7 +4599,7 @@ msgstr ""
 "ເຫັນດ້ວຍກັບຈຸດກັງວົນຂອງລາວ"
 
 #. module: crm
-#: code:addons/crm/wizard/base_partner_merge.py:306
+#: code:addons/crm/wizard/base_partner_merge.py:270
 #, python-format
 msgid "You cannot merge a contact with one of his parent."
 msgstr "ທ່ານບໍ່ສາມາດຮວມທີ່ຢູ່ຜູ້ຕິດຕໍ່ເຂົ້າກັບອີກອັນໜຶ່ງໃນທີ່ຢູ່ຫຼັກຂອງລາວ."
@@ -4975,10 +4618,22 @@ msgstr ""
 "                            ຂອງເປົ້າໝາຍການຂາຍ: ບໍ່ມີງົບປະມານ, ການແຂ່ງຂັນ, ບໍ່ມີຂໍ້ກັງວົນ, ແລະອື່ນໆ."
 
 #. module: crm
-#: code:addons/crm/wizard/base_partner_merge.py:398
+#: code:addons/crm/wizard/base_partner_merge.py:362
 #, python-format
 msgid "You have to specify a filter for your selection"
 msgstr "ທ່ານຕ້ອງໄດ້ລະບຸຕົວກັ່ນຕອງ ສຳລັບ ການເລືອກຂອງທ່ານ"
+
+#. module: crm
+#: code:addons/crm/models/crm_lead.py:385
+#, python-format
+msgid "You just beat your personal record for the past 30 days."
+msgstr ""
+
+#. module: crm
+#: code:addons/crm/models/crm_lead.py:387
+#, python-format
+msgid "You just beat your personal record for the past 7 days."
+msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_case_form_view_salesteams_opportunity
@@ -5033,11 +4688,6 @@ msgstr "ໜ້າ ເວັບ LinkedIn ຫຼື ສື່ສັ່ງຄົມ
 #: model:mail.template,subject:crm.mail_template_data_module_install_crm
 msgid "Your Odoo CRM application is running smoothly."
 msgstr "ແອັບ Odoo CRM ຂອງ ທ່ານ ກຳລັງແລ່ນ ຢ່າງທຸ້ນທ່ຽງດີ."
-
-#. module: crm
-#: model:ir.actions.act_window,name:crm.crm_lead_opportunities_tree_view
-msgid "Your Pipeline"
-msgstr "ຊ່ອງທາງຂອງທ່ານ"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -5106,33 +4756,31 @@ msgid "e.g. Customer Deal"
 msgstr "ຕ.ຢ. ຂໍ້ສະເໜີພິເສດສຳລັບລູກຄ້າ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
-#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
-#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
-msgid "e.g. Discuss proposal"
-msgstr "ຕ.ຢ.  ການຫາລືກ່ຽວກັບຂໍ້ສະເໜີ"
-
-#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "e.g. Product Pricing"
 msgstr "ຕ.ຢ. ການກຳນົດລາຄາຜະລິດຕະພັນ"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:871
+#: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
+msgid "e.g. www.odoo.com"
+msgstr ""
+
+#. module: crm
+#: code:addons/crm/models/crm_lead.py:912
 #, python-format
 msgid "opportunities"
 msgstr "ກາລະໂອກາດ"
 
 #. module: crm
-#: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "or"
 msgstr "ຫຼື"
 
 #. module: crm
-#: model:ir.model,name:crm.model_sale_config_settings
-msgid "sale.config.settings"
-msgstr "sale.config.settings"
+#: model:ir.model,name:crm.model_res_config_settings
+msgid "res.config.settings"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -5188,7 +4836,7 @@ msgstr ""
 "                                 ເຊັ່ນ (ຕ.ຢ. sales@yourcompany.com)"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:877
+#: code:addons/crm/models/crm_lead.py:918
 #, python-format
 msgid "unknown"
 msgstr "ບໍ່ຮູ້ຈັກ"

@@ -10,11 +10,11 @@ class ProductCategory(models.Model):
     property_account_income_categ_id = fields.Many2one('account.account', company_dependent=True,
         string="Income Account", oldname="property_account_income_categ",
         domain=[('deprecated', '=', False)],
-        help="This account will be used for invoices to value sales.")
+        help="This account will be used when validating a customer invoice.")
     property_account_expense_categ_id = fields.Many2one('account.account', company_dependent=True,
         string="Expense Account", oldname="property_account_expense_categ",
         domain=[('deprecated', '=', False)],
-        help="This account will be used for invoices to value expenses.")
+        help="The expense is accounted for when a vendor bill is validated, except in anglo-saxon accounting with perpetual inventory valuation in which case the expense (Cost of Goods Sold account) is recognized at the customer invoice validation.")
 
 #----------------------------------------------------------
 # Products
@@ -29,27 +29,11 @@ class ProductTemplate(models.Model):
     property_account_income_id = fields.Many2one('account.account', company_dependent=True,
         string="Income Account", oldname="property_account_income",
         domain=[('deprecated', '=', False)],
-        help="This account will be used for invoices instead of the default one to value sales for the current product.")
+        help="Keep this field empty to use the default value from the product category.")
     property_account_expense_id = fields.Many2one('account.account', company_dependent=True,
         string="Expense Account", oldname="property_account_expense",
         domain=[('deprecated', '=', False)],
-        help="This account will be used for invoices instead of the default one to value expenses for the current product.")
-
-    @api.multi
-    def write(self, vals):
-        #TODO: really? i don't see the reason we'd need that constraint..
-        check = self.ids and 'uom_po_id' in vals
-        if check:
-            self._cr.execute("SELECT id, uom_po_id FROM product_template WHERE id IN %s", [tuple(self.ids)])
-            uoms = dict(self._cr.fetchall())
-        res = super(ProductTemplate, self).write(vals)
-        if check:
-            self._cr.execute("SELECT id, uom_po_id FROM product_template WHERE id IN %s", [tuple(self.ids)])
-            if dict(self._cr.fetchall()) != uoms:
-                products = self.env['product.product'].search([('product_tmpl_id', 'in', self.ids)])
-                if self.env['account.move.line'].search_count([('product_id', 'in', products.ids)]):
-                    raise UserError(_('You can not change the unit of measure of a product that has been already used in an account journal item. If you need to change the unit of measure, you may deactivate this product.'))
-        return res
+        help="The expense is accounted for when a vendor bill is validated, except in anglo-saxon accounting with perpetual inventory valuation in which case the expense (Cost of Goods Sold account) is recognized at the customer invoice validation. If the field is empty, it uses the one defined in the product category.")
 
     @api.multi
     def _get_product_accounts(self):

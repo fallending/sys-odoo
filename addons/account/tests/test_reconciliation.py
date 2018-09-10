@@ -1,6 +1,8 @@
+from odoo import api
 from odoo.addons.account.tests.account_test_classes import AccountingTestCase
 import time
 import unittest
+
 
 class TestReconciliation(AccountingTestCase):
 
@@ -344,8 +346,8 @@ class TestReconciliation(AccountingTestCase):
         self.assertTrue(exchange_loss_line, 'There should be one move line of 0.01 EUR in credit')
         # The journal items of the reconciliation should have their debit and credit total equal
         # Besides, the total debit and total credit should be 60.61 EUR (2.00 USD)
-        self.assertEquals(sum([res['debit'] for res in result.values()]), 60.61)
-        self.assertEquals(sum([res['credit'] for res in result.values()]), 60.61)
+        self.assertEquals(sum(res['debit'] for res in result.values()), 60.61)
+        self.assertEquals(sum(res['credit'] for res in result.items()), 60.61)
         counterpart_exchange_loss_line = None
         for line in exchange_loss_line.move_id.line_id:
             if line.account_id.id == self.account_fx_expense_id:
@@ -711,7 +713,6 @@ class TestReconciliation(AccountingTestCase):
         credit_aml.with_context(invoice_id=inv.id).remove_move_reconcile()
         self.assertAlmostEquals(inv.residual, 111)
 
-    # Please do forward port all the way up
     def test_revert_payment_and_reconcile(self):
         payment = self.env['account.payment'].create({
             'payment_method_id': self.inbound_payment_method.id,
@@ -785,8 +786,7 @@ class TestReconciliation(AccountingTestCase):
         currency = self.env.user.company_id.currency_id
 
         invoice = self.create_invoice_partner(currency_id=currency.id, partner_id=partner.id)
-        # Don't forward port in >= 11.0
-        journal = self.env['account.journal'].create({'name': 'Bank', 'type': 'bank', 'code': 'THE'})
+        journal = self.env['account.journal'].create({'name': 'Bank', 'type': 'bank', 'code': 'THE', 'currency_id': currency.id})
 
         statement = self.make_payment(invoice, journal, 50)
 
@@ -885,6 +885,5 @@ class TestReconciliation(AccountingTestCase):
         self.assertFalse(exchange_reconcile.exists())
 
         reverted_exchange_move = self.env['account.move'].search([('journal_id', '=', exchange_move.journal_id.id), ('ref', 'ilike', exchange_move.name)], limit=1)
-
         _move_revert_test_pair(payment_move, reverted_payment_move)
         _move_revert_test_pair(exchange_move, reverted_exchange_move)

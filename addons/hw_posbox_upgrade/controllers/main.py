@@ -8,7 +8,7 @@ import threading
 
 from odoo import http
 
-import odoo.addons.hw_proxy.controllers.main as hw_proxy
+from odoo.addons.hw_proxy.controllers import main as hw_proxy
 
 _logger = logging.getLogger(__name__)
 
@@ -80,7 +80,7 @@ upgrade_template = """
         </p>
         <pre>
 """
-upgrade_template += subprocess.check_output("git --work-tree=/home/pi/odoo/ --git-dir=/home/pi/odoo/.git log -1", shell=True).replace("\n", "<br/>")
+upgrade_template += subprocess.check_output("git --work-tree=/home/pi/odoo/ --git-dir=/home/pi/odoo/.git log -1", shell=True).decode('utf-8').replace("\n", "<br/>")
 upgrade_template += """
         </pre>
         <div class='centering'>

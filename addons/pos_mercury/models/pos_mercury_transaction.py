@@ -3,15 +3,13 @@
 
 from datetime import date, timedelta
 
-import cgi
-import urllib2
-import ssl
+import requests
 import werkzeug
 
 from odoo import models, api, service
 from odoo.tools.translate import _
 from odoo.exceptions import UserError
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, misc
 
 
 class MercuryTransaction(models.Model):
@@ -47,14 +45,14 @@ class MercuryTransaction(models.Model):
         data['memo'] = "Odoo " + service.common.exp_version()['server_version']
 
     def _do_request(self, template, data):
-        xml_transaction = self.env.ref(template).render(data)
+        xml_transaction = self.env.ref(template).render(data).decode()
 
         if not data['merchant_id'] or not data['merchant_pwd']:
             return "not setup"
 
         soap_header = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://www.mercurypay.com"><soapenv:Header/><soapenv:Body><mer:CreditTransaction><mer:tran>'
         soap_footer = '</mer:tran><mer:pw>' + data['merchant_pwd'] + '</mer:pw></mer:CreditTransaction></soapenv:Body></soapenv:Envelope>'
-        xml_transaction = soap_header + cgi.escape(xml_transaction) + soap_footer
+        xml_transaction = soap_header + misc.html_escape(xml_transaction) + soap_footer
 
         response = ''
 
@@ -67,11 +65,11 @@ class MercuryTransaction(models.Model):
         if self.env['ir.config_parameter'].sudo().get_param('pos_mercury.enable_test_env'):
             url = 'https://w1.mercurycert.net/ws/ws.asmx'
 
-        r = urllib2.Request(url, data=xml_transaction, headers=headers)
         try:
-            u = urllib2.urlopen(r, timeout=65)
-            response = werkzeug.utils.unescape(u.read())
-        except (urllib2.URLError, ssl.SSLError):
+            r = requests.post(url, data=xml_transaction, headers=headers, timeout=65)
+            r.raise_for_status()
+            response = werkzeug.utils.unescape(r.content.decode())
+        except Exception:
             response = "timeout"
 
         return response

@@ -4,14 +4,15 @@ odoo.define('pos_restaurant.multiprint', function (require) {
 var models = require('point_of_sale.models');
 var screens = require('point_of_sale.screens');
 var core = require('web.core');
+var mixins = require('web.mixins');
 var Session = require('web.Session');
 
 var QWeb = core.qweb;
-var mixins = core.mixins;
 
 var Printer = core.Class.extend(mixins.PropertiesMixin,{
     init: function(parent,options){
-        mixins.PropertiesMixin.init.call(this,parent);
+        mixins.PropertiesMixin.init.call(this);
+        this.setParent(parent);
         options = options || {};
         var url = options.url || 'http://localhost:8069';
         this.connection = new Session(undefined,url, { use_cors: true});
@@ -26,7 +27,8 @@ var Printer = core.Class.extend(mixins.PropertiesMixin,{
         function send_printing_job(){
             if(self.receipt_queue.length > 0){
                 var r = self.receipt_queue.shift();
-                self.connection.rpc('/hw_proxy/print_xml_receipt',{receipt: r},{timeout: 5000})
+                var options = {shadow: true, timeout: 5000};
+                self.connection.rpc('/hw_proxy/print_xml_receipt', {receipt: r}, options)
                     .then(function(){
                         send_printing_job();
                     },function(error, event){

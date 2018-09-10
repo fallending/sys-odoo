@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import base64
 import os
 import re
 import hashlib
@@ -8,11 +9,13 @@ import textwrap
 import uuid
 from datetime import datetime
 from subprocess import Popen, PIPE
+from collections import OrderedDict
 from odoo import fields, tools, SUPERUSER_ID
+from odoo.tools.pycompat import string_types, to_text
 from odoo.http import request
 from odoo.modules.module import get_resource_path
+from odoo.addons.base.ir.ir_qweb.qweb import escape
 import psycopg2
-import werkzeug
 from odoo.tools import func, misc
 
 import logging
@@ -65,7 +68,6 @@ def rjsmin(script):
     ).strip()
     return result
 
-
 class AssetError(Exception):
     pass
 
@@ -79,17 +81,16 @@ class AssetsBundle(object):
     rx_preprocess_imports = re.compile("""(@import\s?['"]([^'"]+)['"](;?))""")
     rx_css_split = re.compile("\/\*\! ([a-f0-9-]+) \*\/")
 
-    def __init__(self, name, files, remains, env=None):
+    # remains attribute is depreciated and will remove after v11
+    def __init__(self, name, files, remains=None, env=None):
         self.name = name
         self.env = request.env if env is None else env
         self.max_css_rules = self.env.context.get('max_css_rules', MAX_CSS_RULES)
         self.javascripts = []
         self.stylesheets = []
         self.css_errors = []
-        self.remains = []
         self._checksum = None
         self.files = files
-        self.remains = remains
         for f in files:
             if f['atype'] == 'text/sass':
                 self.stylesheets.append(SassStylesheetAsset(self, url=f['url'], filename=f['filename'], inline=f['content'], media=f['media']))
@@ -100,38 +101,75 @@ class AssetsBundle(object):
             elif f['atype'] == 'text/javascript':
                 self.javascripts.append(JavascriptAsset(self, url=f['url'], filename=f['filename'], inline=f['content']))
 
-    def to_html(self, sep=None, css=True, js=True, debug=False, async=False, url_for=(lambda url: url)):
+    # depreciated and will remove after v11
+    def to_html(self, sep=None, css=True, js=True, debug=False, async_load=False, url_for=(lambda url: url), **kw):
+        if 'async' in kw:
+            _logger.warning("Using deprecated argument 'async' in to_html call, use 'async_load' instead.")
+            async_load = kw['async']
+        nodes = self.to_node(css=css, js=js, debug=debug, async_load=async_load)
+
         if sep is None:
-            sep = '\n            '
+            sep = u'\n            '
+        response = []
+        for tagName, attributes, content in nodes:
+            html = u"<%s " % tagName
+            for name, value in attributes.items():
+                if value or isinstance(value, string_types):
+                    html += u' %s="%s"' % (name, escape(to_text(value)))
+            if content is None:
+                html += u'/>'
+            else:
+                html += u'>%s</%s>' % (escape(to_text(content)), tagName)
+            response.append(html)
+
+        return sep + sep.join(response)
+
+    def to_node(self, css=True, js=True, debug=False, async_load=False, **kw):
+        """
+        :returns [(tagName, attributes, content)] if the tag is auto close
+        """
+        if 'async' in kw:
+            _logger.warning("Using deprecated argument 'async' in to_node call, use 'async_load' instead.")
+            async_load = kw['async']
         response = []
         if debug == 'assets':
             if css and self.stylesheets:
-                if not self.is_css_preprocessed():
-                    self.preprocess_css(debug=debug)
+                is_css_preprocessed, old_attachments = self.is_css_preprocessed()
+                if not is_css_preprocessed:
+                    self.preprocess_css(debug=debug, old_attachments=old_attachments)
                     if self.css_errors:
                         msg = '\n'.join(self.css_errors)
-                        self.stylesheets.append(StylesheetAsset(self, inline=self.css_message(msg)))
-                for style in self.stylesheets:
-                    response.append(style.to_html())
+                        response.append(JavascriptAsset(self, inline=self.dialog_message(msg)).to_node())
+                        response.append(StylesheetAsset(self, url="/web/static/lib/bootstrap/css/bootstrap.css").to_node())
+                if not self.css_errors:
+                    for style in self.stylesheets:
+                        response.append(style.to_node())
+
             if js:
                 for jscript in self.javascripts:
-                    response.append(jscript.to_html())
+                    response.append(jscript.to_node())
         else:
             if css and self.stylesheets:
-                css_attachments = self.css()
-                if not self.css_errors:
-                    for attachment in css_attachments:
-                        response.append('<link href="%s" rel="stylesheet"/>' % url_for(attachment.url))
-                else:
+                css_attachments = self.css() or []
+                for attachment in css_attachments:
+                    attr = OrderedDict([
+                        ["type", "text/css"],
+                        ["rel", "stylesheet"],
+                        ["href", attachment.url],
+                    ])
+                    response.append(("link", attr, None))
+                if self.css_errors:
                     msg = '\n'.join(self.css_errors)
-                    self.stylesheets.append(StylesheetAsset(self, inline=self.css_message(msg)))
-                    for style in self.stylesheets:
-                        response.append(style.to_html())
+                    response.append(JavascriptAsset(self, inline=self.dialog_message(msg)).to_node())
             if js and self.javascripts:
-                response.append('<script %s type="text/javascript" src="%s"></script>' % (async and 'async="async"' or '', url_for(self.js().url)))
-        response.extend(self.remains)
+                attr = OrderedDict([
+                    ["async", "async" if async_load else None],
+                    ["type", "text/javascript"],
+                    ["src", self.js().url],
+                ])
+                response.append(("script", attr, None))
 
-        return sep + sep.join(response)
+        return response
 
     @func.lazy_property
     def last_modified(self):
@@ -151,8 +189,8 @@ class AssetsBundle(object):
         Not really a full checksum.
         We compute a SHA1 on the rendered bundle + max linked files last_modified date
         """
-        check = json.dumps(self.files) + ",".join(self.remains) + str(self.last_modified)
-        return hashlib.sha1(check).hexdigest()
+        check = u"%s%s" % (json.dumps(self.files, sort_keys=True), self.last_modified)
+        return hashlib.sha1(check.encode('utf-8')).hexdigest()
 
     def clean_attachments(self, type):
         """ Takes care of deleting any outdated ir.attachment records associated to a bundle before
@@ -179,7 +217,7 @@ class AssetsBundle(object):
 
         return ira.sudo().search(domain).unlink()
 
-    def get_attachments(self, type):
+    def get_attachments(self, type, ignore_version=False):
         """ Return the ir.attachment records for a given bundle. This method takes care of mitigating
         an issue happening when parallel transactions generate the same bundle: while the file is not
         duplicated on the filestore (as it is stored according to its hash), there are multiple
@@ -187,7 +225,8 @@ class AssetsBundle(object):
         multiple time the same bundle in our `to_html` function, we group our ir.attachment records
         by file name and only return the one with the max id for each group.
         """
-        url_pattern = '/web/content/%-{0}/{1}{2}.{3}'.format(self.version, self.name, '.%' if type == 'css' else '', type)
+        version = "%" if ignore_version else self.version
+        url_pattern = '/web/content/%-{0}/{1}{2}.{3}'.format(version, self.name, '.%' if type == 'css' else '', type)
         self.env.cr.execute("""
              SELECT max(id)
                FROM ir_attachment
@@ -213,7 +252,7 @@ class AssetsBundle(object):
             'res_id': False,
             'type': 'binary',
             'public': True,
-            'datas': content.encode('utf8').encode('base64'),
+            'datas': base64.b64encode(content.encode('utf8')),
         }
         attachment = ira.sudo().create(values)
 
@@ -244,7 +283,7 @@ class AssetsBundle(object):
             # get css content
             css = self.preprocess_css()
             if self.css_errors:
-                return
+                return self.get_attachments('css', ignore_version=True)
 
             # move up all @import rules to the top
             matches = []
@@ -272,27 +311,48 @@ class AssetsBundle(object):
             attachments = self.get_attachments('css')
         return attachments
 
-    def css_message(self, message):
-        # '\A' == css content carriage return
-        message = message.replace('\n', '\\A ').replace('"', '\\"')
+    def dialog_message(self, message):
         return """
-            body:before {
-                background: #ffc;
-                width: 100%%;
-                font-size: 14px;
-                font-family: monospace;
-                white-space: pre;
-                content: "%s";
-            }
-        """ % message
+            (function (message) {
+                if (window.__assetsBundleErrorSeen) return;
+                window.__assetsBundleErrorSeen = true;
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    var alertTimeout = setTimeout(alert.bind(window, message), 0);
+                    if (typeof odoo === "undefined") return;
+
+                    odoo.define("AssetsBundle.ErrorMessage", function (require) {
+                        "use strict";
+
+                        var base = require("web_editor.base");
+                        var core = require("web.core");
+                        var Dialog = require("web.Dialog");
+
+                        var _t = core._t;
+
+                        clearTimeout(alertTimeout);
+
+                        base.ready().then(function () {
+                            new Dialog(null, {
+                                title: _t("Style error"),
+                                $content: $("<div/>")
+                                    .append($("<p/>", {text: _t("The style compilation failed, see the error below. Your recent actions may be the cause, please try reverting the changes you made.")}))
+                                    .append($("<pre/>", {html: message})),
+                            }).open();
+                        });
+                    });
+                });
+            })("%s");
+        """ % message.replace('"', '\\"').replace('\n', '&NewLine;')
 
     def is_css_preprocessed(self):
         preprocessed = True
+        attachments = None
         for atype in (SassStylesheetAsset, LessStylesheetAsset):
             outdated = False
             assets = dict((asset.html_url, asset) for asset in self.stylesheets if isinstance(asset, atype))
             if assets:
-                assets_domain = [('url', 'in', assets.keys())]
+                assets_domain = [('url', 'in', list(assets.keys()))]
                 attachments = self.env['ir.attachment'].sudo().search(assets_domain)
                 for attachment in attachments:
                     asset = assets[attachment.url]
@@ -300,21 +360,19 @@ class AssetsBundle(object):
                         outdated = True
                         break
                     if asset._content is None:
-                        asset._content = attachment.datas and attachment.datas.decode('base64').decode('utf8') or ''
+                        asset._content = attachment.datas and base64.b64decode(attachment.datas).decode('utf8') or ''
                         if not asset._content and attachment.file_size > 0:
                             asset._content = None # file missing, force recompile
 
-                if any(asset._content is None for asset in assets.itervalues()):
+                if any(asset._content is None for asset in assets.values()):
                     outdated = True
 
                 if outdated:
-                    if attachments:
-                        attachments.unlink()
                     preprocessed = False
 
-        return preprocessed
+        return preprocessed, attachments
 
-    def preprocess_css(self, debug=False):
+    def preprocess_css(self, debug=False, old_attachments=None):
         """
             Checks if the bundle contains any sass/less content, then compiles it to css.
             Returns the bundle's flat css.
@@ -325,6 +383,9 @@ class AssetsBundle(object):
                 cmd = assets[0].get_command()
                 source = '\n'.join([asset.get_source() for asset in assets])
                 compiled = self.compile_css(cmd, source)
+                if not self.css_errors and old_attachments:
+                    old_attachments.unlink()
+                    old_attachments = None
 
                 fragments = self.rx_css_split.split(compiled)
                 at_rules = fragments.pop(0)
@@ -342,7 +403,7 @@ class AssetsBundle(object):
                             url = asset.html_url
                             with self.env.cr.savepoint():
                                 self.env['ir.attachment'].sudo().create(dict(
-                                    datas=asset.content.encode('utf8').encode('base64'),
+                                    datas=base64.b64encode(asset.content.encode('utf8')),
                                     mimetype='text/css',
                                     type='binary',
                                     name=url,
@@ -384,7 +445,10 @@ class AssetsBundle(object):
             return ''
         result = compiler.communicate(input=source.encode('utf-8'))
         if compiler.returncode:
-            error = self.get_preprocessor_error(''.join(result), source=source)
+            cmd_output = ''.join(misc.ustr(result))
+            if not cmd_output:
+                cmd_output = "Process exited with return code %d\n" % compiler.returncode
+            error = self.get_preprocessor_error(cmd_output, source=source)
             _logger.warning(error)
             self.css_errors.append(error)
             return ''
@@ -436,7 +500,7 @@ class WebAsset(object):
 
     def stat(self):
         if not (self.inline or self._filename or self._ir_attach):
-            path = filter(None, self.url.split('/'))
+            path = (segment for segment in self.url.split('/') if segment)
             self._filename = get_resource_path(*path)
             if self._filename:
                 return
@@ -449,7 +513,20 @@ class WebAsset(object):
             except Exception:
                 raise AssetNotFound("Could not find %s" % self.name)
 
+    # depreciated and will remove after v11
     def to_html(self):
+        tagName, attributes, content = self.to_node()
+        html = u"<%s " % tagName
+        for name, value in attributes.items():
+            if value or isinstance(value, string_types):
+                html += u' %s="%s"' % (name, escape(to_text(value)))
+        if content is None:
+            html += u'/>'
+        else:
+            html += u'>%s</%s>' % (escape(to_text(content)), tagName)
+        return html
+
+    def to_node(self):
         raise NotImplementedError()
 
     @func.lazy_property
@@ -483,7 +560,7 @@ class WebAsset(object):
                 with open(self._filename, 'rb') as fp:
                     return fp.read().decode('utf-8')
             else:
-                return self._ir_attach['datas'].decode('base64').decode('utf-8')
+                return base64.b64decode(self._ir_attach['datas']).decode('utf-8')
         except UnicodeDecodeError:
             raise AssetError('%s is not utf-8 encoded.' % self.name)
         except IOError:
@@ -507,14 +584,20 @@ class JavascriptAsset(WebAsset):
     def _fetch_content(self):
         try:
             return super(JavascriptAsset, self)._fetch_content()
-        except AssetError, e:
-            return "console.error(%s);" % json.dumps(e.message)
+        except AssetError as e:
+            return u"console.error(%s);" % json.dumps(to_text(e))
 
-    def to_html(self):
+    def to_node(self):
         if self.url:
-            return '<script type="text/javascript" src="%s"></script>' % (self.html_url)
+            return ("script", OrderedDict([
+                ["type", "text/javascript"],
+                ["src", self.html_url],
+            ]), None)
         else:
-            return '<script type="text/javascript" charset="utf-8">%s</script>' % self.with_header()
+            return ("script", OrderedDict([
+                ["type", "text/javascript"],
+                ["charset", "utf-8"],
+            ]), self.with_header())
 
 
 class StylesheetAsset(WebAsset):
@@ -556,8 +639,8 @@ class StylesheetAsset(WebAsset):
                 content = self.rx_charset.sub('', content)
 
             return content
-        except AssetError, e:
-            self.bundle.css_errors.append(e.message)
+        except AssetError as e:
+            self.bundle.css_errors.append(str(e))
             return ''
 
     def minify(self):
@@ -570,13 +653,21 @@ class StylesheetAsset(WebAsset):
         content = re.sub(r' *([{}]) *', r'\1', content)
         return self.with_header(content)
 
-    def to_html(self):
-        media = (' media="%s"' % werkzeug.utils.escape(self.media)) if self.media else ''
+    def to_node(self):
         if self.url:
-            href = self.html_url
-            return '<link rel="stylesheet" href="%s" type="text/css"%s/>' % (href, media)
+            attr = OrderedDict([
+                ["type", "text/css"],
+                ["rel", "stylesheet"],
+                ["href", self.html_url],
+                ["media", escape(to_text(self.media)) if self.media else None]
+            ])
+            return ("link", attr, None)
         else:
-            return '<style type="text/css"%s>%s</style>' % (media, self.with_header())
+            attr = OrderedDict([
+                ["type", "text/css"],
+                ["media", escape(to_text(self.media)) if self.media else None]
+            ])
+            return ("style", attr, self.with_header())
 
 
 class PreprocessedCSS(StylesheetAsset):

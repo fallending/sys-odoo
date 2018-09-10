@@ -3,18 +3,18 @@
 # * bus
 # 
 # Translators:
-# Phạm Lân <phamquanglan@gmail.com>, 2016
-# Martin Trigaux, 2016
-# son dang <son.dang@doda100.com>, 2016
-# fanha99 <fanha99@hotmail.com>, 2016
-# Duy BQ <duybq86@gmail.com>, 2018
+# Martin Trigaux, 2017
+# Phạm Lân <phamquanglan@gmail.com>, 2017
+# fanha99 <fanha99@hotmail.com>, 2017
+# Duy BQ <duybq86@gmail.com>, 2017
+# son dang <son.dang@doda100.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Duy BQ <duybq86@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: son dang <son.dang@doda100.com>, 2017\n"
 "Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,6 +38,11 @@ msgid "Channel"
 msgstr "Kênh"
 
 #. module: bus
+#: model:ir.model,name:bus.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_create_date
 msgid "Create date"
 msgstr "Ngày tạo"
@@ -52,21 +57,6 @@ msgstr "Được tạo bởi"
 #: model:ir.model.fields,field_description:bus.field_bus_presence_display_name
 msgid "Display Name"
 msgstr "Tên hiển thị"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_partner_latitude
-msgid "Geo Latitude"
-msgstr "Vĩ độ Địa lý"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_partner_longitude
-msgid "Geo Longitude"
-msgstr "Kinh độ Địa lý"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_date_localization
-msgid "Geolocation Date"
-msgstr "Ngày xác định Vị trí"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_id
@@ -85,7 +75,7 @@ msgstr "Tình trạng IM"
 #: model:ir.model.fields,field_description:bus.field_bus_bus___last_update
 #: model:ir.model.fields,field_description:bus.field_bus_presence___last_update
 msgid "Last Modified on"
-msgstr "Sửa lần cuối vào"
+msgstr "Sửa lần cuối"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_presence_last_poll
@@ -105,7 +95,7 @@ msgstr "Cập nhật lần cuối bởi"
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_write_date
 msgid "Last Updated on"
-msgstr "Cập nhật lần cuối vào"
+msgstr "Cập nhật lần cuối"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_message
@@ -121,11 +111,6 @@ msgstr "Ngoại tuyến"
 #: selection:bus.presence,status:0
 msgid "Online"
 msgstr "Trực tuyến"
-
-#. module: bus
-#: model:ir.model,name:bus.model_res_partner
-msgid "Partner"
-msgstr "Đối tác"
 
 #. module: bus
 #: model:ir.model,name:bus.model_bus_presence

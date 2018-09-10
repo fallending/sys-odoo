@@ -3,15 +3,17 @@
 # * bus
 # 
 # Translators:
-# Martin Trigaux <mat@odoo.com>, 2017
-# Otgonbayar.A <gobi.mn@gmail.com>, 2017
+# Onii Onii <onii0223@yahoo.com>, 2018
+# Martin Trigaux, 2018
+# Otgonbayar.A <gobi.mn@gmail.com>, 2018
+# Batzul B <batzul.active@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Otgonbayar.A <gobi.mn@gmail.com>, 2017\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: Batzul B <batzul.active@gmail.com>, 2018\n"
 "Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +37,11 @@ msgid "Channel"
 msgstr "Суваг"
 
 #. module: bus
+#: model:ir.model,name:bus.model_res_partner
+msgid "Contact"
+msgstr "Холбох хаяг"
+
+#. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_create_date
 msgid "Create date"
 msgstr "Үүсгэсэн огноо"
@@ -49,21 +56,6 @@ msgstr "Үүсгэгч"
 #: model:ir.model.fields,field_description:bus.field_bus_presence_display_name
 msgid "Display Name"
 msgstr "Дэлгэцийн Нэр"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_partner_latitude
-msgid "Geo Latitude"
-msgstr "Өргөрөг"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_partner_longitude
-msgid "Geo Longitude"
-msgstr "Уртраг"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_date_localization
-msgid "Geolocation Date"
-msgstr "Газарзүйн байршлын огноо"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_id
@@ -82,7 +74,7 @@ msgstr "ШХ Төлөв"
 #: model:ir.model.fields,field_description:bus.field_bus_bus___last_update
 #: model:ir.model.fields,field_description:bus.field_bus_presence___last_update
 msgid "Last Modified on"
-msgstr "Сүүлийн засвар хийсэн огноо"
+msgstr "Сүүлийн зассан хийсэн огноо"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_presence_last_poll
@@ -107,7 +99,7 @@ msgstr "Сүүлийн засвар хийсэн огноо"
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_message
 msgid "Message"
-msgstr "Мессеж"
+msgstr "Зурвас"
 
 #. module: bus
 #: selection:bus.presence,status:0
@@ -118,11 +110,6 @@ msgstr "Оффлайн"
 #: selection:bus.presence,status:0
 msgid "Online"
 msgstr "Онлайн"
-
-#. module: bus
-#: model:ir.model,name:bus.model_res_partner
-msgid "Partner"
-msgstr "Харилцагч"
 
 #. module: bus
 #: model:ir.model,name:bus.model_bus_presence

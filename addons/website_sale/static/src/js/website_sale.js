@@ -1,7 +1,7 @@
 odoo.define('website_sale.cart', function (require) {
     "use strict";
 
-    var base = require('web_editor.base');
+    require('web.dom_ready');
     var core = require('web.core');
     var _t = core._t;
 
@@ -49,7 +49,7 @@ odoo.define('website_sale.cart', function (require) {
 odoo.define('website_sale.website_sale_category', function (require) {
     "use strict";
 
-    var base = require('web_editor.base');
+    require('web.dom_ready');
 
     if(!$('#o_shop_collapse_category').length) {
         return $.Deferred().reject("DOM doesn't contain '#o_shop_collapse_category'");
@@ -70,11 +70,13 @@ odoo.define('website_sale.website_sale_category', function (require) {
 odoo.define('website_sale.website_sale', function (require) {
     "use strict";
 
-    var base = require('web_editor.base');
+    require('web.dom_ready');
+    var base = require("web_editor.base");
     var ajax = require('web.ajax');
     var utils = require('web.utils');
     var core = require('web.core');
     var config = require('web.config');
+    require("website.content.zoomodoo");
     var _t = core._t;
 
     if(!$('.oe_website_sale').length) {
@@ -86,30 +88,44 @@ odoo.define('website_sale.website_sale', function (require) {
 
         $(oe_website_sale).on("change", 'input[name="add_qty"]', function (event) {
             var product_ids = [];
-            var product_dom = $(".js_product .js_add_cart_variants[data-attribute_value_ids]");
+            var product_dom = $(event.target).closest(".js_product").find("ul.js_add_cart_variants");
             var qty = $(event.target).closest('form').find('input[name="add_qty"]').val();
             if (!product_dom.length) {
+                // if variants in list view, update variant price based on quantity
+                var $list_products = $(event.target).closest('.js_product').find('.js_product_change');
+                if ($list_products.length) {
+                    ajax.jsonRpc("/shop/get_unit_price", 'call', {
+                        'product_ids': _.map($list_products, function (variant) {
+                            return parseInt(variant.value);
+                        }),
+                        'add_qty': parseInt(qty)
+                    }).then(function (data) {
+                        _.each(data, function (value, key) {
+                            $list_products.filter('[value="'+key+'"]').data('price', value);
+                        });
+                        $list_products.filter(':checked').change();
+                    });
+                }
                 return;
             }
-            _.each(product_dom, function (prod) {
-                _.each($(prod).data("attribute_value_ids"), function(entry) {
-                    if (product_ids.indexOf(entry[0]) === -1) {
-                        product_ids.push(entry[0]);
-                    }
-                });
-            });
+            var attribute_value_ids = product_dom.data("attribute_value_ids");
+            if(_.isString(attribute_value_ids)) {
+                attribute_value_ids = JSON.parse(attribute_value_ids.replace(/'/g, '"'));
+                // set permanent reference so modifications are kept
+                product_dom.data('attribute_value_ids', attribute_value_ids);
+            }
+            _.each(attribute_value_ids, function(entry) {
+                product_ids.push(entry[0]);});
 
             if ($("#product_detail").length) {
                 // display the reduction from the pricelist in function of the quantity
                 ajax.jsonRpc("/shop/get_unit_price", 'call', {'product_ids': product_ids,'add_qty': parseInt(qty)})
                 .then(function (data) {
-                    _.each(product_dom, function (prod) {
-                        var current = $(prod).data("attribute_value_ids");
-                        for(var j=0; j < current.length; j++){
-                            current[j][2] = data[current[j][0]];
-                        }
-                        $(prod).trigger("change");
-                    });
+                    var current = attribute_value_ids;
+                    for(var j=0; j < current.length; j++){
+                        current[j][2] = data[current[j][0]];
+                    }
+                    product_dom.trigger("change");
                 });
             }
         });
@@ -133,9 +149,9 @@ odoo.define('website_sale.website_sale', function (require) {
                 return;
             }
           var value = parseInt($input.val() || 0, 10);
-      if (isNaN(value)) {
-          value = 1;
-      }
+          if (isNaN(value)) {
+              value = 1;
+          }
           var $dom = $(this).closest('tr');
           //var default_price = parseFloat($dom.find('.text-danger > span.oe_currency_value').text());
           var $dom_optional = $dom.nextUntil(':not(.optional_product.info)');
@@ -205,17 +221,18 @@ odoo.define('website_sale.website_sale', function (require) {
             var min = parseFloat($input.data("min") || 0);
             var max = parseFloat($input.data("max") || Infinity);
             var quantity = ($link.has(".fa-minus").length ? -1 : 1) + parseFloat($input.val() || 0, 10);
+            var new_qty = quantity > min ? (quantity < max ? quantity : max) : min;
             // if they are more of one input for this product (eg: option modal)
             $('input[name="'+$input.attr("name")+'"]').add($input).filter(function () {
                 var $prod = $(this).closest('*:has(input[name="product_id"])');
                 return !$prod.length || +$prod.find('input[name="product_id"]').val() === product_id;
-            }).val(quantity > min ? (quantity < max ? quantity : max) : min);
-            $input.change();
+            }).val(new_qty).change();
             return false;
         });
 
-        $('.oe_website_sale .a-submit, #comment .a-submit').off('click').on('click', function (event) {
+        $('.oe_website_sale, #comment').off('click', '.a-submit').on('click', '.a-submit', function (event) {
             if (!event.isDefaultPrevented() && !$(this).is(".disabled")) {
+                event.preventDefault();
                 $(this).closest('form').submit();
             }
             if ($(this).hasClass('a-submit-disable')){
@@ -234,6 +251,7 @@ odoo.define('website_sale.website_sale', function (require) {
         });
         $('form.js_attributes input, form.js_attributes select', oe_website_sale).on('change', function (event) {
             if (!event.isDefaultPrevented()) {
+                event.preventDefault();
                 $(this).closest("form").submit();
             }
         });
@@ -262,7 +280,6 @@ odoo.define('website_sale.website_sale', function (require) {
 
             if ($(".decimal_precision").length) {
                 precision = parseInt($(".decimal_precision").last().data('precision'));
-                if (!precision) { precision = 0; } //todo: remove me in master/saas-17
             }
             var formatted = _.str.sprintf('%.' + precision + 'f', price).split('.');
             formatted[0] = utils.insert_thousand_seps(formatted[0]);
@@ -270,8 +287,9 @@ odoo.define('website_sale.website_sale', function (require) {
         }
 
         function update_product_image(event_source, product_id) {
+            var $img;
             if ($('#o-carousel-product').length) {
-                var $img = $(event_source).closest('tr.js_product, .oe_website_sale').find('img.js_variant_img');
+                $img = $(event_source).closest('tr.js_product, .oe_website_sale').find('img.js_variant_img');
                 $img.attr("src", "/web/image/product.product/" + product_id + "/image");
                 $img.parent().attr('data-oe-model', 'product.product').attr('data-oe-id', product_id)
                     .data('oe-model', 'product.product').data('oe-id', product_id);
@@ -283,7 +301,7 @@ odoo.define('website_sale.website_sale', function (require) {
                 }
             }
             else {
-                var $img = $(event_source).closest('tr.js_product, .oe_website_sale').find('span[data-oe-model^="product."][data-oe-type="image"] img:first, img.product_detail_img');
+                $img = $(event_source).closest('tr.js_product, .oe_website_sale').find('span[data-oe-model^="product."][data-oe-type="image"] img:first, img.product_detail_img');
                 $img.attr("src", "/web/image/product.product/" + product_id + "/image");
                 $img.parent().attr('data-oe-model', 'product.product').attr('data-oe-id', product_id)
                     .data('oe-model', 'product.product').data('oe-id', product_id);
@@ -313,6 +331,9 @@ odoo.define('website_sale.website_sale', function (require) {
             var $default_price = $parent.find(".oe_default_price:first .oe_currency_value");
             var $optional_price = $parent.find(".oe_optional:first .oe_currency_value");
             var variant_ids = $ul.data("attribute_value_ids");
+            if(_.isString(variant_ids)) {
+                variant_ids = JSON.parse(variant_ids.replace(/'/g, '"'));
+            }
             var values = [];
             var unchanged_values = $parent.find('div.oe_unchanged_value_ids').data('unchanged_value_ids') || [];
 
@@ -374,7 +395,7 @@ odoo.define('website_sale.website_sale', function (require) {
         });
 
         $('div.js_product', oe_website_sale).each(function () {
-            $('input.js_product_change', this).first().trigger('change');
+            $('input.js_product_change', this).first().prop('checked', 'checked').trigger('change');
         });
 
         $('.js_add_cart_variants', oe_website_sale).each(function () {

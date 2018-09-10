@@ -3,17 +3,17 @@
 # * payment_authorize
 # 
 # Translators:
-# Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2016
-# Carles Antoli <carlesantoli@hotmail.com>, 2016
-# RGB Consulting <odoo@rgbconsulting.com>, 2016
 # Lluís Dalmau <lluis.dalmau@guifi.net>, 2018
+# Carles Antoli <carlesantoli@hotmail.com>, 2018
+# RGB Consulting <odoo@rgbconsulting.com>, 2018
+# Quim - eccit <quim@eccit.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: Lluís Dalmau <lluis.dalmau@guifi.net>, 2018\n"
+"POT-Creation-Date: 2018-02-19 13:43+0000\n"
+"PO-Revision-Date: 2018-02-19 13:43+0000\n"
+"Last-Translator: Quim - eccit <quim@eccit.com>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/odoo/teams/41243/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +29,7 @@ msgstr "API Identificador d'accés "
 #. module: payment_authorize
 #: model:ir.model.fields,field_description:payment_authorize.field_payment_acquirer_authorize_transaction_key
 msgid "API Transaction Key"
-msgstr "Clau de l'API de transacció"
-
-#. module: payment_authorize
-#: code:addons/payment_authorize/models/authorize_request.py:66
-#, python-format
-msgid ""
-"Authorize.net Error Message(s):\n"
-" %s"
-msgstr "Authorize.net Missatge/s d'error: %s"
+msgstr "Clau de l'APT de transacció"
 
 #. module: payment_authorize
 #: model:ir.model.fields,field_description:payment_authorize.field_payment_token_authorize_profile
@@ -66,31 +58,26 @@ msgstr "Número de targeta"
 
 #. module: payment_authorize
 #: model:ir.ui.view,arch_db:payment_authorize.authorize_s2s_form
-msgid "Confirm <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Confirmar <span class=\"fa fa-long-arrow-right\"/>"
+msgid "Cardholder name"
+msgstr ""
 
 #. module: payment_authorize
 #: model:ir.ui.view,arch_db:payment_authorize.authorize_s2s_form
-msgid "Expires"
-msgstr "Caduca"
+msgid "Expires (MM / YY)"
+msgstr ""
 
 #. module: payment_authorize
 #: model:ir.ui.view,arch_db:payment_authorize.acquirer_form_authorize
-msgid ""
-"How to configure your Authorize.Net account (look for Getting Started Guide)"
-" ?"
+msgid "How to get paid with Authorize.Net"
 msgstr ""
-"Com configurar el teu compte Authorize.Net (cerqueu la guia d'introducció) ?"
 
 #. module: payment_authorize
-#: model:ir.ui.view,arch_db:payment_authorize.authorize_s2s_form
-msgid "MM / YY"
-msgstr "MM / YY"
-
-#. module: payment_authorize
-#: model:ir.ui.view,arch_db:payment_authorize.authorize_s2s_form
-msgid "Name"
-msgstr "Nom"
+#: code:addons/payment_authorize/controllers/main.py:61
+#, python-format
+msgid ""
+"If you don't have any account, please ask your salesperson to update your "
+"profile. "
+msgstr ""
 
 #. module: payment_authorize
 #: model:ir.model,name:payment_authorize.model_payment_acquirer
@@ -103,10 +90,40 @@ msgid "Payment Transaction"
 msgstr "Transacció de pagament"
 
 #. module: payment_authorize
-#: code:addons/payment_authorize/models/payment.py:347
+#: code:addons/payment_authorize/controllers/main.py:63
+#, python-format
+msgid "Please complete your profile. "
+msgstr ""
+
+#. module: payment_authorize
+#: code:addons/payment_authorize/controllers/main.py:58
+#, python-format
+msgid "Please sign in to complete your profile."
+msgstr ""
+
+#. module: payment_authorize
+#: model:ir.model.fields,field_description:payment_authorize.field_payment_token_provider
+msgid "Provider"
+msgstr "Proveïdor"
+
+#. module: payment_authorize
+#: model:ir.model.fields,field_description:payment_authorize.field_payment_token_save_token
+msgid "Save Cards"
+msgstr ""
+
+#. module: payment_authorize
+#: code:addons/payment_authorize/models/payment.py:372
 #, python-format
 msgid "The Customer Profile creation in Authorize.NET failed."
 msgstr "La creació del perfil de client a Authorize.NET ha fallat."
+
+#. module: payment_authorize
+#: code:addons/payment_authorize/controllers/main.py:55
+#, python-format
+msgid ""
+"The transaction cannot be processed because some contact details are missing"
+" or invalid: "
+msgstr ""
 
 #. module: payment_authorize
 #: model:ir.model.fields,help:payment_authorize.field_payment_token_authorize_profile
@@ -116,6 +133,15 @@ msgid ""
 msgstr ""
 "Això conté la referència exclusiva d'aquest soci/pagament al backend "
 "d'Authorize.net"
+
+#. module: payment_authorize
+#: model:ir.model.fields,help:payment_authorize.field_payment_token_save_token
+msgid ""
+"This option allows customers to save their credit card as a payment token "
+"and to reuse it for a later purchase. If you manage subscriptions (recurring"
+" invoicing), you need it to automatically charge the customer when you issue"
+" an invoice."
+msgstr ""
 
 #. module: payment_authorize
 #: model:ir.model,name:payment_authorize.model_payment_token

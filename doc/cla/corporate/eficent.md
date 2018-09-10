@@ -17,4 +17,3 @@ Lois Rilo lois.rilo@eficent.com https://github.com/lreficent
 Miquel Raich miquel.raich@eficent.com https://github.com/mreficent
 Jordi Ballester jordi.ballester@eficent.com https://github.com/jbeficent
 Hector Villarreal hector.villarreal@eficent.com https://github.com/hveficent
-Roser Garcia roser.garcia@eficent.com https://github.com/rgarnau (up to 2018-05-01)

@@ -54,7 +54,7 @@ Business objects
     by Odoo based on their configuration
 
 Data files
-    XML or CSV files declaring metadata (views or workflows), configuration
+    XML or CSV files declaring metadata (views or reports), configuration
     data (modules parameterization), demonstration data and more
 
 Web controllers
@@ -230,11 +230,11 @@ record.
 .. code-block:: xml
 
     <odoo>
-        <data>
+
             <record model="{model name}" id="{record identifier}">
                 <field name="{a field name}">{a value}</field>
             </record>
-        </data>
+
     </odoo>
 
 * ``model`` is the name of the Odoo model for the record.
@@ -257,6 +257,13 @@ be declared in the ``'data'`` list (always loaded) or in the ``'demo'`` list
         Edit the file ``openacademy/demo/demo.xml`` to include some data.
 
         .. patch::
+
+.. tip:: The content of the data files is only loaded when a module is
+    installed or updated.
+
+    After making some changes, do not forget to use
+    :ref:`odoo-bin -u openacademy <reference/cmdline>` to save the changes
+    to your database.
 
 Actions and Menus
 -----------------
@@ -994,7 +1001,7 @@ behavior:
 
     ``{$name}`` can be ``bf`` (``font-weight: bold``), ``it``
     (``font-style: italic``), or any `bootstrap contextual color
-    <http://getbootstrap.com/components/#available-variations>`_ (``danger``,
+    <https://getbootstrap.com/docs/3.3/components/#available-variations>`_ (``danger``,
     ``info``, ``muted``, ``primary``, ``success`` or ``warning``).
 
     .. code-block:: xml
@@ -1036,9 +1043,9 @@ their most common attributes are:
 ``date_start``
     record's field holding the start date/time for the event
 ``date_stop`` (optional)
-    record's field holding the end date/time for the event
-
-field (to define the label for each calendar event)
+    record's field holding the end date/time for the event
+``string``
+    record's field to define the label for each calendar event
 
 .. code-block:: xml
 
@@ -1231,90 +1238,6 @@ Kanban views define the structure of each card as a mix of form elements
 
         #. Add an integer ``color`` field to the *Session* model
         #. Add the kanban view and update the action
-
-        .. patch::
-
-Workflows
-=========
-
-Workflows are models associated to business objects describing their dynamics.
-Workflows are also used to track processes that evolve over time.
-
-.. exercise:: Almost a workflow
-
-    Add a ``state`` field to the *Session* model. It will be used to define
-    a workflow-ish.
-
-    A sesion can have three possible states: Draft (default), Confirmed and
-    Done.
-
-    In the session form, add a (read-only) field to
-    visualize the state, and buttons to change it. The valid transitions are:
-
-    * Draft -> Confirmed
-    * Confirmed -> Draft
-    * Confirmed -> Done
-    * Done -> Draft
-
-    .. only:: solutions
-
-        #. Add a new ``state`` field
-        #. Add state-transitioning methods, those can be called from view
-           buttons to change the record's state
-        #. And add the relevant buttons to the session's form view
-
-        .. patch::
-
-Workflows may be associated with any object in Odoo, and are entirely
-customizable. Workflows are used to structure and manage the lifecycles of
-business objects and documents, and define transitions, triggers, etc. with
-graphical tools. Workflows, activities (nodes or actions) and transitions
-(conditions) are declared as XML records, as usual. The tokens that navigate
-in workflows are called workitems.
-
-.. warning::
-
-    A workflow associated with a model is only created when the
-    model's records are created. Thus there is no workflow instance
-    associated with session instances created before the workflow's
-    definition
-
-.. exercise:: Workflow
-
-    Replace the ad-hoc *Session* workflow by a real workflow. Transform the
-    *Session* form view so its buttons call the workflow instead of the
-    model's methods.
-
-    .. only:: solutions
-
-        .. patch::
-
-        .. tip::
-
-            In order to check if instances of the workflow are correctly
-            created alongside sessions, go to :menuselection:`Settings -->
-            Technical --> Workflows --> Instances`
-
-
-
-.. exercise:: Automatic transitions
-
-    Automatically transition sessions from *Draft* to *Confirmed* when more
-    than half the session's seats are reserved.
-
-    .. only:: solutions
-
-        .. patch::
-
-.. exercise:: Server actions
-
-    Replace the Python methods for synchronizing session state by
-    server actions.
-
-    Both the workflow and the server actions could have been created entirely
-    from the UI.
-
-    .. only:: solutions
 
         .. patch::
 
@@ -1585,12 +1508,12 @@ Reporting
 Printed reports
 ---------------
 
-Odoo 8.0 comes with a new report engine based on :ref:`reference/qweb`,
+Odoo 11.0 uses a report engine based on :ref:`reference/qweb`,
 `Twitter Bootstrap`_ and Wkhtmltopdf_. 
 
 A report is a combination two elements:
 
-* an ``ir.actions.report.xml``, for which a ``<report>`` shortcut element is
+* an ``ir.actions.report``, for which a ``<report>`` shortcut element is
   provided, it sets up various basic parameters for the report (default
   type, whether the report should be saved to the database after generation,…)
 
@@ -1613,9 +1536,9 @@ A report is a combination two elements:
 
   .. code-block:: xml
 
-    <t t-call="report.html_container">
+    <t t-call="web.html_container">
         <t t-foreach="docs" t-as="o">
-            <t t-call="report.external_layout">
+            <t t-call="web.external_layout">
                 <div class="page">
                     <h2>Report title</h2>
                 </div>
@@ -1715,18 +1638,18 @@ exist in many languages.
 XML-RPC Library
 ---------------
 
-The following example is a Python program that interacts with an Odoo
-server with the library ``xmlrpclib``::
+The following example is a Python 3 program that interacts with an Odoo
+server with the library ``xmlrpc.client``::
 
-   import xmlrpclib
+   import xmlrpc.client
 
    root = 'http://%s:%d/xmlrpc/' % (HOST, PORT)
 
-   uid = xmlrpclib.ServerProxy(root + 'common').login(DB, USER, PASS)
-   print "Logged in as %s (uid: %d)" % (USER, uid)
+   uid = xmlrpc.client.ServerProxy(root + 'common').login(DB, USER, PASS)
+   print("Logged in as %s (uid: %d)" % (USER, uid))
 
    # Create a new note
-   sock = xmlrpclib.ServerProxy(root + 'object')
+   sock = xmlrpc.client.ServerProxy(root + 'object')
    args = {
        'color' : 8,
        'memo' : 'This is a note',
@@ -1746,7 +1669,7 @@ server with the library ``xmlrpclib``::
         .. code-block:: python
 
             import functools
-            import xmlrpclib
+            import xmlrpc.client
             HOST = 'localhost'
             PORT = 8069
             DB = 'openacademy'
@@ -1755,17 +1678,17 @@ server with the library ``xmlrpclib``::
             ROOT = 'http://%s:%d/xmlrpc/' % (HOST,PORT)
 
             # 1. Login
-            uid = xmlrpclib.ServerProxy(ROOT + 'common').login(DB,USER,PASS)
-            print "Logged in as %s (uid:%d)" % (USER,uid)
+            uid = xmlrpc.client.ServerProxy(ROOT + 'common').login(DB,USER,PASS)
+            print("Logged in as %s (uid:%d)" % (USER,uid))
 
             call = functools.partial(
-                xmlrpclib.ServerProxy(ROOT + 'object').execute,
+                xmlrpc.client.ServerProxy(ROOT + 'object').execute,
                 DB, uid, PASS)
 
             # 2. Read the sessions
             sessions = call('openacademy.session','search_read', [], ['name','seats'])
             for session in sessions:
-                print "Session %s (%s seats)" % (session['name'], session['seats'])
+                print("Session %s (%s seats)" % (session['name'], session['seats']))
             # 3.create a new session
             session_id = call('openacademy.session', 'create', {
                 'name' : 'My session',
@@ -1785,12 +1708,19 @@ server with the library ``xmlrpclib``::
 JSON-RPC Library
 ----------------
 
-The following example is a Python program that interacts with an Odoo server
-with the standard Python libraries ``urllib2`` and ``json``::
+The following example is a Python 3 program that interacts with an Odoo server
+with the standard Python libraries ``urllib.request`` and ``json``. This
+example assumes the **Productivity** app (``note``) is installed::
 
     import json
     import random
-    import urllib2
+    import urllib.request
+
+    HOST = 'localhost'
+    PORT = 8069
+    DB = 'openacademy'
+    USER = 'admin'
+    PASS = 'admin'
 
     def json_rpc(url, method, params):
         data = {
@@ -1799,10 +1729,10 @@ with the standard Python libraries ``urllib2`` and ``json``::
             "params": params,
             "id": random.randint(0, 1000000000),
         }
-        req = urllib2.Request(url=url, data=json.dumps(data), headers={
+        req = urllib.request.Request(url=url, data=json.dumps(data).encode(), headers={
             "Content-Type":"application/json",
         })
-        reply = json.load(urllib2.urlopen(req))
+        reply = json.loads(urllib.request.urlopen(req).read().decode('UTF-8'))
         if reply.get("error"):
             raise Exception(reply["error"])
         return reply["result"]
@@ -1816,36 +1746,11 @@ with the standard Python libraries ``urllib2`` and ``json``::
 
     # create a new note
     args = {
-        'color' : 8,
-        'memo' : 'This is another note',
+        'color': 8,
+        'memo': 'This is another note',
         'create_uid': uid,
     }
     note_id = call(url, "object", "execute", DB, uid, PASS, 'note.note', 'create', args)
-
-Here is the same program, using the library
-`jsonrpclib <https://pypi.python.org/pypi/jsonrpclib>`_::
-
-    import jsonrpclib
-
-    # server proxy object
-    url = "http://%s:%s/jsonrpc" % (HOST, PORT)
-    server = jsonrpclib.Server(url)
-
-    # log in the given database
-    uid = server.call(service="common", method="login", args=[DB, USER, PASS])
-
-    # helper function for invoking model methods
-    def invoke(model, method, *args):
-        args = [DB, uid, PASS, model, method] + list(args)
-        return server.call(service="object", method="execute", args=args)
-
-    # create a new note
-    args = {
-        'color' : 8,
-        'memo' : 'This is another note',
-        'create_uid': uid,
-    }
-    note_id = invoke('note.note', 'create', args)
 
 Examples can be easily adapted from XML-RPC to JSON-RPC.
 

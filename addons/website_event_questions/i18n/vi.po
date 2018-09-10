@@ -3,21 +3,19 @@
 # * website_event_questions
 # 
 # Translators:
-# fanha99 <fanha99@hotmail.com>, 2016
-# Martin Trigaux, 2016
-# Phạm Lân <phamquanglan@gmail.com>, 2016
-# son dang <son.dang@doda100.com>, 2016
-# Hoang Loc Le Huu <loclhh@gmail.com>, 2016
+# Martin Trigaux, 2017
+# son dang <son.dang@doda100.com>, 2017
+# Duy BQ <duybq86@gmail.com>, 2017
+# fanha99 <fanha99@hotmail.com>, 2017
+# Phạm Lân <phamquanglan@gmail.com>, 2017
 # Tuan Tran <tmtuan.projects@gmail.com>, 2017
-# Thang Duong Bao <nothingctrl@gmail.com>, 2017
-# Duy BQ <duybq86@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: Duy BQ <duybq86@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-10-02 11:26+0000\n"
+"PO-Revision-Date: 2017-10-02 11:26+0000\n"
+"Last-Translator: Tuan Tran <tmtuan.projects@gmail.com>, 2017\n"
 "Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +25,7 @@ msgstr ""
 
 #. module: website_event_questions
 #: model:ir.ui.view,arch_db:website_event_questions.registration_attendee_details_questions
-msgid "<strong>Common Questions</strong>"
+msgid "<strong>Questions</strong>"
 msgstr ""
 
 #. module: website_event_questions
@@ -47,7 +45,7 @@ msgstr "Trả lời"
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_ids
 #: model:ir.ui.view,arch_db:website_event_questions.view_registration_search_inherit_question
 msgid "Answers"
-msgstr "Các câu trả lời"
+msgstr "Trả lời"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_is_individual
@@ -76,7 +74,7 @@ msgstr "Được tạo bởi"
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_create_date
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_create_date
 msgid "Created on"
-msgstr "Thời điểm tạo"
+msgstr "Được tạo vào"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_answer_display_name
@@ -88,6 +86,7 @@ msgstr "Tên hiển thị"
 
 #. module: website_event_questions
 #: model:ir.model,name:website_event_questions.model_event_event
+#: model:ir.model.fields,field_description:website_event_questions.field_event_question_event_id
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report_event_id
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_report_search
 msgid "Event"
@@ -95,18 +94,23 @@ msgstr "Sự kiện"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_event_answer_id
-msgid "Event answer id"
+msgid "Event Answer"
 msgstr ""
 
 #. module: website_event_questions
-#: model:ir.model.fields,field_description:website_event_questions.field_event_question_event_id
-msgid "Event id"
-msgstr ""
+#: model:ir.model,name:website_event_questions.model_event_type
+msgid "Event Category"
+msgstr "Nhóm Sự kiện"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_event_registration_id
-msgid "Event registration id"
-msgstr ""
+msgid "Event Registration"
+msgstr "Đăng ký Sự kiện"
+
+#. module: website_event_questions
+#: model:ir.model.fields,field_description:website_event_questions.field_event_question_event_type_id
+msgid "Event Type"
+msgstr "Loại sự kiện"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_event_general_question_ids
@@ -154,7 +158,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report___last_update
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer___last_update
 msgid "Last Modified on"
-msgstr "Sửa lần cuối vào"
+msgstr "Sửa lần cuối"
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_answer_write_uid
@@ -168,12 +172,12 @@ msgstr "Cập nhật lần cuối bởi"
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_write_date
 #: model:ir.model.fields,field_description:website_event_questions.field_event_registration_answer_write_date
 msgid "Last Updated on"
-msgstr "Cập nhật lần cuối vào"
+msgstr "Cập nhật lần cuối"
 
 #. module: website_event_questions
 #: model:event.answer,name:website_event_questions.event_suggestion_1_1
 msgid "No"
-msgstr "No"
+msgstr "Không"
 
 #. module: website_event_questions
 #: model:event.answer,name:website_event_questions.event_suggestion_2_0
@@ -181,6 +185,7 @@ msgid "Personal"
 msgstr "Cá nhân"
 
 #. module: website_event_questions
+#: model:ir.model.fields,field_description:website_event_questions.field_event_answer_question_id
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report_question_id
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_answer_simplified_form
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_form
@@ -189,12 +194,14 @@ msgid "Question"
 msgstr "Câu hỏi"
 
 #. module: website_event_questions
-#: model:ir.model.fields,field_description:website_event_questions.field_event_answer_question_id
-msgid "Question id"
+#: code:addons/website_event_questions/models/event.py:78
+#, python-format
+msgid "Question should belong to either event category or event but not both"
 msgstr ""
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_event_question_ids
+#: model:ir.model.fields,field_description:website_event_questions.field_event_type_question_ids
 #: model:ir.ui.menu,name:website_event_questions.menu_report_event_questions
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_form_inherit_question
 msgid "Questions"
@@ -207,6 +214,11 @@ msgstr "Câu hỏi"
 #: model:ir.ui.view,arch_db:website_event_questions.view_event_question_report_search
 msgid "Questions Analysis"
 msgstr "Phân tích các Câu hỏi"
+
+#. module: website_event_questions
+#: model:ir.model.fields,field_description:website_event_questions.field_event_type_use_questions
+msgid "Questions to Attendees"
+msgstr ""
 
 #. module: website_event_questions
 #: model:ir.model.fields,field_description:website_event_questions.field_event_question_report_attendee_id

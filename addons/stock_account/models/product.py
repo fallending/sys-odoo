@@ -3,7 +3,9 @@
 
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError
-from odoo.tools import float_is_zero
+from odoo.tools import float_is_zero, pycompat
+from odoo.addons import decimal_precision as dp
+
 
 
 class ProductTemplate(models.Model):
@@ -14,17 +16,17 @@ class ProductTemplate(models.Model):
         ('manual_periodic', 'Periodic (manual)'),
         ('real_time', 'Perpetual (automated)')], string='Inventory Valuation',
         company_dependent=True, copy=True, default='manual_periodic',
-        help="If perpetual valuation is enabled for a product, the system will automatically create journal entries corresponding to stock moves, with product price as specified by the 'Costing Method'" \
-             "The inventory variation account set on the product category will represent the current inventory value, and the stock input and stock output account will hold the counterpart moves for incoming and outgoing products.")
+        help="""Manual: The accounting entries to value the inventory are not posted automatically.
+        Automated: An accounting entry is automatically created to value the inventory when a product enters or leaves the company.""")
     valuation = fields.Char(compute='_compute_valuation_type', inverse='_set_valuation_type')
     property_cost_method = fields.Selection([
         ('standard', 'Standard Price'),
-        ('average', 'Average Price'),
-        ('real', 'Real Price')], string='Costing Method',
+        ('fifo', 'First In First Out (FIFO)'),
+        ('average', 'Average Cost (AVCO)')], string='Costing Method',
         company_dependent=True, copy=True,
-        help="""Standard Price: The cost price is manually updated at the end of a specific period (usually once a year).
-                Average Price: The cost price is recomputed at each incoming shipment and used for the product valuation.
-                Real Price: The cost price displayed is the price of the last outgoing product (will be use in case of inventory loss for example).""")
+        help="""Standard Price: The products are valued at their standard cost defined on the product.
+        Average Cost (AVCO): The products are valued at weighted average cost.
+        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first.""")
     cost_method = fields.Char(compute='_compute_cost_method', inverse='_set_cost_method')
     property_stock_account_input = fields.Many2one(
         'account.account', 'Stock Input Account',
@@ -51,14 +53,21 @@ class ProductTemplate(models.Model):
     def _compute_cost_method(self):
         self.cost_method = self.property_cost_method or self.categ_id.property_cost_method
 
+    def _is_cost_method_standard(self):
+        return self.property_cost_method == 'standard'
+
     @api.one
     def _set_cost_method(self):
+        # When going from FIFO to AVCO or to standard, we update the standard price with the
+        # average value in stock.
+        if self.property_cost_method == 'fifo' and self.cost_method in ['average', 'standard']:
+            # Cannot use the `stock_value` computed field as it's already invalidated when
+            # entering this method.
+            valuation = sum([variant._sum_remaining_values()[0] for variant in self.product_variant_ids])
+            qty_available = self.with_context(company_owned=True).qty_available
+            if qty_available:
+                self.standard_price = valuation / qty_available
         return self.write({'property_cost_method': self.cost_method})
-
-    @api.onchange('type')
-    def onchange_type_valuation(self):
-        # TO REMOVE IN MASTER
-        pass
 
     @api.multi
     def _get_product_accounts(self):
@@ -75,6 +84,11 @@ class ProductTemplate(models.Model):
         return accounts
 
     @api.multi
+    def action_open_product_moves(self):
+        # TODO: remove me in master
+        pass
+
+    @api.multi
     def get_product_accounts(self, fiscal_pos=None):
         """ Add the stock journal related to product to the result of super()
         @return: dictionary which contains all needed information regarding stock accounts and journal and super (income+expense accounts)
@@ -87,10 +101,14 @@ class ProductTemplate(models.Model):
 class ProductProduct(models.Model):
     _inherit = 'product.product'
 
-    @api.onchange('type')
-    def onchange_type_valuation(self):
-        # TO REMOVE IN MASTER
-        pass
+    stock_value = fields.Float(
+        'Value', compute='_compute_stock_value')
+    qty_at_date = fields.Float(
+        'Quantity', compute='_compute_stock_value')
+    stock_fifo_real_time_aml_ids = fields.Many2many(
+        'account.move.line', compute='_compute_stock_value')
+    stock_fifo_manual_move_ids = fields.Many2many(
+        'stock.move', compute='_compute_stock_value')
 
     @api.multi
     def do_change_standard_price(self, new_price, account_id):
@@ -124,13 +142,13 @@ class ProductProduct(models.Model):
                         'journal_id': product_accounts[product.id]['stock_journal'].id,
                         'company_id': location.company_id.id,
                         'line_ids': [(0, 0, {
-                            'name': _('Standard Price changed'),
+                            'name': _('Standard Price changed  - %s') % (product.display_name),
                             'account_id': debit_account_id,
                             'debit': abs(diff * qty_available),
                             'credit': 0,
                             'product_id': product.id,
                         }), (0, 0, {
-                            'name': _('Standard Price changed'),
+                            'name': _('Standard Price changed  - %s') % (product.display_name),
                             'account_id': credit_account_id,
                             'debit': 0,
                             'credit': abs(diff * qty_available),
@@ -142,6 +160,112 @@ class ProductProduct(models.Model):
 
         self.write({'standard_price': new_price})
         return True
+
+    def _get_fifo_candidates_in_move(self):
+        """ Find IN moves that can be used to value OUT moves.
+        """
+        self.ensure_one()
+        domain = [('product_id', '=', self.id), ('remaining_qty', '>', 0.0)] + self.env['stock.move']._get_in_base_domain()
+        candidates = self.env['stock.move'].search(domain, order='date, id')
+        return candidates
+
+    def _sum_remaining_values(self):
+        StockMove = self.env['stock.move']
+        domain = [('product_id', '=', self.id)] + StockMove._get_all_base_domain()
+        moves = StockMove.search(domain)
+        return sum(moves.mapped('remaining_value')), moves
+
+    @api.multi
+    @api.depends('stock_move_ids.product_qty', 'stock_move_ids.state', 'stock_move_ids.remaining_value', 'product_tmpl_id.cost_method', 'product_tmpl_id.standard_price', 'product_tmpl_id.property_valuation', 'product_tmpl_id.categ_id.property_valuation')
+    def _compute_stock_value(self):
+        StockMove = self.env['stock.move']
+        to_date = self.env.context.get('to_date')
+
+        self.env['account.move.line'].check_access_rights('read')
+        fifo_automated_values = {}
+        query = """SELECT aml.product_id, aml.account_id, sum(aml.debit) - sum(aml.credit), sum(quantity), array_agg(aml.id)
+                     FROM account_move_line AS aml
+                    WHERE aml.product_id IS NOT NULL AND aml.company_id=%%s %s
+                 GROUP BY aml.product_id, aml.account_id"""
+        params = (self.env.user.company_id.id,)
+        if to_date:
+            query = query % ('AND aml.date <= %s',)
+            params = params + (to_date,)
+        else:
+            query = query % ('',)
+        self.env.cr.execute(query, params=params)
+
+        res = self.env.cr.fetchall()
+        for row in res:
+            fifo_automated_values[(row[0], row[1])] = (row[2], row[3], list(row[4]))
+
+        for product in self:
+            if product.cost_method in ['standard', 'average']:
+                qty_available = product.with_context(company_owned=True, owner_id=False).qty_available
+                price_used = product.standard_price
+                if to_date:
+                    price_used = product.get_history_price(
+                        self.env.user.company_id.id,
+                        date=to_date,
+                    )
+                product.stock_value = price_used * qty_available
+                product.qty_at_date = qty_available
+            elif product.cost_method == 'fifo':
+                if to_date:
+                    if product.product_tmpl_id.valuation == 'manual_periodic':
+                        domain = [('product_id', '=', product.id), ('date', '<=', to_date)] + StockMove._get_all_base_domain()
+                        moves = StockMove.search(domain)
+                        product.stock_value = sum(moves.mapped('value'))
+                        product.qty_at_date = product.with_context(company_owned=True, owner_id=False).qty_available
+                        product.stock_fifo_manual_move_ids = StockMove.browse(moves.ids)
+                    elif product.product_tmpl_id.valuation == 'real_time':
+                        valuation_account_id = product.categ_id.property_stock_valuation_account_id.id
+                        value, quantity, aml_ids = fifo_automated_values.get((product.id, valuation_account_id)) or (0, 0, [])
+                        product.stock_value = value
+                        product.qty_at_date = quantity
+                        product.stock_fifo_real_time_aml_ids = self.env['account.move.line'].browse(aml_ids)
+                else:
+                    product.stock_value, moves = product._sum_remaining_values()
+                    product.qty_at_date = product.with_context(company_owned=True, owner_id=False).qty_available
+                    if product.product_tmpl_id.valuation == 'manual_periodic':
+                        product.stock_fifo_manual_move_ids = moves
+                    elif product.product_tmpl_id.valuation == 'real_time':
+                        valuation_account_id = product.categ_id.property_stock_valuation_account_id.id
+                        value, quantity, aml_ids = fifo_automated_values.get((product.id, valuation_account_id)) or (0, 0, [])
+                        product.stock_fifo_real_time_aml_ids = self.env['account.move.line'].browse(aml_ids)
+
+    def action_valuation_at_date_details(self):
+        """ Returns an action with either a list view of all the valued stock moves of `self` if the
+        valuation is set as manual or a list view of all the account move lines if the valuation is
+        set as automated.
+        """
+        self.ensure_one()
+        to_date = self.env.context.get('to_date')
+        action = {
+            'name': _('Valuation at date'),
+            'type': 'ir.actions.act_window',
+            'view_type': 'form',
+            'view_mode': 'tree,form',
+            'context': self.env.context,
+        }
+        if self.valuation == 'real_time':
+            action['res_model'] = 'account.move.line'
+            action['domain'] = [('id', 'in', self.with_context(to_date=to_date).stock_fifo_real_time_aml_ids.ids)]
+            tree_view_ref = self.env.ref('stock_account.view_stock_account_aml')
+            form_view_ref = self.env.ref('account.view_move_line_form')
+            action['views'] = [(tree_view_ref.id, 'tree'), (form_view_ref.id, 'form')]
+        else:
+            action['res_model'] = 'stock.move'
+            action['domain'] = [('id', 'in', self.with_context(to_date=to_date).stock_fifo_manual_move_ids.ids)]
+            tree_view_ref = self.env.ref('stock_account.view_move_tree_valuation_at_date')
+            form_view_ref = self.env.ref('stock.view_move_form')
+            action['views'] = [(tree_view_ref.id, 'tree'), (form_view_ref.id, 'form')]
+        return action
+
+    @api.multi
+    def action_open_product_moves(self):
+        #TODO: remove me in master
+        pass
 
     @api.model
     def _anglo_saxon_sale_move_lines(self, name, product, uom, qty, price_unit, currency=False, amount_currency=False, fiscal_position=False, account_analytic=False, analytic_tags=False):
@@ -206,32 +330,49 @@ class ProductProduct(models.Model):
             return price or 0.0
         return self.uom_id._compute_price(price, uom)
 
+    def _compute_average_price(self, qty_done, quantity, moves):
+        average_price_unit = 0
+        qty_delivered = 0
+        invoiced_qty = 0
+        for move in moves:
+            if move.state != 'done':
+                continue
+            invoiced_qty += move.product_qty
+            if invoiced_qty <= qty_done:
+                continue
+            qty_to_consider = move.product_qty
+            if invoiced_qty - move.product_qty < qty_done:
+                qty_to_consider = invoiced_qty - qty_done
+            qty_to_consider = min(qty_to_consider, quantity - qty_delivered)
+            qty_delivered += qty_to_consider
+            # `move.price_unit` is negative if the move is out and positive if the move is
+            # dropshipped. Use its absolute value to compute the average price unit.
+            if qty_delivered:
+                average_price_unit = (average_price_unit * (qty_delivered - qty_to_consider) + abs(move.price_unit) * qty_to_consider) / qty_delivered
+            if qty_delivered == quantity:
+                break
+        return average_price_unit
+
 
 class ProductCategory(models.Model):
     _inherit = 'product.category'
 
     property_valuation = fields.Selection([
-        ('manual_periodic', 'Periodic (manual)'),
-        ('real_time', 'Perpetual (automated)')], string='Inventory Valuation',
+        ('manual_periodic', 'Manual'),
+        ('real_time', 'Automated')], string='Inventory Valuation',
         company_dependent=True, copy=True, required=True,
-        help="If perpetual valuation is enabled for a product, the system "
-             "will automatically create journal entries corresponding to "
-             "stock moves, with product price as specified by the 'Costing "
-             "Method'. The inventory variation account set on the product "
-             "category will represent the current inventory value, and the "
-             "stock input and stock output account will hold the counterpart "
-             "moves for incoming and outgoing products.")
+        help="""Manual: The accounting entries to value the inventory are not posted automatically.
+        Automated: An accounting entry is automatically created to value the inventory when a product enters or leaves the company.
+        """)
     property_cost_method = fields.Selection([
         ('standard', 'Standard Price'),
-        ('average', 'Average Price'),
-        ('real', 'Real Price')], string="Costing Method",
+        ('fifo', 'First In First Out (FIFO)'),
+        ('average', 'Average Cost (AVCO)')], string="Costing Method",
         company_dependent=True, copy=True, required=True,
-        help="Standard Price: The cost price is manually updated at the end "
-             "of a specific period (usually once a year).\nAverage Price: "
-             "The cost price is recomputed at each incoming shipment and "
-             "used for the product valuation.\nReal Price: The cost price "
-             "displayed is the price of the last outgoing product (will be "
-             "used in case of inventory loss for example).""")
+        help="""Standard Price: The products are valued at their standard cost defined on the product.
+        Average Cost (AVCO): The products are valued at weighted average cost.
+        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first.
+        """)
     property_stock_journal = fields.Many2one(
         'account.journal', 'Stock Journal', company_dependent=True,
         help="When doing real-time inventory valuation, this is the Accounting Journal in which entries will be automatically posted when stock moves are processed.")
@@ -251,3 +392,15 @@ class ProductCategory(models.Model):
         'account.account', 'Stock Valuation Account', company_dependent=True,
         domain=[('deprecated', '=', False)],
         help="When real-time inventory valuation is enabled on a product, this account will hold the current value of the products.",)
+
+    @api.onchange('property_cost_method')
+    def onchange_property_valuation(self):
+        if not self._origin:
+            # don't display the warning when creating a product category
+            return
+        return {
+            'warning': {
+                'title': _("Warning"),
+                'message': _("Changing your cost method is an important change that will impact your inventory valuation. Are you sure you want to make that change?"),
+            }
+        }

@@ -3,21 +3,20 @@
 # * mass_mailing
 # 
 # Translators:
-# 방상우 <mrroom@gmail.com>, 2017
 # Martin Trigaux, 2017
-# 최재호 <hwangtog@gmail.com>, 2017
-# 종현 엄 <whd5367@naver.com>, 2017
-# Hwang, Geon Gu <under_09@naver.com>, 2017
+# Linkup <link-up@naver.com>, 2017
 # Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2018
 # Seongseok Shin <shinss61@hotmail.com>, 2018
+# Mark Lee <odoos@soti.33mail.com>, 2018
+# 최재호 <hwangtog@gmail.com>, 2018
+# 종현 엄 <whd5367@naver.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:28+0000\n"
-"PO-Revision-Date: 2017-06-23 13:28+0000\n"
-"Last-Translator: Seongseok Shin <shinss61@hotmail.com>, 2018\n"
+"POT-Creation-Date: 2018-02-19 13:43+0000\n"
+"PO-Revision-Date: 2018-02-19 13:43+0000\n"
+"Last-Translator: 종현 엄 <whd5367@naver.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,27 +32,31 @@ msgstr "$18"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_discount2
 msgid "$20"
-msgstr ""
+msgstr "$20"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_kanban
 msgid ""
 "% <br/>\n"
-"                                            <strong>Clicks</strong>"
+"                                                <strong>Clicks</strong>"
 msgstr ""
+"% <br/>\n"
+"                                                <strong>클릭</strong>"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_kanban
 msgid ""
 "%<br/>\n"
-"                                            <strong>Replied</strong>"
+"                                                <strong>Replied</strong>"
 msgstr ""
+"%<br/>\n"
+"                                                <strong>회신됨</strong>"
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:431
+#: code:addons/mass_mailing/models/mass_mailing.py:466
 #, python-format
 msgid "%s (copy)"
-msgstr "%s (사본)"
+msgstr "%s (복사)"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_discount1
@@ -99,7 +102,7 @@ msgstr ""
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_discount1
 msgid "20%"
-msgstr ""
+msgstr "20%"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_event
@@ -110,9 +113,12 @@ msgstr "7월 21일"
 #: model:mail.template,body_html:mass_mailing.newsletter_template
 msgid ""
 "<div class=\"snippet_row bg-color\" style=\"padding:0px;width:600px;margin:auto;background: #ffffff repeat top /100%\">\n"
-"                <table cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse\" width=\"100%\"><tbody><tr><td style=\"padding:10px 10px 10px 5px\" valign=\"center\" width=\"270\"> <a style=\"text-decoration:none\" href=\"http://www.example.com\"><strong>My Company</strong></a> </td><td style=\"padding:10px 15px 10px 10px;vertical-align:middle\" valign=\"center\" width=\"270\"><table align=\"right\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse\"><tbody><tr><td align=\"right\"><a href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-facebook-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td><td align=\"right\" style=\"padding-left:5px\"><a href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-google-plus-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td><td align=\"right\" style=\"padding-left:5px\"><a href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-linkedin-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td><td align=\"right\" style=\"padding-left:5px\"><a href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-twitter-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td></tr></tbody></table></td></tr></tbody></table></div><div style=\"padding:0px;width:600px;margin:auto;background-color:#44B7B7;color:#168484\"><table cellpadding=\"0\" cellspacing=\"0\" style=\"width:100%;background-color:inherit;border-collapse:collapse;color:inherit\"><tbody><tr><td class=\"col_mv bg-color\" style=\"text-align:left; padding-left:20px;vertical-align:middle;font-size:14px\"><p style=\"margin:0;font-size:20px;color:#fff\">You get a 20% discount for signing up!</p><p style=\"margin:0\">Discount Code: <strong>45A9E77DGW8455</strong></p></td><td class=\"col_mv bg-color\" style=\"padding:20px;text-align:center;vertical-align:middle\">  <span class=\"fa fa-6x fa-ticket\"></span>  </td></tr></tbody></table></div><div class=\"snippet_row bg-color\" style=\"padding:0;width:600px;max-width:600px;margin:0 auto;background: #fff repeat top /100%;color:#168484\"><table style=\"width:100%;text-align:justify;margin:0 auto;inherit;border-collapse:collapse;color:inherit\"><tbody><tr><td style=\"padding:10px 30px;font-size:14px;line-height:20px\"><p style=\"margin:0\">Dear ${object.name}</p><p style=\"margin:0\">Great stories have personality. Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.<br></p><p style=\"margin:0\">Great stories are for everyone even when only written for just one person. If you try to write with a wide general audience in mind, your story will ring false and be bland. No one will be interested. Write for one person. If it’s genuine for the one, it’s genuine for the rest.</p><p style=\"margin:0\">Kind Regards,</p><p style=\"margin:0\">Michael Fletcher</p></td></tr></tbody></table></div><div style=\"padding:0;width:600px;max-width:600px;margin:0 auto\"><table style=\"width:100%;text-align:justify;margin:0 auto;background-color:inherit;border-collapse:collapse\"><tbody><tr><td class=\"col_mv bg-color\" style=\"padding:10px 0;background-color:#168484;color:#fff\"><table style=\"border-collapse:collapse;background-color:inherit\"><tbody><tr><td rowspan=\"2\" style=\"padding-left:10px\">  <span class=\"fa fa-check fa-3x\"></span>  </td><td style=\"padding-left:10px;color:#fff;font-size:14px\"><p style=\"font-weight:bold;font-size:18px;margin:0 0 3px 0\">Step 1:</p><p style=\"margin:0\">Place Order</p></td></tr></tbody></table></td><td class=\"col_mv bg-color\" style=\"padding:10px 0;background-color:#FFFFFF;color:#808080\"><table style=\"border-collapse:collapse;background-color:inherit\"><tbody><tr><td rowspan=\"2\" style=\"padding-left:10px\">  <span class=\"fa fa-truck fa-3x\"></span>  </td><td style=\"padding-left:10px;color:#808080;font-size:14px\"><p style=\"font-weight:bold;font-size:18px;margin:0 0 3px 0\">Step 2:</p><p style=\"margin:0\">Shipping</p></td></tr></tbody></table></td><td class=\"col_mv bg-color\" style=\"padding:10px 0;background-color:#FFFFFF;color:#808080\"><table style=\"border-collapse:collapse;background-color:inherit\"><tbody><tr><td rowspan=\"2\" style=\"padding-left:10px\">  <span class=\"fa fa-dollar fa-3x\"></span>  </td><td style=\"padding-left:10px;color:#808080;font-size:14px\"><p style=\"font-weight:bold;font-size:18px;margin:0 0 3px 0\">Step 3:</p><p style=\"margin:0\">Payment</p></td></tr></tbody></table></td></tr></tbody></table></div><div class=\"snippet_row bg-color\" style=\"padding:0px;width:600px;margin:auto;background: #414141 repeat top /100%;color:#44B7B7\"><div style=\"padding:10px\"><table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0 auto;width:100%;border-collapse:collapse;color:inherit;color:inherit\"><tbody><tr><td style=\"text-align:center\"> <a style=\"text-decoration: none;\" href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-facebook-square fa-2x\"></span></a><a style=\"text-decoration: none;\" href=\"https://plus.google.com/+Odooapps\"><span class=\"fa fa-google-plus-square fa-2x\"></span></a><a style=\"text-decoration: none;\" href=\"https://www.linkedin.com/company/odoo\"><span class=\"fa fa-linkedin-square fa-2x\"></span></a><a style=\"text-decoration: none;\" href=\"https://twitter.com/Odoo\"><span class=\"fa fa-twitter-square fa-2x\"></span></a> </td></tr><tr><td style=\"font-size:12px;text-align:center;padding-top:10px;padding-bottom:5px\"> <a href=\"/unsubscribe_from_list\" style=\"color:#44B7B7\">Unsubscribe</a>|<a href=\"/page/contactus\" style=\"color:#44B7B7\">Contact</a> </td></tr></tbody></table></div>\n"
+"                <table cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse\" width=\"100%\"><tbody><tr><td style=\"padding:10px 10px 10px 5px\" valign=\"center\" width=\"270\"> <a style=\"text-decoration:none\" href=\"http://www.example.com\"><strong>My Company</strong></a> </td><td style=\"padding:10px 15px 10px 10px;vertical-align:middle\" valign=\"center\" width=\"270\"><table align=\"right\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse\"><tbody><tr><td align=\"right\"><a target=\"_blank\" href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-facebook-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td><td align=\"right\" style=\"padding-left:5px\"><a target=\"_blank\" href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-google-plus-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td><td align=\"right\" style=\"padding-left:5px\"><a target=\"_blank\" href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-linkedin-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td><td align=\"right\" style=\"padding-left:5px\"><a target=\"_blank\" href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-twitter-square fa-2x\" style=\"color:#44B7B7;\"></span></a></td></tr></tbody></table></td></tr></tbody></table></div><div style=\"padding:0px;width:600px;margin:auto;background-color:#44B7B7;color:#168484\"><table cellpadding=\"0\" cellspacing=\"0\" style=\"width:100%;background-color:inherit;border-collapse:collapse;color:inherit\"><tbody><tr><td class=\"col_mv bg-color\" style=\"text-align:left; padding-left:20px;vertical-align:middle;font-size:14px\"><p style=\"margin:0;font-size:20px;color:#fff\">You get a 20% discount for signing up!</p><p style=\"margin:0\">Discount Code: <strong>45A9E77DGW8455</strong></p></td><td class=\"col_mv bg-color\" style=\"padding:20px;text-align:center;vertical-align:middle\">  <span class=\"fa fa-6x fa-ticket\"></span>  </td></tr></tbody></table></div><div class=\"snippet_row bg-color\" style=\"padding:0;width:600px;max-width:600px;margin:0 auto;background: #fff repeat top /100%;color:#168484\"><table style=\"width:100%;text-align:justify;margin:0 auto;inherit;border-collapse:collapse;color:inherit\"><tbody><tr><td style=\"padding:10px 30px;font-size:14px;line-height:20px\"><p style=\"margin:0\">Dear ${object.name}</p><p style=\"margin:0\">Great stories have personality. Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.<br></p><p style=\"margin:0\">Great stories are for everyone even when only written for just one person. If you try to write with a wide general audience in mind, your story will ring false and be bland. No one will be interested. Write for one person. If it’s genuine for the one, it’s genuine for the rest.</p><p style=\"margin:0\">Kind Regards,</p><p style=\"margin:0\">Michael Fletcher</p></td></tr></tbody></table></div><div style=\"padding:0;width:600px;max-width:600px;margin:0 auto\"><table style=\"width:100%;text-align:justify;margin:0 auto;background-color:inherit;border-collapse:collapse\"><tbody><tr><td class=\"col_mv bg-color\" style=\"padding:10px 0;background-color:#168484;color:#fff\"><table style=\"border-collapse:collapse;background-color:inherit\"><tbody><tr><td rowspan=\"2\" style=\"padding-left:10px\">  <span class=\"fa fa-check fa-3x\"></span>  </td><td style=\"padding-left:10px;color:#fff;font-size:14px\"><p style=\"font-weight:bold;font-size:18px;margin:0 0 3px 0\">Step 1:</p><p style=\"margin:0\">Place Order</p></td></tr></tbody></table></td><td class=\"col_mv bg-color\" style=\"padding:10px 0;background-color:#FFFFFF;color:#808080\"><table style=\"border-collapse:collapse;background-color:inherit\"><tbody><tr><td rowspan=\"2\" style=\"padding-left:10px\">  <span class=\"fa fa-truck fa-3x\"></span>  </td><td style=\"padding-left:10px;color:#808080;font-size:14px\"><p style=\"font-weight:bold;font-size:18px;margin:0 0 3px 0\">Step 2:</p><p style=\"margin:0\">Shipping</p></td></tr></tbody></table></td><td class=\"col_mv bg-color\" style=\"padding:10px 0;background-color:#FFFFFF;color:#808080\"><table style=\"border-collapse:collapse;background-color:inherit\"><tbody><tr><td rowspan=\"2\" style=\"padding-left:10px\">  <span class=\"fa fa-dollar fa-3x\"></span>  </td><td style=\"padding-left:10px;color:#808080;font-size:14px\"><p style=\"font-weight:bold;font-size:18px;margin:0 0 3px 0\">Step 3:</p><p style=\"margin:0\">Payment</p></td></tr></tbody></table></td></tr></tbody></table></div><div class=\"snippet_row bg-color\" style=\"padding:0px;width:600px;margin:auto;background: #414141 repeat top /100%;color:#44B7B7\"><div style=\"padding:10px\"><table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0 auto;width:100%;border-collapse:collapse;color:inherit;color:inherit\"><tbody><tr><td style=\"text-align:center\"> <a target=\"_blank\" style=\"text-decoration: none;\" href=\"https://www.facebook.com/Odoo\"><span class=\"fa fa-facebook-square fa-2x\"></span></a><a target=\"_blank\" style=\"text-decoration: none;\" href=\"https://plus.google.com/+Odooapps\"><span class=\"fa fa-google-plus-square fa-2x\"></span></a><a target=\"_blank\" style=\"text-decoration: none;\" href=\"https://www.linkedin.com/company/odoo\"><span class=\"fa fa-linkedin-square fa-2x\"></span></a><a target=\"_blank\" style=\"text-decoration: none;\" href=\"https://twitter.com/Odoo\"><span class=\"fa fa-twitter-square fa-2x\"></span></a> </td></tr><tr><td style=\"font-size:12px;text-align:center;padding-top:10px;padding-bottom:5px\"> <a href=\"/unsubscribe_from_list\" style=\"color:#44B7B7\">Unsubscribe</a>|<a href=\"/page/contactus\" style=\"color:#44B7B7\">Contact</a> </td></tr></tbody></table></div>\n"
 "            </div>"
 msgstr ""
+"<div class=“snippet_row bg-color” style=“padding:0px;width:600px;margin:auto;background: #ffffff repeat top /100%”>\n"
+"                <table cellpadding=“0” cellspacing=“0” style=“border-collapse:collapse” width=“100%”><tbody><tr><td style=“padding:10px 10px 10px 5px” valign=“center” width=“270”> <a style=“text-decoration:none” href=“http://www.example.com”><strong>내 회사</strong></a> </td><td style=“padding:10px 15px 10px 10px;vertical-align:middle” valign=“center” width=“270”><table align=“right” border=“0” cellpadding=“0” cellspacing=“0” style=“border-collapse:collapse”><tbody><tr><td align=“right”><a target=“_blank” href=“https://www.facebook.com/Odoo”><span class=“fa fa-facebook-square fa-2x” style=“color:#44B7B7;”></span></a></td><td align=“right” style=“padding-left:5px”><a target=“_blank” href=“https://www.facebook.com/Odoo”><span class=“fa fa-google-plus-square fa-2x” style=“color:#44B7B7;”></span></a></td><td align=“right” style=“padding-left:5px”><a target=“_blank” href=“https://www.facebook.com/Odoo”><span class=“fa fa-linkedin-square fa-2x” style=“color:#44B7B7;”></span></a></td><td align=“right” style=“padding-left:5px”><a target=“_blank” href=“https://www.facebook.com/Odoo”><span class=“fa fa-twitter-square fa-2x” style=“color:#44B7B7;”></span></a></td></tr></tbody></table></td></tr></tbody></table></div><div style=“padding:0px;width:600px;margin:auto;background-color:#44B7B7;color:#168484”><table cellpadding=“0” cellspacing=“0” style=“width:100%;background-color:inherit;border-collapse:collapse;color:inherit”><tbody><tr><td class=“col_mv bg-color” style=“text-align:left; padding-left:20px;vertical-align:middle;font-size:14px”><p style=“margin:0;font-size:20px;color:#fff”>로그인시 20%의 할인이 주어집니다!</p><p style=“margin:0”>할인코드: <strong>45A9E77DGW8455</strong></p></td><td class=“col_mv bg-color” style=“padding:20px;text-align:center;vertical-align:middle”>  <span class=“fa fa-6x fa-ticket”></span>  </td></tr></tbody></table></div><div class=“snippet_row bg-color” style=“padding:0;width:600px;max-width:600px;margin:0 auto;background: #fff repeat top /100%;color:#168484”><table style=“width:100%;text-align:justify;margin:0 auto;inherit;border-collapse:collapse;color:inherit”><tbody><tr><td style=“padding:10px 30px;font-size:14px;line-height:20px”><p style=“margin:0”>Dear ${object.name}</p><p style=“margin:0”>당신을 위한 특별한 소식.당신의 놀라운 이야기를 확인하세요. 개인적인 잠재고객의 이야기를 쓰는 것은 관계를 새롭게 만드는 것을 도와줍니다. 이것은 단어나 문장선택같은 작은 습관을 보여줄 수 있습니다. 누군가 다른 사람의 경험이 아닌 당신의 시각에서 기록하세요. <br></p><p style=“margin:0”>한사람을 위해 쓰여졌다 하더라도 모두를 위한 놀라운 이야기됩니다.만약 당신이 마음속에서 광범위하고 일반적인 내용을 쓴다면, 당신의 이야기는 더이상 특별하지 않을 것입니다. 아무도 관심이 없을 것입니다. 한 사람의 이야기를 쓰세요. 만약 하나에 성실하면, 나머지 또한 성실합니다.</p><p style=“margin:0”>Kind Regards,</p><p style=“margin:0”>Michael Fletcher</p></td></tr></tbody></table></div><div style=“padding:0;width:600px;max-width:600px;margin:0 auto”><table style=“width:100%;text-align:justify;margin:0 auto;background-color:inherit;border-collapse:collapse”><tbody><tr><td class=“col_mv bg-color” style=“padding:10px 0;background-color:#168484;color:#fff”><table style=“border-collapse:collapse;background-color:inherit”><tbody><tr><td rowspan=“2” style=“padding-left:10px”>  <span class=“fa fa-check fa-3x”></span>  </td><td style=“padding-left:10px;color:#fff;font-size:14px”><p style=“font-weight:bold;font-size:18px;margin:0 0 3px 0”>1단계 :</p><p style=“margin:0”>주문</p></td></tr></tbody></table></td><td class=“col_mv bg-color” style=“padding:10px 0;background-color:#FFFFFF;color:#808080”><table style=“border-collapse:collapse;background-color:inherit”><tbody><tr><td rowspan=“2” style=“padding-left:10px”>  <span class=“fa fa-truck fa-3x”></span>  </td><td style=“padding-left:10px;color:#808080;font-size:14px”><p style=“font-weight:bold;font-size:18px;margin:0 0 3px 0”>2단계 :</p><p style=“margin:0”>배송</p></td></tr></tbody></table></td><td class=“col_mv bg-color” style=“padding:10px 0;background-color:#FFFFFF;color:#808080”><table style=“border-collapse:collapse;background-color:inherit”><tbody><tr><td rowspan=“2” style=“padding-left:10px”>  <span class=“fa fa-dollar fa-3x”></span>  </td><td style=“padding-left:10px;color:#808080;font-size:14px”><p style=“font-weight:bold;font-size:18px;margin:0 0 3px 0”>3단계 :</p><p style=“margin:0”>결제</p></td></tr></tbody></table></td></tr></tbody></table></div><div class=“snippet_row bg-color” style=“padding:0px;width:600px;margin:auto;background: #414141 repeat top /100%;color:#44B7B7”><div style=“padding:10px”><table cellpadding=“0” cellspacing=“0” style=“margin: 0 auto;width:100%;border-collapse:collapse;color:inherit;color:inherit”><tbody><tr><td style=“text-align:center”> <a target=“_blank” style=“text-decoration: none;” href=“https://www.facebook.com/Odoo”><span class=“fa fa-facebook-square fa-2x”></span></a><a target=“_blank” style=“text-decoration: none;” href=“https://plus.google.com/+Odooapps”><span class=“fa fa-google-plus-square fa-2x”></span></a><a target=“_blank” style=“text-decoration: none;” href=“https://www.linkedin.com/company/odoo”><span class=“fa fa-linkedin-square fa-2x”></span></a><a target=“_blank” style=“text-decoration: none;” href=“https://twitter.com/Odoo”><span class=“fa fa-twitter-square fa-2x”></span></a> </td></tr><tr><td style=“font-size:12px;text-align:center;padding-top:10px;padding-bottom:5px”> <a href=“/unsubscribe_from_list” style=“color:#44B7B7”>구독 취소</a>|<a href=“/page/contactus” style=“color:#44B7B7”>연락하기</a> </td></tr></tbody></table></div>\n"
+"            </div>"
 
 #. module: mass_mailing
 #: model:mail.mass_mailing.list,popup_content:mass_mailing.mass_mail_list_1
@@ -197,6 +203,11 @@ msgid "<span class=\"fa fa-copyright\"/> 2016 All Rights Reserved"
 msgstr "<span class=“fa fa-copyright”/> 2016 All Rights Reserved"
 
 #. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_form
+msgid "<span> times</span>"
+msgstr ""
+
+#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_comparison_table
 msgid "<strong>24/7 Support</strong>"
 msgstr ""
@@ -237,11 +248,6 @@ msgid "A/B Testing percentage"
 msgstr ""
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_unique_ab_testing
-msgid "AB Testing"
-msgstr ""
-
-#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_event
 msgid "ALL DAY"
 msgstr "하루종일"
@@ -250,17 +256,12 @@ msgstr "하루종일"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_active
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_list_active
 msgid "Active"
-msgstr "사용"
+msgstr "활성화"
 
 #. module: mass_mailing
-#: selection:mass.mailing.config.settings,group_mass_mailing_campaign:0
-msgid "Allow using marketing campaigns (advanced)"
-msgstr ""
-
-#. module: mass_mailing
-#: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
-msgid "Apply"
-msgstr "적용"
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_unique_ab_testing
+msgid "Allow A/B Testing"
+msgstr "A/B테스트를 허용"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_footer_tag_line
@@ -276,7 +277,7 @@ msgstr "당신의 사업을 성장시키는것을 돕는 앱!"
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_search
 msgid "Archived"
-msgstr "보관"
+msgstr "보관완료"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -304,14 +305,10 @@ msgid "Body"
 msgstr "본문"
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_message_bounce
-msgid "Bounce"
-msgstr "반송"
-
-#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_bounced
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_bounced
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_bounced
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_message_bounce
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report_bounced
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mail_statistics_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -320,17 +317,13 @@ msgid "Bounced"
 msgstr "반송됨"
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_bounced_ratio
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_bounced_ratio
 msgid "Bounced Ratio"
 msgstr "반송 비중"
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_bounced_ratio
-msgid "Bounced ratio"
-msgstr ""
-
-#. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_id_3681
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_id_3643
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid "Campaign"
 msgstr "캠페인"
@@ -339,10 +332,11 @@ msgstr "캠페인"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_name
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_form
 msgid "Campaign Name"
-msgstr "캠페인명"
+msgstr "캠페인 명"
 
 #. module: mass_mailing
 #: model:ir.ui.menu,name:mass_mailing.menu_view_mass_mailing_stages
+#: model:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
 msgid "Campaign Stages"
 msgstr "캠페인 단계"
 
@@ -354,7 +348,6 @@ msgid "Campaign Tags"
 msgstr "캠페인 태그"
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_group_mass_mailing_campaign
 #: model:ir.ui.menu,name:mass_mailing.menu_email_campaigns
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_search
 msgid "Campaigns"
@@ -363,7 +356,6 @@ msgstr "캠페인"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_test_form
-#: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
 msgid "Cancel"
 msgstr "취소"
 
@@ -382,7 +374,7 @@ msgstr "시선집중!"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_steps
 msgid "Choose"
-msgstr ""
+msgstr "선택"
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,help:mass_mailing.action_view_mass_mailing_lists
@@ -413,6 +405,12 @@ msgid "Click to define a new mass mailing campaign."
 msgstr "클릭해서 새로운 대량메일 캠페인을 정의합니다."
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_clicked
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mail_statistics_search
+msgid "Clicked"
+msgstr "클릭함"
+
+#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_kanban
@@ -424,7 +422,12 @@ msgstr "클릭수"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_color
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_color
 msgid "Color Index"
-msgstr "컬러 색인"
+msgstr "색상표"
+
+#. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_kanban
+msgid "Colour"
+msgstr "색상"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_three_cols
@@ -442,16 +445,20 @@ msgid "Comma-separated list of email addresses."
 msgstr ""
 
 #. module: mass_mailing
+#: model:ir.model,name:mass_mailing.model_res_company
+msgid "Companies"
+msgstr "회사"
+
+#. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_company_name
+msgid "Company Name"
+msgstr "회사명"
+
+#. module: mass_mailing
 #: model:ir.ui.menu,name:mass_mailing.mass_mailing_configuration
 #: model:ir.ui.menu,name:mass_mailing.menu_mass_mailing_configuration
 msgid "Configuration"
 msgstr "환경 설정"
-
-#. module: mass_mailing
-#: model:ir.actions.act_window,name:mass_mailing.action_mass_mailing_configuration
-#: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
-msgid "Configure Mass Mailing"
-msgstr ""
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_form
@@ -459,7 +466,14 @@ msgid "Contact List"
 msgstr "연락처 목록"
 
 #. module: mass_mailing
+#: model:ir.actions.act_window,name:mass_mailing.action_view_mass_mailing_contacts
+#: model:ir.ui.menu,name:mass_mailing.mass_mailing_contact_menu
 #: model:ir.ui.menu,name:mass_mailing.menu_email_mass_mailing_contacts
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_form
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_graph
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_pivot
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_tree
 msgid "Contacts"
 msgstr "연락처"
 
@@ -469,9 +483,9 @@ msgid "Counter of the number of bounced emails for this contact."
 msgstr "이 연락처에서 반송된 이메일의 수를 확인합니다."
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_create_date
-msgid "Create Date"
-msgstr "작성일"
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_country_id
+msgid "Country"
+msgstr "국가"
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,help:mass_mailing.action_view_mass_mailing_campaigns
@@ -489,7 +503,6 @@ msgstr "대량메일을 조직하고 이메일 상태를 분석하기 위해 새
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_stage_create_uid
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_create_uid
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test_create_uid
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_create_uid
 msgid "Created by"
 msgstr "작성자"
 
@@ -499,11 +512,11 @@ msgstr "작성자"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_stage_create_date
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_create_date
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test_create_date
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_create_date
 msgid "Created on"
 msgstr "작성일"
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_create_date
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_create_date
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_list_create_date
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
@@ -525,7 +538,7 @@ msgstr ""
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_event
 msgid "Cybersecurity"
-msgstr ""
+msgstr "사이버보안"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_comparison_table
@@ -536,6 +549,11 @@ msgstr "기본값"
 #: model:ir.model.fields,help:mass_mailing.field_mail_mail_statistics_exception
 msgid "Date of technical error leading to the email not being sent"
 msgstr "기술적 오류로 인해 메일이 전송되지 않은 날짜"
+
+#. module: mass_mailing
+#: model:ir.model.fields,help:mass_mailing.field_mail_mail_statistics_clicked
+msgid "Date when customer clicked on at least one tracked link"
+msgstr "고객이 최소한 1번 링크를 클릭한 날짜"
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mail_mail_statistics_scheduled
@@ -596,14 +614,8 @@ msgstr "디자인"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_display_name
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test_display_name
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report_display_name
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_display_name
 msgid "Display Name"
 msgstr "표시 이름"
-
-#. module: mass_mailing
-#: selection:mass.mailing.config.settings,group_mass_mailing_campaign:0
-msgid "Do not organize and schedule mail campaigns (easy)"
-msgstr ""
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_res_id
@@ -621,7 +633,7 @@ msgid "Domain"
 msgstr "도메인"
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:439
+#: code:addons/mass_mailing/models/mass_mailing.py:474
 #: selection:mail.mass_mailing,state:0
 #: selection:mail.statistics.report,state:0
 #, python-format
@@ -631,12 +643,23 @@ msgstr "기안"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_form
 msgid "Duplicate"
-msgstr "사본 생성"
+msgstr "복제"
+
+#. module: mass_mailing
+#: model:ir.actions.act_window,name:mass_mailing.action_view_mail_mail_statistics_mailing_list
+msgid "EMails Sent"
+msgstr ""
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_email
 msgid "Email"
 msgstr "이메일"
+
+#. module: mass_mailing
+#: model:ir.ui.menu,name:mass_mailing.mass_mailing_menu_root
+#: model:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
+msgid "Email Marketing"
+msgstr "이메일 마케팅"
 
 #. module: mass_mailing
 #: model:ir.model,name:mass_mailing.model_mail_mail_statistics
@@ -667,7 +690,7 @@ msgstr "이메일 통계"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_steps
 msgid "Enjoy!"
-msgstr ""
+msgstr "Enjoy!"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_title_text
@@ -682,8 +705,8 @@ msgstr "제외"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
-msgid "Exclude Dead"
-msgstr ""
+msgid "Exclude Bounced"
+msgstr "반송 제외"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
@@ -693,7 +716,7 @@ msgstr ""
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_statistics_report_search
 msgid "Extended Filters..."
-msgstr "확장 필터..."
+msgstr "필터 확장..."
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_discount1
@@ -701,10 +724,20 @@ msgid "FROM YOUR NEXT ORDER!"
 msgstr ""
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_res_company_social_facebook
+msgid "Facebook Account"
+msgstr "페이스북 계정"
+
+#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_failed
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_failed
 msgid "Failed"
 msgstr "실패함"
+
+#. module: mass_mailing
+#: model:ir.model,name:mass_mailing.model_ir_model_fields
+msgid "Fields"
+msgstr "필드"
 
 #. module: mass_mailing
 #: model:mail.mass_mailing,name:mass_mailing.mass_mail_1
@@ -731,18 +764,28 @@ msgid ""
 msgstr ""
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_res_company_social_github
+msgid "GitHub Account"
+msgstr "GitHub 계정"
+
+#. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_res_company_social_googleplus
+msgid "Google+ Account"
+msgstr "Google+ 계정"
+
+#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mail_statistics_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_search
 msgid "Group By"
-msgstr "그룹화"
+msgstr "그룹별"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_statistics_report_search
 msgid "Group By..."
-msgstr "그룹화..."
+msgstr "그룹별..."
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_id
@@ -754,7 +797,6 @@ msgstr "그룹화..."
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_id
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test_id
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report_id
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_id
 msgid "ID"
 msgstr "ID"
 
@@ -769,12 +811,15 @@ msgstr ""
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mail_mass_mailing_campaign_unique_ab_testing
 msgid ""
-"If checked, recipients will be mailed only once, allowing to send various "
-"mailings in a single campaign to test the effectiveness of the mailings."
+"If checked, recipients will be mailed only once for the whole campaign. This"
+" lets you send different mailings to randomly selected recipients and test "
+"the effectiveness of the mailings, without causing duplicate messages."
 msgstr ""
+"체크시, 수신자는 캠페인 전체에서 단한번의 메일을 받게 됩니다. 이는 중복메시지 없이 서로다른 메일을 랜덤으로 선택된 수신자에 전송하여 "
+"메일의 효과를 테스트할 수 있습니다."
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:445
+#: code:addons/mass_mailing/models/mass_mailing.py:474
 #: selection:mail.mass_mailing,state:0
 #, python-format
 msgid "In Queue"
@@ -808,7 +853,6 @@ msgstr "로그인"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag___last_update
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test___last_update
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report___last_update
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings___last_update
 msgid "Last Modified on"
 msgstr "최근 수정"
 
@@ -826,7 +870,6 @@ msgstr "최근 업데이트"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_write_uid
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test_write_uid
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_write_uid
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_write_uid
 msgid "Last Updated by"
 msgstr "최근 갱신한 사람"
 
@@ -839,7 +882,6 @@ msgstr "최근 갱신한 사람"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_tag_write_date
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_test_write_date
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_write_date
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_write_date
 msgid "Last Updated on"
 msgstr "최근 갱신 날짜"
 
@@ -847,6 +889,11 @@ msgstr "최근 갱신 날짜"
 #: model:ir.model.fields,help:mass_mailing.field_mail_mail_statistics_state_update
 msgid "Last state update of the mail"
 msgstr "최근 상태가 업데이트된 메일"
+
+#. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_res_company_social_linkedin
+msgid "LinkedIn Account"
+msgstr "LinkedIn 계정"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_links_click_ids
@@ -864,6 +911,19 @@ msgid "List Unsubscription"
 msgstr "구독취소 목록"
 
 #. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.theme_basic_template
+msgid ""
+"Lorem ipsum dolor sit amet, <br/><br/>consectetur adipisicing elit, sed do "
+"eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+" veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea "
+"commodo consequat."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+" quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "
+"consequat."
+
+#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_mail_mail_id
 msgid "Mail"
 msgstr "메일"
@@ -871,7 +931,7 @@ msgstr "메일"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid "Mail Body"
-msgstr "이메일 내용"
+msgstr "메일본문"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_mail_mail_id_int
@@ -897,41 +957,23 @@ msgid "Mailing"
 msgstr "메일링"
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:283
 #: model:ir.model,name:mass_mailing.model_mail_mass_mailing_list
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_compose_message_mailing_list_ids
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_list_id
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_list_name
 #: model:ir.model.fields,field_description:mass_mailing.field_survey_mail_compose_message_mailing_list_ids
-#, python-format
 msgid "Mailing List"
-msgstr "메일 그룹"
-
-#. module: mass_mailing
-#: model:ir.actions.act_window,name:mass_mailing.action_view_mass_mailing_contacts
-msgid "Mailing List Subscribers"
-msgstr ""
+msgstr "메일링 목록"
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.action_view_mass_mailing_lists
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_list_ids
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_list_ids_3655
 #: model:ir.ui.menu,name:mass_mailing.menu_email_mass_mailing_lists
-#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
+#: model:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_tree
 msgid "Mailing Lists"
-msgstr "메일 그룹"
-
-#. module: mass_mailing
-#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_graph
-msgid "Mailing Lists Subscriber"
-msgstr ""
-
-#. module: mass_mailing
-#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
-#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_tree
-msgid "Mailing Lists Subscribers"
-msgstr ""
+msgstr "메일링 목록"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_links_tree
@@ -959,7 +1001,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_kanban
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_search
 msgid "Mailings"
-msgstr "메일 발송"
+msgstr "메일링"
 
 #. module: mass_mailing
 #: model:res.groups,name:mass_mailing.group_mass_mailing_campaign
@@ -967,9 +1009,9 @@ msgid "Manage Mass Mailing Campaigns"
 msgstr "대량메일 캠페인 관리"
 
 #. module: mass_mailing
-#: model:ir.model.fields,help:mass_mailing.field_mass_mailing_config_settings_group_mass_mailing_campaign
-msgid "Manage mass mailign using Campaigns"
-msgstr ""
+#: model:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
+msgid "Manage campaigns of mass emails with process stages"
+msgstr "작업단계에서 대량메일 캠페인을 관리합니다"
 
 #. module: mass_mailing
 #: model:mail.mass_mailing.tag,name:mass_mailing.mass_mail_tag_1
@@ -996,13 +1038,11 @@ msgstr "대량메일 캠페인"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_mass_mailing_id
 #: model:ir.model.fields,field_description:mass_mailing.field_survey_mail_compose_message_mass_mailing_id
 #: model:ir.model.fields,field_description:mass_mailing.field_survey_mail_compose_message_mass_mailing_name
-#: model:ir.ui.menu,name:mass_mailing.mass_mailing_menu_root
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mail_statistics_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_graph
-#: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
 msgid "Mass Mailing"
-msgstr "대량 메일 발송"
+msgstr "대량메일"
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.action_mail_statistics_report
@@ -1029,10 +1069,11 @@ msgstr "대량메일 캠페인 단계"
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.action_view_mass_mailing_campaigns
+#: model:ir.model.fields,field_description:mass_mailing.field_res_config_settings_group_mass_mailing_campaign
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_tree
 msgid "Mass Mailing Campaigns"
-msgstr "대량 메일 발송 캠페인"
+msgstr "대량메일 캠페인"
 
 #. module: mass_mailing
 #: model:ir.model,name:mass_mailing.model_mail_mass_mailing_contact
@@ -1069,6 +1110,13 @@ msgid "Mass Mailing Tag"
 msgstr "대량메일 태그"
 
 #. module: mass_mailing
+#: model:ir.actions.server,name:mass_mailing.ir_cron_mass_mailing_queue_ir_actions_server
+#: model:ir.cron,cron_name:mass_mailing.ir_cron_mass_mailing_queue
+#: model:ir.cron,name:mass_mailing.ir_cron_mass_mailing_queue
+msgid "Mass Mailing: Process queue"
+msgstr "대량메일 : 절차 대기중"
+
+#. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.action_create_ab_mass_mailings_from_campaign
 #: model:ir.actions.act_window,name:mass_mailing.action_create_mass_mailings_from_campaign
 #: model:ir.actions.act_window,name:mass_mailing.action_view_mass_mailings
@@ -1093,12 +1141,6 @@ msgid ""
 msgstr "대량메일은 연락처나 고객 등에게 메일링 리스트를 사용하여 쉽게 디자인하여 쉽게 대량메일을 전송할 수 있게 해줍니다."
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mass_mailing_config_settings_module_mass_mailing_themes
-#: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
-msgid "Mass mailing themes"
-msgstr ""
-
-#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_medium_id
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_medium_id
 msgid "Medium"
@@ -1116,7 +1158,6 @@ msgstr "더 보기"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_event
-#: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
 msgid "More Info"
 msgstr "더 많은 정보"
 
@@ -1138,16 +1179,16 @@ msgid "Name"
 msgstr "이름"
 
 #. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_search
+msgid "Name / Email"
+msgstr "이름 / 이메일"
+
+#. module: mass_mailing
 #: model:mail.mass_mailing.campaign,name:mass_mailing.mass_mail_campaign_1
 #: model:mail.template,subject:mass_mailing.newsletter_template
 #: model:utm.campaign,name:mass_mailing.mass_mail_campaign_1_utm_campaign
 msgid "Newsletter"
 msgstr "뉴스레터"
-
-#. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_next_departure
-msgid "Next Departure"
-msgstr ""
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_comparison_table
@@ -1168,6 +1209,11 @@ msgstr "클릭 수"
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_list_contact_nbr
 msgid "Number of Contacts"
 msgstr "연락처 수"
+
+#. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_kanban
+msgid "Number of bounced email."
+msgstr "반송된 이메일 수."
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_clicks_ratio
@@ -1211,7 +1257,7 @@ msgstr "개봉일"
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_kanban
 #: selection:mail.mail.statistics,state:0
 msgid "Opened"
-msgstr "열림"
+msgstr "개봉함"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_opened_ratio
@@ -1227,7 +1273,7 @@ msgstr "메일수신 거부"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid "Options"
-msgstr "선택 사항"
+msgstr "옵션"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_steps
@@ -1237,12 +1283,12 @@ msgstr "주문"
 #. module: mass_mailing
 #: selection:mail.mail.statistics,state:0
 msgid "Outgoing"
-msgstr "내보내기"
+msgstr "발신"
 
 #. module: mass_mailing
 #: model:ir.model,name:mass_mailing.model_mail_mail
 msgid "Outgoing Mails"
-msgstr "보내는 메일"
+msgstr "발신 메일"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_comparison_table
@@ -1257,7 +1303,7 @@ msgid ""
 msgstr "메일 전송될 연락처 비율. 수신인은 랜덤으로 추출됩니다."
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:563
+#: code:addons/mass_mailing/models/mass_mailing.py:656
 #, python-format
 msgid "Please select recipients."
 msgstr "수신인을 선택하세요."
@@ -1280,13 +1326,13 @@ msgstr "더 읽기..."
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid "Received"
-msgstr "받음"
+msgstr "수신함"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_received_ratio
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_received_ratio
 msgid "Received Ratio"
-msgstr "수령율"
+msgstr "수신 비중"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_recipient
@@ -1299,12 +1345,22 @@ msgstr "수신인"
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_form
 msgid "Recipients"
-msgstr "받는 사람"
+msgstr "수신인"
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_mailing_model
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_mailing_model_id
 msgid "Recipients Model"
 msgstr "수신인 모델"
+
+#. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_mailing_model_name
+msgid "Recipients Model Name"
+msgstr "수신인 모델명"
+
+#. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_mailing_model_real
+msgid "Recipients Real Model"
+msgstr "수신인 실제 모델"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_discount1
@@ -1362,7 +1418,7 @@ msgstr "회신 모드"
 
 #. module: mass_mailing
 #: model:ir.ui.menu,name:mass_mailing.menu_mass_mailing_report
-msgid "Reports"
+msgid "Reporting"
 msgstr "보고서"
 
 #. module: mass_mailing
@@ -1384,7 +1440,7 @@ msgstr "메일마법사 예시"
 #. module: mass_mailing
 #: model:mail.mass_mailing.stage,name:mass_mailing.campaign_stage_1
 msgid "Schedule"
-msgstr "예약 일정"
+msgstr "일정"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_schedule_date
@@ -1396,15 +1452,20 @@ msgstr ""
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_scheduled
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_scheduled
 msgid "Scheduled"
-msgstr "예정된"
+msgstr "계획됨"
+
+#. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report_scheduled_date
+msgid "Scheduled Date"
+msgstr "계획 일자"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_statistics_report_search
 msgid "Scheduled Month"
-msgstr "예정월"
+msgstr "계획 월"
 
 #. module: mass_mailing
-#: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report_scheduled_date
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_next_departure
 msgid "Scheduled date"
 msgstr "계획 일자"
 
@@ -1428,11 +1489,6 @@ msgstr "메일링 리스트 선택..."
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid "Select mailing lists:"
 msgstr "메일링 리스트 선택 :"
-
-#. module: mass_mailing
-#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
-msgid "Select recipients"
-msgstr ""
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_test_form
@@ -1467,14 +1523,14 @@ msgid "Send to All"
 msgstr "모두에게 전송"
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:439
+#: code:addons/mass_mailing/models/mass_mailing.py:474
 #: selection:mail.mass_mailing,state:0
 #, python-format
 msgid "Sending"
 msgstr "전송중"
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:439
+#: code:addons/mass_mailing/models/mass_mailing.py:474
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_sent
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_sent
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_statistics_report_sent
@@ -1483,7 +1539,7 @@ msgstr "전송중"
 #: selection:mail.statistics.report,state:0
 #, python-format
 msgid "Sent"
-msgstr "보냄"
+msgstr "전송"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_search
@@ -1512,15 +1568,21 @@ msgid "Sequence"
 msgstr "순서"
 
 #. module: mass_mailing
+#: model:ir.actions.act_window,name:mass_mailing.action_mass_mailing_configuration
 #: model:ir.ui.menu,name:mass_mailing.menu_mass_mailing_global_settings
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_kanban
 msgid "Settings"
 msgstr "설정"
 
 #. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.view_company_form_inherit_mass_mailing
+msgid "Social Media"
+msgstr "소셜미디어"
+
+#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_source_id
 msgid "Source"
-msgstr "자재"
+msgstr "소스"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_name
@@ -1543,7 +1605,7 @@ msgstr "단계"
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mail_statistics_search
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_statistics_report_search
 msgid "State"
-msgstr "주/도"
+msgstr "상태"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_state_update
@@ -1577,15 +1639,16 @@ msgstr "제목"
 #. module: mass_mailing
 #: sql_constraint:mail.mass_mailing.tag:0
 msgid "Tag name already exists !"
-msgstr "태그명이 이미 존재합니다."
+msgstr "태그명이 이미 존재합니다!"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_tag_ids
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_tag_ids
 msgid "Tags"
 msgstr "태그"
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/models/mass_mailing.py:500
+#: code:addons/mass_mailing/models/mass_mailing.py:529
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 #, python-format
 msgid "Test Mailing"
@@ -1647,16 +1710,35 @@ msgid ""
 msgstr ""
 
 #. module: mass_mailing
+#: model:ir.model.fields,help:mass_mailing.field_res_config_settings_group_mass_mailing_campaign
+msgid ""
+"This is useful if your marketing campaigns are composed of several emails"
+msgstr ""
+
+#. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
+msgid ""
+"This is useful if your marketing campaigns are composed of several emails."
+msgstr ""
+
+#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid "This mass mailing is scheduled for"
 msgstr ""
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mail_mass_mailing_campaign_campaign_id
-#: model:ir.model.fields,help:mass_mailing.field_mail_mass_mailing_campaign_id_3681
+#: model:ir.model.fields,help:mass_mailing.field_mail_mass_mailing_campaign_id_3643
 msgid ""
 "This name helps you tracking your different campaign efforts, e.g. "
 "Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
+msgid ""
+"This tool is advised if your marketing campaign is composed of several "
+"emails."
 msgstr ""
 
 #. module: mass_mailing
@@ -1666,15 +1748,15 @@ msgid ""
 msgstr ""
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_contact_title_id
+msgid "Title"
+msgstr "제목"
+
+#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_campaign_total
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mass_mailing_total
 msgid "Total"
-msgstr "합계"
-
-#. module: mass_mailing
-#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_links_search
-msgid "Tracked Link"
-msgstr ""
+msgstr "총계"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_campaign_form
@@ -1682,9 +1764,13 @@ msgid "Tracking"
 msgstr "추적"
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_res_company_social_twitter
+msgid "Twitter Account"
+msgstr "트위터 계정"
+
+#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_footer_social
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_footer_social_left
-#: model:mail.mass_mailing,body_html:mass_mailing.mass_mail_1
 msgid "Unsubscribe"
 msgstr "구독 취소"
 
@@ -1754,7 +1840,7 @@ msgid ""
 msgstr ""
 
 #. module: mass_mailing
-#: code:addons/mass_mailing/controllers/main.py:26
+#: code:addons/mass_mailing/controllers/main.py:33
 #, python-format
 msgid "You have been unsubscribed successfully"
 msgstr "구독취소가 완료되었습니다"
@@ -1789,6 +1875,11 @@ msgid ""
 msgstr ""
 
 #. module: mass_mailing
+#: model:ir.model.fields,field_description:mass_mailing.field_res_company_social_youtube
+msgid "Youtube Account"
+msgstr "Youtube 계정"
+
+#. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.s_mail_block_discount2
 msgid "and save $20 on your next order!"
 msgstr "그리고 다음주문부터 $20을 절약할 수 있습니다!"
@@ -1802,6 +1893,11 @@ msgstr "campaign_id"
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_list_form
 msgid "e.g. Consumer Newsletter"
 msgstr "예. 고객 뉴스레터"
+
+#. module: mass_mailing
+#: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_contact_form
+msgid "e.g. John Smith"
+msgstr "예. 홍길동"
 
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -1824,6 +1920,6 @@ msgid "link.tracker.click"
 msgstr "link.tracker.click"
 
 #. module: mass_mailing
-#: model:ir.model,name:mass_mailing.model_mass_mailing_config_settings
-msgid "mass.mailing.config.settings"
-msgstr ""
+#: model:ir.model,name:mass_mailing.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"

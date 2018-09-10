@@ -3,17 +3,15 @@
 # * hr_recruitment_survey
 # 
 # Translators:
-# Martin Trigaux, 2016
-# kalatchev, 2016
+# aleksandar ivanov, 2018
 # Albena Mincheva <albena_vicheva@abv.bg>, 2018
-# Maria Boyadjieva <marabo2000@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: Albena Mincheva <albena_vicheva@abv.bg>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,7 +80,7 @@ msgstr ""
 #. module: hr_recruitment_survey
 #: model:survey.question,question:hr_recruitment_survey.recruitment_2_4
 msgid "Activities"
-msgstr "Действия"
+msgstr "Дейности"
 
 #. module: hr_recruitment_survey
 #: model:ir.ui.view,arch_db:hr_recruitment_survey.crm_case_form_view_job_inherit
@@ -106,6 +104,8 @@ msgid ""
 "Choose an interview form for this job position and you will be able to "
 "print/answer this interview from all applicants who apply for this job"
 msgstr ""
+"Изберете интервю за тази длъжност и ще можете да отпечатате / отговорите на "
+"това интервю от всички кандидати, кандидатстващи за тази длъжност"
 
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rrow_2_1_4
@@ -121,7 +121,7 @@ msgstr "Покажи формата за интервю "
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rrow_2_1_11
 msgid "Dress code"
-msgstr ""
+msgstr "Дрескод"
 
 #. module: hr_recruitment_survey
 #: model:survey.question,question:hr_recruitment_survey.recruitment_2_2
@@ -156,7 +156,7 @@ msgstr "Кой университет ще завършиш?"
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rrow_2_1_2
 msgid "Getting on with colleagues"
-msgstr ""
+msgstr "Да се ​​свързвате с колеги"
 
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rrow_2_1_7
@@ -202,6 +202,11 @@ msgid "Interview Form"
 msgstr "Формуляр за интервю"
 
 #. module: hr_recruitment_survey
+#: model:ir.ui.view,arch_db:hr_recruitment_survey.res_config_settings_view_form
+msgid "Interview Forms"
+msgstr "Формуляри за интервю"
+
+#. module: hr_recruitment_survey
 #: model:ir.model,name:hr_recruitment_survey.model_hr_job
 msgid "Job Position"
 msgstr "Длъжност"
@@ -224,17 +229,17 @@ msgstr "Най-важно"
 #. module: hr_recruitment_survey
 #: model:ir.ui.view,arch_db:hr_recruitment_survey.view_hr_job_kanban_inherit
 msgid "No Interview Form"
-msgstr ""
+msgstr "Няма формуляр за интервю"
 
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rrow_2_1_10
 msgid "No out of hours working"
-msgstr ""
+msgstr "Няма работени часове"
 
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rcol_3_1_1
 msgid "Not important"
-msgstr ""
+msgstr "Маловажно"
 
 #. module: hr_recruitment_survey
 #: model:survey.label,value:hr_recruitment_survey.rrow_2_1_3

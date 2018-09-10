@@ -3,14 +3,14 @@
 # * website_membership
 # 
 # Translators:
-# Martin Trigaux, 2018
+# Michael Yeung, 2017
 # 敬雲 林 <chingyun@yuanchih-consult.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
+"POT-Creation-Date: 2017-09-20 09:54+0000\n"
+"PO-Revision-Date: 2017-09-20 09:54+0000\n"
 "Last-Translator: 敬雲 林 <chingyun@yuanchih-consult.com>, 2018\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. module: website_membership
 #: model:ir.ui.view,arch_db:website_membership.index
 msgid "All"
-msgstr "全部"
+msgstr "所有"
 
 #. module: website_membership
 #: code:addons/website_membership/controllers/main.py:83
@@ -49,13 +49,13 @@ msgstr "免費會員"
 #. module: website_membership
 #: model:ir.ui.view,arch_db:website_membership.opt_index_country
 msgid "Location"
-msgstr "地點"
+msgstr "位置"
 
 #. module: website_membership
 #: model:ir.ui.view,arch_db:website_membership.footer_custom
 #: model:ir.ui.view,arch_db:website_membership.index
 msgid "Members"
-msgstr "會員"
+msgstr "成員"
 
 #. module: website_membership
 #: model:ir.ui.view,arch_db:website_membership.index

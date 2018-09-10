@@ -3,24 +3,23 @@
 # * bus
 # 
 # Translators:
-# Pavol Krnáč <pavol.krnac@ekoenergo.sk>, 2017
-# Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2017
-# Matus Krnac <matus.krnac@gmail.com>, 2017
-# Martin Trigaux <mat@odoo.com>, 2017
-# gebri <gebri@inmail.sk>, 2017
+# Martin Trigaux, 2017
+# gebri <gebri@inmail.sk>, 2018
+# Matus Krnac <matus.krnac@gmail.com>, 2018
+# Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: gebri <gebri@inmail.sk>, 2017\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2018\n"
 "Language-Team: Slovak (https://www.transifex.com/odoo/teams/41243/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: sk\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #. module: bus
 #: sql_constraint:bus.presence:0
@@ -38,6 +37,11 @@ msgid "Channel"
 msgstr "Kanál"
 
 #. module: bus
+#: model:ir.model,name:bus.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_create_date
 msgid "Create date"
 msgstr "Dátum vytvorenia"
@@ -45,28 +49,13 @@ msgstr "Dátum vytvorenia"
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_create_uid
 msgid "Created by"
-msgstr "Created by "
+msgstr "Vytvoril"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_display_name
 #: model:ir.model.fields,field_description:bus.field_bus_presence_display_name
 msgid "Display Name"
-msgstr "Názov obrazovky "
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_partner_latitude
-msgid "Geo Latitude"
-msgstr "Geo Zemepisná Šírka"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_partner_longitude
-msgid "Geo Longitude"
-msgstr "Geo Zemepisná Dĺžka"
-
-#. module: bus
-#: model:ir.model.fields,field_description:bus.field_res_users_date_localization
-msgid "Geolocation Date"
-msgstr ""
+msgstr "Zobraziť meno"
 
 #. module: bus
 #: model:ir.model.fields,field_description:bus.field_bus_bus_id
@@ -121,11 +110,6 @@ msgstr "Offline"
 #: selection:bus.presence,status:0
 msgid "Online"
 msgstr "Online"
-
-#. module: bus
-#: model:ir.model,name:bus.model_res_partner
-msgid "Partner"
-msgstr "Partner"
 
 #. module: bus
 #: model:ir.model,name:bus.model_bus_presence

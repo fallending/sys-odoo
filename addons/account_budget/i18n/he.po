@@ -3,23 +3,23 @@
 # * account_budget
 # 
 # Translators:
-# ExcaliberX <excaliberx@gmail.com>, 2017
-# Moshe Flam <pashute@gmail.com>, 2017
-# Martin Trigaux <mat@odoo.com>, 2017
 # Yihya Hugirat <hugirat@gmail.com>, 2017
+# שהאב חוסיין <shhab89@gmail.com>, 2018
+# Martin Trigaux, 2018
+# Moshe Flam <pashute@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Yihya Hugirat <hugirat@gmail.com>, 2017\n"
+"POT-Creation-Date: 2017-10-10 11:34+0000\n"
+"PO-Revision-Date: 2017-10-10 11:34+0000\n"
+"Last-Translator: Moshe Flam <pashute@gmail.com>, 2018\n"
 "Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: he\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
 #. module: account_budget
 #: model:ir.actions.act_window,help:account_budget.act_crossovered_budget_view
@@ -45,7 +45,7 @@ msgstr "הישג"
 #: model:ir.model,name:account_budget.model_account_analytic_account
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_analytic_account_id
 msgid "Analytic Account"
-msgstr "חשבון לצרכי ניתוח"
+msgstr "חשבון ניהולי"
 
 #. module: account_budget
 #: model:ir.ui.view,arch_db:account_budget.crossovered_budget_view_form
@@ -76,6 +76,7 @@ msgstr "שורת תקציב"
 #: model:ir.model.fields,field_description:account_budget.field_account_analytic_account_crossovered_budget_line
 #: model:ir.model.fields,field_description:account_budget.field_account_budget_post_crossovered_budget_line
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_crossovered_budget_line
+#: model:ir.model.fields,field_description:account_budget.field_project_project_crossovered_budget_line
 #: model:ir.ui.view,arch_db:account_budget.crossovered_budget_view_form
 #: model:ir.ui.view,arch_db:account_budget.view_crossovered_budget_line_form
 #: model:ir.ui.view,arch_db:account_budget.view_crossovered_budget_line_search
@@ -101,6 +102,7 @@ msgstr "מיקום התקציב"
 #. module: account_budget
 #: model:ir.actions.act_window,name:account_budget.open_budget_post_form
 #: model:ir.ui.menu,name:account_budget.menu_budget_post_form
+#: model:ir.ui.view,arch_db:account_budget.res_config_settings_view_form
 msgid "Budgetary Positions"
 msgstr "מיקומי התקציבים"
 
@@ -130,7 +132,7 @@ msgstr "בטל תקציב"
 #. module: account_budget
 #: selection:crossovered.budget,state:0
 msgid "Cancelled"
-msgstr "בוטל"
+msgstr "בוטלה"
 
 #. module: account_budget
 #: model:ir.actions.act_window,help:account_budget.act_crossovered_budget_view
@@ -152,7 +154,7 @@ msgstr "אשר"
 #. module: account_budget
 #: selection:crossovered.budget,state:0
 msgid "Confirmed"
-msgstr "אושר"
+msgstr "מאושר"
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_account_budget_post_create_uid
@@ -166,7 +168,7 @@ msgstr "נוצר על ידי"
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_create_date
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_create_date
 msgid "Created on"
-msgstr "נוצר בתאריך "
+msgstr "נוצר ב-"
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_account_budget_post_display_name
@@ -203,7 +205,7 @@ msgstr "תאריך סיום"
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_id
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_id
 msgid "ID"
-msgstr "מספר זיהוי"
+msgstr "מזהה"
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_account_budget_post___last_update
@@ -224,7 +226,7 @@ msgstr "עודכן לאחרונה על ידי"
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_write_date
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_write_date
 msgid "Last Updated on"
-msgstr "עודכן לאחרונה על"
+msgstr "תאריך עדכון אחרון"
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_account_budget_post_name
@@ -276,10 +278,10 @@ msgid "Status"
 msgstr "סטטוס"
 
 #. module: account_budget
-#: code:addons/account_budget/models/account_budget.py:89
+#: code:addons/account_budget/models/account_budget.py:31
 #, python-format
-msgid "The Budget '%s' has no accounts!"
-msgstr "לתקציב '%s' אין חשבונות !"
+msgid "The budget must have at least one account."
+msgstr ""
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_theoritical_amount

@@ -36,7 +36,7 @@ class AutoVacuum(models.AbstractModel):
         _logger.info("GC'd %d user log entries", self._cr.rowcount)
 
     @api.model
-    def power_on(self):
+    def power_on(self, *args, **kwargs):
         if not self.env.user._is_admin():
             raise AccessDenied()
         self.env['ir.attachment']._file_gc()

@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 16:56+0200\n"
-"PO-Revision-Date: 2016-09-19 16:51+0200\n"
+"POT-Creation-Date: 2017-03-06 12:52+0000\n"
+"PO-Revision-Date: 2017-03-15 14:20+0100\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: nl_BE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.9\n"
-"Last-Translator: \n"
-"Language: nl_BE\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-00
@@ -29,33 +29,60 @@ msgstr "0% Diverse goederen"
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-CC
-msgid "0% Cocontractant"
-msgstr "0% Medecontractant"
+msgid "0% Cocont."
+msgstr "0% Medecont."
 
 #. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-00-CC
+msgid "0% Cocont. - Biens d'investissement"
+msgstr "0% Medecont. - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00-CC
+msgid "0% Cocont. M."
+msgstr "0% Medecont. G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-CC
+msgid "0% Cocont. S."
+msgstr "0% Medecont. D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-00-EU
+msgid "0% EU - Biens d'investissement"
+msgstr "0% EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-EU-G
+msgid "0% EU - Biens divers"
+msgstr "0% EU - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00-EU
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-EU-L
-msgid "0% EU L"
-msgstr "0% EU L"
+msgid "0% EU M."
+msgstr "0% EU G."
 
 #. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-EU-S
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-EU-S
-msgid "0% EU Services"
-msgstr "0% EU Diensten"
+msgid "0% EU S."
+msgstr "0% EU D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-EU-T
-msgid "0% EU T"
-msgstr "0% EU T"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-ROW
-msgid "0% Export Non EU"
-msgstr "0% Export buiten EU"
+msgid "0% EU T."
+msgstr "0% EU. T."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00
-msgid "0% Marchandises"
-msgstr "0% Handelsgoederen"
+msgid "0% M."
+msgstr "0% G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-ROW
+msgid "0% Non EU"
+msgstr "0% Non EU"
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-00-ROW-CC
@@ -63,10 +90,20 @@ msgid "0% Non EU - Biens d'investissement"
 msgstr "0% Niet EU - Investeringsgoederen"
 
 #. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00-ROW-CC
+msgid "0% Non EU M."
+msgstr "0% Non EU G. "
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-ROW-CC
+msgid "0% Non EU S."
+msgstr "0% Non EU D."
+
+#. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-S
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-00-S
-msgid "0% Services"
-msgstr "0% Diensten"
+msgid "0% S."
+msgstr "0% D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-12-L
@@ -84,20 +121,160 @@ msgid "12% Biens divers"
 msgstr "12% Diverse goederen"
 
 #. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-CC
+msgid "12% Cocont. - Biens d'investissement"
+msgstr "12% Medecont. - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-CC-C1
+msgid "12% Cocont. Déductible - Biens d'investissement"
+msgstr "12% Medecont. Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-CC-C1
+msgid "12% Cocont. Déductible M."
+msgstr "12% Medecont. Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-CC-C1
+msgid "12% Cocont. Déductible S."
+msgstr "12% Medecont. Aftrekbaar D."
+
+#. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-CC
-msgid "12% Cocontract. - Approvisionn. et marchandises"
-msgstr "12% Medecontract. - Grondstoffen en handelsgoederen"
+msgid "12% Cocont. M."
+msgstr "12% Medecont. G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-CC-C2
+msgid "12% Cocont. Récupérable - Biens d'investissement"
+msgstr "12% Medecont. Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-CC-C2
+msgid "12% Cocont. Récupérable M."
+msgstr "12% Medecont. Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-CC-C2
+msgid "12% Cocont. Récupérable S."
+msgstr "12% Medecont. Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-CC
+msgid "12% Cocont. S."
+msgstr "12% Medecont. D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-EU
+msgid "12% EU - Biens d'investissement"
+msgstr "12% EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-G
+msgid "12% EU - Biens divers"
+msgstr "12% EU - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-EU-C1
+msgid "12% EU Déductible - Biens d'investissement"
+msgstr "12% EU Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-G-C1
+msgid "12% EU Déductible - Biens divers"
+msgstr "12% EU Aftrekbaar - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-EU-C1
+msgid "12% EU Déductible M."
+msgstr "12% EU Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-S-C1
+msgid "12% EU Déductible S."
+msgstr "12% EU Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-EU
+msgid "12% EU M."
+msgstr "12% EU G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-EU-C2
+msgid "12% EU Récupérable - Biens d'investissement"
+msgstr "12% EU Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-EU-C2
+msgid "12% EU Récupérable M."
+msgstr "12% EU Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-S-C2
+msgid "12% EU Récupérable S."
+msgstr "12% EU Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-S
+msgid "12% EU S."
+msgstr "12% EU D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12
-msgid "12% Marchandises"
-msgstr "12% Handelsgoederen"
+msgid "12% M."
+msgstr "12% G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-ROW-CC
+msgid "12% Non EU - Biens d'investissement"
+msgstr "12% Niet EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-ROW-CC-C1
+msgid "12% Non EU Déductible - Biens d'investissement"
+msgstr "12% Niet EU Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-ROW-CC-C1
+msgid "12% Non EU Déductible M."
+msgstr "12% Non EU Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-ROW-CC-C1
+msgid "12% Non EU Déductible S."
+msgstr "12% Niet EU Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-ROW-CC
+msgid "12% Non EU M."
+msgstr "12% Niet EU G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-ROW-CC-C2
+msgid "12% Non EU Récupérable - Biens d'investissement"
+msgstr "12% Niet EU Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-ROW-CC-C2
+msgid "12% Non EU Récupérable M."
+msgstr "12% Niet EU Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-ROW-CC-C2
+msgid "12% Non EU Récupérable S."
+msgstr "12% Non EU Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-ROW-CC
+msgid "12% Non EU S."
+msgstr "12% Niet EU D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-S
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-12-S
-msgid "12% Services"
-msgstr "12% Diensten"
+msgid "12% S."
+msgstr "12% D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-21-L
@@ -115,20 +292,185 @@ msgid "21% Biens divers"
 msgstr "21% Diverse goederen"
 
 #. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-CC
+msgid "21% Cocont .S."
+msgstr "21% Medecont. D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-CC
+msgid "21% Cocont. - Biens d'investissement"
+msgstr "21% Medecont. - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-CC-C1
+msgid "21% Cocont. Déductible - Biens d'investissement"
+msgstr "21% Medecont. Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-CC-C1
+msgid "21% Cocont. Déductible M."
+msgstr "21% Medecont. Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-CC-C1
+msgid "21% Cocont. Déductible S."
+msgstr "21%  Medecont. Aftrekbaar D."
+
+#. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-CC
-msgid "21% Cocontract. - Approvisionn. et marchandises"
-msgstr "21% Medecontract. - Grondstoffen en handelsgoederen"
+msgid "21% Cocont. M."
+msgstr "21% Medecont. G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-CC-C2
+msgid "21% Cocont. Récupérable - Biens d'investissement"
+msgstr "21% Medecont. Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-CC-C2
+msgid "21% Cocont. Récupérable M."
+msgstr "21% Medecont. Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-CC-C2
+msgid "21% Cocont. Récupérable S."
+msgstr "21% Medecont. Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-EU
+msgid "21% EU - Biens d'investissement"
+msgstr "21% EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-G
+msgid "21% EU - Biens divers"
+msgstr "21% EU - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-EU-C1
+msgid "21% EU Déductible - Biens d'investissement"
+msgstr "21% EU Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-G-C1
+msgid "21% EU Déductible - Biens divers"
+msgstr "21% EU Aftrekbaar - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-EU-C1
+msgid "21% EU Déductible M."
+msgstr "21% EU Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-S-C1
+msgid "21% EU Déductible S."
+msgstr "21% EU Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-EU
+msgid "21% EU M."
+msgstr "21% EU. G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-EU-C2
+msgid "21% EU Récupérable - Biens d'investissement"
+msgstr "21% EU Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-G-C2
+msgid "21% EU Récupérable - Biens divers"
+msgstr "21% EU Verhaalbaar - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-EU-C2
+msgid "21% EU Récupérable M."
+msgstr "21% EU Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-S-C2
+msgid "21% EU Récupérable S."
+msgstr "21% EU Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-S
+msgid "21% EU S."
+msgstr "21% EU D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21
-msgid "21% Marchandises"
-msgstr "21% Handelsgoederen"
+msgid "21% M."
+msgstr "21% G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-ROW-CC
+msgid "21% Non EU - Biens d'investissement"
+msgstr "21% Niet EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-ROW-CC-C1
+msgid "21% Non EU Déductible - Biens d'investissement"
+msgstr "21% Non EU Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-ROW-CC-C1
+msgid "21% Non EU Déductible M."
+msgstr "21% Non EU Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-ROW-CC-C1
+msgid "21% Non EU Déductible S."
+msgstr "21% Non EU Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-ROW-CC
+msgid "21% Non EU M."
+msgstr "21% Niet EU G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-ROW-CC-C2
+msgid "21% Non EU Récupérable - Biens d'investissement"
+msgstr "21% Non EU Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-ROW-CC-C2
+msgid "21% Non EU Récupérable M."
+msgstr "21% Non EU Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-ROW-CC-C2
+msgid "21% Non EU Récupérable S."
+msgstr "21% Niet EU Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-ROW-CC
+msgid "21% Non EU S."
+msgstr "21% Non EU D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-S
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-21-S
-msgid "21% Services"
-msgstr "21% Diensten"
+msgid "21% S."
+msgstr "21% D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_TVA-21-inclus-dans-prix
+msgid "21% S. TTC"
+msgstr "21% D. (Inclusief BTW)"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-CAR-EXC-C2
+msgid "50% Déductible - Frais de voiture (Prix Excl.)"
+msgstr "50% Aftrekbaar - Autokosten (Prijs Excl.)"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-CAR-EXC-C1
+msgid "50% Non Déductible - Frais de voiture"
+msgstr "50% Niet Aftrekbaar - Autokosten"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-CAR-EXC
+msgid "50% Non Déductible - Frais de voiture (Prix Excl.)"
+msgstr "50% Niet Aftrekbaar - Autokosten (Prijs Excl.)"
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06
@@ -141,15 +483,165 @@ msgid "6% Biens divers"
 msgstr "6% Diverse goederen"
 
 #. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-CC
+msgid "6% Cocont. - Biens d'investissement"
+msgstr "6% Medecont. - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-CC-C1
+msgid "6% Cocont. Déductible - Biens d'investissement"
+msgstr "6% Medecont. Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-CC-C1
+msgid "6% Cocont. Déductible M."
+msgstr "6% Medecont. Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-CC-C1
+msgid "6% Cocont. Déductible S."
+msgstr "6% Medecont. Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-CC
+msgid "6% Cocont. M."
+msgstr "6% Medecont. G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-CC-C2
+msgid "6% Cocont. Récupérable - Biens d'investissement"
+msgstr "6% Medecont. Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-CC-C2
+msgid "6% Cocont. Récupérable M."
+msgstr "6% Medecont. Verhaalbaar G. "
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-CC-C2
+msgid "6% Cocont. Récupérable S."
+msgstr "6% Medecont. Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-CC
+msgid "6% Cocont. S."
+msgstr "6% Medecont. D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-EU
+msgid "6% EU - Biens d'investissement"
+msgstr "6% EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-G
+msgid "6% EU - Biens divers"
+msgstr "6% EU - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-EU-C1
+msgid "6% EU Déductible - Biens d'investissement"
+msgstr "6% EU Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-G-C1
+msgid "6% EU Déductible - Biens divers"
+msgstr "6% EU Aftrekbaar - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-EU-C1
+msgid "6% EU Déductible M."
+msgstr "6% EU Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-S-C1
+msgid "6% EU Déductible S."
+msgstr "6% EU Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-EU
+msgid "6% EU M."
+msgstr "6% EU G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-EU-C2
+msgid "6% EU Récupérable - Biens d'investissement"
+msgstr "6% EU Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-G-C2
+msgid "6% EU Récupérable - Biens divers"
+msgstr "6% EU Verhaalbaar - Diverse goederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-EU-C2
+msgid "6% EU Récupérable M."
+msgstr "6% EU Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-S-C2
+msgid "6% EU Récupérable S."
+msgstr "6% EU Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-S
+msgid "6% EU S."
+msgstr "6% EU D."
+
+#. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06
-msgid "6% Marchandises"
-msgstr "6% Handelsgoederen"
+msgid "6% M."
+msgstr "6% G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-ROW-CC
+msgid "6% Non EU - Biens d'investissement"
+msgstr "6% Niet EU - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-ROW-CC-C1
+msgid "6% Non EU Déductible - Biens d'investissement"
+msgstr "6% Niet EU Aftrekbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-ROW-CC-C1
+msgid "6% Non EU Déductible M."
+msgstr "6% Niet EU Aftrekbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-ROW-CC-C1
+msgid "6% Non EU Déductible S."
+msgstr "6% Niet EU Aftrekbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-ROW-CC
+msgid "6% Non EU M."
+msgstr "6% Niet EU G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-ROW-CC-C2
+msgid "6% Non EU Récupérable - Biens d'investissement"
+msgstr "6% Non EU Verhaalbaar - Investeringsgoederen"
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-ROW-CC-C2
+msgid "6% Non EU Récupérable M."
+msgstr "6% Niet EU Verhaalbaar G."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-ROW-CC-C2
+msgid "6% Non EU Récupérable S."
+msgstr "6% Niet EU Verhaalbaar D."
+
+#. module: l10n_be
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-ROW-CC
+msgid "6% Non EU S."
+msgstr "6% Niet EU D."
 
 #. module: l10n_be
 #: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-S
 #: model:account.tax.template,name:l10n_be.attn_VAT-OUT-06-S
-msgid "6% Services"
-msgstr "6% Diensten"
+msgid "6% S."
+msgstr "6% D."
 
 #. module: l10n_be
 #: model:account.account.template,name:l10n_be.a601
@@ -302,6 +794,181 @@ msgstr "Voorschotten en leningen aan het personeel"
 #: model:account.chart.template,name:l10n_be.l10nbe_chart_template
 msgid "Belgian PCMN"
 msgstr "Belgische PCMN"
+
+#. module: l10n_be
+#: model:ir.ui.menu,name:l10n_be.account_reports_be_statements_menu
+msgid "Belgium Statements"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_81_not_deductible
+msgid "Belgium VAT Form: Tax not deductible (grid 81)"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_82_not_deductible
+msgid "Belgium VAT Form: Tax not deductible (grid 82)"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_83_not_deductible
+msgid "Belgium VAT Form: Tax not deductible (grid 83)"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_85_not_deductible
+msgid "Belgium VAT Form: Tax not deductible (grid 85)"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_87
+msgid "Belgium VAT Form: base in 87"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_00
+msgid "Belgium VAT Form: grid 0"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_01
+msgid "Belgium VAT Form: grid 01"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_02
+msgid "Belgium VAT Form: grid 02"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_03
+msgid "Belgium VAT Form: grid 03"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_44
+msgid "Belgium VAT Form: grid 44"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_45
+msgid "Belgium VAT Form: grid 45"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_46L
+msgid "Belgium VAT Form: grid 46L"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_46T
+msgid "Belgium VAT Form: grid 46T"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_47
+msgid "Belgium VAT Form: grid 47"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_48s44
+msgid "Belgium VAT Form: grid 48s44"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_48s46L
+msgid "Belgium VAT Form: grid 48s46L"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_48s46T
+msgid "Belgium VAT Form: grid 48s46T"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_49
+msgid "Belgium VAT Form: grid 49"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_54
+msgid "Belgium VAT Form: grid 54"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_55
+msgid "Belgium VAT Form: grid 55"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_56
+msgid "Belgium VAT Form: grid 56"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_57
+msgid "Belgium VAT Form: grid 57"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_59
+msgid "Belgium VAT Form: grid 59"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_61
+msgid "Belgium VAT Form: grid 61"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_62
+msgid "Belgium VAT Form: grid 62"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_63
+msgid "Belgium VAT Form: grid 63"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_64
+msgid "Belgium VAT Form: grid 64"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_81
+msgid "Belgium VAT Form: grid 81"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_82
+msgid "Belgium VAT Form: grid 82"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_83
+msgid "Belgium VAT Form: grid 83"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_84
+msgid "Belgium VAT Form: grid 84"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_85
+msgid "Belgium VAT Form: grid 85"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_86
+msgid "Belgium VAT Form: grid 86"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.account.tag,name:l10n_be.tax_tag_88
+msgid "Belgium VAT Form: grid 88"
+msgstr ""
 
 #. module: l10n_be
 #: model:account.account.template,name:l10n_be.a140
@@ -524,14 +1191,14 @@ msgid "En cours de fabrication"
 msgstr "Goederen in bewerking"
 
 #. module: l10n_be
-#: model:account.account.template,name:l10n_be.a440
-msgid "Entreprises liées"
-msgstr "Aanverwante bedrijven"
-
-#. module: l10n_be
 #: model:account.account.template,name:l10n_be.a611
 msgid "Entretien et réparation"
 msgstr "Onderhoud en herstellingen"
+
+#. module: l10n_be
+#: model:account.account.template,name:l10n_be.a653
+msgid "Escomptes clients"
+msgstr ""
 
 #. module: l10n_be
 #: model:account.account.template,name:l10n_be.a757
@@ -564,7 +1231,7 @@ msgid "Financement de biens mobiliers"
 msgstr "Financiering roerend goed"
 
 #. module: l10n_be
-#: model:account.account.template,name:l10n_be.a4250
+#: model:account.account.template,name:l10n_be.a440
 msgid "Fournisseurs"
 msgstr "Leveranciers"
 
@@ -592,16 +1259,6 @@ msgstr "Oprichtingskosten en kapitaalverhoging"
 #: model:account.account.template,name:l10n_be.a2100
 msgid "Frais de recherche et de mise au point"
 msgstr "Kosten van onderzoek en ontwikkeling"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-CAR-EXC-C2
-msgid "Frais de voiture - TVA 50% Deductible (Prix Excl.)"
-msgstr "Auto kosten - BTW 50% aftrekbaar (exl. prijs)"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-CAR-EXC-C1
-msgid "Frais de voiture - TVA 50% Non Deductible"
-msgstr "Auto kosten - BTW 50% niet aftrekbaar"
 
 #. module: l10n_be
 #: model:account.account.template,name:l10n_be.a3500
@@ -897,6 +1554,18 @@ msgid "Régime National"
 msgstr "Nationaal"
 
 #. module: l10n_be
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V61
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V61
+msgid "Régularisation en faveur de l'état"
+msgstr ""
+
+#. module: l10n_be
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V62
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V62
+msgid "Régularisation en faveur du déclarant"
+msgstr ""
+
+#. module: l10n_be
 #: model:account.account.template,name:l10n_be.a7710
 msgid "Régularisations d'impôts dus ou versés"
 msgstr "Regularisering van verschuldigde of betaalde belastingen"
@@ -997,194 +1666,289 @@ msgid "T.V.A. à payer - Intra-communautaire"
 msgstr "Te betalen BTW - Intracommunautair"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-CC
-msgid "TVA Déductible 12% Cocontract. - Biens d'investissement"
-msgstr "BTW aftrekbaar 12% Medecontr. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-00
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-00-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-00-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-00
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-L
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-S
+msgid "TVA 0%"
+msgstr "BTW 0%"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-CC
-msgid "TVA Déductible 12% Cocontract. - Services and other goods"
-msgstr "BTW aftrekbaar 12% Medecontr. - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-00-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-00-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-00-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-CC
+msgid "TVA 0% Cocont."
+msgstr "BTW 0% Medecont."
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-ROW-CC
-msgid "TVA Déductible 12% Hors EU - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 12% Buiten EU - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-00-EU
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-00-EU-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-00-EU-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-00-EU
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-EU-L
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-EU-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-EU-T
+msgid "TVA 0% EU"
+msgstr "BTW 0% EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-ROW-CC
-msgid "TVA Déductible 12% Hors EU - Biens d'investissement"
-msgstr "BTW aftrekbaar 12% Buiten EU - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-00-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-00-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-00-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-00-ROW
+msgid "TVA 0% Non EU"
+msgstr "BTW 0% Non EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-ROW-CC
-msgid "TVA Déductible 12% Hors EU - Services and other goods"
-msgstr "BTW afrekbaar 12% Buiten EU - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-12-L
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-12-S
+msgid "TVA 12%"
+msgstr "BTW 12%"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-EU
-msgid "TVA Déductible 12% Intracomm. - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 12% Intracomm. - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-CC
+msgid "TVA 12% Cocont."
+msgstr "BTW 12% Medecont."
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-EU
-msgid "TVA Déductible 12% Intracomm. - Biens d'investissement"
-msgstr "BTW aftrekbaar 12% Intracomm. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-CC-C1
+msgid "TVA 12% Cocont. Déductible"
+msgstr "BTW 12% Medecont. Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-G
-msgid "TVA Déductible 12% Intracomm. - Biens divers"
-msgstr "BTW aftrekbaar 12% Intracomm. - Diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-CC-C2
+msgid "TVA 12% Cocont. Récupérable"
+msgstr "BTW 12% Medecont. Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-S
-msgid "TVA Déductible 12% Intracomm. - Services"
-msgstr "BTW aftrekbaar 12% Intracomm. - Diensten"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-EU
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-EU-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-EU-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-EU
+msgid "TVA 12% EU"
+msgstr "BTW 12% EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-CC
-msgid "TVA Déductible 21% Cocontract. - Biens d'investissement"
-msgstr "BTW aftrekbaar 21% Medecontr. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-EU-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-EU-G-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-EU-S-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-EU-C1
+msgid "TVA 12% EU Déductible"
+msgstr "BTW 12% EU Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-CC
-msgid "TVA Déductible 21% Cocontract. - Services and other goods"
-msgstr "BTW aftrekbaar 21% Medecontr. - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-EU-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-EU-G-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-EU-S-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-EU-C2
+msgid "TVA 12% EU Récupérable"
+msgstr "BTW 12% EU Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-ROW-CC
-msgid "TVA Déductible 21% Hors EU - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 21% Buiten EU - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-G-C2
+msgid "TVA 12% EU Récupérable - Biens divers"
+msgstr "BTW 12% EU Verhaalbaar - Diverse goederen"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-ROW-CC
-msgid "TVA Déductible 21% Hors EU - Biens d'investissement"
-msgstr "BTW aftrekbaar 21% Buiten EU - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-ROW-CC
+msgid "TVA 12% Non EU"
+msgstr "BTW 12% Niet EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-ROW-CC
-msgid "TVA Déductible 21% Hors EU - Services and other goods"
-msgstr "BTW afrekbaar 21% Buiten EU - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-ROW-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-ROW-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-ROW-CC-C1
+msgid "TVA 12% Non EU Déductible"
+msgstr "BTW 12% Niet EU Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-EU
-msgid "TVA Déductible 21% Intracomm. - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 21% Intracomm. - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-12-ROW-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-12-ROW-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-12-ROW-CC-C2
+msgid "TVA 12% Non EU Récupérable"
+msgstr "BTW 12% Niet EU Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-EU
-msgid "TVA Déductible 21% Intracomm. - Biens d'investissement"
-msgstr "BTW aftrekbaar 21% Intracomm. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-21-L
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-21-S
+msgid "TVA 21%"
+msgstr "BTW 21%"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-G
-msgid "TVA Déductible 21% Intracomm. - Biens divers"
-msgstr "BTW aftrekbaar 21% Intracomm. - Diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-CC
+msgid "TVA 21% Cocont."
+msgstr "BTW 21% Medecont."
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-S
-msgid "TVA Déductible 21% Intracomm. - Services"
-msgstr "BTW aftrekbaar 21% Intracomm. - Diensten"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-CC-C1
+msgid "TVA 21% Cocont. Déductible"
+msgstr "BTW 21% Medecont. Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-CC
-msgid "TVA Déductible 6% Cocontract. - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 6% Medecontr. - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-CC-C2
+msgid "TVA 21% Cocont. Récupérable"
+msgstr "BTW 21% Medecont. Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-CC
-msgid "TVA Déductible 6% Cocontract. - Biens d'investissement"
-msgstr "BTW aftrekbaar 6% Medecontr. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-EU
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-EU-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-EU-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-EU
+msgid "TVA 21% EU"
+msgstr "BTW 21% EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-CC
-msgid "TVA Déductible 6% Cocontract. - Services and other goods"
-msgstr "BTW aftrekbaar 6% Medecontr. - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-EU-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-EU-G-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-EU-S-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-EU-C1
+msgid "TVA 21% EU Déductible"
+msgstr "BTW 21% EU Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-ROW-CC
-msgid "TVA Déductible 6% Hors EU - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 6% Buiten EU - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-EU-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-EU-G-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-EU-S-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-EU-C2
+msgid "TVA 21% EU Récupérable"
+msgstr "BTW 21% EU Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-ROW-CC
-msgid "TVA Déductible 6% Hors EU - Biens d'investissement"
-msgstr "BTW aftrekbaar 6% Buiten EU - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-ROW-CC
+msgid "TVA 21% Non EU"
+msgstr "BTW 21% Niet EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-ROW-CC
-msgid "TVA Déductible 6% Hors EU - Services and other goods"
-msgstr "BTW afrekbaar 6% Buiten EU - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-ROW-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-ROW-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-ROW-CC-C1
+msgid "TVA 21% Non EU Déductible"
+msgstr "BTW 21% Niet EU Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-EU
-msgid "TVA Déductible 6% Intracomm. - Approvisionn. et marchandises"
-msgstr "BTW aftrekbaar 6% Intracomm. - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-21-ROW-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-21-ROW-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-21-ROW-CC-C2
+msgid "TVA 21% Non EU Récupérable"
+msgstr "BTW 21% Niet EU Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-EU
-msgid "TVA Déductible 6% Intracomm. - Biens d'investissement"
-msgstr "BTW aftrekbaar 6% Intracomm. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_TVA-21-inclus-dans-prix
+msgid "TVA 21% TTC"
+msgstr "VAT 21% (inclusief BTW)"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-G
-msgid "TVA Déductible 6% Intracomm. - Biens divers"
-msgstr "BTW aftrekbaar 6% Intracomm. - Diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-CAR-EXC-C2
+msgid "TVA 50% Déductible - Frais de voiture (Prix Excl.)"
+msgstr "BTW 5°% Aftrekbaar - Auto kosten (Prijs Excl.)"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-S
-msgid "TVA Déductible 6% Intracomm. - Services"
-msgstr "BTW aftrekbaar 6% Intracomm. - Diensten"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-CAR-EXC
+msgid "TVA 50% Non Déductible - Frais de voiture (Prix Excl.)"
+msgstr "BTW 50% Niet Aftrekbaar - Auto kosten (Prijs Excl.)"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-CAR-EXC
-msgid "TVA Entrant - Frais de voiture - VAT 50% Non Deductible (Price Excl.)"
-msgstr "BTW inkomend - onkosten wagen - BTW 50% Niet-aftrekbaar (Prijs Excl.)"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-06-L
+#: model:account.tax.template,description:l10n_be.attn_VAT-OUT-06-S
+msgid "TVA 6%"
+msgstr "BTW 6%"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00-CC
-msgid "TVA à l'entrée 0% Cocontract. - Approvisionn. et marchandises"
-msgstr "BTW inkomend 0% Medecontr. - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-CC
+msgid "TVA 6% Cocont."
+msgstr "BTW 6% Medecont."
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-00-CC
-msgid "TVA à l'entrée 0% Cocontract. - Biens d'investissement"
-msgstr "BTW inkomend 0% Medecontr. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-CC-C1
+msgid "TVA 6% Cocont. Déductible"
+msgstr "BTW 6% Medecont. Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-CC
-msgid "TVA à l'entrée 0% Cocontract. - Services and other goods"
-msgstr "BTW inkomend 0% Medecontr. - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-CC-C2
+msgid "TVA 6% Cocont. Récupérable"
+msgstr "BTW 6% Medecont. Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00-ROW-CC
-msgid "TVA à l'entrée 0% Hors EU - Approvisionn. et marchandises"
-msgstr "BTW inkomend 0% Buiten EU - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-EU
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-EU-G
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-EU-S
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-EU
+msgid "TVA 6% EU"
+msgstr "BTW 6% EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-ROW-CC
-msgid "TVA à l'entrée 0% Hors EU - Services and other goods"
-msgstr "BTW inkomend 0% Buiten EU - Diensten en diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-EU-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-EU-G-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-EU-S-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-EU-C1
+msgid "TVA 6% EU Déductible"
+msgstr "BTW 6% EU Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-00-EU
-msgid "TVA à l'entrée 0% Intracomm. - Approvisionn. et marchandises"
-msgstr "BTW inkomend 0% Intracomm. - Grondstoffen en handelsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-EU-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-EU-G-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-EU-S-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-EU-C2
+msgid "TVA 6% EU Récupérable"
+msgstr "BTW 6% EU Verhaalbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-00-EU
-msgid "TVA à l'entrée 0% Intracomm. - Biens d'investissement"
-msgstr "BTW inkomend 0% Intracomm. - Investeringsgoederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-ROW-CC
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-ROW-CC
+msgid "TVA 6% Non EU"
+msgstr "BTW 6% Niet EU"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-EU-G
-msgid "TVA à l'entrée 0% Intracomm. - Biens divers"
-msgstr "BTW inkomend 0% Intracomm. - Diverse goederen"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-ROW-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-ROW-CC-C1
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-ROW-CC-C1
+msgid "TVA 6% Non EU Déductible"
+msgstr "BTW 6% Niet EU Aftrekbaar"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-00-EU-S
-msgid "TVA à l'entrée 0% Intracomm. - Services"
-msgstr "BTW inkomend 0% Intracomm. - Diensten"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V81-06-ROW-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-06-ROW-CC-C2
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V83-06-ROW-CC-C2
+msgid "TVA 6% Non EU Récupérable"
+msgstr "BTW 6% Niet EU Verhaalbaar"
 
 #. module: l10n_be
 #: model:account.account.template,name:l10n_be.a4118
@@ -1207,304 +1971,9 @@ msgid "Transferts"
 msgstr "Transferten"
 
 #. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-CC-C1
-msgid "VAT-IN-V81-06-CC-C1"
-msgstr "VAT-IN-V81-06-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-CC-C2
-msgid "VAT-IN-V81-06-CC-C2"
-msgstr "VAT-IN-V81-06-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-EU-C1
-msgid "VAT-IN-V81-06-EU-C1"
-msgstr "VAT-IN-V81-06-EU-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-EU-C2
-msgid "VAT-IN-V81-06-EU-C2"
-msgstr "VAT-IN-V81-06-EU-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-ROW-CC-C1
-msgid "VAT-IN-V81-06-ROW-CC-C1"
-msgstr "VAT-IN-V81-06-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-06-ROW-CC-C2
-msgid "VAT-IN-V81-06-ROW-CC-C2"
-msgstr "VAT-IN-V81-06-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-CC-C1
-msgid "VAT-IN-V81-12-CC-C1"
-msgstr "VAT-IN-V81-12-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-CC-C2
-msgid "VAT-IN-V81-12-CC-C2"
-msgstr "VAT-IN-V81-12-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-EU-C1
-msgid "VAT-IN-V81-12-EU-C1"
-msgstr "VAT-IN-V81-12-EU-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-EU-C2
-msgid "VAT-IN-V81-12-EU-C2"
-msgstr "VAT-IN-V81-12-EU-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-ROW-CC-C1
-msgid "VAT-IN-V81-12-ROW-CC-C1"
-msgstr "VAT-IN-V81-12-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-12-ROW-CC-C2
-msgid "VAT-IN-V81-12-ROW-CC-C2"
-msgstr "VAT-IN-V81-12-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-CC-C1
-msgid "VAT-IN-V81-21-CC-C1"
-msgstr "VAT-IN-V81-21-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-CC-C2
-msgid "VAT-IN-V81-21-CC-C2"
-msgstr "VAT-IN-V81-21-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-EU-C1
-msgid "VAT-IN-V81-21-EU-C1"
-msgstr "VAT-IN-V81-21-EU-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-EU-C2
-msgid "VAT-IN-V81-21-EU-C2"
-msgstr "VAT-IN-V81-21-EU-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-ROW-CC-C1
-msgid "VAT-IN-V81-21-ROW-CC-C1"
-msgstr "VAT-IN-V81-21-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V81-21-ROW-CC-C2
-msgid "VAT-IN-V81-21-ROW-CC-C2"
-msgstr "VAT-IN-V81-21-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-CC-C1
-msgid "VAT-IN-V82-06-CC-C1"
-msgstr "VAT-IN-V82-06-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-CC-C2
-msgid "VAT-IN-V82-06-CC-C2"
-msgstr "VAT-IN-V82-06-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-G-C1
-msgid "VAT-IN-V82-06-EU-G-C1"
-msgstr "VAT-IN-V82-06-EU-G-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-G-C2
-msgid "VAT-IN-V82-06-EU-G-C2"
-msgstr "VAT-IN-V82-06-EU-G-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-S-C1
-msgid "VAT-IN-V82-06-EU-S-C1"
-msgstr "VAT-IN-V82-06-EU-S-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-EU-S-C2
-msgid "VAT-IN-V82-06-EU-S-C2"
-msgstr "VAT-IN-V82-06-EU-S-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-ROW-CC-C1
-msgid "VAT-IN-V82-06-ROW-CC-C1"
-msgstr "VAT-IN-V82-06-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-06-ROW-CC-C2
-msgid "VAT-IN-V82-06-ROW-CC-C2"
-msgstr "VAT-IN-V82-06-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-CC-C1
-msgid "VAT-IN-V82-12-CC-C1"
-msgstr "VAT-IN-V82-12-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-CC-C2
-msgid "VAT-IN-V82-12-CC-C2"
-msgstr "VAT-IN-V82-12-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-G-C1
-msgid "VAT-IN-V82-12-EU-G-C1"
-msgstr "VAT-IN-V82-12-EU-G-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-G-C2
-msgid "VAT-IN-V82-12-EU-G-C2"
-msgstr "VAT-IN-V82-12-EU-G-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-S-C1
-msgid "VAT-IN-V82-12-EU-S-C1"
-msgstr "VAT-IN-V82-12-EU-S-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-EU-S-C2
-msgid "VAT-IN-V82-12-EU-S-C2"
-msgstr "VAT-IN-V82-12-EU-S-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-ROW-CC-C1
-msgid "VAT-IN-V82-12-ROW-CC-C1"
-msgstr "VAT-IN-V82-12-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-12-ROW-CC-C2
-msgid "VAT-IN-V82-12-ROW-CC-C2"
-msgstr "VAT-IN-V82-12-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-CC-C1
-msgid "VAT-IN-V82-21-CC-C1"
-msgstr "VAT-IN-V82-21-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-CC-C2
-msgid "VAT-IN-V82-21-CC-C2"
-msgstr "VAT-IN-V82-21-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-G-C1
-msgid "VAT-IN-V82-21-EU-G-C1"
-msgstr "VAT-IN-V82-21-EU-G-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-G-C2
-msgid "VAT-IN-V82-21-EU-G-C2"
-msgstr "VAT-IN-V82-21-EU-G-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-S-C1
-msgid "VAT-IN-V82-21-EU-S-C1"
-msgstr "VAT-IN-V82-21-EU-S-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-EU-S-C2
-msgid "VAT-IN-V82-21-EU-S-C2"
-msgstr "VAT-IN-V82-21-EU-S-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-ROW-CC-C1
-msgid "VAT-IN-V82-21-ROW-CC-C1"
-msgstr "VAT-IN-V82-21-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V82-21-ROW-CC-C2
-msgid "VAT-IN-V82-21-ROW-CC-C2"
-msgstr "VAT-IN-V82-21-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-CC-C1
-msgid "VAT-IN-V83-06-CC-C1"
-msgstr "VAT-IN-V83-06-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-CC-C2
-msgid "VAT-IN-V83-06-CC-C2"
-msgstr "VAT-IN-V83-06-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-EU-C1
-msgid "VAT-IN-V83-06-EU-C1"
-msgstr "VAT-IN-V83-06-EU-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-EU-C2
-msgid "VAT-IN-V83-06-EU-C2"
-msgstr "VAT-IN-V83-06-EU-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-ROW-CC-C1
-msgid "VAT-IN-V83-06-ROW-CC-C1"
-msgstr "VAT-IN-V83-06-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-06-ROW-CC-C2
-msgid "VAT-IN-V83-06-ROW-CC-C2"
-msgstr "VAT-IN-V83-06-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-CC-C1
-msgid "VAT-IN-V83-12-CC-C1"
-msgstr "VAT-IN-V83-12-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-CC-C2
-msgid "VAT-IN-V83-12-CC-C2"
-msgstr "VAT-IN-V83-12-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-EU-C1
-msgid "VAT-IN-V83-12-EU-C1"
-msgstr "VAT-IN-V83-12-EU-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-EU-C2
-msgid "VAT-IN-V83-12-EU-C2"
-msgstr "VAT-IN-V83-12-EU-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-ROW-CC-C1
-msgid "VAT-IN-V83-12-ROW-CC-C1"
-msgstr "VAT-IN-V83-12-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-12-ROW-CC-C2
-msgid "VAT-IN-V83-12-ROW-CC-C2"
-msgstr "VAT-IN-V83-12-ROW-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-CC-C1
-msgid "VAT-IN-V83-21-CC-C1"
-msgstr "VAT-IN-V83-21-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-CC-C2
-msgid "VAT-IN-V83-21-CC-C2"
-msgstr "VAT-IN-V83-21-CC-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-EU-C1
-msgid "VAT-IN-V83-21-EU-C1"
-msgstr "VAT-IN-V83-21-EU-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-EU-C2
-msgid "VAT-IN-V83-21-EU-C2"
-msgstr "VAT-IN-V83-21-EU-C2"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-ROW-CC-C1
-msgid "VAT-IN-V83-21-ROW-CC-C1"
-msgstr "VAT-IN-V83-21-ROW-CC-C1"
-
-#. module: l10n_be
-#: model:account.tax.template,name:l10n_be.attn_VAT-IN-V83-21-ROW-CC-C2
-msgid "VAT-IN-V83-21-ROW-CC-C2"
-msgstr "VAT-IN-V83-21-ROW-CC-C2"
+#: model:account.tax.template,description:l10n_be.attn_VAT-IN-V82-CAR-EXC-C1
+msgid "VAT 50% Non Déductible - Frais de voiture"
+msgstr "BTW 50% Niet Aftrekbaar - Auto kosten"
 
 #. module: l10n_be
 #: model:account.account.template,name:l10n_be.a7001

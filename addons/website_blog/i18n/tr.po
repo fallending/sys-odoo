@@ -3,26 +3,23 @@
 # * website_blog
 # 
 # Translators:
-# Ediz Duman <neps1192@gmail.com>, 2016
-# Martin Trigaux, 2016
-# Murat Kaplan <muratk@projetgrup.com>, 2016
-# gezgin biri <gezginbiri@hotmail.com>, 2016
-# Gökhan Erdoğdu <gokhan.erdogdu@mechsoft.com.tr>, 2016
-# dhkabayel <dhkabayel@gmail.com>, 2016
-# Ayhan KIZILTAN <akiziltan76@hotmail.com>, 2016
-# Thermo Dynamic <emirhanayar2004@gmail.com>, 2016
-# Doğan Altunbay <doganaltunbay@gmail.com>, 2016
-# Esin Kandemir <esaykandemir@gmail.com>, 2016
-# Ramiz Deniz Öner <deniz@denizoner.com>, 2016
-# Azar Huseynli <azerbay1984@gmail.com>, 2016
+# Murat Kaplan <muratk@projetgrup.com>, 2017
+# Martin Trigaux, 2017
+# Ediz Duman <neps1192@gmail.com>, 2017
+# Gökhan Erdoğdu <gokhan.erdogdu@mechsoft.com.tr>, 2017
+# dhkabayel <dhkabayel@gmail.com>, 2017
+# Ayhan KIZILTAN <akiziltan76@hotmail.com>, 2017
+# Thermo Dynamic <emirhanayar2004@gmail.com>, 2017
+# Güven YILMAZ <guvenyilmaz@outlook.com.tr>, 2017
 # Umur Akın <umura@projetgrup.com>, 2018
+# Ertuğrul Güreş <ertugrulg@projetgrup.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:28+0000\n"
-"PO-Revision-Date: 2017-06-23 13:28+0000\n"
-"Last-Translator: Umur Akın <umura@projetgrup.com>, 2018\n"
+"POT-Creation-Date: 2017-10-24 09:00+0000\n"
+"PO-Revision-Date: 2017-10-24 09:00+0000\n"
+"Last-Translator: Ertuğrul Güreş <ertugrulg@projetgrup.com>, 2018\n"
 "Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,7 +50,7 @@ msgid ""
 "                    employed by most industry providers.\""
 msgstr ""
 "\"Odoo şimdi birçok cephede rekabet ediyor, onları en üst noktadan vurmak için gerçek bir rekabet yok.\n"
-"Entegre CMS ve E-ticaret sistemlerinin başlangıcı ile, açık kaynak devriminde lider ışıklardan biri olarak sadece konumlarını yükseltir. Başka bir ERP veya CMS sağlayıcısının sektördeki çoğu endüstri firması tarafından halen kullanılmakta olan teknoloji nedeniyle bu seviyede rekabet edebilmeleri için en az 5 yıl gerekli. \""
+"Entegre CMS ve E-ticaret sistemlerinin lansmanı ile, açık kaynak devriminde lider ışıklardan biri olarak sadece konumlarını yükseltir. Başka bir ERP veya CMS sağlayıcısının sektördeki çoğu endüstri firması tarafından halen kullanılmakta olan teknoloji nedeniyle bu seviyede rekabet edebilmeleri için en az 5 yıl gerekli. \""
 
 #. module: website_blog
 #: model:blog.post,content:website_blog.blog_post_2
@@ -107,8 +104,8 @@ msgid ""
 "(Un)archiving a blog automatically (un)archives its posts. Do you want to "
 "proceed?"
 msgstr ""
-"Bir blog arşivlemek otomatik olarak arşivlere postalanır. İşleme devam etmek"
-" istiyor musunuz?"
+"Bir bloğu arşivlemek, otomatik olarak içindeki mesajları da arşivler. İşleme"
+" devam etmek istiyor musunuz?"
 
 #. module: website_blog
 #. openerp-web
@@ -171,7 +168,7 @@ msgstr "Erişim postası"
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog_active
 #: model:ir.model.fields,field_description:website_blog.field_blog_post_active
 msgid "Active"
-msgstr "Etkin"
+msgstr "Aktif"
 
 #. module: website_blog
 #: model:blog.post,content:website_blog.blog_post_2
@@ -182,7 +179,7 @@ msgstr "Sektör lideri teknoloji ekleme"
 #: model:ir.ui.view,arch_db:website_blog.blog_blog_view_search
 #: model:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Archived"
-msgstr "Arşiv"
+msgstr "Arşivlendi"
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.opt_blog_rc_history
@@ -224,7 +221,7 @@ msgstr "Atom Besleme"
 #: model:ir.model.fields,field_description:website_blog.field_blog_post_author_id
 #: model:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Author"
-msgstr "Yazan"
+msgstr "Üretici"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post_author_avatar
@@ -252,7 +249,8 @@ msgid "Blog Name"
 msgstr "Blog Adı"
 
 #. module: website_blog
-#: code:addons/website_blog/models/website.py:23
+#: code:addons/website_blog/models/website.py:22
+#: code:addons/website_blog/models/website.py:47
 #: model:ir.model,name:website_blog.model_blog_post
 #: model:ir.ui.view,arch_db:website_blog.view_blog_post_form
 #: model:ir.ui.view,arch_db:website_blog.view_blog_post_search
@@ -261,7 +259,13 @@ msgid "Blog Post"
 msgstr "Blog Yazısı"
 
 #. module: website_blog
-#: code:addons/website_blog/models/website.py:27
+#: code:addons/website_blog/models/website.py:53
+#, python-format
+msgid "Blog Post <b>%s</b> seems to be calling this file !"
+msgstr ""
+
+#. module: website_blog
+#: code:addons/website_blog/models/website.py:28
 #, python-format
 msgid "Blog Post <b>%s</b> seems to have a link to this page !"
 msgstr ""
@@ -274,9 +278,12 @@ msgid "Blog Post Title"
 msgstr "Yazı Başlığı"
 
 #. module: website_blog
+#: code:addons/website_blog/models/website.py:24
+#: code:addons/website_blog/models/website.py:49
 #: model:ir.actions.act_window,name:website_blog.action_blog_post
 #: model:ir.ui.menu,name:website_blog.menu_page
 #: model:ir.ui.view,arch_db:website_blog.view_blog_post_list
+#, python-format
 msgid "Blog Posts"
 msgstr "Blog Yazıları"
 
@@ -395,10 +402,10 @@ msgstr "Tartışma Yolu"
 #: model:ir.model.fields,field_description:website_blog.field_blog_post_display_name
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_display_name
 msgid "Display Name"
-msgstr "Adı Göstermek"
+msgstr "Görünüm Adı"
 
 #. module: website_blog
-#: model:ir.ui.view,arch_db:website_blog.blog_post_complete
+#: model:ir.ui.view,arch_db:website_blog.blog_edit_options
 msgid "Duplicate"
 msgstr "Kopyala"
 
@@ -586,7 +593,7 @@ msgid ""
 msgstr ""
 "Birçok modern website tasarımcısı gibi, Odoo ile aynı eksende içerikleri "
 "düzenleyebilir, neyi değiştirmeyi görmek istiyorsanız görebilir, "
-"değişikliklerin içeriğe uygun olmasını sağlayabilrisiniz"
+"değişikliklerin içeriğe uygun olmasını sağlayabilirsiniz."
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.website_blog
@@ -639,7 +646,7 @@ msgstr "Orta Ekran"
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_name
 msgid "Name"
-msgstr "Adı"
+msgstr "İsim"
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.website_blog
@@ -648,7 +655,7 @@ msgstr "Dar"
 
 #. module: website_blog
 #. openerp-web
-#: code:addons/website_blog/static/src/js/website_blog.editor.js:21
+#: code:addons/website_blog/static/src/js/website_blog.editor.js:37
 #: model:ir.ui.view,arch_db:website_blog.content_new_blogpost
 #, python-format
 msgid "New Blog Post"
@@ -716,7 +723,7 @@ msgstr ""
 #. module: website_blog
 #: model:blog.blog,name:website_blog.blog_blog_1
 msgid "Our Blog"
-msgstr "Bizim Bloğumuz"
+msgstr "Blog"
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.opt_blog_rc_blogs
@@ -741,12 +748,12 @@ msgid ""
 "                        to read a thread. Reading a full thread, replying,\n"
 "                        attaching documents is super fast."
 msgstr ""
-"Üretim anahtardır: Akıllı kullanıcı arayüzümüz tüm maile tıklayıp bir "
-"sırayla okumaya gerek duymaz. Tam sırayla okumak, cevap vermek, dosya "
-"eklemek çok hızlı."
+"Verim anahtardır: Akıllı kullanıcı arayüzümüz tüm maile tıklayıp bir sırayla"
+" okumaya gerek duymaz. Tam sırayla okumak, cevap vermek, dosya eklemek çok "
+"hızlı."
 
 #. module: website_blog
-#: code:addons/website_blog/controllers/main.py:263
+#: code:addons/website_blog/controllers/main.py:270
 #, python-format
 msgid "Public user cannot post comments on blog post."
 msgstr "Genel kullanıcı blog yazısı hakkında yorum gönderemezsiniz"
@@ -768,14 +775,14 @@ msgid "Published Post"
 msgstr "Yayınlanmış"
 
 #. module: website_blog
-#: model:ir.model.fields,field_description:website_blog.field_blog_post_post_date
-msgid "Published date"
-msgstr ""
-
-#. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.view_blog_post_form
 msgid "Publishing Options"
 msgstr "Yayınlama Seçenekleri"
+
+#. module: website_blog
+#: model:ir.model.fields,field_description:website_blog.field_blog_post_post_date
+msgid "Publishing date"
+msgstr "Yayınlanma Tarihi"
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.website_blog
@@ -848,7 +855,7 @@ msgstr ""
 
 #. module: website_blog
 #. openerp-web
-#: code:addons/website_blog/models/website_blog.py:103
+#: code:addons/website_blog/models/website_blog.py:123
 #: code:addons/website_blog/static/src/js/website.tour.blog.js:52
 #, python-format
 msgid "Start writing here..."
@@ -923,6 +930,15 @@ msgid "The Future of Emails"
 msgstr "E-postalar Geleceği"
 
 #. module: website_blog
+#: model:ir.model.fields,help:website_blog.field_blog_post_post_date
+msgid ""
+"The blog post will be visible for your visitors as of this date on the "
+"website if it is set as published."
+msgstr ""
+"Blog yazısı için yayınlanma tarihi ayarladıysanız, o tarihte websitenizdeki"
+"  ziyaretçileriniz için görünür olacaktır."
+
+#. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.latest_blogs
 msgid ""
 "This page is great to improve your <strong>Search Engine Optimization</strong>;\n"
@@ -946,7 +962,7 @@ msgstr ""
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post_name
 msgid "Title"
-msgstr "Ünvan"
+msgstr "Başlık"
 
 #. module: website_blog
 #: model:blog.post,content:website_blog.blog_post_2
@@ -971,7 +987,7 @@ msgstr ""
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.opt_blog_rc_status
 msgid "Unpublished"
-msgstr "Yayınlanmayan"
+msgstr "Yayında Değil"
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.blog_post_short
@@ -1004,7 +1020,7 @@ msgstr ""
 #. module: website_blog
 #: model:ir.model,name:website_blog.model_website
 msgid "Website"
-msgstr "Web Sitesi"
+msgstr "Websitesi"
 
 #. module: website_blog
 #: model:ir.actions.act_url,name:website_blog.action_open_website
@@ -1092,7 +1108,7 @@ msgstr "sağa-çek"
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.blog_post_short
 msgid "unpublished"
-msgstr "yayınlanmayan"
+msgstr "yayında değil"
 
 #. module: website_blog
 #: model:ir.ui.view,arch_db:website_blog.blog_post_short

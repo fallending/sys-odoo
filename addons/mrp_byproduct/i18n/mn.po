@@ -3,15 +3,17 @@
 # * mrp_byproduct
 # 
 # Translators:
-# Martin Trigaux <mat@odoo.com>, 2017
-# Otgonbayar.A <gobi.mn@gmail.com>, 2017
+# Onii Onii <onii0223@yahoo.com>, 2018
+# Martin Trigaux, 2018
+# Otgonbayar.A <gobi.mn@gmail.com>, 2018
+# Batzul B <batzul.active@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: Otgonbayar.A <gobi.mn@gmail.com>, 2017\n"
+"POT-Creation-Date: 2017-10-24 09:00+0000\n"
+"PO-Revision-Date: 2017-10-24 09:00+0000\n"
+"Last-Translator: Batzul B <batzul.active@gmail.com>, 2018\n"
 "Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +45,7 @@ msgstr "Дайвар бүтээгдэхүүнүүд"
 #. module: mrp_byproduct
 #: model:ir.model,name:mrp_byproduct.model_change_production_qty
 msgid "Change Quantity of Products"
-msgstr "Бараануудын Тоо хэмжээг өөрчлөх"
+msgstr "Барааны Тоо хэмжээг Өөрчлөх"
 
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_mrp_subproduct_create_uid
@@ -68,7 +70,7 @@ msgstr "ID"
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_mrp_subproduct___last_update
 msgid "Last Modified on"
-msgstr "Сүүлийн засвар хийсэн огноо"
+msgstr "Сүүлийн зассан хийсэн огноо"
 
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_mrp_subproduct_write_uid
@@ -101,9 +103,14 @@ msgid "Production"
 msgstr "Үйлдвэрлэл"
 
 #. module: mrp_byproduct
+#: model:ir.model,name:mrp_byproduct.model_mrp_product_produce
+msgid "Record Production"
+msgstr "Үйлдвэрлэлийг Хөтлөх"
+
+#. module: mrp_byproduct
 #: model:ir.model,name:mrp_byproduct.model_stock_move
 msgid "Stock Move"
-msgstr "Агуулахын хөдөлгөөн"
+msgstr "Барааны Хөдөлгөөн"
 
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_stock_move_subproduct_id
@@ -122,7 +129,7 @@ msgid ""
 "The Product Unit of Measure you chose has a different category than in the "
 "product form."
 msgstr ""
-"Таны сонгосон барааны хэмжих нэгж нь барааны маягт дээр сонгосон хэмжих "
+"Таны сонгосон Барааны Хэмжих Нэгж нь барааны маягтан дээр сонгосон хэмжих "
 "нэгжээс ялгаатай ангилалтай байна."
 
 #. module: mrp_byproduct

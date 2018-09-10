@@ -49,10 +49,7 @@
             Create a Quotation, the first step of a new sale.
           </p><p>
             Your next actions should flow efficiently: confirm the Quotation
-            to a Sale Order, then create the Invoice and collect the Payment.
-          </p><p>
-            Note that once a Quotation becomes a Sale Order, it will be moved
-            from the Quotations list to the Sales Order list.
+            to a Sales Order, then create the Invoice and collect the Payment.
           </p>
         </field>
     </record>

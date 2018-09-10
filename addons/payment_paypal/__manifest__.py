@@ -10,8 +10,8 @@
     'data': [
         'views/payment_views.xml',
         'views/payment_paypal_templates.xml',
-        'views/account_config_settings_views.xml',
         'data/payment_acquirer_data.xml',
     ],
     'installable': True,
+    'post_init_hook': 'create_missing_journal_for_acquirers',
 }

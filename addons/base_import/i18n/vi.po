@@ -3,20 +3,18 @@
 # * base_import
 # 
 # Translators:
-# Martin Trigaux, 2016
-# fanha99 <fanha99@hotmail.com>, 2016
-# Phạm Lân <phamquanglan@gmail.com>, 2016
-# son dang <son.dang@doda100.com>, 2016
-# Hoang Loc Le Huu <loclhh@gmail.com>, 2016
-# Duy BQ <duybq86@gmail.com>, 2018
-# thanh nguyen <thanhnguyen.icsc@gmail.com>, 2018
+# Martin Trigaux, 2017
+# fanha99 <fanha99@hotmail.com>, 2017
+# son dang <son.dang@doda100.com>, 2017
+# Duy BQ <duybq86@gmail.com>, 2017
+# Phạm Lân <phamquanglan@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:27+0000\n"
-"PO-Revision-Date: 2017-06-23 13:27+0000\n"
-"Last-Translator: thanh nguyen <thanhnguyen.icsc@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-02-19 13:43+0000\n"
+"PO-Revision-Date: 2018-02-19 13:43+0000\n"
+"Last-Translator: Phạm Lân <phamquanglan@gmail.com>, 2017\n"
 "Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,14 +24,14 @@ msgstr ""
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:598
+#: code:addons/base_import/static/src/js/import_action.js:535
 #, python-format
 msgid "(%d more)"
 msgstr "(%d nữa)"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:375
+#: code:addons/base_import/static/src/js/import_action.js:309
 #, python-format
 msgid ""
 "A single column was found in the file, this often means the file separator "
@@ -50,7 +48,7 @@ msgid "Cancel"
 msgstr "Hủy"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:599
+#: code:addons/base_import/models/base_import.py:596
 #, python-format
 msgid "Column %s contains incorrect values (value: %s)"
 msgstr ""
@@ -58,17 +56,17 @@ msgstr ""
 "tháng"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:619
+#: code:addons/base_import/models/base_import.py:618
 #, python-format
 msgid "Column %s contains incorrect values. Error in line %d: %s"
 msgstr "Cột %s chứa giá trị không hợp lệ. Lỗi ở dòng %d: %s)"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:245
-#: code:addons/base_import/static/src/js/base_import.js:256
-#: code:addons/base_import/static/src/js/base_import.js:263
-#: code:addons/base_import/static/src/js/base_import.js:275
+#: code:addons/base_import/static/src/js/import_action.js:176
+#: code:addons/base_import/static/src/js/import_action.js:187
+#: code:addons/base_import/static/src/js/import_action.js:194
+#: code:addons/base_import/static/src/js/import_action.js:206
 #, python-format
 msgid "Comma"
 msgstr "Dấy phẩy"
@@ -107,35 +105,42 @@ msgstr "Được tạo bởi"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_create_date
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview_create_date
 msgid "Created on"
-msgstr "Thời điểm tạo"
+msgstr "Được tạo vào"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:152
-#: code:addons/base_import/models/base_import.py:157
+#: code:addons/base_import/models/base_import.py:145
+#: code:addons/base_import/models/base_import.py:150
 #, python-format
 msgid "Database ID"
 msgstr ""
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:125
+#: code:addons/base_import/static/src/js/import_action.js:55
 #, python-format
 msgid "Date Format:"
 msgstr "Định dạng Ngày:"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:126
+#: code:addons/base_import/static/src/js/import_action.js:56
 #, python-format
 msgid "Datetime Format:"
 msgstr "Định dạng Ngày giờ"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:128
+#: code:addons/base_import/static/src/js/import_action.js:58
 #, python-format
 msgid "Decimal Separator:"
 msgstr "Dấu phân cách Thập phân:"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:71
+#, python-format
+msgid "Defer parent/child computation"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import_display_name
@@ -157,48 +162,48 @@ msgstr "Tên hiển thị"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:419
+#: code:addons/base_import/static/src/js/import_action.js:353
 #, python-format
 msgid "Don't import"
 msgstr "Không nhập"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:264
-#: code:addons/base_import/static/src/js/base_import.js:282
+#: code:addons/base_import/static/src/js/import_action.js:195
+#: code:addons/base_import/static/src/js/import_action.js:213
 #, python-format
 msgid "Dot"
 msgstr "Chấm"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:120
+#: code:addons/base_import/static/src/js/import_action.js:50
 #, python-format
 msgid "Encoding:"
-msgstr "Mã hóa:"
+msgstr "Mã hoá:"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:621
+#: code:addons/base_import/models/base_import.py:620
 #, python-format
 msgid "Error Parsing Date [%s:L%d]: %s"
 msgstr "Lỗi xử lý Ngày [%s:L%d]: %s"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:234
+#: code:addons/base_import/models/base_import.py:227
 #, python-format
 msgid "Error cell found while reading XLS/XLSX file: %s"
 msgstr "Cell lỗi được tìm thấy trong khi đọc tập tin XLS/XLSX: %s"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:575
+#: code:addons/base_import/static/src/js/import_action.js:512
 #, python-format
 msgid "Everything seems valid."
 msgstr "Mọi thứ dường như hợp lệ."
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:117
-#: code:addons/base_import/models/base_import.py:151
+#: code:addons/base_import/models/base_import.py:110
+#: code:addons/base_import/models/base_import.py:144
 #, python-format
 msgid "External ID"
 msgstr "External ID"
@@ -232,7 +237,7 @@ msgstr "Đối với tập tin CSV, vấn đề có thể là mã hoá không đ
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:622
+#: code:addons/base_import/static/src/js/import_action.js:559
 #, python-format
 msgid "Get all possible values"
 msgstr "Xem tất cả các giá trị khả thi"
@@ -246,7 +251,7 @@ msgstr "Trợ giúp"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:609
+#: code:addons/base_import/static/src/js/import_action.js:546
 #, python-format
 msgid "Here are the possible values:"
 msgstr "Dưới đây là các giá trị khả thi:"
@@ -305,15 +310,25 @@ msgstr ""
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/xml/base_import.xml:88
-#: code:addons/base_import/static/src/xml/base_import.xml:147
+#: code:addons/base_import/static/src/xml/base_import.xml:69
+#, python-format
+msgid ""
+"If the model uses parent/child relations, computing the"
+"                      parent / child relation occurs on every line, and lead"
+" to a slower import.                     Defering it can speed up import."
+msgstr ""
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:97
+#: code:addons/base_import/static/src/xml/base_import.xml:156
 #, python-format
 msgid "Import"
 msgstr "Nhập"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:182
+#: code:addons/base_import/static/src/js/import_action.js:111
 #, python-format
 msgid "Import a File"
 msgstr "Import một tập tin"
@@ -341,7 +356,7 @@ msgstr "Xem trước nội dung nhập không thành công do:"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child___last_update
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview___last_update
 msgid "Last Modified on"
-msgstr "Sửa lần cuối vào"
+msgstr "Sửa lần cuối"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import_write_uid
@@ -377,7 +392,7 @@ msgstr "Cập nhật lần cuối bởi"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_write_date
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview_write_date
 msgid "Last Updated on"
-msgstr "Cập nhật lần cuối vào"
+msgstr "Cập nhật lần cuối"
 
 #. module: base_import
 #. openerp-web
@@ -412,7 +427,7 @@ msgstr "Không có tập tin nào được chọn..."
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:485
+#: code:addons/base_import/static/src/js/import_action.js:418
 #, python-format
 msgid "Normal Fields"
 msgstr "Trường thông thường"
@@ -431,12 +446,12 @@ msgstr "Các Biến khác"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child_parent_id
-msgid "Parent id"
-msgstr "Id Cha"
+msgid "Parent"
+msgstr "Dự án cha"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:486
+#: code:addons/base_import/static/src/js/import_action.js:419
 #, python-format
 msgid "Relation Fields"
 msgstr "Các trường Quan hệ"
@@ -457,17 +472,17 @@ msgstr "Chọn một tập tin CSV hoặc Excel để nhập"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:246
+#: code:addons/base_import/static/src/js/import_action.js:177
 #, python-format
 msgid "Semicolon"
 msgstr "Dấu chẩm phẩy"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:121
+#: code:addons/base_import/static/src/js/import_action.js:51
 #, python-format
 msgid "Separator:"
-msgstr "Ngăn cách:"
+msgstr "Phân cách:"
 
 #. module: base_import
 #. openerp-web
@@ -483,21 +498,28 @@ msgstr "Một vài Giá trị"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:248
+#: code:addons/base_import/static/src/js/import_action.js:179
 #, python-format
 msgid "Space"
 msgstr "Dấu cách"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:247
+#: code:addons/base_import/static/src/js/import_action.js:178
 #, python-format
 msgid "Tab"
 msgstr ""
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:122
+#: code:addons/base_import/static/src/xml/base_import.xml:86
+#, python-format
+msgid "Test Import"
+msgstr ""
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:52
 #, python-format
 msgid "Text Delimiter:"
 msgstr ""
@@ -515,7 +537,7 @@ msgstr ""
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:127
+#: code:addons/base_import/static/src/js/import_action.js:57
 #, python-format
 msgid "Thousands Separator:"
 msgstr "Phân cách phần nghìn:"
@@ -528,7 +550,7 @@ msgid "Track history during import"
 msgstr "Truy xuất lịch sử trong quá trình import"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:199
+#: code:addons/base_import/models/base_import.py:192
 #, python-format
 msgid "Unable to load \"{extension}\" file: requires Python module \"{modname}\""
 msgstr ""
@@ -536,20 +558,13 @@ msgstr ""
 "\"{modname}\""
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:200
+#: code:addons/base_import/models/base_import.py:193
 #, python-format
 msgid ""
 "Unsupported file format \"{}\", import only supports CSV, ODS, XLS and XLSX"
 msgstr ""
 "Định dạng tập tin không được hỗ trợ \"{}\", import chỉ hỗ trợ các tập tin "
 "CSV, ODS, XLS và XLSX"
-
-#. module: base_import
-#. openerp-web
-#: code:addons/base_import/static/src/xml/base_import.xml:86
-#, python-format
-msgid "Validate"
-msgstr "Xác nhận"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly_value
@@ -568,14 +583,14 @@ msgid "Value"
 msgstr "Giá trị"
 
 #. module: base_import
-#: code:addons/base_import/models/base_import.py:537
+#: code:addons/base_import/models/base_import.py:534
 #, python-format
 msgid "You must configure at least one field to import"
 msgstr "Bạn phải cấu hình ít nhất một trường để import"
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:592
+#: code:addons/base_import/static/src/js/import_action.js:529
 #, python-format
 msgid "at row %d"
 msgstr "ở hàng %d"
@@ -652,7 +667,7 @@ msgstr ""
 
 #. module: base_import
 #. openerp-web
-#: code:addons/base_import/static/src/js/base_import.js:594
+#: code:addons/base_import/static/src/js/import_action.js:531
 #, python-format
 msgid "between rows %d and %d"
 msgstr "giữa hàng %d và %d"

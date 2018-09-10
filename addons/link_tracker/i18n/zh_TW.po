@@ -3,15 +3,15 @@
 # * link_tracker
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Michael Yeung, 2018
+# Martin Trigaux, 2017
+# Michael Yeung, 2017
 # 敬雲 林 <chingyun@yuanchih-consult.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
 "Last-Translator: 敬雲 林 <chingyun@yuanchih-consult.com>, 2018\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -44,21 +44,21 @@ msgstr "國家"
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_click_date
 msgid "Create Date"
-msgstr "創建日期"
+msgstr "建立日期"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_create_uid
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_code_create_uid
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_create_uid
 msgid "Created by"
-msgstr "創建人"
+msgstr "建立者"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_create_date
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_code_create_date
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_create_date
 msgid "Created on"
-msgstr "創建時間"
+msgstr "建立於"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_display_name
@@ -87,7 +87,7 @@ msgstr "短網址主機"
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_code_id
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_id
 msgid "ID"
-msgstr "ID"
+msgstr "編號"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_ip
@@ -99,21 +99,21 @@ msgstr "網路協議"
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click___last_update
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_code___last_update
 msgid "Last Modified on"
-msgstr "最後修改日"
+msgstr "最後修改:"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_write_uid
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_code_write_uid
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_write_uid
 msgid "Last Updated by"
-msgstr "最後更新人"
+msgstr "最後更新："
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_write_date
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_code_write_date
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_write_date
 msgid "Last Updated on"
-msgstr "最後更新時間"
+msgstr "最後更新於"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_click_link_id
@@ -125,7 +125,7 @@ msgstr "連結"
 #: model:ir.actions.act_window,name:link_tracker.action_link_tracker
 #: model:ir.ui.menu,name:link_tracker.menu_url_shortener_main
 msgid "Link Tracker"
-msgstr "連結追蹤"
+msgstr "鏈接追蹤"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_count
@@ -155,7 +155,7 @@ msgstr "短網址代碼"
 #. module: link_tracker
 #: model:ir.actions.act_window,name:link_tracker.action_view_click_statistics
 msgid "Statistics of Clicks"
-msgstr "點擊分析"
+msgstr "點擊統計"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_url
@@ -170,7 +170,7 @@ msgstr "標題和網址"
 #. module: link_tracker
 #: model:ir.ui.view,arch_db:link_tracker.view_link_tracker_filter
 msgid "Tracked Link"
-msgstr "追蹤連結"
+msgstr "追蹤用連結"
 
 #. module: link_tracker
 #: model:ir.model.fields,field_description:link_tracker.field_link_tracker_short_url

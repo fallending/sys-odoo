@@ -3,15 +3,14 @@
 # * product_extended
 # 
 # Translators:
-# Kaloyan Naumov <kaloyan@lumnus.net>, 2016
-# Maria Boyadjieva <marabo2000@gmail.com>, 2016
+# Martin Trigaux, 2017
 # Albena Mincheva <albena_vicheva@abv.bg>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
 "Last-Translator: Albena Mincheva <albena_vicheva@abv.bg>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -19,22 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#. module: product_extended
-#: model:ir.model.fields,field_description:product_extended.field_product_product_available_in_pos
-msgid "Available in the Point of Sale"
-msgstr "Наличен в център за продажби"
-
-#. module: product_extended
-#: model:ir.model.fields,help:product_extended.field_product_product_to_weight
-msgid ""
-"Check if the product should be weighted using the hardware scale integration"
-msgstr "Отбележи, ако продукта трябва да бъде премерен с кантар"
-
-#. module: product_extended
-#: model:ir.model.fields,help:product_extended.field_product_product_available_in_pos
-msgid "Check if you want this product to appear in the Point of Sale"
-msgstr "Отметнете, ако желате продуктът да се появява Центъра за продажби. "
 
 #. module: product_extended
 #: model:ir.ui.view,arch_db:product_extended.product_product_ext_form_view2
@@ -49,13 +32,8 @@ msgid ""
 "Compute the price of the product using products and operations of related "
 "bill of materials, for manufactured products only."
 msgstr ""
-"Изчислете цената на продукта, като използвате продукти и операции от "
-"свързана фактура за покупка на материали, само за производствени продукти."
-
-#. module: product_extended
-#: model:ir.model.fields,field_description:product_extended.field_product_product_pos_categ_id
-msgid "Point of Sale Category"
-msgstr "Категория 'Център за продажби'"
+"Изчислява се цената на продукта, като се използват продукти и операции със "
+"съответната сметка за материали само за произведените продукти."
 
 #. module: product_extended
 #: model:ir.model,name:product_extended.model_product_product
@@ -66,15 +44,3 @@ msgstr "Продукт"
 #: model:ir.model,name:product_extended.model_product_template
 msgid "Product Template"
 msgstr "Шаблон за продукт"
-
-#. module: product_extended
-#: model:ir.model.fields,help:product_extended.field_product_product_pos_categ_id
-msgid "Those categories are used to group similar products for point of sale."
-msgstr ""
-"Тези категории се използват за групиране на сходни продукти в 'Център за "
-"продажби'."
-
-#. module: product_extended
-#: model:ir.model.fields,field_description:product_extended.field_product_product_to_weight
-msgid "To Weigh With Scale"
-msgstr "Да се премери на кантар"

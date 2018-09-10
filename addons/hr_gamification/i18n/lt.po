@@ -3,17 +3,17 @@
 # * hr_gamification
 # 
 # Translators:
-# Martin Trigaux, 2016
-# Monika Raciunaite <monika.raciunaite@gmail.com>, 2016
+# Linas Versada <paulius.sladkevicius@gmail.com>, 2017
 # digitouch UAB <digitouchagencyeur@gmail.com>, 2017
-# Linas Versada <paulius.sladkevicius@gmail.com>, 2018
+# Martin Trigaux, 2017
+# Monika Raciunaite <monika.raciunaite@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: Linas Versada <paulius.sladkevicius@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: Monika Raciunaite <monika.raciunaite@gmail.com>, 2017\n"
 "Language-Team: Lithuanian (https://www.transifex.com/odoo/teams/41243/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +54,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_gamification.field_res_users_badge_ids
 #: model:ir.ui.menu,name:hr_gamification.gamification_badge_menu_hr
 msgid "Badges"
-msgstr "Pažymėjimai"
+msgstr "Ženkleliai"
 
 #. module: hr_gamification
 #: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
@@ -67,7 +67,7 @@ msgstr ""
 #. module: hr_gamification
 #: model:ir.model.fields,help:hr_gamification.field_hr_employee_direct_badge_ids
 msgid "Badges directly linked to the employee"
-msgstr "Pažymėjimai, tiesiogiai susieti su darbuotoju"
+msgstr "Ženkleliai, tiesiogiai susiję su darbuotoju"
 
 #. module: hr_gamification
 #: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
@@ -104,8 +104,8 @@ msgstr "Apibūdinkite, ką jie padarė ir kodėl tai svarbu (bus paviešinta)"
 
 #. module: hr_gamification
 #: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_direct_badge_ids
-msgid "Direct badge ids"
-msgstr "Tiesioginio pažymėjimo ID"
+msgid "Direct Badge"
+msgstr "Tiesioginis ženklelis"
 
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_hr_employee
@@ -117,7 +117,7 @@ msgstr "Darbuotojas"
 #. module: hr_gamification
 #: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_badge_ids
 msgid "Employee Badges"
-msgstr "Darbuotojo pažymėjimai"
+msgstr "Darbuotojo ženkleliai"
 
 #. module: hr_gamification
 #: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_goal_ids
@@ -127,17 +127,17 @@ msgstr "Darbuotojo tikslai"
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_gamification_badge
 msgid "Gamification badge"
-msgstr "Sužaidybinimo pasiekimas"
+msgstr "Sužaidybinimo ženklelis"
 
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_gamification_badge_user
 msgid "Gamification user badge"
-msgstr "Sužaidybinimo vartotojo pasiekimas"
+msgstr "Vartotojo sužaidybinimo ženklelis"
 
 #. module: hr_gamification
 #: model:ir.model.fields,field_description:hr_gamification.field_res_users_goal_ids
-msgid "Goal ids"
-msgstr "Tikslų id"
+msgid "Goal"
+msgstr "Tikslas"
 
 #. module: hr_gamification
 #: model:ir.actions.act_window,name:hr_gamification.goals_menu_groupby_action2
@@ -148,7 +148,7 @@ msgstr "Tikslų istorija"
 #. module: hr_gamification
 #: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Grant a Badge"
-msgstr "Suteikti pažymėjimą"
+msgstr "Suteikti ženklelį"
 
 #. module: hr_gamification
 #: model:ir.ui.view,arch_db:hr_gamification.hr_badge_form_view
@@ -157,24 +157,18 @@ msgstr "Suteikta"
 
 #. module: hr_gamification
 #: model:ir.model.fields,field_description:hr_gamification.field_gamification_badge_granted_employees_count
-msgid "Granted employees count"
-msgstr ""
+msgid "Granted Employees Count"
+msgstr "Apdovanotų darbuotojų kiekis"
 
 #. module: hr_gamification
 #: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_has_badges
-msgid "Has badges"
-msgstr "Turi pažymėjimų"
-
-#. module: hr_gamification
-#: model:ir.model.fields,field_description:hr_gamification.field_res_users_calendar_last_notif_ack
-msgid "Last notification marked as read from base Calendar"
-msgstr ""
-"Paskutinis pranešimas, pažymėtas kaip skaitytas iš bazinio kalendoriaus"
+msgid "Has Badges"
+msgstr "Turi ženklelių"
 
 #. module: hr_gamification
 #: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Received Badges"
-msgstr "Gauti pažymėjimai"
+msgstr "Gauti ženkleliai"
 
 #. module: hr_gamification
 #: model:ir.actions.act_window,name:hr_gamification.action_reward_wizard
@@ -196,7 +190,7 @@ msgstr "Pasirinktas darbuotojas nesutampa su pasirinktu vartotoju."
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_res_users
 msgid "Users"
-msgstr "Naudotojai"
+msgstr "Vartotojai"
 
 #. module: hr_gamification
 #: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
@@ -207,13 +201,13 @@ msgstr "Už ką esi dėkingas?"
 #: code:addons/hr_gamification/wizard/gamification_badge_user_wizard.py:21
 #, python-format
 msgid "You can not send a badge to yourself"
-msgstr "Negalite siųsti pažymėjimo sau"
+msgstr "Negalite siųsti ženklelio sau"
 
 #. module: hr_gamification
 #: code:addons/hr_gamification/wizard/gamification_badge_user_wizard.py:18
 #, python-format
 msgid "You can send badges only to employees linked to a user."
-msgstr "Galite siųsti pažymėjimus tik darbuotojams, susietiems su vartotoju."
+msgstr "Galite siųsti ženklelius tik darbuotojams, susietiems su vartotoju."
 
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_gamification_badge_user_wizard

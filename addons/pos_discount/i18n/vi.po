@@ -7,10 +7,10 @@
 # Duy BQ <duybq86@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:55+0000\n"
-"PO-Revision-Date: 2016-09-07 08:55+0000\n"
+"POT-Creation-Date: 2017-09-20 09:52+0000\n"
+"PO-Revision-Date: 2017-09-20 09:52+0000\n"
 "Last-Translator: Duy BQ <duybq86@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -32,22 +32,20 @@ msgid "Discount"
 msgstr "Chiết khấu"
 
 #. module: pos_discount
-#. openerp-web
-#: code:addons/pos_discount/static/src/js/discount.js:14
+#: model:ir.ui.view,arch_db:pos_discount.pos_config_view_form_inherit_pos_discount
+msgid "Discount %"
+msgstr "% Chiết khấu"
+
+#. module: pos_discount
 #: model:ir.model.fields,field_description:pos_discount.field_pos_config_discount_pc
-#, python-format
 msgid "Discount Percentage"
 msgstr "Phần trăm Chiết khấu"
 
 #. module: pos_discount
 #: model:ir.model.fields,field_description:pos_discount.field_pos_config_discount_product_id
+#: model:ir.ui.view,arch_db:pos_discount.pos_config_view_form_inherit_pos_discount
 msgid "Discount Product"
 msgstr "Sản phẩm Chiết khấu"
-
-#. module: pos_discount
-#: model:ir.ui.view,arch_db:pos_discount.view_pos_config_form
-msgid "Discounts"
-msgstr "Chiết khấu"
 
 #. module: pos_discount
 #: model:ir.model.fields,field_description:pos_discount.field_pos_config_iface_discount
@@ -61,8 +59,8 @@ msgstr "Phần trăm chiết khấu mặc định"
 
 #. module: pos_discount
 #: model:ir.model.fields,help:pos_discount.field_pos_config_discount_product_id
-msgid "The product used to model the discount"
-msgstr ""
+msgid "The product used to model the discount."
+msgstr "Sản phẩm được sử dụng để đại diện cho khoản chiết khấu."
 
 #. module: pos_discount
 #: model:ir.model,name:pos_discount.model_pos_config

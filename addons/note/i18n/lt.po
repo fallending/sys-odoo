@@ -3,22 +3,24 @@
 # * note
 # 
 # Translators:
-# UAB "Draugiški sprendimai" <transifex@draugiskisprendimai.lt>, 2016
-# Martin Trigaux, 2016
-# Šarūnas Ažna <sarunas.azna@gmail.com>, 2016
-# Rolandas <info@paninfo.lt>, 2016
-# Audrius Palenskis <audrius.palenskis@gmail.com>, 2016
-# Monika Raciunaite <monika.raciunaite@gmail.com>, 2016
-# Antanas Muliuolis <an.muliuolis@gmail.com>, 2017
+# Martin Trigaux, 2017
 # digitouch UAB <digitouchagencyeur@gmail.com>, 2017
+# Audrius Palenskis <audrius.palenskis@gmail.com>, 2017
+# UAB "Draugiški sprendimai" <transifex@draugiskisprendimai.lt>, 2017
+# Monika Raciunaite <monika.raciunaite@gmail.com>, 2017
+# Antanas Muliuolis <an.muliuolis@gmail.com>, 2017
+# Šarūnas Ažna <sarunas.azna@gmail.com>, 2017
+# Rolandas <info@paninfo.lt>, 2017
 # Silvija Butko <silvija.butko@gmail.com>, 2018
+# Eimantas <eimantas@focusate.eu>, 2018
+# Linas Versada <paulius.sladkevicius@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Silvija Butko <silvija.butko@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-10-02 11:26+0000\n"
+"PO-Revision-Date: 2017-10-02 11:26+0000\n"
+"Last-Translator: Linas Versada <paulius.sladkevicius@gmail.com>, 2018\n"
 "Language-Team: Lithuanian (https://www.transifex.com/odoo/teams/41243/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +52,7 @@ msgstr "Spauskite pridėti naują žymą."
 #. module: note
 #: model:ir.actions.act_window,help:note.action_note_note
 msgid "Click to add a personal note."
-msgstr "Paspauskite, norėdami sukurti asmeninę pastabą."
+msgstr "Paspauskite, norėdami pridėti asmeninę pastabą."
 
 #. module: note
 #: model:ir.model.fields,field_description:note.field_note_note_color
@@ -85,7 +87,7 @@ msgstr "Įvykdymo data"
 #. module: note
 #: model:ir.ui.view,arch_db:note.view_note_note_kanban
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr "Trinti"
 
 #. module: note
 #: model:ir.model.fields,field_description:note.field_note_note_display_name
@@ -98,6 +100,11 @@ msgstr "Vaizduojamas pavadinimas"
 #: model:ir.model.fields,field_description:note.field_note_stage_fold
 msgid "Folded by Default"
 msgstr "Suskleista pagal nutylėjimą"
+
+#. module: note
+#: model:ir.ui.view,arch_db:note.view_note_note_filter
+msgid "Future Activities"
+msgstr "Ateities veiklos"
 
 #. module: note
 #: model:ir.ui.view,arch_db:note.view_note_note_filter
@@ -133,21 +140,25 @@ msgid "Last Updated on"
 msgstr "Paskutinį kartą atnaujinta"
 
 #. module: note
+#: model:ir.ui.view,arch_db:note.view_note_note_filter
+msgid "Late Activities"
+msgstr "Pavėluotos veiklos"
+
+#. module: note
 #: model:note.stage,name:note.demo_note_stage_03
 #: model:note.stage,name:note.note_stage_03
 msgid "Later"
 msgstr "Vėlesni"
 
 #. module: note
+#: model:ir.ui.view,arch_db:note.view_note_note_filter
+msgid "My Activities"
+msgstr "Mano veiksmai"
+
+#. module: note
 #: model:note.stage,name:note.note_stage_00
 msgid "New"
 msgstr "Nauja"
-
-#. module: note
-#: code:addons/note/models/note.py:129
-#, python-format
-msgid "New Note"
-msgstr ""
 
 #. module: note
 #: model:ir.model,name:note.model_note_note
@@ -202,6 +213,12 @@ msgid "Sequence"
 msgstr "Seka"
 
 #. module: note
+#: model:ir.ui.view,arch_db:note.view_note_note_filter
+msgid "Show all records which has next action date is before today"
+msgstr ""
+"Rodyti visus įrašus, kurių sekančio veiksmo data yra ankstesnė nei šiandiena"
+
+#. module: note
 #: model:ir.model.fields,field_description:note.field_note_note_stage_id
 #: model:ir.ui.view,arch_db:note.view_note_note_filter
 msgid "Stage"
@@ -249,6 +266,7 @@ msgstr "Žymos pavadinimas jau egzistuoja!"
 #: model:ir.model.fields,field_description:note.field_note_note_tag_ids
 #: model:ir.ui.menu,name:note.notes_tag_menu
 #: model:ir.ui.view,arch_db:note.note_tag_view_form
+#: model:ir.ui.view,arch_db:note.note_tag_view_tree
 #: model:ir.ui.view,arch_db:note.view_note_note_form
 msgid "Tags"
 msgstr "Žymos"
@@ -263,6 +281,11 @@ msgstr "Šia Savaitę"
 #: model:note.stage,name:note.note_stage_01
 msgid "Today"
 msgstr "Šiandien"
+
+#. module: note
+#: model:ir.ui.view,arch_db:note.view_note_note_filter
+msgid "Today Activities"
+msgstr "Šiandienos veiklos"
 
 #. module: note
 #: model:note.stage,name:note.demo_note_stage_02
@@ -292,7 +315,7 @@ msgstr "Naudojama užsakant pastabų stadijas."
 #. module: note
 #: model:ir.model,name:note.model_res_users
 msgid "Users"
-msgstr "Naudotojai"
+msgstr "Vartotojai"
 
 #. module: note
 #: model:ir.actions.act_window,help:note.action_note_note

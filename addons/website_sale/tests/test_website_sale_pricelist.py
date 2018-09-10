@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from mock import patch
+try:
+    from unittest.mock import patch
+except ImportError:
+    from mock import patch
 from odoo.tests.common import TransactionCase
 
 
@@ -35,9 +38,9 @@ class TestWebsitePriceList(TransactionCase):
             'country_group_ids': [(6, 0, [ca_group.id])],
             'sequence': 10
         })
-
-        self.patcher = patch('odoo.addons.website_sale.models.sale_order.Website.get_pricelist_available', wraps=self._get_pricelist_available)
-        self.mock_get_pricelist_available = self.patcher.start()
+        patcher = patch('odoo.addons.website_sale.models.website.Website.get_pricelist_available', wraps=self._get_pricelist_available)
+        patcher.start()
+        self.addCleanup(patcher.stop)
 
     def get_pl(self, show, current_pl, country):
         pls = self.website._get_pl(
@@ -54,11 +57,11 @@ class TestWebsitePriceList(TransactionCase):
         current_pl = False
 
         country_list = {
-            False: ['USD', 'EUR', 'Benelux', 'Canada'],
+            False: ['Public Pricelist', 'EUR', 'Benelux', 'Canada'],
             'BE': ['EUR', 'Benelux'],
             'IT': ['EUR'],
             'CA': ['Canada'],
-            'US': ['USD', 'EUR', 'Benelux', 'Canada']
+            'US': ['Public Pricelist', 'EUR', 'Benelux', 'Canada']
         }
         for country, result in country_list.items():
             pls = self.get_pl(show, current_pl, country)
@@ -70,10 +73,10 @@ class TestWebsitePriceList(TransactionCase):
         current_pl = False
 
         country_list = {
-            False: ['USD', 'EUR', 'Benelux', 'Christmas', 'Canada'],
+            False: ['Public Pricelist', 'EUR', 'Benelux', 'Christmas', 'Canada'],
             'BE': ['EUR', 'Benelux', 'Christmas'],
             'IT': ['EUR', 'Christmas'],
-            'US': ['USD', 'EUR', 'Benelux', 'Christmas', 'Canada'],
+            'US': ['Public Pricelist', 'EUR', 'Benelux', 'Christmas', 'Canada'],
             'CA': ['Canada']
         }
 
@@ -113,17 +116,13 @@ class TestWebsitePriceList(TransactionCase):
         current_pl = False
 
         country_list = {
-            False: ['USD', 'EUR', 'Benelux', 'Canada'],
+            False: ['Public Pricelist', 'EUR', 'Benelux', 'Canada'],
             'BE': ['EUR', 'Benelux'],
             'IT': ['EUR'],
             'CA': ['EUR', 'Canada'],
-            'US': ['USD', 'EUR', 'Benelux', 'Canada']
+            'US': ['Public Pricelist', 'EUR', 'Benelux', 'Canada']
         }
         for country, result in country_list.items():
             pls = self.get_pl(show, current_pl, country)
             self.assertEquals(len(set(pls.mapped('name')) & set(result)), len(pls), 'Test failed for %s (%s %s vs %s %s)'
                               % (country, len(pls), pls.mapped('name'), len(result), result))
-
-    def tearDown(self):
-        self.patcher.stop()
-        super(TestWebsitePriceList, self).tearDown()

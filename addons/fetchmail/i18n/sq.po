@@ -3,18 +3,17 @@
 # * fetchmail
 # 
 # Translators:
-# Anri Haxhi <anrihaxhi@gmail.com>, 2016
-# artxcenter <artxcenter@gmail.com>, 2016
-# Full Name <endrit.veseli@inveen.com>, 2016
-# Arion Kosturi <arionkosturi@gmail.com>, 2016
-# Martin Trigaux <mat@odoo.com>, 2016
+# Martin Trigaux, 2017
+# artxcenter <artxcenter@gmail.com>, 2018
+# Anri Haxhi <anrihaxhi@gmail.com>, 2018
+# Arion Kosturi <arionkosturi@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Martin Trigaux <mat@odoo.com>, 2016\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: Arion Kosturi <arionkosturi@gmail.com>, 2018\n"
 "Language-Team: Albanian (https://www.transifex.com/odoo/teams/41243/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,11 +53,6 @@ msgid "Configuration"
 msgstr "Konfigurimi"
 
 #. module: fetchmail
-#: model:ir.ui.view,arch_db:fetchmail.inherit_view_general_configuration
-msgid "Configure the incoming email gateway"
-msgstr ""
-
-#. module: fetchmail
 #: selection:fetchmail.server,state:0
 msgid "Confirmed"
 msgstr "E Konfirmuar"
@@ -89,7 +83,7 @@ msgstr "Krijuar nga"
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_create_date
 msgid "Created on"
-msgstr "Krijuar në"
+msgstr "Krijuar me"
 
 #. module: fetchmail
 #: model:ir.model.fields,help:fetchmail.field_fetchmail_server_priority
@@ -99,7 +93,7 @@ msgstr ""
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_display_name
 msgid "Display Name"
-msgstr "Emri i shfaqur"
+msgstr "Emri i paraqitur"
 
 #. module: fetchmail
 #: model:ir.ui.view,arch_db:fetchmail.view_email_server_form
@@ -137,6 +131,11 @@ msgid "Inbound Mail Server"
 msgstr ""
 
 #. module: fetchmail
+#: model:ir.ui.view,arch_db:fetchmail.res_config_settings_view_form
+msgid "Incoming Email Servers"
+msgstr ""
+
+#. module: fetchmail
 #: model:ir.ui.view,arch_db:fetchmail.view_email_server_form
 #: model:ir.ui.view,arch_db:fetchmail.view_email_server_search
 msgid "Incoming Mail Server"
@@ -171,12 +170,12 @@ msgstr "Modifikimi i fundit në"
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_write_uid
 msgid "Last Updated by"
-msgstr "Perditësimi i fundit nga"
+msgstr "Modifikuar per here te fundit nga"
 
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_write_date
 msgid "Last Updated on"
-msgstr "Përditësimi i fundit në"
+msgstr "Modifikuar per here te fundit me"
 
 #. module: fetchmail
 #: selection:fetchmail.server,type:0
@@ -187,6 +186,13 @@ msgstr ""
 #: model:ir.ui.view,arch_db:fetchmail.view_email_server_form
 msgid "Login Information"
 msgstr "Informacion mbi Login"
+
+#. module: fetchmail
+#: model:ir.actions.server,name:fetchmail.ir_cron_mail_gateway_action_ir_actions_server
+#: model:ir.cron,cron_name:fetchmail.ir_cron_mail_gateway_action
+#: model:ir.cron,name:fetchmail.ir_cron_mail_gateway_action
+msgid "Mail: Fetchmail Service"
+msgstr ""
 
 #. module: fetchmail
 #: model:ir.actions.act_window,name:fetchmail.act_server_history
@@ -209,6 +215,11 @@ msgstr ""
 msgid ""
 "Optional custom server action to trigger for each incoming mail, on the "
 "record that was created or updated by this mail"
+msgstr ""
+
+#. module: fetchmail
+#: model:ir.ui.view,arch_db:fetchmail.res_config_settings_view_form
+msgid "Outgoing Email Servers"
 msgstr ""
 
 #. module: fetchmail

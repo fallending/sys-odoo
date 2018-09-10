@@ -7,11 +7,14 @@ from collections import OrderedDict
 import hashlib
 import hmac
 import logging
-import urlparse
+from itertools import chain
+
+from werkzeug import urls
 
 from odoo import api, fields, models, tools, _
 from odoo.addons.payment.models.payment_acquirer import ValidationError
 from odoo.addons.payment_adyen.controllers.main import AdyenController
+from odoo.tools.pycompat import to_native
 
 _logger = logging.getLogger(__name__)
 
@@ -46,8 +49,11 @@ class AcquirerAdyen(models.Model):
             return val.replace('\\', '\\\\').replace(':', '\\:')
 
         def signParams(parms):
-            signing_string = ':'.join(map(escapeVal, parms.keys() + parms.values()))
-            hm = hmac.new(hmac_key, signing_string, hashlib.sha256)
+            signing_string = ':'.join(
+                escapeVal(v)
+                for v in chain(parms.keys(), parms.values())
+            )
+            hm = hmac.new(hmac_key, signing_string.encode('utf-8'), hashlib.sha256)
             return base64.b64encode(hm.digest())
 
         assert inout in ('in', 'out')
@@ -73,7 +79,7 @@ class AcquirerAdyen(models.Model):
             ]
 
         hmac_key = binascii.a2b_hex(self.adyen_skin_hmac_key.encode('ascii'))
-        raw_values = {k: values.get(k.encode('ascii'), '') for k in keys if k in values}
+        raw_values = {k: values.get(k, '') for k in keys if k in values}
         raw_values_ordered = OrderedDict(sorted(raw_values.items(), key=lambda t: t[0]))
 
         return signParams(raw_values_ordered)
@@ -109,7 +115,7 @@ class AcquirerAdyen(models.Model):
 
     @api.multi
     def adyen_form_generate_values(self, values):
-        base_url = self.env['ir.config_parameter'].get_param('web.base.url')
+        base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
         # tmp
         import datetime
         from dateutil import relativedelta
@@ -126,7 +132,7 @@ class AcquirerAdyen(models.Model):
                 'merchantAccount': self.adyen_merchant_account,
                 'shopperLocale': values.get('partner_lang', ''),
                 'sessionValidity': tmp_date.isoformat('T')[:19] + "Z",
-                'resURL': '%s' % urlparse.urljoin(base_url, AdyenController._return_url),
+                'resURL': urls.url_join(base_url, AdyenController._return_url),
                 'merchantReturnData': json.dumps({'return_url': '%s' % values.pop('return_url')}) if values.get('return_url', '') else False,
                 'shopperEmail': values.get('partner_email', ''),
             })
@@ -144,10 +150,10 @@ class AcquirerAdyen(models.Model):
                 'merchantAccount': self.adyen_merchant_account,
                 'shopperLocale': values.get('partner_lang'),
                 'sessionValidity': tmp_date,
-                'resURL': '%s' % urlparse.urljoin(base_url, AdyenController._return_url),
+                'resURL': urls.url_join(base_url, AdyenController._return_url),
                 'merchantReturnData': json.dumps({'return_url': '%s' % values.pop('return_url')}) if values.get('return_url') else False,
-                'merchantSig': self._adyen_generate_merchant_sig('in', values),
             })
+            values['merchantSig'] = self._adyen_generate_merchant_sig('in', values)
 
         return values
 
@@ -187,7 +193,7 @@ class TxAdyen(models.Model):
             shasign_check = tx.acquirer_id._adyen_generate_merchant_sig_sha256('out', data)
         else:
             shasign_check = tx.acquirer_id._adyen_generate_merchant_sig('out', data)
-        if shasign_check != data.get('merchantSig'):
+        if to_native(shasign_check) != to_native(data.get('merchantSig')):
             error_msg = _('Adyen: invalid merchantSig, received %s, computed %s') % (data.get('merchantSig'), shasign_check)
             _logger.warning(error_msg)
             raise ValidationError(error_msg)

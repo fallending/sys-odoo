@@ -3,17 +3,15 @@
 # * web_settings_dashboard
 # 
 # Translators:
-# ShangLin Wu <markx2008@gmail.com>, 2018
-# 敬雲 林 <chingyun@yuanchih-consult.com>, 2018
-# Michael Yeung, 2018
-# amos lin <seeing@edirect168.com>, 2018
+# 敬雲 林 <chingyun@yuanchih-consult.com>, 2017
+# Michael Yeung, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
-"Last-Translator: amos lin <seeing@edirect168.com>, 2018\n"
+"POT-Creation-Date: 2017-09-20 09:54+0000\n"
+"PO-Revision-Date: 2017-09-20 09:54+0000\n"
+"Last-Translator: Michael Yeung, 2017\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +21,7 @@ msgstr ""
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:90
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:96
 #, python-format
 msgid ""
 "%\n"
@@ -34,63 +32,63 @@ msgstr ""
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:149
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:156
 #, python-format
 msgid "(Community Edition)"
 msgstr "(社區版)"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:165
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:172
 #, python-format
 msgid "Activate the developer mode"
-msgstr "啟用開發者模式"
+msgstr "激活開發者模式"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:167
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:174
 #, python-format
 msgid "Activate the developer mode (with assets)"
-msgstr "啟用開發者模式 (帶assets)"
+msgstr "激活開發者模式 (assets)"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:56
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:62
 #, python-format
 msgid "Active User"
 msgstr "有效使用者"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:57
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:63
 #, python-format
 msgid "Active Users"
 msgstr "有效使用者"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:42
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:48
 #, python-format
 msgid "App store"
 msgstr "應用商店"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:39
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:45
 #, python-format
 msgid "Browse Apps"
 msgstr "瀏覽應用"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:102
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:108
 #, python-format
 msgid "Browse the documentation."
 msgstr "瀏覽文檔."
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:156
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:163
 #, python-format
 msgid "Copyright © 2004-2016"
 msgstr ""
@@ -103,147 +101,184 @@ msgstr "儀表板"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:169
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:176
 #, python-format
 msgid "Deactivate the developer mode"
-msgstr "取消啟用開發者模式"
+msgstr "取消激活開發者模式"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:66
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:72
 #, python-format
 msgid "Enter e-mail addresses (one per line)"
 msgstr "輸入信件地址(每行一個)"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:94
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:100
 #, python-format
 msgid "Follow these implementation guides to get the most out of Odoo."
 msgstr "按照這些實施指導來有效利用Odoo."
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:156
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:163
 #, python-format
-msgid "GNU LGPL Licenced"
-msgstr ""
+msgid "GNU LGPL Licensed"
+msgstr "GNU LGPL授權"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:180
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:187
 #, python-format
 msgid "Get more features with the Enterprise Edition!"
 msgstr "通過企業版獲得更多的功能！"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:133
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:140
 #, python-format
 msgid "Help us spread the word: Share Odoo's awesomeness with your friends!"
 msgstr "幫助我們傳播:和您的朋友們分享Odoo的精彩!"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:31
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:37
 #, python-format
 msgid "Installed App"
 msgstr "已安裝的應用"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:32
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:38
 #, python-format
 msgid "Installed Apps"
 msgstr "已安裝的應用"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:67
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:73
 #, python-format
 msgid "Invite"
 msgstr "邀請"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:65
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:71
 #, python-format
 msgid "Invite new users:"
 msgstr "邀請新使用者"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:61
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:208
+#, python-format
+msgid "Load a Translation"
+msgstr "加載翻譯"
+
+#. module: web_settings_dashboard
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:67
 #, python-format
 msgid "Manage access rights"
 msgstr "管理訪問權"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:101
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:107
 #, python-format
 msgid "Need more help?"
 msgstr "需要幫助?"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:34
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:40
 #, python-format
 msgid "No app installed"
 msgstr "沒有已安裝的應用"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:148
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:155
 #, python-format
 msgid "Odoo"
 msgstr "Odoo"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:179
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:186
 #, python-format
 msgid "Odoo Enterprise"
 msgstr "Odoo 企業版"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:156
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:163
 #, python-format
 msgid "Odoo S.A."
 msgstr "Odoo S.A."
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:73
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:79
 #, python-format
 msgid "Pending invitations:"
 msgstr "待定的邀請:"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/js/dashboard.js:107
+#: code:addons/web_settings_dashboard/static/src/js/dashboard.js:116
 #, python-format
 msgid "Please provide valid email addresses"
 msgstr "請提供有效的信件地址"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:131
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:203
+#, python-format
+msgid ""
+"Send your documents in your partner's language or set up a language for your"
+" users"
+msgstr "以您的合作夥伴的語言發送您的文檔或為您的使用者設定一種語言"
+
+#. module: web_settings_dashboard
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:225
+#, python-format
+msgid "Set Up"
+msgstr "設定"
+
+#. module: web_settings_dashboard
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:220
+#, python-format
+msgid "Set up your company information"
+msgstr "設定您的公司信息"
+
+#. module: web_settings_dashboard
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:138
 #, python-format
 msgid "Share the Love"
 msgstr "分享摯愛"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:43
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:49
 #, python-format
 msgid "Theme store"
 msgstr "主題商店"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:183
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:199
+#, python-format
+msgid "Translations"
+msgstr "翻譯"
+
+#. module: web_settings_dashboard
+#. openerp-web
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:190
 #, python-format
 msgid "Upgrade Now"
 msgstr "現在升級"
@@ -255,14 +290,14 @@ msgstr "使用者"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:109
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:115
 #, python-format
 msgid "You need to install some apps first."
 msgstr "首先需要安裝一些應用"
 
 #. module: web_settings_dashboard
 #. openerp-web
-#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:79
+#: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:85
 #, python-format
 msgid "more"
 msgstr "更多"

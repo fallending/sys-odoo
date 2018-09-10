@@ -16,7 +16,7 @@ class LivechatController(http.Controller):
         # _get_asset return the bundle html code (script and link list) but we want to use the attachment content
         xmlid = 'im_livechat.external_lib'
         files, remains = request.env["ir.qweb"]._get_asset_content(xmlid, options=request.context)
-        asset = AssetsBundle(xmlid, files, remains)
+        asset = AssetsBundle(xmlid, files)
 
         mock_attachment = getattr(asset, ext)()
         if isinstance(mock_attachment, list):  # suppose that CSS asset will not required to be split in pages
@@ -86,24 +86,32 @@ class LivechatController(http.Controller):
             # limit the creation : only ONE rating per session
             values = {
                 'rating': rate,
-                'consumed': True
+                'consumed': True,
+                'feedback': reason,
             }
             if not channel.rating_ids:
+                res_model_id = request.env['ir.model'].sudo().search([('model', '=', channel._name)], limit=1).id
                 values.update({
                     'res_id': channel.id,
-                    'res_model': 'mail.channel',
-                    'rating': rate,
-                    'feedback': reason,
+                    'res_model_id': res_model_id,
                 })
                 # find the partner (operator)
                 if channel.channel_partner_ids:
                     values['rated_partner_id'] = channel.channel_partner_ids[0] and channel.channel_partner_ids[0].id or False
+                # if logged in user, set its partner on rating
+                values['partner_id'] = request.env.user.partner_id.id if request.session.uid else False
                 # create the rating
                 rating = Rating.sudo().create(values)
             else:
-                if reason:
-                    values['feedback'] = reason
                 rating = channel.rating_ids[0]
                 rating.write(values)
             return rating.id
         return False
+
+    @http.route('/im_livechat/history', type="json", auth="public")
+    def history_pages(self, pid, channel_uuid, page_history=None):
+        partner_ids = (pid, request.env.user.partner_id.id)
+        channel = request.env['mail.channel'].sudo().search([('uuid', '=', channel_uuid), ('channel_partner_ids', 'in', partner_ids)])
+        if channel:
+            channel._send_history_message(pid, page_history)
+        return True

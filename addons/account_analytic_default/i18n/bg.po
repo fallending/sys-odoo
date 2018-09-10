@@ -3,19 +3,15 @@
 # * account_analytic_default
 # 
 # Translators:
-# Kaloyan Naumov <kaloyan@lumnus.net>, 2016
-# Martin Trigaux, 2016
-# kalatchev, 2016
-# Maria Boyadjieva <marabo2000@gmail.com>, 2016
-# Iliana Ilieva <i.ilieva@sunservice-bg.com>, 2016
-# kirily <kiril@teracomp.eu>, 2017
+# Martin Trigaux, 2017
+# aleksandar ivanov, 2018
 # Albena Mincheva <albena_vicheva@abv.bg>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
 "Last-Translator: Albena Mincheva <albena_vicheva@abv.bg>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -25,10 +21,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: account_analytic_default
-#: model:ir.model.fields,field_description:account_analytic_default.field_product_product_rules_count
-#: model:ir.model.fields,field_description:account_analytic_default.field_product_template_rules_count
-msgid "# Analytic Rules"
-msgstr "# Аналитични правила"
+#: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
+msgid "<i class=\"fa fa-calendar\"/> From"
+msgstr "<i class=\"fa fa-calendar\"/>От"
+
+#. module: account_analytic_default
+#: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
+msgid "<strong>Customer</strong>"
+msgstr "<strong>Клиент</strong>"
+
+#. module: account_analytic_default
+#: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
+msgid "<strong>Product</strong>"
+msgstr "<strong>Продукт</strong>"
 
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
@@ -43,23 +48,21 @@ msgstr "Аналитична сметка"
 
 #. module: account_analytic_default
 #: model:ir.actions.act_window,name:account_analytic_default.action_analytic_default_list
-#: model:ir.actions.act_window,name:account_analytic_default.action_product_default_list
 #: model:ir.ui.menu,name:account_analytic_default.menu_analytic_default_list
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_tree
 msgid "Analytic Defaults"
-msgstr "Стойности по подразбиране за аналитична сметка"
+msgstr "Аналитични стойности по подразбиране"
 
 #. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_account_analytic_default
 msgid "Analytic Distribution"
-msgstr "Аналитично рапределение"
+msgstr "Аналитично разпределение"
 
 #. module: account_analytic_default
+#: model:ir.actions.act_window,name:account_analytic_default.action_product_default_list
 #: model:ir.actions.act_window,name:account_analytic_default.analytic_rule_action_partner
 #: model:ir.actions.act_window,name:account_analytic_default.analytic_rule_action_user
-#: model:ir.ui.view,arch_db:account_analytic_default.product_form_view_default_analytic_button
-#: model:ir.ui.view,arch_db:account_analytic_default.product_template_view_default_analytic_button
 msgid "Analytic Rules"
 msgstr "Аналитични правила"
 
@@ -67,7 +70,7 @@ msgstr "Аналитични правила"
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_company_id
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Company"
-msgstr "Компания"
+msgstr "Фирма"
 
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form
@@ -85,19 +88,24 @@ msgid "Created on"
 msgstr "Създадено на"
 
 #. module: account_analytic_default
+#: model:ir.ui.view,arch_db:account_analytic_default.res_config_settings_view_form
+msgid "Default Analytic Values"
+msgstr "Стандартни аналитични стойности"
+
+#. module: account_analytic_default
 #: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default_date_stop
 msgid "Default end date for this Analytic Account."
-msgstr "Крайна дата по подразбиране за тази аналитична сметка."
+msgstr "Крайна дата по подразбиране за тази аналитичена сметка."
 
 #. module: account_analytic_default
 #: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default_date_start
 msgid "Default start date for this Analytic Account."
-msgstr "Начална дата по подразбиране за тази аналитична сметка."
+msgstr "Начална дата по подразбиране за тази аналитичена сметка."
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_display_name
 msgid "Display Name"
-msgstr "Покажете име"
+msgstr "Име за показване"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_date_stop
@@ -109,18 +117,18 @@ msgstr "Крайна дата"
 msgid ""
 "Gives the sequence order when displaying a list of analytic distribution"
 msgstr ""
-"Дава реда на последователност при показване на списък с аналитично "
+"Дава реда на последователността при показване на списък с аналитично "
 "разпределение"
 
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Group By"
-msgstr "Групирайте по"
+msgstr "Групиране по"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_id
 msgid "ID"
-msgstr "ИН"
+msgstr "ID"
 
 #. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_account_invoice_line
@@ -130,7 +138,7 @@ msgstr "Ред от фактура"
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default___last_update
 msgid "Last Modified on"
-msgstr "Последно коригирано на"
+msgstr "Последно променено на"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_write_uid
@@ -146,24 +154,18 @@ msgstr "Последно обновено на"
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_partner_id
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Partner"
-msgstr "Контрагент"
+msgstr "Партньор"
 
 #. module: account_analytic_default
-#: model:ir.model,name:account_analytic_default.model_product_product
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default_product_id
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Product"
 msgstr "Продукт"
 
 #. module: account_analytic_default
-#: model:ir.model,name:account_analytic_default.model_product_template
-msgid "Product Template"
-msgstr "Шаблон на продукт"
-
-#. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "Ред на поръчка за продажби"
+msgstr "Ред от нареждане за продажба"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default_company_id
@@ -172,10 +174,10 @@ msgid ""
 "default (e.g. create new customer invoice or Sales order if we select this "
 "company, it will automatically take this as an analytic account)"
 msgstr ""
-"Изберете компания, която ще използва аналитично счетоводство с аналитични "
-"стойности по подразбиране (напр. ако изберем тази компания, създаваме нова "
-"фактура за продажба или поръчка за продажба, това автоматично ще се "
-"възприеме като аналитична сметка.)"
+"Изберете компания, която ще използва аналитичната сметка, посочена по "
+"подразбиране (например при създаване на нова клиентска фактура или поръчка "
+"за продажба, ако изберем този партньор, автоматично ще го вземе като "
+"аналитична сметка)"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default_partner_id
@@ -184,9 +186,9 @@ msgid ""
 "default (e.g. create new customer invoice or Sales order if we select this "
 "partner, it will automatically take this as an analytic account)"
 msgstr ""
-"Изберете контрагент, който ще използва аналитичната сметка, посочена по "
-"подразбиране (напр.  ако изберем този контраген, създаваме нова фактура за "
-"продажба или поръчка за продажба - автоматично ще го възприеме като "
+"Изберете партньор, който ще използва аналитичната сметка, посочена по "
+"подразбиране (например при създаване на нова клиентска фактура или поръчка "
+"за продажба, ако изберем този партньор, автоматично ще го вземе като "
 "аналитична сметка)"
 
 #. module: account_analytic_default
@@ -196,10 +198,10 @@ msgid ""
 "default (e.g. create new customer invoice or Sales order if we select this "
 "product, it will automatically take this as an analytic account)"
 msgstr ""
-"Изберете продукт, който ще използва посочената аналитична сметка по "
-"подразбиране (напр. ако изберем този продукт, създаваме нова фактура за "
-"продажба или поръчка за продажби, автоматично ще го възприеме това като "
-"аналитична сметка)"
+"Изберете продукт, който ще използва посочената аналитична сметка, по "
+"подразбиране (напр. Създаване на нова клиентска фактура или поръчка за "
+"продажба, ако изберем този продукт, той автоматично ще вземе това като "
+"аналитична сметка)."
 
 #. module: account_analytic_default
 #: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default_user_id
@@ -223,3 +225,8 @@ msgstr "Начална дата"
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "User"
 msgstr "Потребител"
+
+#. module: account_analytic_default
+#: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
+msgid "to"
+msgstr "до"

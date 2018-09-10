@@ -3,17 +3,16 @@
 # * web_planner
 # 
 # Translators:
-# Martin Trigaux, 2016
-# kalatchev, 2016
-# Kaloyan Naumov <kaloyan@lumnus.net>, 2016
-# Maria Boyadjieva <marabo2000@gmail.com>, 2016
+# Martin Trigaux, 2017
+# aleksandar ivanov, 2018
+# Albena Mincheva <albena_vicheva@abv.bg>, 2018
 # Boris Stefanov <borkata@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-14 15:55+0000\n"
-"PO-Revision-Date: 2016-11-14 15:55+0000\n"
+"POT-Creation-Date: 2017-09-20 09:54+0000\n"
+"PO-Revision-Date: 2017-09-20 09:54+0000\n"
 "Last-Translator: Boris Stefanov <borkata@gmail.com>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -30,10 +29,10 @@ msgstr "Активен"
 
 #. module: web_planner
 #. openerp-web
-#: code:addons/web_planner/static/src/js/web_planner_common.js:436
+#: code:addons/web_planner/static/src/js/web_planner_common.js:379
 #, python-format
 msgid "Cancel"
-msgstr "Отказ"
+msgstr "Откажи"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_create_uid
@@ -48,7 +47,7 @@ msgstr "Създадено на"
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_data
 msgid "Data"
-msgstr "Данни"
+msgstr "Дата"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_display_name
@@ -58,7 +57,7 @@ msgstr "Име за показване"
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_id
 msgid "ID"
-msgstr "ИН"
+msgstr "ID"
 
 #. module: web_planner
 #: model:ir.model.fields,help:web_planner.field_web_planner_active
@@ -89,7 +88,7 @@ msgstr "Последно обновено на"
 
 #. module: web_planner
 #. openerp-web
-#: code:addons/web_planner/static/src/xml/web_planner.xml:31
+#: code:addons/web_planner/static/src/js/web_planner_common.js:133
 #, python-format
 msgid "Mark As Done"
 msgstr ""
@@ -106,14 +105,14 @@ msgstr "Име"
 
 #. module: web_planner
 #. openerp-web
-#: code:addons/web_planner/static/src/xml/web_planner.xml:34
+#: code:addons/web_planner/static/src/js/web_planner_common.js:141
 #, python-format
-msgid "Next step"
+msgid "Next Step"
 msgstr ""
 
 #. module: web_planner
 #. openerp-web
-#: code:addons/web_planner/static/src/js/web_planner_common.js:446
+#: code:addons/web_planner/static/src/js/web_planner_common.js:388
 #, python-format
 msgid "Odoo Enterprise"
 msgstr "Odoo Enterprise"
@@ -153,7 +152,7 @@ msgstr "Образец"
 
 #. module: web_planner
 #. openerp-web
-#: code:addons/web_planner/static/src/js/web_planner_common.js:430
+#: code:addons/web_planner/static/src/js/web_planner_common.js:365
 #, python-format
 msgid "Upgrade now"
 msgstr ""

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
+from odoo import api, models, fields
 
 import logging
 
@@ -53,7 +53,7 @@ class AccountInvoiceLine(models.Model):
             price = company_currency.with_context(date=self.invoice_id.date_invoice).compute(price_unit * self.quantity, self.invoice_id.currency_id)
         else:
             price = price_unit * self.quantity
-        return round(price, self.invoice_id.currency_id.decimal_places)
+        return self.invoice_id.currency_id.round(price)
 
     def get_invoice_line_account(self, type, product, fpos, company):
         if company.anglo_saxon_accounting and type in ('in_invoice', 'in_refund') and product and product.type == 'product':

@@ -2,7 +2,8 @@ odoo.define('point_of_sale.devices', function (require) {
 "use strict";
 
 var core = require('web.core');
-var Model = require('web.DataModel');
+var mixins = require('web.mixins');
+var rpc = require('web.rpc');
 var Session = require('web.Session');
 var PosBaseWidget = require('point_of_sale.BaseWidget');
 
@@ -90,10 +91,11 @@ var JobQueue = function(){
 // connected to the Point of Sale. As the communication only goes from the POS to the proxy,
 // methods are used both to signal an event, and to fetch information.
 
-var ProxyDevice  = core.Class.extend(core.mixins.PropertiesMixin,{
+var ProxyDevice  = core.Class.extend(mixins.PropertiesMixin,{
     init: function(parent,options){
-        core.mixins.PropertiesMixin.init.call(this,parent);
+        mixins.PropertiesMixin.init.call(this);
         var self = this;
+        this.setParent(parent);
         options = options || {};
 
         this.pos = parent;
@@ -131,6 +133,8 @@ var ProxyDevice  = core.Class.extend(core.mixins.PropertiesMixin,{
                 self.print_receipt();
             }
         });
+
+        this.posbox_supports_display = true;
 
         window.hw_proxy = this;
     },
@@ -211,7 +215,7 @@ var ProxyDevice  = core.Class.extend(core.mixins.PropertiesMixin,{
         var self = this;
 
         function status(){
-            self.connection.rpc('/hw_proxy/status_json',{},{timeout:2500})
+            self.connection.rpc('/hw_proxy/status_json',{},{shadow: true, timeout:2500})
                 .then(function(driver_status){
                     self.set_connection_status('connected',driver_status);
                 },function(){
@@ -235,7 +239,7 @@ var ProxyDevice  = core.Class.extend(core.mixins.PropertiesMixin,{
             callbacks[i](params);
         }
         if(this.get('status').status !== 'disconnected'){
-            return this.connection.rpc('/hw_proxy/' + name, params || {});
+            return this.connection.rpc('/hw_proxy/' + name, params || {}, {shadow: true});
         }else{
             return (new $.Deferred()).reject();
         }
@@ -437,22 +441,45 @@ var ProxyDevice  = core.Class.extend(core.mixins.PropertiesMixin,{
         send_printing_job();
     },
 
-    print_sale_details: function() { 
+    print_sale_details: function() {
         var self = this;
-        new Model('report.point_of_sale.report_saledetails').call('get_sale_details').then(function(result){
-            var env = {
-                widget: new PosBaseWidget(self),
-                company: self.pos.company,
-                pos: self.pos,
-                products: result.products,
-                payments: result.payments,
-                taxes: result.taxes,
-                total_paid: result.total_paid,
-                date: (new Date()).toLocaleString(),
-            };
-            var report = QWeb.render('SaleDetailsReport', env);
-            self.print_receipt(report);
-        })
+        rpc.query({
+                model: 'report.point_of_sale.report_saledetails',
+                method: 'get_sale_details',
+            })
+            .then(function(result){
+                var env = {
+                    widget: new PosBaseWidget(self),
+                    company: self.pos.company,
+                    pos: self.pos,
+                    products: result.products,
+                    payments: result.payments,
+                    taxes: result.taxes,
+                    total_paid: result.total_paid,
+                    date: (new Date()).toLocaleString(),
+                };
+                var report = QWeb.render('SaleDetailsReport', env);
+                self.print_receipt(report);
+            });
+    },
+
+    update_customer_facing_display: function(html) {
+        if (this.posbox_supports_display) {
+            return this.message('customer_facing_display',
+                { html: html },
+                { timeout: 5000 });
+        }
+    },
+
+    take_ownership_over_client_screen: function(html) {
+        return this.message("take_control", { html: html });
+    },
+
+    test_ownership_of_client_screen: function() {
+        if (this.connection) {
+            return this.message("test_ownership", {});
+        }
+        return null;
     },
 
     // asks the proxy to log some information, as with the debug.log you can provide several arguments.
@@ -561,7 +588,7 @@ var BarcodeReader = core.Class.extend({
         this.remote_active = 1;
 
         function waitforbarcode(){
-            return self.proxy.connection.rpc('/hw_proxy/scanner',{},{timeout:7500})
+            return self.proxy.connection.rpc('/hw_proxy/scanner',{},{shadow: true, timeout:7500})
                 .then(function(barcode){
                     if(!self.remote_scanning){
                         self.remote_active = 0;

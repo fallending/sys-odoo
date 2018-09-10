@@ -3,18 +3,15 @@
 # * hr_maintenance
 # 
 # Translators:
-# kalatchev, 2016
-# Martin Trigaux, 2016
-# Vladimir Petrov <vladimir.petrov@gmail.com>, 2017
-# kirily <kiril@teracomp.eu>, 2017
-# Maria Boyadjieva <marabo2000@gmail.com>, 2018
+# aleksandar ivanov, 2018
+# Albena Mincheva <albena_vicheva@abv.bg>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:58+0000\n"
-"PO-Revision-Date: 2016-09-07 08:58+0000\n"
-"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-09-20 09:54+0000\n"
+"PO-Revision-Date: 2017-09-20 09:54+0000\n"
+"Last-Translator: Albena Mincheva <albena_vicheva@abv.bg>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,22 +22,23 @@ msgstr ""
 #. module: hr_maintenance
 #: model:ir.model.fields,field_description:hr_maintenance.field_maintenance_equipment_department_id
 msgid "Assigned to Department"
-msgstr "Разпределено към отдел"
+msgstr "Задай на отдел"
 
 #. module: hr_maintenance
 #: model:ir.model.fields,field_description:hr_maintenance.field_maintenance_equipment_employee_id
 msgid "Assigned to Employee"
-msgstr "Разпределено на служител"
+msgstr "Задай на служител"
 
 #. module: hr_maintenance
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_request_view_form_inherit_hr
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_request_view_search_inherit_hr
 msgid "Created By"
-msgstr "Създадено от"
+msgstr "Създаден от"
 
 #. module: hr_maintenance
 #: model:ir.model.fields,field_description:hr_maintenance.field_maintenance_request_department_id
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_equipment_view_form_inherit_hr
+#: model:ir.ui.view,arch_db:hr_maintenance.maintenance_equipment_view_search_inherit_hr
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_equipment_view_tree_inherit_hr
 #: selection:maintenance.equipment,equipment_assign_to:0
 msgid "Department"
@@ -49,6 +47,7 @@ msgstr "Отдел"
 #. module: hr_maintenance
 #: model:ir.model.fields,field_description:hr_maintenance.field_maintenance_request_employee_id
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_equipment_view_form_inherit_hr
+#: model:ir.ui.view,arch_db:hr_maintenance.maintenance_equipment_view_search_inherit_hr
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_equipment_view_tree_inherit_hr
 #: selection:maintenance.equipment,equipment_assign_to:0
 msgid "Employee"
@@ -57,12 +56,12 @@ msgstr "Служител"
 #. module: hr_maintenance
 #: model:ir.model,name:hr_maintenance.model_maintenance_equipment
 msgid "Equipment"
-msgstr "Оборудване"
+msgstr "Екипировка"
 
 #. module: hr_maintenance
 #: model:ir.model,name:hr_maintenance.model_maintenance_request
 msgid "Maintenance Requests"
-msgstr "Заявки за поддръжка"
+msgstr "Заявка за поддръжка"
 
 #. module: hr_maintenance
 #: model:ir.ui.view,arch_db:hr_maintenance.maintenance_request_view_search_inherit_hr
@@ -77,4 +76,4 @@ msgstr "Друго"
 #. module: hr_maintenance
 #: model:ir.model.fields,field_description:hr_maintenance.field_maintenance_equipment_equipment_assign_to
 msgid "Used By"
-msgstr ""
+msgstr "Използван от"

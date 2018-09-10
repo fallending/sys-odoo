@@ -3,16 +3,16 @@
 # * mrp_byproduct
 # 
 # Translators:
-# Bohdan Lisnenko, 2016
-# ТАрас <tratatuta@i.ua>, 2016
-# Martin Trigaux, 2016
+# Bohdan Lisnenko, 2017
+# ТАрас <tratatuta@i.ua>, 2017
+# Martin Trigaux, 2017
 # Alina Semeniuk <alinasemeniuk1@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:57+0000\n"
-"PO-Revision-Date: 2016-09-07 08:57+0000\n"
+"POT-Creation-Date: 2017-10-24 09:00+0000\n"
+"PO-Revision-Date: 2017-10-24 09:00+0000\n"
 "Last-Translator: Alina Semeniuk <alinasemeniuk1@gmail.com>, 2017\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -95,12 +95,17 @@ msgstr "Товар"
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_mrp_subproduct_product_qty
 msgid "Product Qty"
-msgstr "К-сть"
+msgstr "К-сть товару"
 
 #. module: mrp_byproduct
 #: model:ir.model,name:mrp_byproduct.model_mrp_production
 msgid "Production"
 msgstr "Виробництво"
+
+#. module: mrp_byproduct
+#: model:ir.model,name:mrp_byproduct.model_mrp_product_produce
+msgid "Record Production"
+msgstr "Запис виробництва"
 
 #. module: mrp_byproduct
 #: model:ir.model,name:mrp_byproduct.model_stock_move
@@ -110,12 +115,12 @@ msgstr "Переміщення запасів"
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_stock_move_subproduct_id
 msgid "Subproduct"
-msgstr "Субпродукт"
+msgstr "Субтовар"
 
 #. module: mrp_byproduct
 #: model:ir.model.fields,help:mrp_byproduct.field_stock_move_subproduct_id
 msgid "Subproduct line that generated the move in a manufacturing order"
-msgstr "Лінія субпродукту, яка спричинила рух у виробничому замовленні"
+msgstr "Лінія субтовару, яка спричинила рух у виробничому замовленні"
 
 #. module: mrp_byproduct
 #: code:addons/mrp_byproduct/models/mrp_subproduct.py:32
@@ -124,8 +129,7 @@ msgid ""
 "The Product Unit of Measure you chose has a different category than in the "
 "product form."
 msgstr ""
-"Категорія вибраного продукту одиниці виміру відрізняється від форми "
-"продукту."
+"Категорія вибраного товару одиниці виміру відрізняється від форми товару."
 
 #. module: mrp_byproduct
 #: model:ir.model.fields,field_description:mrp_byproduct.field_mrp_subproduct_product_uom_id

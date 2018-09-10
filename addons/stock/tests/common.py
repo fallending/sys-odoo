@@ -12,7 +12,7 @@ class TestStockCommon(common.TransactionCase):
         self.UomObj = self.env['product.uom']
         self.PartnerObj = self.env['res.partner']
         self.ModelDataObj = self.env['ir.model.data']
-        self.StockPackObj = self.env['stock.pack.operation']
+        self.StockPackObj = self.env['stock.move.line']
         self.StockQuantObj = self.env['stock.quant']
         self.PickingObj = self.env['stock.picking']
         self.MoveObj = self.env['stock.move']
@@ -28,6 +28,7 @@ class TestStockCommon(common.TransactionCase):
         self.supplier_location = self.ModelDataObj.xmlid_to_res_id('stock.stock_location_suppliers')
         self.stock_location = self.ModelDataObj.xmlid_to_res_id('stock.stock_location_stock')
         self.pack_location = self.ModelDataObj.xmlid_to_res_id('stock.location_pack_zone')
+        self.output_location = self.ModelDataObj.xmlid_to_res_id('stock.stock_location_output')
         self.customer_location = self.ModelDataObj.xmlid_to_res_id('stock.stock_location_customers')
         self.categ_unit = self.ModelDataObj.xmlid_to_res_id('product.product_uom_categ_unit')
         self.categ_kgm = self.ModelDataObj.xmlid_to_res_id('product.product_uom_categ_kgm')
@@ -43,9 +44,6 @@ class TestStockCommon(common.TransactionCase):
         self.uom_kg = self.UomObj.create({
             'name': 'Test-KG',
             'category_id': self.categ_kgm,
-            'factor_inv': 1,
-            'factor': 1,
-            'uom_type': 'reference',
             'rounding': 0.000001})
         self.uom_tone = self.UomObj.create({
             'name': 'Test-Tone',
@@ -69,8 +67,6 @@ class TestStockCommon(common.TransactionCase):
         self.uom_unit = self.UomObj.create({
             'name': 'Test-Unit',
             'category_id': self.categ_unit,
-            'factor': 1,
-            'uom_type': 'reference',
             'rounding': 1.0})
         self.uom_dozen = self.UomObj.create({
             'name': 'Test-DozenA',

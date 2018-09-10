@@ -3,17 +3,16 @@
 # * gamification_sale_crm
 # 
 # Translators:
-# fanha99 <fanha99@hotmail.com>, 2016
-# son dang <son.dang@doda100.com>, 2016
-# Martin Trigaux, 2016
-# Duy BQ <duybq86@gmail.com>, 2018
+# Duy BQ <duybq86@gmail.com>, 2017
+# Martin Trigaux, 2017
+# thanh nguyen <thanhnguyen.icsc@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Duy BQ <duybq86@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: thanh nguyen <thanhnguyen.icsc@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,8 +22,8 @@ msgstr ""
 
 #. module: gamification_sale_crm
 #: model:gamification.goal.definition,name:gamification_sale_crm.definition_crm_nbr_customer_refunds
-msgid "Customer Refunds"
-msgstr "Hoàn tiền cho Khách hàng"
+msgid "Customer Credit Notes"
+msgstr "Customer Credit Notes"
 
 #. module: gamification_sale_crm
 #: model:gamification.goal.definition,name:gamification_sale_crm.definition_crm_lead_delay_close
@@ -67,18 +66,18 @@ msgstr "SL Đơn hàng bán đã thanh toán"
 #: model:gamification.challenge.line,name:gamification_sale_crm.line_crm_marketing2
 #: model:gamification.goal.definition,name:gamification_sale_crm.definition_crm_lead_delay_open
 msgid "Time to Qualify a Lead"
-msgstr "Thời gian để Thẩm định một Tiềm năng"
+msgstr "Thời gian để thẩm định một Tiềm năng"
 
 #. module: gamification_sale_crm
 #: model:gamification.goal.definition,name:gamification_sale_crm.definition_crm_tot_customer_refunds
-msgid "Total Customer Refunds"
+msgid "Total Customer Credit Notes"
 msgstr ""
 
 #. module: gamification_sale_crm
 #: model:gamification.challenge.line,name:gamification_sale_crm.line_crm_sale1
 #: model:gamification.goal.definition,name:gamification_sale_crm.definition_crm_tot_invoices
 msgid "Total Invoiced"
-msgstr "Tổng tiền hóa đơn đã xuất"
+msgstr "Tổng tiền hoá đơn đã xuất"
 
 #. module: gamification_sale_crm
 #: model:gamification.goal.definition,name:gamification_sale_crm.definition_crm_tot_paid_sale_order
@@ -101,13 +100,13 @@ msgstr "hoá đơn"
 #: model:gamification.challenge.line,definition_suffix:gamification_sale_crm.line_crm_marketing1
 #: model:gamification.goal.definition,suffix:gamification_sale_crm.definition_crm_nbr_new_leads
 msgid "leads"
-msgstr "đầu mối"
+msgstr "tiềm năng"
 
 #. module: gamification_sale_crm
 #: model:gamification.challenge.line,definition_suffix:gamification_sale_crm.line_crm_marketing3
 #: model:gamification.goal.definition,suffix:gamification_sale_crm.definition_crm_nbr_new_opportunities
 msgid "opportunities"
-msgstr "Các cơ hội"
+msgstr "cơ hội"
 
 #. module: gamification_sale_crm
 #: model:gamification.goal.definition,suffix:gamification_sale_crm.definition_crm_nbr_paid_sale_order

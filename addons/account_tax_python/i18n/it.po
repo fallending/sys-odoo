@@ -3,16 +3,16 @@
 # * account_tax_python
 # 
 # Translators:
-# Francesco Garganese <francesco.garganese@aeromnia.aero>, 2016
-# Francesco <francesco.bianchi.88@gmail.com>, 2016
-# Paolo Valier, 2016
+# Paolo Valier, 2018
+# David Minneci <david@numeko.it>, 2018
+# Francesco <francesco.bianchi.88@gmail.com>, 2018
 # Léonie Bouchat <lbo@odoo.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
 "Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
@@ -39,9 +39,9 @@ msgid ""
 ":param product: product.product recordset singleton or None\n"
 ":param partner: res.partner recordset singleton or None"
 msgstr ""
-"Calcola l'importo dell'imposta impostando la variabile \"result\".\n"
+"Calcola l'importo dell'imposta impostando la variabile \"risultato\".\n"
 "\n"
-":param base_amount: effettivo, importo effettivo a cui si applica l'imposta\n"
+":param base_amount: effettivo, importo attuale a cui si applica l'imposta\n"
 ":param price_unit: effettivo\n"
 ":param quantity: effettivo\n"
 ":param company: registrazione di res.company\n"
@@ -59,7 +59,7 @@ msgid ""
 ":param product: product.product recordset singleton or None\n"
 ":param partner: res.partner recordset singleton or None"
 msgstr ""
-"Calcola l'importo dell'imposta impostando la variabile \"result\".\n"
+"Calcola l'importo dell'imposta impostando la variabile \"risultato\".\n"
 "\n"
 ":param base_amount: effettivo, importo attuale a cui si applica l'imposta\n"
 ":param price_unit: effettivo\n"
@@ -78,7 +78,7 @@ msgid ""
 ":param product: product.product recordset singleton or None\n"
 ":param partner: res.partner recordset singleton or None"
 msgstr ""
-"Calcola l'importo dell'imposta impostando la variabile \"risultato\".\n"
+"Determina se l'imposta sarà applicata impostando la variabile \"risultato\" su Vero o Falso.\n"
 "\n"
 ":param price_unit: effettivo\n"
 ":param quantity: effettivo\n"

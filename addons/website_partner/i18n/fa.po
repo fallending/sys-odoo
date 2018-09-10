@@ -3,14 +3,14 @@
 # * website_partner
 # 
 # Translators:
-# Hamid Darabi, 2016
+# Martin Trigaux, 2017
 # Hamed Mohammadi <hamed@dehongi.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:28+0000\n"
-"PO-Revision-Date: 2017-06-23 13:28+0000\n"
+"POT-Creation-Date: 2017-09-20 09:54+0000\n"
+"PO-Revision-Date: 2017-09-20 09:54+0000\n"
 "Last-Translator: Hamed Mohammadi <hamed@dehongi.com>, 2018\n"
 "Language-Team: Persian (https://www.transifex.com/odoo/teams/41243/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,8 @@ msgstr ""
 
 #. module: website_partner
 #: model:ir.model,name:website_partner.model_res_partner
-msgid "Partner"
-msgstr "همکار"
+msgid "Contact"
+msgstr "تماس"
 
 #. module: website_partner
 #: model:ir.ui.view,arch_db:website_partner.partner_detail

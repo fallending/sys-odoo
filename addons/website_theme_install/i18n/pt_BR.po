@@ -3,15 +3,15 @@
 # * website_theme_install
 # 
 # Translators:
-# Martin Trigaux, 2016
-# Mateus Lopes <mateus1@gmail.com>, 2016
+# Martin Trigaux, 2017
+# Mateus Lopes <mateus1@gmail.com>, 2017
 # Hildeberto Abreu Magalhães <hildeberto@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 10.saas~14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-08 09:20+0000\n"
-"PO-Revision-Date: 2016-11-08 09:20+0000\n"
+"POT-Creation-Date: 2017-02-15 11:03+0000\n"
+"PO-Revision-Date: 2017-02-15 11:03+0000\n"
 "Last-Translator: Hildeberto Abreu Magalhães <hildeberto@gmail.com>, 2018\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/odoo/teams/41243/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -37,8 +37,8 @@ msgstr "Escolha seu Tema"
 
 #. module: website_theme_install
 #: model:ir.actions.server,name:website_theme_install.theme_install_todo_action
-msgid "Choose Your Theme Todo Action"
-msgstr ""
+msgid "Config: Choose Your Theme"
+msgstr "Configuração: Escolha seu Tema"
 
 #. module: website_theme_install
 #: model:ir.ui.view,arch_db:website_theme_install.theme_view_kanban
@@ -63,7 +63,7 @@ msgstr "Telas"
 #. module: website_theme_install
 #: model:ir.ui.view,arch_db:website_theme_install.customize_modal
 msgid "See themes here"
-msgstr ""
+msgstr "Veja temas aqui"
 
 #. module: website_theme_install
 #: model:ir.ui.view,arch_db:website_theme_install.theme_view_search

@@ -3,20 +3,18 @@
 # * product
 # 
 # Translators:
-# Martin Trigaux, 2017
-# Otgonbayar.A <gobi.mn@gmail.com>, 2017
-# nasaaskii <nasaaskii@gmail.com>, 2017
-# Khishigbat Ganbold <khishigbat@asterisk-tech.mn>, 2017
-# Javhlantugs Bazarsad <javhlantugs@gmail.com>, 2017
-# odmunkh enkh-ochir <odmunkh0609@gmail.com>, 2017
-# Batzul B <batzul.active@gmail.com>, 2017
+# Khishigbat Ganbold <khishigbat@asterisk-tech.mn>, 2018
+# Martin Trigaux, 2018
+# Onii Onii <onii0223@yahoo.com>, 2018
+# Jacara <baskhuujacara@gmail.com>, 2018
+# Otgonbayar.A <gobi.mn@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:27+0000\n"
-"PO-Revision-Date: 2017-06-23 13:27+0000\n"
-"Last-Translator: Batzul B <batzul.active@gmail.com>, 2017\n"
+"POT-Creation-Date: 2018-02-19 13:43+0000\n"
+"PO-Revision-Date: 2018-02-19 13:43+0000\n"
+"Last-Translator: Otgonbayar.A <gobi.mn@gmail.com>, 2018\n"
 "Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,13 +25,13 @@ msgstr ""
 #. module: product
 #: selection:product.pricelist.item,applied_on:0
 msgid " Product Category"
-msgstr "Барааны ангилал"
+msgstr "Барааны Ангилал"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_product_variant_count
 #: model:ir.model.fields,field_description:product.field_product_template_product_variant_count
 msgid "# Product Variants"
-msgstr "Барааны хувилбар #"
+msgstr "Барааны Хувилбар #"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_product_count
@@ -41,19 +39,19 @@ msgid "# Products"
 msgstr "Бараанууд #"
 
 #. module: product
-#: code:addons/product/models/product_pricelist.py:438
+#: code:addons/product/models/product_pricelist.py:446
 #, python-format
 msgid "%s %% discount"
 msgstr "%s %% хөнгөлөлт"
 
 #. module: product
-#: code:addons/product/models/product_pricelist.py:440
+#: code:addons/product/models/product_pricelist.py:448
 #, python-format
 msgid "%s %% discount and %s surcharge"
 msgstr "%s %% хөнгөлөлт ба %s нэмэлт төлбөр"
 
 #. module: product
-#: code:addons/product/models/product_template.py:302
+#: code:addons/product/models/product_template.py:324
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (хуулбар)"
@@ -68,28 +66,20 @@ msgstr "16 GB"
 #: model:product.template,description_sale:product.product_product_3_product_template
 msgid ""
 "17\" LCD Monitor\n"
-"Processor AMD 8-Core\n"
-"512MB RAM\n"
-"HDD SH-1"
+"Processor AMD 8-Core"
 msgstr ""
 "17\" LCD Monitor\n"
-"Processor AMD 8-Core\n"
-"512MB RAM\n"
-"HDD SH-1"
+"Processor AMD 8-Core"
 
 #. module: product
 #: model:product.product,description:product.product_product_25
 #: model:product.template,description:product.product_product_25_product_template
 msgid ""
-"17\" Monitor\n"
-"4GB RAM\n"
-"Standard-1294P Processor\n"
-"QWERTY keyboard"
+"17\" Monitor, 4GB RAM\n"
+"Standard-1294P Processor"
 msgstr ""
-"17\" Monitor\n"
-"4GB RAM\n"
-"Standard-1294P Processor\n"
-"QWERTY keyboard"
+"17\" Monitor, 4GB RAM\n"
+"Standard-1294P Processor"
 
 #. module: product
 #: model:product.attribute.value,name:product.product_attribute_value_5
@@ -133,7 +123,7 @@ msgid ""
 "Dual-core A5 with quad-core graphics\n"
 "FaceTime HD Camera, 1.2 MP Photos"
 msgstr ""
-"7.9‑inch (диагональ) LED-backlit, 128Gb\n"
+"7.9‑inch (diagonal) LED-backlit, 128Gb\n"
 "Dual-core A5 with quad-core graphics\n"
 "FaceTime HD Camera, 1.2 MP Photos"
 
@@ -165,6 +155,11 @@ msgid "<span>kg</span>"
 msgstr "<span>кг</span>"
 
 #. module: product
+#: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
+msgid "<span>m³</span>"
+msgstr "<span>м³</span>"
+
+#. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
 msgid "<strong>Currency</strong>:<br/>"
 msgstr "<strong>Валют</strong>:<br/>"
@@ -172,7 +167,7 @@ msgstr "<strong>Валют</strong>:<br/>"
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
 msgid "<strong>Description</strong>"
-msgstr "<strong>Тайлбар</strong>"
+msgstr "Тайлбар"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
@@ -196,27 +191,17 @@ msgstr ""
 "боломжийг гээхэд хүргэдэг."
 
 #. module: product
-#: code:addons/product/models/product.py:167 sql_constraint:product.product:0
-#, python-format
+#: sql_constraint:product.product:0
 msgid "A barcode can only be assigned to one product !"
 msgstr "Зураасан код нь зөвхөн нэг бараанд л оноогдох ёстой !"
-
-#. module: product
-#: model:ir.model.fields,help:product.field_product_category_type
-msgid ""
-"A category of the view type is a virtual category that can be used as the "
-"parent of another category to create a hierarchical structure."
-msgstr ""
-"Харагдац төрлийн ангилал нь хуурмаг ангилал бөгөөд өөр ангилалаар эцэгээр "
-"ашиглагдаж мөчирлөсөн бүтцийг бий болгоход хэрэглэгддэг."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_description_sale
 #: model:ir.model.fields,help:product.field_product_template_description_sale
 msgid ""
 "A description of the Product that you want to communicate to your customers."
-" This description will be copied to every Sale Order, Delivery Order and "
-"Customer Invoice/Refund"
+" This description will be copied to every Sales Order, Delivery Order and "
+"Customer Invoice/Credit Note"
 msgstr ""
 "Захиалагчтай харилцах гэж байгаа барааны тодорхойлолт. Энэ тодорхойлолт нь "
 "борлуулалтын захиалга, хүргэх захиалга, захиалагчийн нэхэмжлэл, буцаалт бүрд"
@@ -228,7 +213,7 @@ msgstr ""
 msgid ""
 "A description of the Product that you want to communicate to your vendors. "
 "This description will be copied to every Purchase Order, Receipt and Vendor "
-"Bill/Refund."
+"Bill/Credit Note."
 msgstr ""
 "Нийлүүлэгчтэй харилцах гэж байгаа барааны тодорхойлолт. Энэ тодорхойлолт нь "
 "худалдан авах захиалга, хүлээн авах баримт, нийлүүлэгчийн тооцоо, төлбөрийн "
@@ -252,7 +237,7 @@ msgstr "Зөвхөн дотоод мэдээллийн зорилгоор хэр
 #: model:ir.actions.act_window,help:product.product_pricelist_action2
 msgid ""
 "A price list contains rules to be evaluated in order to compute\n"
-"                the sales price of the products."
+"                the sale price of the products."
 msgstr ""
 "Үнийн хүснэгт нь барааны борлуулах үнийг тооцоолоход\n"
 "                дүрмүүдийг агуулдаг."
@@ -303,18 +288,27 @@ msgstr "Идэвхитэй"
 #. module: product
 #: model:product.category,name:product.product_category_all
 msgid "All"
-msgstr "Бүх"
+msgstr "Бүгд"
 
 #. module: product
-#: code:addons/product/models/product_pricelist.py:433
+#: code:addons/product/models/product_pricelist.py:441
 #, python-format
 msgid "All Products"
-msgstr "Бүх бараа"
+msgstr "Бүх Бараа"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
 msgid "All general settings about this product are managed on"
 msgstr "Барааны ерөнхий мдээллийг удирдахдаа дараах руу ор"
+
+#. module: product
+#: model:ir.model.fields,help:product.field_res_config_settings_group_sale_pricelist
+msgid ""
+"Allows to manage different prices based on rules per category of customers.\n"
+"                Example: 10% for retailers, promotion of 5 EUR on this product, etc."
+msgstr ""
+"Захиалагчийн ангилалын дүрэм дээр суурилан ялгаатай үнүүдийг менежмент хийх боломжийг олгоно.\n"
+"Жишээ: жижиглэн борлуулалтын 10%, энэ бараанд 5еврогийн урамшуулал, гм."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_8
@@ -388,19 +382,19 @@ msgstr "Шинжийн Нэр"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_value_price_extra
 msgid "Attribute Price Extra"
-msgstr "Шинжийн нэмэлт үнэ"
+msgstr "Шинжийн Нэмэлт Үнэ"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_value_price_ids
 msgid "Attribute Prices"
-msgstr "Шинжийн үнүүд"
+msgstr "Шинжийн Үнүүд"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.variants_action
 #: model:ir.model.fields,field_description:product.field_product_attribute_line_value_ids
 #: model:ir.ui.view,arch_db:product.product_attribute_view_form
 msgid "Attribute Values"
-msgstr "Онцлогийн утгууд"
+msgstr "Хувилбарын Утгууд"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.attribute_action
@@ -409,7 +403,12 @@ msgstr "Онцлогийн утгууд"
 #: model:ir.ui.view,arch_db:product.product_template_search_view
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
 msgid "Attributes"
-msgstr "Атрибут"
+msgstr "Хувилбарууд"
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_res_config_settings_group_product_variant
+msgid "Attributes and Variants"
+msgstr "Шинж чанар болон хувилбарууд"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_5b
@@ -424,13 +423,19 @@ msgid ""
 "Auxiliary port lets you connect other audio sources, like an MP3 player"
 msgstr ""
 "Auxiliary (туслах) оролт нь бусад аудио үүсвэртэй (MP3 тоглуулаг гм) холбох "
-"боломжийг олгоно, "
+"боломжийг олгоно"
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_product_packaging_barcode
 #: model:ir.model.fields,field_description:product.field_product_product_barcode
 #: model:ir.model.fields,field_description:product.field_product_template_barcode
 msgid "Barcode"
 msgstr "Зураасан код"
+
+#. module: product
+#: model:ir.model.fields,help:product.field_product_packaging_barcode
+msgid "Barcode used for packaging identification."
+msgstr "Баглаа боодлыг ялгахад ашиглагддаг зураасан код"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_base
@@ -458,19 +463,19 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_base
 msgid "Based on"
-msgstr "Суурь"
+msgstr "Суурилах"
 
 #. module: product
 #: model:product.product,name:product.consu_delivery_03
 #: model:product.template,name:product.consu_delivery_03_product_template
 msgid "Basic Computer"
-msgstr "Жирийн Компьютер"
+msgstr "Энгийн Компьютер"
 
 #. module: product
 #: model:product.product,name:product.membership_2
 #: model:product.template,name:product.membership_2_product_template
 msgid "Basic Membership"
-msgstr "Энгийн гишүүнчлэл"
+msgstr "Энгийн Гишүүнчлэл"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_6
@@ -546,7 +551,7 @@ msgid ""
 msgstr ""
 "Buttons let you quickly play, pause, change songs, or adjust the volume.\n"
 "                                    The smooth anodized aluminum design makes iPod nano feel as good as it sounds.\n"
-"                                    And iPod nano wouldn’t be iPod nano without gorgeous, hard-to-choose-from color.∂"
+"                                    And iPod nano wouldn’t be iPod nano without gorgeous, hard-to-choose-from color."
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.view_product_price_list
@@ -580,14 +585,9 @@ msgstr "Цуцлах"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_uom_category_id
+#: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Category"
 msgstr "Ангилал"
-
-#. module: product
-#: model:ir.model.fields,field_description:product.field_product_category_type
-#: model:ir.ui.view,arch_db:product.product_category_form_view
-msgid "Category Type"
-msgstr "Ангилалын төрөл"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_category_form_view
@@ -595,7 +595,7 @@ msgid "Category name"
 msgstr "Ангиллын нэр"
 
 #. module: product
-#: code:addons/product/models/product_pricelist.py:427
+#: code:addons/product/models/product_pricelist.py:435
 #, python-format
 msgid "Category: %s"
 msgstr "Ангилал:%s"
@@ -620,7 +620,7 @@ msgid ""
 "                                    home base for your speaker, and it lets you play while it charges."
 msgstr ""
 "Charging cradle recharges the battery and serves as a convenient\n"
-"                                    home base for your speaker, and it lets you play while it charges.∂"
+"                                    home base for your speaker, and it lets you play while it charges."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute_create_variant
@@ -630,7 +630,13 @@ msgstr "Энэ шинжид олон хувилбар үүсгэхээр бол 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_child_id
 msgid "Child Categories"
-msgstr "Дэд ангилалууд"
+msgstr "Дэд Ангилалууд"
+
+#. module: product
+#: model:product.product,name:product.product_product_11c
+#: model:product.template,name:product.product_product_11c_product_template
+msgid "Cleaning"
+msgstr "Цэвэрлэгээ"
 
 #. module: product
 #: model:ir.actions.act_window,help:product.product_uom_categ_form_action
@@ -695,6 +701,11 @@ msgstr ""
 "            "
 
 #. module: product
+#: model:ir.ui.view,arch_db:product.res_config_settings_view_form
+msgid "Common Product Catalog"
+msgstr "Нийтлэг Барааны Каталоги"
+
+#. module: product
 #: model:ir.model,name:product.model_res_company
 msgid "Companies"
 msgstr "Компаниуд"
@@ -710,20 +721,21 @@ msgid "Company"
 msgstr "Компани"
 
 #. module: product
-#: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
-msgid "Compute Price"
-msgstr "Үнэ тооцоолох"
+#: model:ir.model.fields,field_description:product.field_product_category_complete_name
+msgid "Complete Name"
+msgstr "Бүтэн Нэр"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_compute_price
-msgid "Compute price"
-msgstr "Үнэ тооцоолох"
+#: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
+msgid "Compute Price"
+msgstr "Үнэ Тооцоолох"
 
 #. module: product
 #: model:product.product,name:product.product_product_16
 #: model:product.template,name:product.product_product_16_product_template
 msgid "Computer Case"
-msgstr "Процессорын хайрцаг"
+msgstr "Процессорын case"
 
 #. module: product
 #: model:product.product,name:product.product_product_3
@@ -732,11 +744,16 @@ msgid "Computer SC234"
 msgstr "Компьютер SC234"
 
 #. module: product
-#: code:addons/product/models/product_template.py:42
+#: code:addons/product/models/product_template.py:50
 #: selection:product.template,type:0
 #, python-format
 msgid "Consumable"
 msgstr "Хангамжийн"
+
+#. module: product
+#: model:ir.model,name:product.model_res_partner
+msgid "Contact"
+msgstr "Холбох хаяг"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_uom_category_id
@@ -748,7 +765,7 @@ msgstr ""
 "байвал л хийгдэнэ. Хөрвүүлэлт нь харьцаан дээр суурилж явагдана."
 
 #. module: product
-#: code:addons/product/models/product_uom.py:89
+#: code:addons/product/models/product_uom.py:98
 #, python-format
 msgid ""
 "Conversion from Product UoM %s to Default UoM %s is not possible as they "
@@ -768,24 +785,24 @@ msgstr "Өртөг"
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_standard_price
 msgid ""
-"Cost of the product template used for standard stock valuation in accounting"
-" and used as a base price on purchase orders. Expressed in the default unit "
-"of measure of the product."
+"Cost used for stock valuation in standard price and as a first price to set "
+"in average/fifo. Also used as a base price for pricelists. Expressed in the "
+"default unit of measure of the product."
 msgstr ""
-"Барааны стандарт үнэлгээнд зориулагдсан барааны үлгэрийн өртөг энэ нь "
-"худалдан авах захиалгын суурь үнэ болж ашиглагдана. Барааны үндсэн хэмжих "
-"нэгжээр илэрхийлэгдсэн."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_template_standard_price
-msgid "Cost of the product, in the default unit of measure of the product."
-msgstr "Барааны үндсэн хэмжих нэгжээрх барааны өртөг."
+msgid ""
+"Cost used for stock valuation in standard price and as a first price to set "
+"in average/fifo. Also used as a base price for pricelists. Expressed in the "
+"default unit of measure of the product. "
+msgstr ""
 
 #. module: product
 #: model:product.product,name:product.service_delivery
 #: model:product.template,name:product.service_delivery_product_template
 msgid "Cost-plus Contract"
-msgstr "Өртөг-нэмэх Гэрэх"
+msgstr "Өртөг-нэмэх Гэрээ"
 
 #. module: product
 #: model:ir.model,name:product.model_res_country_group
@@ -795,12 +812,12 @@ msgstr "Улсын Бүлэг"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_country_group_ids
 msgid "Country Groups"
-msgstr "Улсын Бүлэг"
+msgstr "Улсын Бүлгүүд"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_create_variant
-msgid "Create variant"
-msgstr "Хувилбар үүсгэх"
+msgid "Create Variant"
+msgstr "Хувилбар Үүсгэх"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_create_uid
@@ -852,7 +869,7 @@ msgstr ""
 "Creating such a stunningly thin design took some equally stunning feats of "
 "technological innovation. We refined,re-imagined,or re-engineered everything"
 " about iMac from the inside out. The result is an advanced, elegant all-in-"
-"one computer that’s as much a work of art as it is state of the art.ћ"
+"one computer that’s as much a work of art as it is state of the art."
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_currency_id
@@ -903,6 +920,12 @@ msgid "Day(s)"
 msgstr "Өдөр(үүд)"
 
 #. module: product
+#: code:addons/product/models/res_company.py:59
+#, python-format
+msgid "Default %(currency)s pricelist for %(company)s"
+msgstr ""
+
+#. module: product
 #: model:ir.model.fields,help:product.field_product_product_uom_id
 #: model:ir.model.fields,help:product.field_product_template_uom_id
 msgid "Default Unit of Measure used for all stock operation."
@@ -921,18 +944,18 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_delay
 msgid "Delivery Lead Time"
-msgstr "Хүргэлтийн урьтал хугацаа"
+msgstr "Хүргэлтийн Урьтал Хугацаа"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_description
 #: model:ir.model.fields,field_description:product.field_product_template_description
 msgid "Description"
-msgstr "Тодорхойлолт"
+msgstr "Гүйлгээний утга"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
-msgid "Description for Quotations"
-msgstr "Үнийн саналын тайлбар"
+msgid "Description for Customers"
+msgstr "Захиалагчийн Тайлбар"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -940,13 +963,13 @@ msgstr "Үнийн саналын тайлбар"
 #: model:product.template,website_description:product.product_product_11_product_template
 #: model:product.template,website_description:product.product_product_11b_product_template
 msgid "Design. The thinnest iPod ever."
-msgstr "Зохиомж. хамгийн нимгэн iPod."
+msgstr "Зохиомж. Хамгийн нимгэн iPod."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute_sequence
 #: model:ir.model.fields,help:product.field_product_attribute_value_sequence
 msgid "Determine the display order"
-msgstr "Харуулах эрэмийг тодорхойлно"
+msgstr "Харуулах эрэмбийг тодорхойлно"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_display_name
@@ -977,8 +1000,8 @@ msgstr "Олон тооны"
 #: model:product.product,description_sale:product.consu_delivery_03
 #: model:product.template,description_sale:product.consu_delivery_03_product_template
 msgid ""
-"Dvorak keyboard \n"
-"            left-handed mouse"
+"Dvorak keyboard\n"
+"left-handed mouse"
 msgstr ""
 "Dvorak гар \n"
 "            солгой хулгана"
@@ -1004,7 +1027,7 @@ msgstr "Оновчтой, өндөр чанарын аудио"
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_date_end
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_date_end
 msgid "End Date"
-msgstr "Дуусах огноо"
+msgstr "Дуусах Огноо"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo_date_end
@@ -1017,19 +1040,19 @@ msgid "Ending valid for the pricelist item validation"
 msgstr "Үнийн хүсгнэгтийн шалгах зүйлийн төгсгөлийн шалгалт"
 
 #. module: product
-#: code:addons/product/models/product.py:43
+#: code:addons/product/models/product.py:53
 #, python-format
 msgid "Error ! You cannot create recursive categories."
 msgstr "Алдаа ! Тойрог ангилал үүсгэх боломжгүй."
 
 #. module: product
-#: code:addons/product/models/product_attribute.py:97
+#: code:addons/product/models/product_attribute.py:101
 #, python-format
 msgid "Error ! You cannot use this attribute with the following value."
 msgstr "Алдаа ! Дараах утгатай шинжийг хэрэглэх боломжгүй."
 
 #. module: product
-#: code:addons/product/models/product.py:302
+#: code:addons/product/models/product.py:283
 #, python-format
 msgid ""
 "Error! It is not allowed to choose more than one value for a given "
@@ -1037,14 +1060,14 @@ msgid ""
 msgstr "Алдаа! Өгсөн шинжид нэгээс олон утга сонгох нь зөвшөөрөгдөөгүй."
 
 #. module: product
-#: code:addons/product/models/product_pricelist.py:419
+#: code:addons/product/models/product_pricelist.py:427
 #, python-format
 msgid "Error! The minimum margin should be lower than the maximum margin."
 msgstr ""
 "Алдаа! Хамгийн бага тохируулга нь хамгийн их тохируулгаас бага байх ёстой."
 
 #. module: product
-#: code:addons/product/models/product_pricelist.py:413
+#: code:addons/product/models/product_pricelist.py:421
 #, python-format
 msgid ""
 "Error! You cannot assign the Main Pricelist as Other Pricelist in PriceList "
@@ -1054,7 +1077,7 @@ msgstr ""
 "оноох боломжгүй!"
 
 #. module: product
-#: code:addons/product/models/product_template.py:252
+#: code:addons/product/models/product_template.py:274
 #, python-format
 msgid ""
 "Error: The default Unit of Measure and the purchase Unit of Measure must be "
@@ -1158,12 +1181,12 @@ msgstr "Хурдан холболт. Дэлхий дээрх."
 #. module: product
 #: selection:product.pricelist.item,compute_price:0
 msgid "Fix Price"
-msgstr "Тогтмол үнэ"
+msgstr "Үнэ Засах"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_fixed_price
 msgid "Fixed Price"
-msgstr "Тогтмол үнэ"
+msgstr "Тогтмол Үнэ"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_min_quantity
@@ -1203,18 +1226,23 @@ msgstr ""
 #: model:product.product,website_description:product.product_product_8
 #: model:product.template,website_description:product.product_product_8_product_template
 msgid "Friendly to the environment."
-msgstr "Орчинд ээлтэй."
+msgstr "Байгаль Орчинд ээлтэй."
+
+#. module: product
+#: model:ir.ui.view,arch_db:product.product_template_search_view
+msgid "Future Activities"
+msgstr "Ирээдүйн Үйл ажиллагаанууд"
 
 #. module: product
 #: model:product.product,name:product.product_product_1
 #: model:product.template,name:product.product_product_1_product_template
 msgid "GAP Analysis Service"
-msgstr "GAP шинжилгээний үйлчилгээ"
+msgstr "GAP Шинжилгээний Үйлчилгээ"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "General Information"
-msgstr "Ерөнхий мэдээлэл"
+msgstr "Ерөнхий Мэдээлэл"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -1227,24 +1255,8 @@ msgstr "Genius. Your own personal DJ."
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_packaging_ids
 #: model:ir.model.fields,help:product.field_product_template_packaging_ids
-msgid ""
-"Gives the different ways to package the same product. This has no impact on "
-"the picking order and is mainly used if you use the EDI module."
+msgid "Gives the different ways to package the same product."
 msgstr ""
-"Ижил барааг савлаж боохдоо ялгаатай арга хэрэглэх боломжтой. Энэ нь "
-"түүвэрлэх дараалалд нөлөө байхгүй. Ерөнхийдөө EDI модулийг ашиглах үед "
-"хэрэглэгдэнэ."
-
-#. module: product
-#: model:ir.model.fields,help:product.field_product_pricelist_item_sequence
-msgid ""
-"Gives the order in which the pricelist items will be checked. The evaluation"
-" gives highest priority to lowest sequence and stops as soon as a matching "
-"item is found."
-msgstr ""
-"Үнийн хүснэгтийн зүйлүүдийн шалгагдах эрэмбийг өгнө. Хамгийн бага дарааллын "
-"дугаар нь хамгийн өндөр урьтамжтай бөгөөд нийцэх зүйл олдмогц тооцоолол "
-"зогсоно."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_sequence
@@ -1256,6 +1268,12 @@ msgstr "Барааны жагсаалтыг харуулахад эрэмбэл�
 #: selection:product.pricelist.item,applied_on:0
 msgid "Global"
 msgstr "Глобал"
+
+#. module: product
+#: code:addons/product/models/product_template.py:30
+#, python-format
+msgid "Go to Internal Categories"
+msgstr "Дотоод Ангилал руу очих"
 
 #. module: product
 #: model:product.product,name:product.membership_0
@@ -1314,12 +1332,12 @@ msgstr ""
 #: model:product.product,website_description:product.product_product_8
 #: model:product.template,website_description:product.product_product_8_product_template
 msgid "Highly rated designs."
-msgstr "Highly rated designs."
+msgstr "Өндөр үнэлгээтэй дизайн"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_hour
 msgid "Hour(s)"
-msgstr "Цаг"
+msgstr "Цаг(ууд)"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_8
@@ -1389,6 +1407,14 @@ msgstr ""
 "Хэрэв үүнийг iPad -д зориулсан гэсэн бол iPad мини -д зориулсан гэсэн үг."
 
 #. module: product
+#: model:ir.model.fields,help:product.field_product_supplierinfo_product_id
+msgid ""
+"If not set, the vendor price will apply to all variants of this products."
+msgstr ""
+"Хэрэв тохируулаагүй бол худалдан авалтын үнэ энэ бүтээгдэхүүний бүх "
+"хувилбарт хамаарна."
+
+#. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_active
 msgid ""
 "If unchecked, it will allow you to hide the pricelist without removing it."
@@ -1446,7 +1472,7 @@ msgstr "Тус бүрчлэн амьдрал дээр харагдах боди�
 #. module: product
 #: model:ir.model,name:product.model_product_supplierinfo
 msgid "Information about a product vendor"
-msgstr "Барааны нийлүүлэгчийн тухай мэдээ"
+msgstr "Барааны нийлүүлэгчийн тухай мэдээлэл"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_7
@@ -1468,22 +1494,25 @@ msgstr "Дотоод"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_categ_id
 #: model:ir.model.fields,field_description:product.field_product_template_categ_id
-#: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Internal Category"
 msgstr "Дотоод Ангилал"
 
 #. module: product
-#: model:ir.model.fields,field_description:product.field_product_product_code
 #: model:ir.model.fields,field_description:product.field_product_product_default_code
 #: model:ir.model.fields,field_description:product.field_product_template_default_code
 msgid "Internal Reference"
-msgstr "Дотоод Код"
+msgstr "Дотоод Сурвалж"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_barcode
 #: model:ir.model.fields,help:product.field_product_template_barcode
 msgid "International Article Number used for product identification."
 msgstr "Барааны Олон улсын хувийн дугаар"
+
+#. module: product
+#: model:ir.ui.view,arch_db:product.product_template_form_view
+msgid "Inventory"
+msgstr "Хадгалах"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_7
@@ -1501,13 +1530,13 @@ msgstr "Түлхүүр чадамж"
 #: model:product.product,name:product.product_product_27
 #: model:product.template,name:product.product_product_27_product_template
 msgid "Laptop Customized"
-msgstr "Өөриймшүүлсэн Laptop"
+msgstr "Өөриймшүүлсэн Нөтбүк"
 
 #. module: product
 #: model:product.product,name:product.product_product_25
 #: model:product.template,name:product.product_product_25_product_template
 msgid "Laptop E5023"
-msgstr "Laptop E5023"
+msgstr "Нөтбүк E5023"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute___last_update
@@ -1527,7 +1556,7 @@ msgstr "Laptop E5023"
 #: model:ir.model.fields,field_description:product.field_product_uom_categ___last_update
 #: model:ir.model.fields,field_description:product.field_report_product_report_pricelist___last_update
 msgid "Last Modified on"
-msgstr "Сүүлийн засвар хийсэн огноо"
+msgstr "Сүүлийн зассан хийсэн огноо"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_line_write_uid
@@ -1568,6 +1597,11 @@ msgid "Last Updated on"
 msgstr "Сүүлийн засвар хийсэн огноо"
 
 #. module: product
+#: model:ir.ui.view,arch_db:product.product_template_search_view
+msgid "Late Activities"
+msgstr "Хожимдсон Үйл ажиллагаанууд"
+
+#. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo_delay
 msgid ""
 "Lead time in days between the confirmation of the purchase order and the "
@@ -1596,7 +1630,7 @@ msgstr "Мөрүүд"
 #. module: product
 #: model:product.uom,name:product.product_uom_litre
 msgid "Liter(s)"
-msgstr "Литер"
+msgstr "Литр(үүд)"
 
 #. module: product
 #: model:product.product,name:product.consu_delivery_02
@@ -1605,35 +1639,24 @@ msgid "Little server"
 msgstr "Жижиг сервер"
 
 #. module: product
-#: model:ir.model.fields,field_description:product.field_product_product_packaging_ids
-#: model:ir.model.fields,field_description:product.field_product_template_packaging_ids
-msgid "Logistical Units"
-msgstr "Логистик нэгж"
-
-#. module: product
 #: model:res.groups,name:product.group_uom
 msgid "Manage Multiple Units of Measure"
-msgstr "Олон хэмжих нэгжийг менежмент хийх"
+msgstr "Олон Хэмжих нэгжийг Менежмент хийх"
 
 #. module: product
 #: model:res.groups,name:product.group_pricelist_item
 msgid "Manage Pricelist Items"
-msgstr "Үнийн хүсгэнтийн мөрүүдийг удирдах"
+msgstr "Үнийн хүснэгтийн Мөрүүдийг Удирдах"
 
 #. module: product
 #: model:res.groups,name:product.group_stock_packaging
 msgid "Manage Product Packaging"
-msgstr "Барааны баглааг менежмент хийнэ"
+msgstr "Барааны Баглааг Менежмент хийнэ"
 
 #. module: product
 #: model:res.groups,name:product.group_product_variant
 msgid "Manage Product Variants"
-msgstr "Барааны хувилбарыг удирдах"
-
-#. module: product
-#: model:res.groups,name:product.group_mrp_properties
-msgid "Manage Properties of Product"
-msgstr "Барааны үзүүлэлтүүдийг менежмент хийнэ"
+msgstr "Барааны Хувилбарыг Удирдах"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
@@ -1643,13 +1666,13 @@ msgstr "Үнийн өсөлтийн дээд хэмжээ"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_price_max_margin
 msgid "Max. Price Margin"
-msgstr "Үнийн хэлбэлзэлийн дээд хэмжээ"
+msgstr "Үнийн Хэлбэлзэлийн Дээд хэмжээ"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_image_medium
 #: model:ir.model.fields,field_description:product.field_product_template_image_medium
 msgid "Medium-sized image"
-msgstr "Дунд-хэмжээт зураг"
+msgstr "Дунд-хэмжээтэй зураг"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_template_image_medium
@@ -1670,22 +1693,22 @@ msgstr "Санах ой"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 msgid "Min. Margin"
-msgstr "Үнийн өсөлтийн доод хэмжээ"
+msgstr "Үнийн өсөлтийн Доод хэмжээ"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_price_min_margin
 msgid "Min. Price Margin"
-msgstr "Үнийн хэлбэлзэлийн доод хэмжээ"
+msgstr "Үнийн Хэлбэлзэлийн доод хэмжээ"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_min_quantity
 msgid "Min. Quantity"
-msgstr "Хамгийн бага тоо"
+msgstr "Хамгийн бага Тоо"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_min_qty
 msgid "Minimal Quantity"
-msgstr "Хамгийн бага тоо хэмжээ"
+msgstr "Хамгийн бага Тоо хэмжээ"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_8
@@ -1738,17 +1761,7 @@ msgstr "Нэр"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 msgid "New Price ="
-msgstr "Шинэ үнэ ="
-
-#. module: product
-#: selection:base.config.settings,group_product_variant:0
-msgid "No variants on products"
-msgstr "Бараан дээр хувилбар байхгүй"
-
-#. module: product
-#: selection:product.category,type:0
-msgid "Normal"
-msgstr "Хэвийн"
+msgstr "Шинэ Үнэ ="
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
@@ -1764,7 +1777,7 @@ msgstr "Бусад мэдээлэл"
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_base_pricelist_id
 #: selection:product.pricelist.item,base:0
 msgid "Other Pricelist"
-msgstr "Бусад үнийн хүснэгт"
+msgstr "Бусад Үнийн хүснэгт"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_6
@@ -1773,31 +1786,27 @@ msgid "Over 375,000 apps."
 msgstr "375,000 -аас олон апп-ууд."
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_product_packaging_name
+msgid "Package Type"
+msgstr "Баглааны Төрөл"
+
+#. module: product
 #: model:ir.model,name:product.model_product_packaging
-#: model:ir.ui.view,arch_db:product.product_packaging_form_view
-#: model:ir.ui.view,arch_db:product.product_packaging_tree_view
+#: model:ir.ui.view,arch_db:product.product_template_form_view
+#: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
 msgid "Packaging"
 msgstr "Баглаа"
 
 #. module: product
-#: model:ir.model.fields,field_description:product.field_product_packaging_name
-msgid "Packaging Type"
-msgstr "Баглааны төрөл"
-
-#. module: product
-#: model:ir.actions.act_window,name:product.action_packaging_view
-msgid "Packagings"
-msgstr "Баглалт"
-
-#. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_parent_id
 msgid "Parent Category"
-msgstr "Дээд ангилал"
+msgstr "Эцэг Ангилал"
 
 #. module: product
-#: model:ir.model,name:product.model_res_partner
-msgid "Partner"
-msgstr "Харилцагч"
+#: model:product.product,name:product.product_product_5c
+#: model:product.template,name:product.product_product_5c_product_template
+msgid "Parts Replacement"
+msgstr "Эд анги солих"
 
 #. module: product
 #: selection:product.pricelist.item,compute_price:0
@@ -1861,17 +1870,17 @@ msgstr "Үнэ"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 msgid "Price Computation"
-msgstr "Үнэ тооцоолол"
+msgstr "Үнэ Тооцоолол"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_price_discount
 msgid "Price Discount"
-msgstr "Үнийн хөнгөлөлт"
+msgstr "Үнийн Хөнгөлөлт"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_price_price_extra
 msgid "Price Extra"
-msgstr "Нэмэлт үнэ"
+msgstr "Нэмэлт Үнэ"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute_value_price_extra
@@ -1894,7 +1903,7 @@ msgstr "Үнийн хүснэгт"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_price_round
 msgid "Price Rounding"
-msgstr "Үнэ тоймлолт"
+msgstr "Үнэ Тоймлолт"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_price_surcharge
@@ -1913,7 +1922,7 @@ msgid "PriceList"
 msgstr "Үнийн хүснэгт"
 
 #. module: product
-#: model:ir.actions.report.xml,name:product.action_report_pricelist
+#: model:ir.actions.report,name:product.action_report_pricelist
 #: model:ir.model,name:product.model_product_pricelist
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_pricelist_id
 #: model:ir.model.fields,field_description:product.field_product_product_pricelist_id
@@ -1921,6 +1930,11 @@ msgstr "Үнийн хүснэгт"
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Pricelist"
 msgstr "Үнийн хүснэгт"
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_product_product_pricelist_item_ids
+msgid "Pricelist Item"
+msgstr "Үнийн хүснэгтийн Мөр"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_applied_on
@@ -1937,22 +1951,17 @@ msgstr "Сонгосон сонголт дээр хэрэглэж болох ү�
 #: model:ir.ui.view,arch_db:product.product_pricelist_view
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Pricelist Items"
-msgstr "Үнийн хүснэгтийн мөр"
+msgstr "Үнийн хүснэгтийн Мөр"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_name
 msgid "Pricelist Name"
-msgstr "Үнийн хүснэгтийн нэр"
+msgstr "Үнийн хүснэгтийн Нэр"
 
 #. module: product
 #: model:ir.model,name:product.model_product_pricelist_item
 msgid "Pricelist item"
 msgstr "Үнийн дүрэм"
-
-#. module: product
-#: model:ir.model.fields,field_description:product.field_product_product_pricelist_item_ids
-msgid "Pricelist item ids"
-msgstr "Үнийн хүснэгтийн мөрийн ids"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_pricelist_action2
@@ -1963,7 +1972,7 @@ msgstr "Үнийн хүснэгт"
 #. module: product
 #: model:res.groups,name:product.group_product_pricelist
 msgid "Pricelists On Product"
-msgstr "Бараан дээрх үнийн хүснэгтүүд"
+msgstr "Бараан дээрх Үнийн хүснэгтүүд"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.view_partner_property_form
@@ -1989,7 +1998,7 @@ msgstr "Processor Core i5 2.70 Ghz"
 
 #. module: product
 #: model:ir.model,name:product.model_product_product
-#: model:ir.model.fields,field_description:product.field_product_packaging_product_tmpl_id
+#: model:ir.model.fields,field_description:product.field_product_packaging_product_id
 #: model:ir.model.fields,field_description:product.field_product_price_history_product_id
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_product_id
 #: model:ir.model.fields,field_description:product.field_product_product_product_variant_id
@@ -2026,26 +2035,40 @@ msgstr "Барааны онцлог ба утга"
 #: model:ir.model.fields,field_description:product.field_product_product_attribute_line_ids
 #: model:ir.model.fields,field_description:product.field_product_template_attribute_line_ids
 msgid "Product Attributes"
-msgstr "Барааны онцлогууд"
+msgstr "Барааны Шинж чанарууд"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_category_action_form
 #: model:ir.ui.view,arch_db:product.product_category_list_view
 #: model:ir.ui.view,arch_db:product.product_category_search_view
 msgid "Product Categories"
-msgstr "Барааны ангилал"
+msgstr "Барааны Ангилал"
 
 #. module: product
 #: model:ir.model,name:product.model_product_category
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_categ_id
 msgid "Product Category"
-msgstr "Барааны ангилал"
+msgstr "Барааны Ангилал"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
 msgid "Product Name"
-msgstr "Барааны нэр"
+msgstr "Барааны Нэр"
+
+#. module: product
+#: model:ir.actions.act_window,name:product.action_packaging_view
+#: model:ir.model.fields,field_description:product.field_product_product_packaging_ids
+#: model:ir.model.fields,field_description:product.field_product_template_packaging_ids
+#: model:ir.model.fields,field_description:product.field_res_config_settings_group_stock_packaging
+#: model:ir.ui.view,arch_db:product.product_packaging_tree_view
+msgid "Product Packages"
+msgstr "Барааны Баглаа"
+
+#. module: product
+#: model:ir.ui.view,arch_db:product.product_packaging_form_view
+msgid "Product Packaging"
+msgstr "Барааны Баглаа"
 
 #. module: product
 #: model:ir.model,name:product.model_product_template
@@ -2056,18 +2079,18 @@ msgstr "Барааны нэр"
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_product_tmpl_id
 #: model:ir.ui.view,arch_db:product.product_search_form_view
 msgid "Product Template"
-msgstr "Барааны үлгэр"
+msgstr "Бараа"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_type
 #: model:ir.model.fields,field_description:product.field_product_template_type
 msgid "Product Type"
-msgstr "Барааны төрөл"
+msgstr "Барааны Төрөл"
 
 #. module: product
 #: model:ir.model,name:product.model_product_uom
 msgid "Product Unit of Measure"
-msgstr "Барааны хэмжих нэгж"
+msgstr "Барааны Хэмжих нэгж"
 
 #. module: product
 #: model:ir.model,name:product.model_product_uom_categ
@@ -2080,13 +2103,12 @@ msgstr "Барааны Хэм.Нэгж Ангилал"
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 #: selection:product.pricelist.item,applied_on:0
 msgid "Product Variant"
-msgstr "Барааны хувилбар"
+msgstr "Барааны Хувилбар"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_normal_action
 #: model:ir.actions.act_window,name:product.product_normal_action_sell
 #: model:ir.actions.act_window,name:product.product_variant_action
-#: model:ir.model.fields,field_description:product.field_base_config_settings_group_product_variant
 #: model:ir.ui.view,arch_db:product.product_product_tree_view
 msgid "Product Variants"
 msgstr "Барааны Хувилбар"
@@ -2101,10 +2123,10 @@ msgid "Products"
 msgstr "Бараанууд"
 
 #. module: product
-#: model:ir.actions.report.xml,name:product.report_product_label
-#: model:ir.actions.report.xml,name:product.report_product_template_label
+#: model:ir.actions.report,name:product.report_product_label
+#: model:ir.actions.report,name:product.report_product_template_label
 msgid "Products Labels"
-msgstr "Барааны шошго"
+msgstr "Барааны Шошго"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_view_search
@@ -2115,44 +2137,35 @@ msgstr "Барааны Үнэ"
 #: model:ir.ui.view,arch_db:product.product_pricelist_view
 #: model:ir.ui.view,arch_db:product.product_pricelist_view_tree
 msgid "Products Price List"
-msgstr "Барааны үнийн хүснэгт"
+msgstr "Барааны Үнийн Хүснэгт"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_view_search
 msgid "Products Price Search"
-msgstr "Барааны үнэ хайх"
+msgstr "Барааны Үнэ Хайх"
 
 #. module: product
-#: selection:base.config.settings,group_product_variant:0
-msgid ""
-"Products can have several attributes, defining variants (Example: size, "
-"color,...)"
-msgstr ""
-"Бараа нь хувилбар тодорхойлох хэд хэдэн шинж тэмдэгтэй байж болно (Жишээ нь:"
-" хэмжээ, өнгө,...)"
-
-#. module: product
-#: model:ir.ui.view,arch_db:product.product_template_search_view
-msgid "Products your store in the inventory"
-msgstr "Агуулахдаа хадгалах бараанууд"
-
-#. module: product
-#: code:addons/product/models/product.py:466
+#: code:addons/product/models/product.py:448
 #, python-format
 msgid "Products: "
-msgstr "Бараанууд "
+msgstr "Бараа:"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_template_lst_price
 #: selection:product.pricelist.item,base:0
 msgid "Public Price"
-msgstr "Борлуулах үнэ"
+msgstr "Борлуулах Үнэ"
+
+#. module: product
+#: model:product.pricelist,name:product.list0
+msgid "Public Pricelist"
+msgstr "Нийтийн үнийн жагсаалт"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_description_purchase
 #: model:ir.model.fields,field_description:product.field_product_template_description_purchase
 msgid "Purchase Description"
-msgstr "Худалдан авалтын тайлбар, тэмдэглэл"
+msgstr "Худалдан авалтын Тэмдэглэл"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_uom_po_id
@@ -2202,6 +2215,11 @@ msgid "Ratio"
 msgstr "Харьцаа"
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_product_product_code
+msgid "Reference"
+msgstr "Дугаар"
+
+#. module: product
 #: selection:product.uom,uom_type:0
 msgid "Reference Unit of Measure for this category"
 msgstr "Ангилалын сурвалж хэмжих нэгж"
@@ -2211,6 +2229,12 @@ msgstr "Ангилалын сурвалж хэмжих нэгж"
 #: model:product.template,website_description:product.product_product_5b_product_template
 msgid "Remote control for power, volume, track seek"
 msgstr "Асааж, унтраах, дууны хүчийг тохируулах, дууг хайх алсын удирдлага"
+
+#. module: product
+#: model:product.product,name:product.product_product_6c
+#: model:product.template,name:product.product_product_6c_product_template
+msgid "Repair"
+msgstr "Засвар"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_parent_right
@@ -2270,31 +2294,29 @@ msgstr ""
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 msgid "Rounding Method"
-msgstr "Тоймлох арга"
+msgstr "Тоймлох Арга"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_uom_rounding
 msgid "Rounding Precision"
-msgstr "Тоймлох нарийвчлал"
+msgstr "Тоймлох Нарийвчлал"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_description_sale
 #: model:ir.model.fields,field_description:product.field_product_template_description_sale
 msgid "Sale Description"
-msgstr "Борлуулалтын тайлбар, тэмдэглэл"
+msgstr "Борлуулалтын Тэмдэглэл"
 
 #. module: product
-#: model:ir.model.fields,field_description:product.field_product_product_list_price
 #: model:ir.model.fields,field_description:product.field_product_product_lst_price
-#: model:ir.model.fields,field_description:product.field_product_template_list_price
 msgid "Sale Price"
-msgstr "Зарах үнэ"
+msgstr "Зарах Үнэ"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_res_partner_property_product_pricelist
 #: model:ir.model.fields,field_description:product.field_res_users_property_product_pricelist
 msgid "Sale Pricelist"
-msgstr "Борлуулалтын үнийн хүснэгт"
+msgstr "Борлуулалтын Үнийн хүснэгт"
 
 #. module: product
 #: model:product.category,name:product.product_category_1
@@ -2307,9 +2329,15 @@ msgid "Sales"
 msgstr "Борлуулалт"
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_product_product_list_price
+#: model:ir.model.fields,field_description:product.field_product_template_list_price
+msgid "Sales Price"
+msgstr "Борлуулах Үнэ"
+
+#. module: product
 #: model:res.groups,name:product.group_sale_pricelist
 msgid "Sales Pricelists"
-msgstr "Борлуулалтын үнийн хүснэгт"
+msgstr "Борлуулалтын Үнийн хүснэгт"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -2342,7 +2370,6 @@ msgstr "Тухайн барааны ангилалыг сонго"
 #: model:ir.model.fields,field_description:product.field_product_attribute_sequence
 #: model:ir.model.fields,field_description:product.field_product_attribute_value_sequence
 #: model:ir.model.fields,field_description:product.field_product_packaging_sequence
-#: model:ir.model.fields,field_description:product.field_product_pricelist_item_sequence
 #: model:ir.model.fields,field_description:product.field_product_pricelist_sequence
 #: model:ir.model.fields,field_description:product.field_product_product_sequence
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_sequence
@@ -2357,7 +2384,7 @@ msgid "Server"
 msgstr "Сервер"
 
 #. module: product
-#: code:addons/product/models/product_template.py:43
+#: code:addons/product/models/product_template.py:51
 #: selection:product.template,type:0
 #, python-format
 msgid "Service"
@@ -2381,12 +2408,12 @@ msgstr ""
 "9.99 үнийг гаргаж авахын тулд тоймлолт нь 10, нэмэлт нь -0.01 байна."
 
 #. module: product
-#: model:ir.model.fields,field_description:product.field_base_config_settings_company_share_product
+#: model:ir.model.fields,field_description:product.field_res_config_settings_company_share_product
 msgid "Share product to all companies"
 msgstr "Барааг бүх компаниудад хуваалцах"
 
 #. module: product
-#: model:ir.model.fields,help:product.field_base_config_settings_company_share_product
+#: model:ir.model.fields,help:product.field_res_config_settings_company_share_product
 msgid ""
 "Share your product to all companies defined in your instance.\n"
 " * Checked : Product are visible for every company, even if a company is defined on the partner.\n"
@@ -2397,10 +2424,25 @@ msgstr ""
 " * Сонгоогүй : Компаниуд нь зөвхөн өөрийн (компани дотор тодорхойлогдсон бараа) барааг л харна. Харин компанитай холбогдоогүй бараа нь бүх компанид харагдана "
 
 #. module: product
+#: model:ir.ui.view,arch_db:product.product_template_search_view
+msgid "Show all records which has next action date is before today"
+msgstr "Өнөөдрөөс өмнө дараагийн арга хэмжээг товлосон бүх рекордыг харуулах"
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_res_config_settings_group_product_pricelist
+msgid "Show pricelists On Products"
+msgstr "Бараа дээр үнийн хүснэгт харуулах"
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_res_config_settings_group_pricelist_item
+msgid "Show pricelists to customers"
+msgstr "Үнийн хүснэгтийг захиалагчидад харуулах"
+
+#. module: product
 #: model:product.product,name:product.membership_1
 #: model:product.template,name:product.membership_1_product_template
 msgid "Silver Membership"
-msgstr "Мөнгөн гишүүнчлэл"
+msgstr "Мөнгөн Гишүүнчлэл"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_5b
@@ -2501,7 +2543,7 @@ msgstr "Суурь үнээс дээш тохируулах хамгийн ба�
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_date_start
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_date_start
 msgid "Start Date"
-msgstr "Эхлэл огноо"
+msgstr "Эхлэх Огноо"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo_date_start
@@ -2625,8 +2667,7 @@ msgstr ""
 "хуваагдах нэгжид хэрэглэнэ. Жишээлбэл ширхэг."
 
 #. module: product
-#: code:addons/product/models/product_uom.py:43 sql_constraint:product.uom:0
-#, python-format
+#: sql_constraint:product.uom:0
 msgid "The conversion ratio for a unit of measure cannot be 0!"
 msgstr "Хэмжих нэгжийн хөрвүүлэлтийн коэффицент 0 байж болохгүй!"
 
@@ -2734,8 +2775,7 @@ msgstr ""
 "сонсож болно."
 
 #. module: product
-#: code:addons/product/models/product_uom.py:44 sql_constraint:product.uom:0
-#, python-format
+#: sql_constraint:product.uom:0
 msgid "The rounding precision must be greater than 0!"
 msgstr "Бүхэлчлэх нарийвчлал нь 0-с их байх ёстой!"
 
@@ -2858,8 +2898,8 @@ msgstr "Энэ нь бүх шинж чанаруудын нэмэлт үнийн
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
-msgid "This note will be displayed on the quotations."
-msgstr "Энэ тэмдэглэл нь үнийн санал дээр харагдана."
+msgid "This note will show up on sales orders."
+msgstr "Энэ тэмдэглэл нь  борлуулалтын захиалга дээр харагдана."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_res_partner_property_product_pricelist
@@ -2890,6 +2930,11 @@ msgstr ""
 "Хоосон орхивол дотоод нэрлэлтийг хэрэглэнэ."
 
 #. module: product
+#: model:ir.ui.view,arch_db:product.product_template_search_view
+msgid "Today Activities"
+msgstr "Өнөөдрийн ажилбарууд"
+
+#. module: product
 #: model:product.product,website_description:product.product_product_7
 #: model:product.template,website_description:product.product_product_7_product_template
 msgid "Two is better than one."
@@ -2909,11 +2954,6 @@ msgid ""
 msgstr ""
 "Bluetooth -ээр холбогдсон үед USB оролт нь програм шинэчлэл хийх боломжийг "
 "олгодог."
-
-#. module: product
-#: model:product.pricelist,name:product.list0
-msgid "USD"
-msgstr "USD"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_6
@@ -2950,15 +2990,16 @@ msgstr "Хэмжих нэгж"
 #. module: product
 #: model:ir.actions.act_window,name:product.product_uom_categ_form_action
 msgid "Unit of Measure Categories"
-msgstr "Хэмжих Нэгжийн Ангилалууд"
+msgstr "Хэмжих нэгжийн Ангилалууд"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_unit
 msgid "Unit(s)"
-msgstr "Нэгж"
+msgstr "Ширхэг(үүд)"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_uom_form_action
+#: model:ir.model.fields,field_description:product.field_res_config_settings_group_uom
 #: model:ir.ui.view,arch_db:product.product_uom_form_view
 #: model:ir.ui.view,arch_db:product.product_uom_tree_view
 msgid "Units of Measure"
@@ -3009,6 +3050,11 @@ msgstr ""
 "Хуучны сайн мэдэх дуугаа сонссон ч анх удаагаа сонсож байгаа мэт санагдана."
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_res_config_settings_group_sale_pricelist
+msgid "Use pricelists to adapt your price per customers"
+msgstr "Үнийн хүснэгтийг ашиглан захиалгчидаар үнийг тохируулж болно"
+
+#. module: product
 #: model:ir.ui.view,arch_db:product.product_supplierinfo_form_view
 msgid "Validity"
 msgstr "Хүчинтэй хугацаа"
@@ -3026,9 +3072,14 @@ msgid "Values"
 msgstr "Утга"
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_product_supplierinfo_product_variant_count
+msgid "Variant Count"
+msgstr "Хувилбарын Тоо"
+
+#. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_image_variant
 msgid "Variant Image"
-msgstr "Хувилбарын зураг"
+msgstr "Хувилбарын Зураг"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
@@ -3043,7 +3094,13 @@ msgstr "Хувилбарын Нэмэлт Үнэ"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Variant Prices"
-msgstr "Хувилбарын үнэнүүд"
+msgstr "Хувилбарын Үнэ"
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_product_product_variant_seller_ids
+#: model:ir.model.fields,field_description:product.field_product_template_variant_seller_ids
+msgid "Variant Seller"
+msgstr "Хувилбарын Борлуулагч"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_attribute_value_action
@@ -3075,7 +3132,7 @@ msgstr "Нийлүүлэгчийн Мэдээлэл"
 #. module: product
 #: model:ir.actions.act_window,name:product.product_supplierinfo_type_action
 msgid "Vendor Pricelists"
-msgstr "Нийлүүлэгчийн үнийн хүснэгт"
+msgstr "Нийлүүлэгчийн Үнийн хүснэгт"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_product_code
@@ -3104,11 +3161,6 @@ msgid "Vendors"
 msgstr "Нийлүүлэгчид"
 
 #. module: product
-#: selection:product.category,type:0
-msgid "View"
-msgstr "Дэлгэц"
-
-#. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_volume
 #: model:ir.model.fields,field_description:product.field_product_template_volume
 #: model:product.uom.categ,name:product.product_uom_categ_vol
@@ -3130,12 +3182,6 @@ msgstr ""
 "Хананы залгуурыг оролт руу эсвэл шууд чанга яригч руу залгах боломжтой"
 
 #. module: product
-#: model:ir.model.fields,field_description:product.field_product_product_warranty
-#: model:ir.model.fields,field_description:product.field_product_template_warranty
-msgid "Warranty"
-msgstr "Баталгаа"
-
-#. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_weight
 #: model:ir.model.fields,field_description:product.field_product_template_weight
 #: model:product.uom.categ,name:product.product_uom_categ_kgm
@@ -3154,15 +3200,6 @@ msgstr "Жин"
 #: model:product.template,website_description:product.product_product_11b_product_template
 msgid "When one playlist isn’t enough."
 msgstr "Ганц дууны жагсаалт хангалтгүй үед."
-
-#. module: product
-#: model:ir.model.fields,help:product.field_product_supplierinfo_product_id
-msgid ""
-"When this field is filled in, the vendor data will only apply to the "
-"variant."
-msgstr ""
-"Хэрэв энэ талбар бөглөгдсөн бол нийлүүлэгчийн өгөгдөл зөвхөн хувилбар дээр "
-"хэрэглэгдэнэ."
 
 #. module: product
 #: model:product.attribute.value,name:product.product_attribute_value_3
@@ -3204,18 +3241,9 @@ msgstr ""
 "татаж, видео ба вэб үзэх боломжтой."
 
 #. module: product
-#: model:ir.model.fields,help:product.field_base_config_settings_group_product_variant
-msgid ""
-"Work with product variant allows you to define some variant of the same "
-"products, an ease the product management in the ecommerce for example"
-msgstr ""
-"Барааны хувилбартай ажиллах нь ижил барааны зарим хувилбарыг тодорхойлох "
-"замаар цахим худалдаа зэрэгт барааны удирдлагыг хөнгөвчлөх бололцоо өгдөг"
-
-#. module: product
 #: model:product.uom.categ,name:product.uom_categ_wtime
 msgid "Working Time"
-msgstr "Ажлын цаг"
+msgstr "Ажлын Цаг"
 
 #. module: product
 #: code:addons/product/models/decimal_precision.py:16
@@ -3226,6 +3254,18 @@ msgid ""
 msgstr ""
 "Та \"Данс\"-ны нарийвчлалын оронг компанийн үндсэн валютын нарийвчлалын "
 "оронгоос ихээр тааруулж чадахгүй"
+
+#. module: product
+#: code:addons/product/wizard/product_price_list.py:26
+#, python-format
+msgid "You have to set a logo or a layout for your company."
+msgstr "Та компанидаа зориулж лого буюу зураглал хийх хэрэгтэй."
+
+#. module: product
+#: code:addons/product/wizard/product_price_list.py:28
+#, python-format
+msgid "You have to set your reports's header and footer layout."
+msgstr "Та тайлангийн толгой ба хажуугийн байршлыг тохируулах ёстой."
 
 #. module: product
 #: model:ir.actions.act_window,help:product.product_uom_form_action
@@ -3258,6 +3298,16 @@ msgstr ""
 "борлуулдаг бүх зүйлдээ бараанууд тодорхойлох ёстой."
 
 #. module: product
+#: code:addons/product/models/product_template.py:29
+#, python-format
+msgid ""
+"You must define at least one product category in order to be able to create "
+"products."
+msgstr ""
+"Шинэ туршилт үүсгэхийн тулд энэ хуудаст ядаж нэг барааны ангилалтай байх "
+"ёстой."
+
+#. module: product
 #: model:product.product,website_description:product.product_product_11
 #: model:product.product,website_description:product.product_product_11b
 #: model:product.template,website_description:product.product_product_11_product_template
@@ -3282,11 +3332,6 @@ msgid "Zed+ Antivirus"
 msgstr "Zed+ Antivirus"
 
 #. module: product
-#: model:ir.model,name:product.model_base_config_settings
-msgid "base.config.settings"
-msgstr "base.config.settings"
-
-#. module: product
 #: model:product.uom,name:product.product_uom_cm
 msgid "cm"
 msgstr "см"
@@ -3299,7 +3344,7 @@ msgstr "өдөр"
 #. module: product
 #: model:ir.model,name:product.model_decimal_precision
 msgid "decimal.precision"
-msgstr "decimal.precision"
+msgstr "бутархайн нарийвчлал"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_category_form_view
@@ -3308,13 +3353,13 @@ msgstr "ж.нь. Чийдэнгүүд"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
-msgid "e.g. Odoo Enterprise Susbcription"
-msgstr "ж.нь. Odoo Байгууллага Захиалга"
+msgid "e.g. Odoo Enterprise Subscription"
+msgstr "ж.нь. Odoo Байгууллага Захиалга"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_view
 msgid "e.g. USD Retailers"
-msgstr "ж.нь. USD Жижиглэн борлуулагчууд"
+msgstr "ж.нь. USD Жижиглэн борлуулагчууд"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_uom_form_view
@@ -3391,7 +3436,7 @@ msgstr ""
 #. module: product
 #: model:product.uom,name:product.product_uom_inch
 msgid "inch(es)"
-msgstr "инч"
+msgstr "инч(үүд)"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_kgm
@@ -3421,22 +3466,22 @@ msgstr "оз(ууд)"
 #. module: product
 #: model:ir.model,name:product.model_product_attribute_line
 msgid "product.attribute.line"
-msgstr "product.attribute.line"
+msgstr "барааны хувилбарын мөр"
 
 #. module: product
 #: model:ir.model,name:product.model_product_attribute_price
 msgid "product.attribute.price"
-msgstr "product.attribute.price"
+msgstr "барааны хувилбарын үнэ"
 
 #. module: product
 #: model:ir.model,name:product.model_product_attribute_value
 msgid "product.attribute.value"
-msgstr "product.attribute.value"
+msgstr "барааны хувилбарын утга"
 
 #. module: product
 #: model:ir.model,name:product.model_product_price_history
 msgid "product.price.history"
-msgstr "product.price.history"
+msgstr "барааны үнийн түүх"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_qt
@@ -3446,27 +3491,24 @@ msgstr "qt"
 #. module: product
 #: model:product.product,description_sale:product.consu_delivery_02
 #: model:product.template,description_sale:product.consu_delivery_02_product_template
-msgid ""
-"raid 1 \n"
-"            512ECC ram"
-msgstr ""
-"raid 1 \n"
-"            512ECC ram"
+msgid "raid 1, 512ECC ram"
+msgstr "raid 1, 512ECC ram"
 
 #. module: product
 #: model:product.product,description_sale:product.consu_delivery_01
 #: model:product.template,description_sale:product.consu_delivery_01_product_template
-msgid ""
-"raid 10 \n"
-"            2048ECC ram"
-msgstr ""
-"raid 10 \n"
-"            2048ECC ram"
+msgid "raid 10, 2048ECC ram"
+msgstr "raid 10, 2048ECC ram"
 
 #. module: product
 #: model:ir.model,name:product.model_report_product_report_pricelist
 msgid "report.product.report_pricelist"
 msgstr "report.product.report_pricelist"
+
+#. module: product
+#: model:ir.model,name:product.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.view_partner_property_form
@@ -3481,4 +3523,4 @@ msgstr "барааны үлгэр"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_supplierinfo_form_view
 msgid "to"
-msgstr "дараах руу"
+msgstr "-"

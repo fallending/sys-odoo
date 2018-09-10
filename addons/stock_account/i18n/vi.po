@@ -3,20 +3,18 @@
 # * stock_account
 # 
 # Translators:
-# fanha99 <fanha99@hotmail.com>, 2016
-# Martin Trigaux, 2016
-# Hoang Loc Le Huu <loclhh@gmail.com>, 2016
-# son dang <son.dang@doda100.com>, 2016
-# Phạm Lân <phamquanglan@gmail.com>, 2016
-# thanh nguyen <thanhnguyen.icsc@gmail.com>, 2017
-# Duy BQ <duybq86@gmail.com>, 2018
+# fanha99 <fanha99@hotmail.com>, 2017
+# Duy BQ <duybq86@gmail.com>, 2017
+# Martin Trigaux, 2017
+# son dang <son.dang@doda100.com>, 2017
+# Phạm Lân <phamquanglan@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 13:27+0000\n"
-"PO-Revision-Date: 2017-06-23 13:27+0000\n"
-"Last-Translator: Duy BQ <duybq86@gmail.com>, 2018\n"
+"POT-Creation-Date: 2017-11-30 13:11+0000\n"
+"PO-Revision-Date: 2017-11-30 13:11+0000\n"
+"Last-Translator: Phạm Lân <phamquanglan@gmail.com>, 2017\n"
 "Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,9 +23,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_tree
-msgid "# of Products"
-msgstr ""
+#: model:ir.model,name:stock_account.model_account_move
+msgid "Account Entry"
+msgstr "Bút toán kế toán"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move_account_move_ids
+msgid "Account Move"
+msgstr "Bút toán Kế toán"
 
 #. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.view_category_property_form
@@ -35,30 +38,43 @@ msgid "Account Stock Properties"
 msgstr "Thuộc tính tài khoản kho"
 
 #. module: stock_account
+#: model:ir.ui.view,arch_db:stock_account.view_move_form_inherit
+msgid "Accounting Entries"
+msgstr "Bút toán Kế toán"
+
+#. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.view_location_form_inherit
 msgid "Accounting Information"
 msgstr "Thông tin kế toán"
 
 #. module: stock_account
-#: model:ir.model.fields,help:stock_account.field_stock_config_settings_group_stock_inventory_valuation
+#: model:ir.model.fields,help:stock_account.field_res_config_settings_module_stock_landed_costs
+#: model:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
 msgid ""
-"Allows to configure inventory valuations on products and product categories."
-msgstr "Cho phép cấu hình định giá tồn kho trên sản phẩm và nhóm sản phẩm."
+"Affect landed costs on receipt operations and split them among products to "
+"update their cost price."
+msgstr ""
+"Ảnh hưởng đến chi phí đã bốc dỡ trên các hoạt động nhận và phân chia chúng "
+"giữa các sản phẩm để cập nhật giá thành của chúng."
+
+#. module: stock_account
+#: selection:product.category,property_valuation:0
+msgid "Automated"
+msgstr "Tự động"
 
 #. module: stock_account
 #: selection:product.category,property_cost_method:0
 #: selection:product.template,property_cost_method:0
-msgid "Average Price"
-msgstr "Giá TB"
+msgid "Average Cost (AVCO)"
+msgstr "Giá Trung bình (AVCO)"
 
 #. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.view_change_standard_price
-#: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
 msgid "Cancel"
 msgstr "Hủy"
 
 #. module: stock_account
-#: code:addons/stock_account/models/stock.py:244
+#: code:addons/stock_account/models/stock.py:452
 #, python-format
 msgid ""
 "Cannot find a stock input account for the product %s. You must define one on"
@@ -69,7 +85,7 @@ msgstr ""
 "khi xử lý hoạt động này."
 
 #. module: stock_account
-#: code:addons/stock_account/models/stock.py:246
+#: code:addons/stock_account/models/stock.py:454
 #, python-format
 msgid ""
 "Cannot find a stock output account for the product %s. You must define one "
@@ -93,9 +109,14 @@ msgid "Change Standard Price"
 msgstr "Thay đổi giá tiêu chuẩn"
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
-msgid "Choose a date in the past to get the inventory at that date."
+#: code:addons/stock_account/models/product.py:243
+#, python-format
+msgid ""
+"Changing your cost method is an important change that will impact your "
+"inventory valuation. Are you sure you want to make that change?"
 msgstr ""
+"Thay đổi phương thức giá vốn là một thay đổi quan trọng mà sẽ ảnh hưởng đến "
+"giá trị tồn kho. Bạn có chắc chắn bạn muốn có sự thay đổi này?"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_stock_inventory_accounting_date
@@ -107,18 +128,12 @@ msgstr ""
 "kiểm kho, thay vì ngày mặc định (ngày kết thúc kiểm kho)"
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
-msgid "Choose your date"
-msgstr "Chọn ngày tháng"
+#: model:ir.actions.act_window,help:stock_account.stock_move_valuation_action
+msgid "Click to create a stock movement."
+msgstr "Bấm để tạo mới một dịch chuyển kho"
 
 #. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_company_id
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
-msgid "Company"
-msgstr "Công ty"
-
-#. module: stock_account
-#: code:addons/stock_account/models/stock.py:338
+#: code:addons/stock_account/models/stock.py:523
 #, python-format
 msgid ""
 "Configuration error. Please configure the price difference account on the "
@@ -130,13 +145,18 @@ msgstr ""
 #. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.view_change_standard_price
 msgid "Cost"
-msgstr "Chi phí"
+msgstr "Giá vốn"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_product_cost_method
 #: model:ir.model.fields,field_description:stock_account.field_product_template_cost_method
-msgid "Cost method"
-msgstr "Phương pháp tính giá vốn"
+msgid "Cost Method"
+msgstr "Phương pháp Giá vốn"
+
+#. module: stock_account
+#: model:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+msgid "Costing"
+msgstr "Giá vốn"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category_property_cost_method
@@ -151,28 +171,30 @@ msgid "Counter-Part Account"
 msgstr "Tài khoản đối ứng"
 
 #. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_counterpart_account_id_required
+msgid "Counter-Part Account Required"
+msgstr "Yêu cầu phải có Tài khoản Đối ứng"
+
+#. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_create_uid
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_create_uid
 msgid "Created by"
 msgstr "Được tạo bởi"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_create_date
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_create_date
 msgid "Created on"
-msgstr "Thời điểm tạo"
-
-#. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_date
-msgid "Date"
-msgstr "Ngày tháng"
+msgstr "Được tạo vào"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_display_name
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_display_name
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_display_name
 msgid "Display Name"
 msgstr "Tên hiển thị"
+
+#. module: stock_account
+#: selection:product.category,property_cost_method:0
+#: selection:product.template,property_cost_method:0
+msgid "First In First Out (FIFO)"
+msgstr "Nhập trước Xuất trước (FIFO)"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_inventory_accounting_date
@@ -180,14 +202,7 @@ msgid "Force Accounting Date"
 msgstr "Cưỡng bức Ngày Kế toán"
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
-msgid "Group By"
-msgstr "Nhóm theo"
-
-#. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_id
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_id
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_id
 msgid "ID"
 msgstr "ID"
 
@@ -197,45 +212,18 @@ msgid ""
 "If cost price is increased, stock variation account will be debited and stock output account will be credited with the value = (difference of amount * quantity available).\n"
 "If cost price is decreased, stock variation account will be creadited and stock input account will be debited."
 msgstr ""
-"Nếu giá vốn tăng, tài khoản biến động kho sẽ ghi nợ và tài khoản xuất kho ghi tăng với giá trị = (số tiền chênh lệch * số lượng khả dụng).\n"
-"Nếu giá vốn giảm, tài khoản biến động kho sẽ ghi có và tài khoản nhập kho sẽ ghi nợ."
+"Nếu giá vốn tăng, tài khoản biến động kho sẽ được ghi nợ và tài khoản xuất kho sẽ được ghi có với giá trị = (số tiền chênh lệch * số lượng khả dụng).\n"
+"Nếu giá vốn giảm, tài khoản biến động kho sẽ được ghi có và tài khoản nhập kho sẽ được ghi nợ."
 
 #. module: stock_account
-#: model:ir.model.fields,help:stock_account.field_product_category_property_valuation
-msgid ""
-"If perpetual valuation is enabled for a product, the system will "
-"automatically create journal entries corresponding to stock moves, with "
-"product price as specified by the 'Costing Method'. The inventory variation "
-"account set on the product category will represent the current inventory "
-"value, and the stock input and stock output account will hold the "
-"counterpart moves for incoming and outgoing products."
-msgstr ""
+#: model:ir.actions.act_window,help:stock_account.product_valuation_action
+msgid "If there are products, you will see its name and valuation."
+msgstr "Nếu có các sản phẩm, bạn sẽ thấy tên và giá trị của chúng"
 
 #. module: stock_account
-#: model:ir.model.fields,help:stock_account.field_product_product_property_valuation
-#: model:ir.model.fields,help:stock_account.field_product_template_property_valuation
-msgid ""
-"If perpetual valuation is enabled for a product, the system will "
-"automatically create journal entries corresponding to stock moves, with "
-"product price as specified by the 'Costing Method'The inventory variation "
-"account set on the product category will represent the current inventory "
-"value, and the stock input and stock output account will hold the "
-"counterpart moves for incoming and outgoing products."
-msgstr ""
-
-#. module: stock_account
-#: selection:stock.config.settings,module_stock_landed_costs:0
-msgid "Include landed costs in product costing computation"
-msgstr ""
-
-#. module: stock_account
-#: model:ir.model.fields,help:stock_account.field_stock_config_settings_module_stock_landed_costs
-msgid ""
-"Install the module that allows to affect landed costs on pickings, and split"
-" them onto the different products."
-msgstr ""
-"Cài đặt phân hệ này sẽ cho phép tác động tới landed costs trên lô hàng "
-"nhập/xuất và phân bổ chúng vào các sản phẩm khác nhau."
+#: model:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+msgid "Include landed costs in product cost"
+msgstr "Phân bổ các chi phí nhập kho vào giá vốn hàng hoá"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_inventory
@@ -245,118 +233,99 @@ msgstr "Tồn kho"
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_location
 msgid "Inventory Locations"
-msgstr "Địa điểm Tồn kho"
+msgstr "Địa điểm Kiểm kê"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category_property_valuation
 #: model:ir.model.fields,field_description:stock_account.field_product_product_property_valuation
 #: model:ir.model.fields,field_description:stock_account.field_product_template_property_valuation
-#: model:ir.model.fields,field_description:stock_account.field_stock_config_settings_group_stock_inventory_valuation
+#: model:ir.ui.menu,name:stock_account.menu_valuation
+#: model:ir.ui.view,arch_db:stock_account.product_template_valuation_form_view
+#: model:ir.ui.view,arch_db:stock_account.product_valuation_form_view
 #: model:ir.ui.view,arch_db:stock_account.view_category_property_form
 msgid "Inventory Valuation"
-msgstr "Định giá tồn kho"
-
-#. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_inventory_value
-msgid "Inventory Value"
-msgstr "Giá trị tồn kho"
-
-#. module: stock_account
-#: model:ir.actions.act_window,name:stock_account.action_wizard_stock_valuation_history
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_choose_date
-#: model:ir.ui.menu,name:stock_account.menu_action_wizard_valuation_history
-msgid "Inventory at Date"
-msgstr "Tồn kho tại ngày"
+msgstr "Định giá Tồn kho"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_account_invoice
 msgid "Invoice"
-msgstr "Hóa đơn"
+msgstr "Hoá đơn"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_account_invoice_line
 msgid "Invoice Line"
-msgstr "Chi tiết hóa đơn"
+msgstr "Chi tiết hoá đơn"
 
 #. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_config_settings_module_stock_landed_costs
+#: model:ir.model.fields,field_description:stock_account.field_res_config_settings_module_stock_landed_costs
 msgid "Landed Costs"
 msgstr "Landed Costs"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price___last_update
-#: model:ir.model.fields,field_description:stock_account.field_stock_history___last_update
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history___last_update
 msgid "Last Modified on"
-msgstr "Sửa lần cuối vào"
+msgstr "Sửa lần cuối"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_write_uid
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_write_uid
 msgid "Last Updated by"
 msgstr "Cập nhật lần cuối bởi"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_write_date
-#: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_write_date
 msgid "Last Updated on"
-msgstr "Cập nhật lần cuối vào"
+msgstr "Cập nhật lần cuối"
 
 #. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_location_id
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
-msgid "Location"
-msgstr "Địa điểm"
+#: selection:product.category,property_valuation:0
+msgid "Manual"
+msgstr "Thủ công"
 
 #. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_serial_number
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
-msgid "Lot/Serial Number"
-msgstr "Lô/Số sê-ri"
+#: model:ir.model.fields,help:stock_account.field_product_product_property_valuation
+#: model:ir.model.fields,help:stock_account.field_product_template_property_valuation
+msgid ""
+"Manual: The accounting entries to value the inventory are not posted automatically.\n"
+"        Automated: An accounting entry is automatically created to value the inventory when a product enters or leaves the company."
+msgstr ""
+"Thủ công: Các bút toán kế toán xuất nhập kho sẽ không được tạo tự động.\n"
+"        Tự động: Một bút toán kế toán sẽ được tạo tự động và vào sổ khi thực hiện hoạt động xuất nhập kho."
 
 #. module: stock_account
-#: model:res.groups,name:stock_account.group_inventory_valuation
-msgid "Manage Inventory Valuation and Costing Methods"
-msgstr "Quản lý định giá tồn kho và phương pháp giá vốn"
+#: model:ir.model.fields,help:stock_account.field_product_category_property_valuation
+msgid ""
+"Manual: The accounting entries to value the inventory are not posted automatically.\n"
+"        Automated: An accounting entry is automatically created to value the inventory when a product enters or leaves the company.\n"
+"        "
+msgstr ""
+"Thủ công: Các bút toán kế toán xuất nhập kho sẽ không được tạo tự động.\n"
+"        Tự động: Một bút toán kế toán sẽ được tạo tự động và vào sổ khi thực hiện hoạt động xuất nhập kho."
 
 #. module: stock_account
-#: code:addons/stock_account/models/product.py:109
+#: model:ir.ui.view,arch_db:stock_account.view_move_tree_valuation
+msgid "Moves"
+msgstr "Moves"
+
+#. module: stock_account
+#: code:addons/stock_account/models/product.py:128
 #, python-format
 msgid "No difference between standard price and new price!"
 msgstr "Không có sự khác biệt giữa giá tiêu chuẩn và giá mới!"
 
 #. module: stock_account
-#: selection:stock.config.settings,module_stock_landed_costs:0
-msgid "No landed costs"
-msgstr ""
+#: model:ir.model,name:stock_account.model_stock_move_line
+msgid "Packing Operation"
+msgstr "Hoạt động Đóng gói"
 
 #. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_date
-msgid "Operation Date"
-msgstr "Operation Date"
-
-#. module: stock_account
-#: selection:product.category,property_valuation:0
 #: selection:product.template,property_valuation:0
 msgid "Periodic (manual)"
 msgstr "Định kỳ (thủ công)"
 
 #. module: stock_account
-#: selection:stock.config.settings,group_stock_inventory_valuation:0
-msgid "Periodic inventory valuation (recommended)"
-msgstr ""
-
-#. module: stock_account
-#: selection:product.category,property_valuation:0
 #: selection:product.template,property_valuation:0
 msgid "Perpetual (automated)"
 msgstr "Thời gian thực (tự động)"
-
-#. module: stock_account
-#: selection:stock.config.settings,group_stock_inventory_valuation:0
-msgid ""
-"Perpetual inventory valuation (stock move generates accounting entries)"
-msgstr ""
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_new_price
@@ -364,102 +333,102 @@ msgid "Price"
 msgstr "Giá"
 
 #. module: stock_account
+#: model:ir.model,name:stock_account.model_procurement_group
+msgid "Procurement Requisition"
+msgstr "Yêu cầu Mua sắm/Cung ứng"
+
+#. module: stock_account
 #: model:ir.model,name:stock_account.model_product_product
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_product_id
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
+#: model:ir.ui.view,arch_db:stock_account.product_valuation_tree
 msgid "Product"
 msgstr "Sản phẩm"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_product_category
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_product_categ_id
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
 msgid "Product Category"
-msgstr "Nhóm sản phẩm"
-
-#. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_quantity
-msgid "Product Quantity"
-msgstr "Số lượng sản phẩm"
+msgstr "Nhóm Sản phẩm"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_product_template
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_product_template_id
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
 msgid "Product Template"
-msgstr "Mẫu sản phẩm"
+msgstr "Mẫu Sản phẩm"
 
 #. module: stock_account
-#: model:ir.model,name:stock_account.model_stock_quant
-msgid "Quants"
-msgstr "Số lượng"
+#: model:ir.actions.act_window,name:stock_account.product_valuation_action
+msgid "Product Valuation"
+msgstr "Định giá Sản phẩm"
 
 #. module: stock_account
-#: selection:product.category,property_cost_method:0
-#: selection:product.template,property_cost_method:0
-msgid "Real Price"
-msgstr "Giá thực tế"
+#: model:ir.ui.view,arch_db:stock_account.view_move_tree_valuation
+msgid "Qty"
+msgstr "SL"
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
-msgid "Retrieve the Inventory Value"
-msgstr "Nhận giá trị tồn kho"
+#: model:ir.ui.view,arch_db:stock_account.product_valuation_tree
+msgid "Quantity on Hand"
+msgstr "Số lượng Thực tế"
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
-msgid "Retrieve the curent stock valuation."
-msgstr ""
+#: model:ir.ui.view,arch_db:stock_account.view_move_tree_valuation
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move_remaining_qty
+msgid "Remaining Qty"
+msgstr "SL còn lại"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move_remaining_value
+msgid "Remaining Value"
+msgstr "Giá trị còn lại"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Trả hàng"
 
 #. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.product_variant_easy_edit_view_inherit
-#: model:ir.ui.view,arch_db:stock_account.view_template_property_form
-msgid "Set standard price"
-msgstr ""
-
-#. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_source
-msgid "Source"
-msgstr "Nguồn"
+msgid "Set standard cost"
+msgstr "Thiết lập Giá vốn Tiêu chuẩn"
 
 #. module: stock_account
 #: selection:product.category,property_cost_method:0
 #: selection:product.template,property_cost_method:0
 msgid "Standard Price"
-msgstr "Giá tiêu chuẩn"
+msgstr "Giá Tiêu chuẩn"
 
 #. module: stock_account
-#: code:addons/stock_account/models/product.py:126
-#: code:addons/stock_account/models/product.py:131
+#: code:addons/stock_account/models/product.py:145
+#: code:addons/stock_account/models/product.py:150
 #, python-format
-msgid "Standard Price changed"
-msgstr "Giá tiêu chuẩn đã thay đổi"
+msgid "Standard Price changed  - %s"
+msgstr "Giá Tiêu chuẩn đã thay đổi - %s"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_product_property_cost_method
 #: model:ir.model.fields,help:stock_account.field_product_template_property_cost_method
 msgid ""
-"Standard Price: The cost price is manually updated at the end of a specific period (usually once a year).\n"
-"                Average Price: The cost price is recomputed at each incoming shipment and used for the product valuation.\n"
-"                Real Price: The cost price displayed is the price of the last outgoing product (will be use in case of inventory loss for example)."
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first."
 msgstr ""
+"Giá tiêu chuẩn: Sản phẩm được định giá theo giá tiêu chuẩn khai báo trên form sản phẩm.\n"
+"        Giá Trung bình (AVCO): Sản phẩm được định giá theo phương pháp bình quân.\n"
+"        Nhập trước Xuất trước (FIFO): Sản phẩm được định giá theo phương pháp thực tế với giả định nhập trước xuất trước. Khi kết hợp với sô Lô/Serial thì sẽ thành Thực tế Đích danh."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_category_property_cost_method
 msgid ""
-"Standard Price: The cost price is manually updated at the end of a specific period (usually once a year).\n"
-"Average Price: The cost price is recomputed at each incoming shipment and used for the product valuation.\n"
-"Real Price: The cost price displayed is the price of the last outgoing product (will be used in case of inventory loss for example)."
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first.\n"
+"        "
 msgstr ""
-
-#. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_stock_config_settings_inherit
-msgid "Stock Accounting"
-msgstr ""
-
-#. module: stock_account
-#: model:ir.actions.act_window,name:stock_account.action_stock_history
-msgid "Stock History"
-msgstr ""
+"Giá tiêu chuẩn: Sản phẩm được định giá theo giá tiêu chuẩn khai báo trên form sản phẩm.\n"
+"        Giá Trung bình (AVCO): Sản phẩm được định giá theo phương pháp bình quân.\n"
+"        Nhập trước Xuất trước (FIFO): Sản phẩm được định giá theo phương pháp thực tế với giả định nhập trước xuất trước. Khi kết hợp với sô Lô/Serial thì sẽ thành Thực tế Đích danh."
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category_property_stock_account_input_categ_id
@@ -477,9 +446,13 @@ msgstr "Sổ nhật ký kho"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_move
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_move_id
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
+#: model:ir.model.fields,field_description:stock_account.field_account_move_stock_move_id
 msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: stock_account
+#: model:ir.actions.act_window,name:stock_account.stock_move_valuation_action
+msgid "Stock Moves"
 msgstr "Dịch chuyển kho"
 
 #. module: stock_account
@@ -490,9 +463,16 @@ msgid "Stock Output Account"
 msgstr "Tài khoản xuất kho"
 
 #. module: stock_account
+#: model:ir.ui.view,arch_db:stock_account.product_valuation_tree
+#: model:ir.ui.view,arch_db:stock_account.view_move_tree_valuation
+#: model:ir.ui.view,arch_db:stock_account.view_template_property_form
+msgid "Stock Valuation"
+msgstr "Định giá Tồn kho"
+
+#. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category_property_stock_valuation_account_id
 msgid "Stock Valuation Account"
-msgstr "Tài khoản định giá tồn kho"
+msgstr "Tài khoản Định giá Tồn kho"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_location_valuation_in_account_id
@@ -505,33 +485,87 @@ msgid "Stock Valuation Account (Outgoing)"
 msgstr "Tài khoản định giá tồn kho (Xuất hàng)"
 
 #. module: stock_account
-#: code:addons/stock_account/wizard/wizard_valuation_history.py:24
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_graph
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_pivot
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_tree
-#, python-format
-msgid "Stock Value At Date"
-msgstr "Giá trị tồn kho tại ngày"
+#: model:ir.actions.server,name:stock_account.action_stock_account_valuation_report
+msgid "Stock Valuation Report"
+msgstr "Báo cáo Định giá Tồn kho"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_account_chart_template
 msgid "Templates for Account Chart"
-msgstr "Mẫu hệ thống tài khoản"
+msgstr "Mẫu Hệ thống Tài khoản"
 
 #. module: stock_account
-#: code:addons/stock_account/models/stock.py:273
+#: code:addons/stock_account/models/stock.py:478
 #, python-format
 msgid ""
-"The found valuation amount for product %s is zero. Which means there is "
-"probably a configuration error. Check the costing method and the standard "
-"price"
+"The cost of %s is currently equal to 0. Change the cost or the configuration"
+" of your product to avoid an incorrect valuation."
 msgstr ""
+"Giá vốn của %s thì hiện tại bằng 0. Thay đổi giá vốn hoặc cấu hình của sản "
+"phẩm để tránh việc sai giá vốn."
 
 #. module: stock_account
-#: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_tree
+#: code:addons/stock_account/models/stock.py:309
+#, python-format
+msgid ""
+"The move lines are not in a consistent state: some are entering and other "
+"are leaving the company. "
+msgstr ""
+"Các đường di chuyển không ở trạng thái nhất quán: một số đang vào và một số "
+"khác sẽ rời khỏi công ty."
+
+#. module: stock_account
+#: code:addons/stock_account/models/stock.py:320
+#, python-format
+msgid ""
+"The move lines are not in a consistent states: they are doing an "
+"intercompany in a single step while they should go through the intercompany "
+"transit location."
+msgstr ""
+"Các đường di chuyển không ở trạng thái nhất quán: chúng đang thực hiện một "
+"công ty liên kết trong một bước duy nhất trong khi chúng phải đi qua vị trí "
+"trung chuyển liên công ty."
+
+#. module: stock_account
+#: code:addons/stock_account/models/stock.py:318
+#, python-format
+msgid ""
+"The move lines are not in a consistent states: they do not share the same "
+"origin or destination company."
+msgstr ""
+"Các dòng di chuyển không ở trong trạng thái nhất quán: chúng không có cùng "
+"nguồn gốc hoặc công ty đích."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move_to_refund
+#: model:ir.model.fields,field_description:stock_account.field_stock_return_picking_line_to_refund
+msgid "To Refund (update SO/PO)"
+msgstr "Hoàn trả (cập nhật SO/PO)"
+
+#. module: stock_account
+#: model:ir.ui.view,arch_db:stock_account.product_valuation_tree
 msgid "Total Value"
 msgstr "Tổng giá trị"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_move_to_refund
+#: model:ir.model.fields,help:stock_account.field_stock_return_picking_line_to_refund
+msgid ""
+"Trigger a decrease of the delivered/received quantity in the associated Sale"
+" Order/Purchase Order"
+msgstr ""
+"Kích hoạt giảm số lượng đã Giao/Nhận được trong Đơn bán/mua hàng được liên "
+"kết"
+
+#. module: stock_account
+#: model:ir.ui.view,arch_db:stock_account.view_move_tree_valuation
+msgid "Unit of Measure"
+msgstr "Đơn vị Đo lường"
+
+#. module: stock_account
+#: model:ir.ui.view,arch_db:stock_account.view_template_property_form
+msgid "Update Cost"
+msgstr "Cập nhật Giá vốn"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_stock_location_valuation_in_account_id
@@ -570,9 +604,16 @@ msgid "Valuation"
 msgstr "Định giá"
 
 #. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_stock_history_price_unit_on_quant
+#: model:ir.model.fields,field_description:stock_account.field_product_product_stock_value
+#: model:ir.model.fields,field_description:stock_account.field_stock_move_value
 msgid "Value"
 msgstr "Giá trị"
+
+#. module: stock_account
+#: code:addons/stock_account/models/product.py:242
+#, python-format
+msgid "Warning"
+msgstr "Cảnh báo"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_category_property_stock_account_input_categ_id
@@ -583,11 +624,8 @@ msgid ""
 "value for all products in this category. It can also directly be set on each"
 " product"
 msgstr ""
-"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho "
-"tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ"
-" khi có một tài khoản định giá được thiết lập trên địa điểm nguồn. Đây là "
-"giá trị mặc định cho tất cả sản phẩm trong nhóm sản phẩm này. Nó cũng có thể"
-" được thiết lập trực tiếp trên từng sản phẩm. "
+"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ khi có một tài khoản định giá được thiết lập trên địa điểm nguồn. Đây là giá trị mặc định cho tất cả sản phẩm trong nhóm sản phẩm này. Nó cũng có thể được thiết lập trực tiếp trên từng sản phẩm.\n"
+"Tips: Giá trị sẽ được ghi vào bên Có của tài khoản này."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_product_property_stock_account_input
@@ -598,11 +636,8 @@ msgid ""
 "specific valuation account set on the source location. When not set on the "
 "product, the one from the product category is used."
 msgstr ""
-"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho "
-"tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ"
-" khi có một tài khoản định giá được thiết lập trên địa điểm nguồn. Khi không"
-" thiết lập trên một sản phẩm, hệ thống sẽ sử dụng thiết lập trên nhóm sản "
-"phẩm. "
+"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ khi có một tài khoản định giá được thiết lập trên địa điểm nguồn. Khi không thiết lập trên sản phẩm, hệ thống sẽ sử dụng thiết lập trên nhóm sản phẩm.\n"
+"Tips: Giá trị sẽ được ghi vào bên Có của tài khoản này."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_category_property_stock_account_output_categ_id
@@ -613,11 +648,8 @@ msgid ""
 "default value for all products in this category. It can also directly be set"
 " on each product"
 msgstr ""
-"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho "
-"tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ"
-" khi có một tài khoản định giá được thiết lập trên địa điểm đích. Đây là giá"
-" trị mặc định cho tất cả sản phẩm trong nhóm sản phẩm này. Nó cũng có thể "
-"được thiết lập trực tiếp trên từng sản phẩm. "
+"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ khi có một tài khoản định giá được thiết lập trên địa điểm đích. Đây là giá trị mặc định cho tất cả sản phẩm trong nhóm sản phẩm này. Nó cũng có thể được thiết lập trực tiếp trên từng sản phẩm.\n"
+"Tips: Giá trị sẽ được ghi vào bên Nợ của tài khoản này."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_product_property_stock_account_output
@@ -628,11 +660,8 @@ msgid ""
 "specific valuation account set on the destination location. When not set on "
 "the product, the one from the product category is used."
 msgstr ""
-"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho "
-"tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ"
-" khi có một tài khoản định giá được thiết lập trên địa điểm đích. Khi không "
-"thiết lập trên một sản phẩm, hệ thống sẽ sử dụng thiết lập trên nhóm sản "
-"phẩm. "
+"Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ khi có một tài khoản định giá được thiết lập trên địa điểm đích. Khi không thiết lập trên một sản phẩm, hệ thống sẽ sử dụng thiết lập trên nhóm sản phẩm.\n"
+"Tips: Giá trị sẽ được ghi vào bên Nợ của tài khoản này."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_category_property_stock_journal
@@ -651,15 +680,10 @@ msgid ""
 "will hold the current value of the products."
 msgstr ""
 "Khi việc định giá tồn kho theo thời gian thực được kích hoạt trên một sản "
-"phẩm, tài khoản này sẽ giữ giá trị hiện tài của sản phẩm."
+"phẩm, tài khoản này sẽ lưu giữ giá trị hiện tại của sản phẩm/hàng hoá."
 
 #. module: stock_account
-#: model:ir.model,name:stock_account.model_wizard_valuation_history
-msgid "Wizard that opens the stock valuation history table"
-msgstr "Đồ thuật để mở một bảng lịch sử định giá tồn kho"
-
-#. module: stock_account
-#: code:addons/stock_account/models/stock.py:242
+#: code:addons/stock_account/models/stock.py:450
 #, python-format
 msgid ""
 "You don't have any stock journal defined on your product category, check if "
@@ -669,8 +693,8 @@ msgstr ""
 "tương ứng. Hãy kiểm tra xem bạn đã cài đặt hệ thống tài khoản kế toán chưa."
 
 #. module: stock_account
-#: code:addons/stock_account/models/product.py:111
-#: code:addons/stock_account/models/stock.py:248
+#: code:addons/stock_account/models/product.py:130
+#: code:addons/stock_account/models/stock.py:456
 #, python-format
 msgid ""
 "You don't have any stock valuation account defined on your product category."
@@ -685,11 +709,11 @@ msgid "_Apply"
 msgstr "_Áp dụng"
 
 #. module: stock_account
-#: model:ir.model,name:stock_account.model_stock_config_settings
-msgid "stock.config.settings"
-msgstr ""
+#: model:ir.model,name:stock_account.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
 
 #. module: stock_account
-#: model:ir.model,name:stock_account.model_stock_history
-msgid "stock.history"
-msgstr ""
+#: model:ir.model,name:stock_account.model_stock_return_picking_line
+msgid "stock.return.picking.line"
+msgstr "stock.return.picking.line"

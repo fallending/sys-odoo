@@ -3,16 +3,17 @@
 # * account_test
 # 
 # Translators:
-# kalatchev, 2016
-# Martin Trigaux, 2016
-# Maria Boyadjieva <marabo2000@gmail.com>, 2016
+# Martin Trigaux, 2017
+# aleksandar ivanov, 2018
+# kalatchev, 2018
+# Maria Boyadjieva <marabo2000@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 08:56+0000\n"
-"PO-Revision-Date: 2016-09-07 08:56+0000\n"
-"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2016\n"
+"POT-Creation-Date: 2017-09-20 09:53+0000\n"
+"PO-Revision-Date: 2017-09-20 09:53+0000\n"
+"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr "<strong>Име:</strong>"
 
 #. module: account_test
 #: model:ir.actions.act_window,name:account_test.action_accounting_assert
-#: model:ir.actions.report.xml,name:account_test.account_assert_test_report
+#: model:ir.actions.report,name:account_test.account_assert_test_report
 #: model:ir.ui.menu,name:account_test.menu_action_license
 msgid "Accounting Tests"
 msgstr "Счетоводни тестове"
@@ -64,14 +65,13 @@ msgid ""
 "Check on bank statement that the Closing Balance = Starting Balance + sum of"
 " statement lines"
 msgstr ""
-"Отметнете в банковото извлечение, че крайното салдо = началното салдо + "
+"Проверете в банковото извлечение, че крайният баланс = началния баланс + "
 "сбора от редовете на извлеченията"
 
 #. module: account_test
 #: model:accounting.assert.test,desc:account_test.account_test_06
 msgid "Check that paid/reconciled invoices are not in 'Open' state"
-msgstr ""
-"Отметнете, че платените/обединените фактури не са в състояние 'Отворени'"
+msgstr "Проверете дали платените/обединени фактури не са в етап 'Отворени'"
 
 #. module: account_test
 #: model:accounting.assert.test,desc:account_test.account_test_05_2
@@ -79,9 +79,8 @@ msgid ""
 "Check that reconciled account moves, that define Payable and Receivable "
 "accounts, are belonging to reconciled invoices"
 msgstr ""
-"Отметнете, че обединените движения по сметка, които определят сметка "
-"задължения към доставчици и сметка вземания от клиенти, принадлежат към "
-"обединени фактури."
+"Проверете дали обединените движения по сметка, които дефинират сметките за "
+"плащане и получаване, принадлежат към обединени фактури."
 
 #. module: account_test
 #: model:accounting.assert.test,desc:account_test.account_test_05
@@ -89,13 +88,13 @@ msgid ""
 "Check that reconciled invoice for Sales/Purchases has reconciled entries for"
 " Payable and Receivable Accounts"
 msgstr ""
-"Отметнете, че обединената фактура за продажби/покупки притежава обединени "
-"записи за сметка задължения към доставчици и сметка вземания от клиенти."
+"Проверете дали обединената фактура за продажби/покупки притежава обединени "
+"записи за сметки за плащане и получаване."
 
 #. module: account_test
 #: model:accounting.assert.test,desc:account_test.account_test_01
 msgid "Check the balance: Debit sum = Credit sum"
-msgstr "Проверете салдото: дебитна сума = кредитна сума"
+msgstr "Проверете баланса: дебитна сума = кредитна сума"
 
 #. module: account_test
 #: model:ir.actions.act_window,help:account_test.action_accounting_assert
@@ -140,12 +139,12 @@ msgstr ""
 "\n"
 "Ако имате нужда от тях, можете да използвате и следните вариации в кода си:\n"
 "    * cr: курсор към базата данни\n"
-"    * uid: ИН на настоящия потребител\n"
+"    * uid: идентификация за текущия потребител\n"
 "\n"
-"Във всички случаи, кодът трябва да представлява правни твърдения на python с правилна идентификация (ако е нужно).\n"
+"Във всички случаи, кодът трябва да представлява правно твърдение на python с правилна идентификация (ако е нужно).\n"
 "\n"
 "Пример: \n"
-"    sql = '''ИЗБЕРЕТЕ ИН, име, референция, дата\n"
+"    sql = '''ИЗБЕРЕТЕ идентификация, име, референция, дата\n"
 "             ОТ account_move_line \n"
 "             КЪДЕТО account_id В (ИЗБЕРИ идентификация ОТ account_account КЪДЕТО вид = 'изглед')\n"
 "          '''\n"
@@ -171,7 +170,7 @@ msgstr "Описание"
 #: model:ir.model.fields,field_description:account_test.field_accounting_assert_test_display_name
 #: model:ir.model.fields,field_description:account_test.field_report_account_test_report_accounttest_display_name
 msgid "Display Name"
-msgstr "Покажете име"
+msgstr "Име за показване"
 
 #. module: account_test
 #: model:ir.ui.view,arch_db:account_test.account_assert_form
@@ -182,7 +181,7 @@ msgstr "Израз"
 #: model:ir.model.fields,field_description:account_test.field_accounting_assert_test_id
 #: model:ir.model.fields,field_description:account_test.field_report_account_test_report_accounttest_id
 msgid "ID"
-msgstr "ИН"
+msgstr "ID"
 
 #. module: account_test
 #: model:ir.model.fields,field_description:account_test.field_accounting_assert_test___last_update
@@ -203,7 +202,7 @@ msgstr "Последно обновено на"
 #. module: account_test
 #: model:ir.ui.view,arch_db:account_test.account_assert_form
 msgid "Python Code"
-msgstr "Код Python"
+msgstr "Python код"
 
 #. module: account_test
 #: model:ir.model.fields,field_description:account_test.field_accounting_assert_test_code_exec
@@ -218,7 +217,7 @@ msgstr "Последователност"
 #. module: account_test
 #: model:accounting.assert.test,name:account_test.account_test_01
 msgid "Test 1: General balance"
-msgstr "Тест 1: Общо салдо"
+msgstr "Тест 1: Общ баланс"
 
 #. module: account_test
 #: model:accounting.assert.test,name:account_test.account_test_03
@@ -230,25 +229,22 @@ msgstr "Тест 3: Редове на движение"
 msgid ""
 "Test 5.1 : Payable and Receivable accountant lines of reconciled invoices"
 msgstr ""
-"Тест 5.1 : Счетоводни редове на обединени фактури за сметка задължения към "
-"доставчици и сметка вземания от клиенти"
+"Тест 5.1 : Счетоводни редове за плащане и получаване на обединени фактури"
 
 #. module: account_test
 #: model:accounting.assert.test,name:account_test.account_test_05_2
 msgid "Test 5.2 : Reconcilied invoices and Payable/Receivable accounts"
-msgstr ""
-"Тест 5.2 : Обединени фактури и сметка задължения към доставчици/сметка "
-"вземания от клиенти"
+msgstr "Тест 5.2 : Обединени фактури и сметки за плащане/получаване"
 
 #. module: account_test
 #: model:accounting.assert.test,name:account_test.account_test_06
 msgid "Test 6 : Invoices status"
-msgstr "Тест 6 : Статус на фактури"
+msgstr "Тест 6 : Етап на фактурите"
 
 #. module: account_test
 #: model:accounting.assert.test,name:account_test.account_test_07
 msgid "Test 7 : Closing balance on bank statements"
-msgstr "Тест 7 : Крайно салдо в банкови извлечения"
+msgstr "Тест 7 : Краен баланс в банково извлечение"
 
 #. module: account_test
 #: model:ir.model.fields,field_description:account_test.field_accounting_assert_test_desc
@@ -267,7 +263,7 @@ msgid "Tests"
 msgstr "Тестове"
 
 #. module: account_test
-#: code:addons/account_test/report/report_account_test.py:51
+#: code:addons/account_test/report/report_account_test.py:52
 #, python-format
 msgid "The test was passed successfully"
 msgstr "Тестът беше проведен успешно"

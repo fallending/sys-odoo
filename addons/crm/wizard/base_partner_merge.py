@@ -2,53 +2,17 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
-from email.utils import parseaddr
 import functools
-import htmlentitydefs
 import itertools
 import logging
-import operator
 import psycopg2
-import re
-
-# Validation Library https://pypi.python.org/pypi/validate_email/1.1
-from .validate_email import validate_email
 
 from odoo import api, fields, models
 from odoo import SUPERUSER_ID, _
 from odoo.exceptions import ValidationError, UserError
 from odoo.tools import mute_logger
 
-
 _logger = logging.getLogger('base.partner.merge')
-
-
-# http://www.php2python.com/wiki/function.html-entity-decode/
-def html_entity_decode_char(m, defs=htmlentitydefs.entitydefs):
-    try:
-        return defs[m.group(1)]
-    except KeyError:
-        return m.group(0)
-
-
-def html_entity_decode(string):
-    pattern = re.compile("&(\w+?);")
-    return pattern.sub(html_entity_decode_char, string)
-
-
-def sanitize_email(email):
-    assert isinstance(email, basestring) and email
-
-    result = re.subn(r';|/|:', ',', html_entity_decode(email or ''))[0].split(',')
-
-    emails = [parseaddr(email)[1]
-              for item in result
-              for email in item.split()]
-
-    return [email.lower()
-            for email in emails
-            if validate_email(email)]
-
 
 class MergePartnerLine(models.TransientModel):
 
@@ -230,7 +194,6 @@ class MergePartnerAutomatic(models.TransientModel):
             update_records('ir.attachment', src=partner, field_model='res_model')
             update_records('mail.followers', src=partner, field_model='res_model')
             update_records('mail.message', src=partner)
-            update_records('marketing.campaign.workitem', src=partner, field_model='object_id.model')
             update_records('ir.model.data', src=partner)
 
         records = self.env['ir.model.fields'].search([('ttype', '=', 'reference')])
@@ -408,7 +371,7 @@ class MergePartnerAutomatic(models.TransientModel):
         """
         return any(
             self.env[model].search_count([(field, 'in', aggr_ids)])
-            for model, field in models.iteritems()
+            for model, field in models.items()
         )
 
     @api.model
@@ -417,7 +380,7 @@ class MergePartnerAutomatic(models.TransientModel):
             :param partner_ids : list of partner ids to sort
         """
         return self.env['res.partner'].browse(partner_ids).sorted(
-            key=lambda p: (p.active, p.create_date),
+            key=lambda p: (p.active, (p.create_date or '')),
             reverse=True,
         )
 

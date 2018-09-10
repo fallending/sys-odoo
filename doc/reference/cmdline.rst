@@ -15,7 +15,9 @@ Running the server
 
 .. option:: -d <database>, --database <database>
 
-    database used when installing or updating modules.
+    database(s) used when installing or updating modules.
+    Providing a comma-separated list restrict access to databases provided in
+    list.
 
 .. option:: -i <modules>, --init <modules>
 
@@ -165,10 +167,59 @@ database
       databases (so domain ``odoo.com`` using ``(?i)%d`` matches the database
       ``Odoo``).
 
+    Since version 11, it's also possible to restrict access to a given database
+    listen by using the --database parameter and specifying a comma-separated
+    list of databases
+
+    When combining the two parameters, db-filter superseed the comma-separated
+    database list for restricting database list, while the comma-separated list
+    is used for performing requested operations like upgrade of modules.
+    
+    .. code-block:: bash
+
+        odoo-bin --db-filter ^11.*$
+
+    Restrict access to databases whose name starts with 11
+
+    .. code-block:: bash
+
+        odoo-bin --database 11firstdatabase,11seconddatabase
+
+    Restrict access to only two databases, 11firstdatabase and 11seconddatabase
+    
+    .. code-block:: bash
+
+        odoo-bin --database 11firstdatabase,11seconddatabase -u base
+
+    Restrict access to only two databases, 11firstdatabase and 11seconddatabase,
+    and update base module on one database: 11firstdatabase
+    If database 11seconddatabase doesn't exist, the database is created and base modules
+    is installed
+    
+    .. code-block:: bash
+
+        odoo-bin --db-filter ^11.*$ --database 11firstdatabase,11seconddatabase -u base
+        
+    Restrict access to databases whose name starts with 11,
+    and update base module on one database: 11firstdatabase
+    If database 11seconddatabase doesn't exist, the database is created and base modules
+    is installed
+    
 .. option:: --db-template <template>
 
     when creating new databases from the database-management screens, use the
     specified `template database`_. Defaults to ``template1``.
+
+.. option:: --no-database-list
+
+    Suppresses the ability to list databases available on the system
+    
+.. option:: --db_sslmode
+
+    Control the SSL security of the connection between Odoo and PostgreSQL.
+    Value should bve one of 'disable', 'allow', 'prefer', 'require',
+    'verify-ca' or 'verify-full'
+    Default value is 'prefer'
 
 .. _reference/cmdline/server/internationalisation:
 
@@ -212,7 +263,7 @@ of importation
 built-in HTTP
 -------------
 
-.. option:: --no-xmlrpc
+.. option:: --no-http
 
     do not start the HTTP or long-polling workers (may still start cron
     workers)
@@ -220,12 +271,12 @@ built-in HTTP
     .. warning:: has no effect if :option:`--test-enable` is set, as tests
                  require an accessible HTTP server
 
-.. option:: --xmlrpc-interface <interface>
+.. option:: --http-interface <interface>
 
     TCP/IP address on which the HTTP server listens, defaults to ``0.0.0.0``
     (all addresses)
 
-.. option:: --xmlrpc-port <port>
+.. option:: --http-port <port>
 
     Port on which the HTTP server listens, defaults to 8069.
 
@@ -254,6 +305,13 @@ customize the amount of logging output
     enables `log rotation <https://docs.python.org/2/library/logging.handlers.html#timedrotatingfilehandler>`_
     daily, keeping 30 backups. Log rotation frequency and number of backups is
     not configurable.
+    
+    .. danger:: 
+    
+        Built-in log rotation is not reliable in multi-workers scenarios
+        and may incur significant data loss. It is *strongly recommended* to 
+        use an external log rotation utility or use system loggers (--syslog) 
+        instead.
 
 .. option:: --syslog
 
@@ -333,6 +391,31 @@ customize the amount of logging output
         In case of conflict between :option:`--log-level` and
         :option:`--log-handler`, the latter is used
 
+emails
+------
+
+.. option:: --email-from <address>
+
+    Email address used as <FROM> when Odoo needs to send mails
+
+.. option:: --smtp <server>
+
+    Address of the SMTP server to connect to in order to send mails
+
+.. option:: --smtp-port <port>
+
+.. option:: --smtp-ssl
+
+    If set, odoo should use SSL/STARTSSL SMTP connections
+
+.. option:: --smtp-user <name>
+
+    Username to connect to the SMTP server
+
+.. option:: --smtp-password <password>
+
+    Password to connect to the SMTP server
+
 
 .. _reference/cmdline/scaffold:
 
@@ -368,6 +451,8 @@ Scaffolding is available via the :command:`odoo-bin scaffold` subcommand.
 Configuration file
 ==================
 
+.. program:: odoo-bin
+
 Most of the command-line options can also be specified via a configuration
 file. Most of the time, they use similar names with the prefix ``-`` removed
 and other ``-`` are replaced by ``_`` e.g. :option:`--db-template` becomes
@@ -376,13 +461,12 @@ and other ``-`` are replaced by ``_`` e.g. :option:`--db-template` becomes
 Some conversions don't match the pattern:
 
 * :option:`--db-filter` becomes ``dbfilter``
-* :option:`--no-xmlrpc` corresponds to the ``xmlrpc`` boolean
+* :option:`--no-http` corresponds to the ``http_enable`` boolean
 * logging presets (all options starting with ``--log-`` except for
   :option:`--log-handler` and :option:`--log-db`) just add content to
   ``log_handler``, use that directly in the configuration file
 * :option:`--smtp` is stored as ``smtp_server``
 * :option:`--database` is stored as ``db_name``
-* :option:`--debug` is stored as ``debug_mode`` (a boolean)
 * :option:`--i18n-import` and :option:`--i18n-export` aren't available at all
   from configuration files
 

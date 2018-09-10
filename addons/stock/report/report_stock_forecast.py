@@ -33,7 +33,7 @@ class ReportStockForecat(models.Model):
             MIN(sq.id) as id,
             sq.product_id,
             date_trunc('week', to_date(to_char(CURRENT_DATE, 'YYYY/MM/DD'), 'YYYY/MM/DD')) as date,
-            SUM(sq.qty) AS product_qty
+            SUM(sq.quantity) AS product_qty
             FROM
             stock_quant as sq
             LEFT JOIN
@@ -61,7 +61,7 @@ class ReportStockForecat(models.Model):
             LEFT JOIN
             stock_location source_location ON sm.location_id = source_location.id
             WHERE
-            sm.state IN ('confirmed','assigned','waiting') and
+            sm.state IN ('confirmed','partially_available','assigned','waiting') and
             source_location.usage != 'internal' and dest_location.usage = 'internal'
             GROUP BY sm.date_expected,sm.product_id
             UNION ALL
@@ -82,7 +82,7 @@ class ReportStockForecat(models.Model):
             LEFT JOIN
                stock_location dest_location ON sm.location_dest_id = dest_location.id
             WHERE
-                sm.state IN ('confirmed','assigned','waiting') and
+                sm.state IN ('confirmed','partially_available','assigned','waiting') and
             source_location.usage = 'internal' and dest_location.usage != 'internal'
             GROUP BY sm.date_expected,sm.product_id)
          as MAIN

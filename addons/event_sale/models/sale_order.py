@@ -10,7 +10,8 @@ class SaleOrder(models.Model):
     def action_confirm(self):
         res = super(SaleOrder, self).action_confirm()
         for order in self:
-            order.order_line._update_registrations(confirm=True)
+            # confirm registration if it was free (otherwise it will be confirmed once invoice fully paid)
+            order.order_line._update_registrations(confirm=order.amount_total == 0, cancel_to_draft=False)
             if any(order.order_line.filtered(lambda line: line.event_id)):
                 return self.env['ir.actions.act_window'].with_context(default_sale_order_id=order.id).for_xml_id(
                     'event_sale', 'action_sale_order_event_registration')
@@ -36,8 +37,8 @@ class SaleOrderLine(models.Model):
         return res
 
     @api.multi
-    def _update_registrations(self, confirm=True, registration_data=None):
-        """ Create or update registrations linked to a sale order line. A sale
+    def _update_registrations(self, confirm=True, cancel_to_draft=False, registration_data=None):
+        """ Create or update registrations linked to a sales order line. A sale
         order line has a product_uom_qty attribute that will be the number of
         registrations linked to this line. This method update existing registrations
         and create new one for missing one. """
@@ -47,7 +48,7 @@ class SaleOrderLine(models.Model):
             existing_registrations = registrations.filtered(lambda self: self.sale_order_line_id.id == so_line.id)
             if confirm:
                 existing_registrations.filtered(lambda self: self.state != 'open').confirm_registration()
-            else:
+            if cancel_to_draft:
                 existing_registrations.filtered(lambda self: self.state == 'cancel').do_draft()
 
             for count in range(int(so_line.product_uom_qty) - len(existing_registrations)):
