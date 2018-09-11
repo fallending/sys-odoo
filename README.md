@@ -11,6 +11,7 @@
 * [Odoo开发教程(一):使用pycharm搭建开发调试环境](https://blog.csdn.net/feigamesnb/article/details/50392082)
 * [mac下完全卸载postgresql的方法](https://blog.csdn.net/stk_tianwen/article/details/17757393)
 * [odoo配置文件详解](https://www.jianshu.com/p/abf366d7319e)
+* [Sphinx 是Python的文档生成工具](https://blog.csdn.net/caroline_wendy/article/details/77089644), 如果下载不下来，则是网络问题
 
 *Linux*
 
