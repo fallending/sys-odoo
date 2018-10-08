@@ -1,6 +1,10 @@
 # odoo 11
 
+指南
+----
 
+* [11 guidelines](https://www.odoo.com/documentation/11.0/reference/guidelines.html)
+* [Odoo 大V社概况](http://www.odoov.com/index.php?title=%E9%A6%96%E9%A1%B5)
 
 搭建
 ----

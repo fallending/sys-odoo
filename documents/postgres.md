@@ -1,0 +1,1 @@
+* [修改postgres密码](https://www.cnblogs.com/kaituorensheng/p/4735191.html)
