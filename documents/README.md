@@ -4,6 +4,32 @@
 ------------------------
 
 * [odoo model 的常用方法](https://blog.csdn.net/catstarxcode/article/details/80367620)
+* [官方文档](https://www.odoo.com/documentation/12.0/)
+* [dashboard参考1](https://www.odoo.com/apps/modules/11.0/hrms_dashboard), [dashboard参考2](https://www.odoo.com/apps/modules/11.0/hr_dashboard)
+* 常规开发参考：https://www.kancloud.cn/hx78/odoo_10/416235
+* [ICon搜索](http://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2)
+
+------------------------
+## QWeb 指令
+## http://www.odoov.com/index.php?title=%E4%BD%BF%E7%94%A8t-att%E4%BD%9C%E4%B8%BA%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7
+------------------------
+
+```
+// t-foreach
+<t t-foreach="record.message_partner_ids.raw_value" t-as="rec">
+	<t t-esc="rec" />
+</t>
+
+//
+t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)"
+
+// t-if
+<t t-if="record.effort_estimate.raw_value gt 0">
+	<li>
+		Estimate <field name="effort_estimate"/>
+	</li>
+</t>
+```
 
 ------------------------
 ## 代码规范
@@ -15,11 +41,15 @@ _glolal_val_ = None
 class Sample(object):
  _ = ''
  _property = ''
+ _result_repo
 
- def test(self):
+ def test(self): # public 方法
  	val = 0
 
  	return val
+
+ def _test(self): # private 方法
+ 	pass
 ```
 
 ------------------------
@@ -73,6 +103,10 @@ class Sample(object):
 
 * [odoo V10中文参考手册（一：ORM API）](https://www.jianshu.com/p/88f6f79756be)
 
+* [odoorpc](https://pythonhosted.org/OdooRPC/tuto_browse.html)
+
+* [API 装饰器 @api.one @api.multi @api.model区别](https://stackoverflow.com/questions/31112660/what-is-different-b-w-api-one-api-multi-and-api-model)，其他百度的国内文章可以不必看了，很多在瞎说
+
 ## Web
 
 * [Odoo Web前端界面详解 - 1](https://blog.csdn.net/J_z10/article/details/79247533?utm_source=blogxgwz0)
@@ -97,3 +131,37 @@ class Sample(object):
 
 * [odoo10参考系列--操作（Actions）](https://blog.csdn.net/mzl87/article/details/79754834)
 * [Odoo 创建特定布局的页面](https://blog.csdn.net/Pompeii/article/details/76098344?utm_source=blogxgwz0)
+
+## [QWeb](https://www.odoo.com/documentation/12.0/reference/qweb.html)
+
+
+------------------------
+## 第3阶段：Bootstrap
+## https://v3.bootcss.com/css/
+------------------------
+
+## 对其方式
+
+```
+<p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+
+// button 按钮靠右布局
+父div 增加样式 text-align:right;
+
+// 左右对齐
+div可以使用pull-right, text-center, pull-left
+```
+
+
+## 栅栏方式
+
+```
+row
+```
+
+
+## display 属性
+
+*规定元素应该生成的框的类型*
